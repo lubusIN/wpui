@@ -10,7 +10,7 @@ import {
 
 export default function Header() {
     return (
-        <Card>
+        <Card style={{ width: '100vw' }}>
             <CardHeader>
                 <HStack justify="space-between">
                     <Heading level={2}>Back End Developer</Heading>
