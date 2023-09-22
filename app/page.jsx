@@ -37,6 +37,9 @@ export default function Home() {
         <li>
           <Link href="/dashboard">DashBoard</Link>
         </li>
+        <li>
+          <Link href="/view">View Tasks</Link>
+        </li>
       </ul>
     </main>
   )
