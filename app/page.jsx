@@ -40,6 +40,9 @@ export default function Home() {
         <li>
           <Link href="/view">View Tasks</Link>
         </li>
+        <li>
+          <Link href="/form">Form</Link>
+        </li>
       </ul>
     </main>
   )

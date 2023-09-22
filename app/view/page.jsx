@@ -4,6 +4,7 @@ import {
     Icon,
     Button,
     CardDivider,
+    DropdownMenu,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
@@ -11,7 +12,7 @@ import {
     __experimentalGrid as Grid,
 } from "@wordpress/components";
 
-import { moreVertical } from "@wordpress/icons";
+import { addCard, edit, moreVertical, trash, wordpress } from "@wordpress/icons";
 
 
 export default function View() {
@@ -33,7 +34,28 @@ export default function View() {
                 </VStack>
                 <HStack alignment="right">
                     <Button variant="secondary">View Project</Button>
-                    <Icon icon={moreVertical}></Icon>
+                    <DropdownMenu
+                        controls={[
+                            {
+                                icon: <Icon icon={addCard}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Add data'
+                            },
+                            {
+                                icon: <Icon icon={edit}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Edit data'
+                            },
+                            {
+                                icon: <Icon icon={trash}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Delete data'
+                            },
+
+                        ]}
+                        icon={moreVertical}
+                        onToggle={function noRefCheck() { }}
+                    />
                 </HStack>
             </Grid>
             <CardDivider margin={5}></CardDivider>
@@ -53,7 +75,28 @@ export default function View() {
                 </VStack>
                 <HStack alignment="right">
                     <Button variant="secondary">View Project</Button>
-                    <Icon icon={moreVertical}></Icon>
+                    <DropdownMenu
+                        controls={[
+                            {
+                                icon: <Icon icon={addCard}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Add data'
+                            },
+                            {
+                                icon: <Icon icon={edit}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Edit data'
+                            },
+                            {
+                                icon: <Icon icon={trash}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Delete data'
+                            },
+
+                        ]}
+                        icon={moreVertical}
+                        onToggle={function noRefCheck() { }}
+                    />
                 </HStack>
             </Grid>
             <CardDivider margin={5}></CardDivider>
@@ -73,7 +116,28 @@ export default function View() {
                 </VStack>
                 <HStack alignment="right">
                     <Button variant="secondary">View Project</Button>
-                    <Icon icon={moreVertical}></Icon>
+                    <DropdownMenu
+                        controls={[
+                            {
+                                icon: <Icon icon={addCard}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Add data'
+                            },
+                            {
+                                icon: <Icon icon={edit}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Edit data'
+                            },
+                            {
+                                icon: <Icon icon={trash}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Delete data'
+                            },
+
+                        ]}
+                        icon={moreVertical}
+                        onToggle={function noRefCheck() { }}
+                    />
                 </HStack>
             </Grid>
             <CardDivider margin={5}></CardDivider>
@@ -93,7 +157,28 @@ export default function View() {
                 </VStack>
                 <HStack alignment="right">
                     <Button variant="secondary">View Project</Button>
-                    <Icon icon={moreVertical}></Icon>
+                    <DropdownMenu
+                        controls={[
+                            {
+                                icon: <Icon icon={addCard}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Add data'
+                            },
+                            {
+                                icon: <Icon icon={edit}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Edit data'
+                            },
+                            {
+                                icon: <Icon icon={trash}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Delete data'
+                            },
+
+                        ]}
+                        icon={moreVertical}
+                        onToggle={function noRefCheck() { }}
+                    />
                 </HStack>
             </Grid>
             <CardDivider margin={5}></CardDivider>
@@ -113,7 +198,28 @@ export default function View() {
                 </VStack>
                 <HStack alignment="right">
                     <Button variant="secondary">View Project</Button>
-                    <Icon icon={moreVertical}></Icon>
+                    <DropdownMenu
+                        controls={[
+                            {
+                                icon: <Icon icon={addCard}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Add data'
+                            },
+                            {
+                                icon: <Icon icon={edit}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Edit data'
+                            },
+                            {
+                                icon: <Icon icon={trash}></Icon>,
+                                onClick: function noRefCheck() { },
+                                title: 'Delete data'
+                            },
+
+                        ]}
+                        icon={moreVertical}
+                        onToggle={function noRefCheck() { }}
+                    />
                 </HStack>
             </Grid>
         </VStack>
