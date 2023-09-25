@@ -49,6 +49,9 @@ export default function Home() {
         <li>
           <Link href="/users">User Profiles</Link>
         </li>
+        <li>
+          <Link href="/tasks-update">Tasks Updates</Link>
+        </li>
       </ul>
     </main>
   )
