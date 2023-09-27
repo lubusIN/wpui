@@ -1,26 +1,31 @@
 {
   "name": "wpui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build --webpack-no-externals",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start --webpack-no-externals",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
   },
   "dependencies": {
-    "autoprefixer": "10.4.15",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
-    "next": "13.4.19",
-    "postcss": "8.4.29",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3"
+    "@wordpress/components": "^25.8.0",
+    "@wordpress/element": "^5.19.0",
+    "@wordpress/icons": "^9.33.0",
+    "@wordpress/scripts": "^26.13.0"
   },
-  "devDependencies": {
-    "@wordpress/components": "^25.7.0",
-    "@wordpress/icons": "^9.32.0",
-    "@wordpress/scripts": "^26.12.0"
-  }
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
 }
