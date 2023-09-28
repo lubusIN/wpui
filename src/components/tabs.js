@@ -6,7 +6,7 @@ import {
 } from "@wordpress/components";
 import { arrowDown, arrowRight, arrowUp, wordpress } from "@wordpress/icons";
 
-export default function MyTabPanel() {
+export default function Tabs() {
     const tabs = [
         {
             name: 'my-account',

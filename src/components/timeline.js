@@ -10,7 +10,7 @@ import {
 
 import { check, commentAuthorAvatar, pin } from "@wordpress/icons";
 
-export default function TaskUpdate() {
+export default function Timeline() {
 
     return (
         <TreeGrid

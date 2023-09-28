@@ -5,7 +5,7 @@ import {
 } from "@wordpress/components";
 import { home } from "@wordpress/icons";
 
-export default function Navigate() {
+export default function Breadcrumb() {
     return (
         <HStack alignment="center" spacing={5}>
             <Icon icon={home}></Icon>

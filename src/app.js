@@ -7,24 +7,26 @@ import {
     __experimentalNavigationItem as NavigationItem,
 } from "@wordpress/components";
 
-import Header from "./Tailwind/header";
-import Navigate from "./Tailwind/navigation";
-import Cards from "./Tailwind/card";
-import Charts from "./Tailwind/chart";
-import Dashboard from "./Tailwind/dashboard";
-import Form from "./Tailwind/form";
-import NewProject from "./Tailwind/new-project";
-import SelectBox from "./Tailwind/selectbox";
-import SignUp from "./Tailwind/signup";
-import Subscription from "./Tailwind/subscription";
-import MyTabPanel from "./Tailwind/tabs";
-import TaskUpdate from "./Tailwind/tasks-update";
-import Users from "./Tailwind/users";
-import View from "./Tailwind/view";
-import HeroSection from "./Tatva/herosection";
-import ImageCard from "./Tatva/imagecard";
-import Updates from "./Tatva/updates";
-import Questions from "./Tatva/questions";
+import {
+    Header,
+    Breadcrumb,
+    Cards,
+    Stats,
+    Dashboard,
+    Form,
+    Placeholder,
+    SelectBox,
+    SignUp,
+    Subscription,
+    Tabs,
+    Timeline,
+    Users,
+    View,
+    HeroSection,
+    ImageCard,
+    Updates,
+    Questions
+} from './components';
 
 export default function App() {
     return (
@@ -116,7 +118,7 @@ export default function App() {
                 parentMenu="root"
             >
                 <NavigationItem>
-                    <Navigate />
+                    <Breadcrumb />
                 </NavigationItem>
             </NavigationMenu>
             <NavigationMenu
@@ -140,7 +142,7 @@ export default function App() {
                 parentMenu="root"
             >
                 <NavigationItem>
-                    <NewProject />
+                    <Placeholder />
                 </NavigationItem>
             </NavigationMenu>
             <NavigationMenu
@@ -156,7 +158,7 @@ export default function App() {
                 parentMenu="root"
             >
                 <NavigationItem>
-                    <Charts />
+                    <Stats />
                 </NavigationItem>
             </NavigationMenu>
             <NavigationMenu
@@ -164,7 +166,7 @@ export default function App() {
                 parentMenu="root"
             >
                 <NavigationItem>
-                    <MyTabPanel />
+                    <Tabs />
                 </NavigationItem>
             </NavigationMenu>
             <NavigationMenu
@@ -212,7 +214,7 @@ export default function App() {
                 parentMenu="root"
             >
                 <NavigationItem>
-                    <TaskUpdate />
+                    <Timeline />
                 </NavigationItem>
             </NavigationMenu>
             <NavigationMenu

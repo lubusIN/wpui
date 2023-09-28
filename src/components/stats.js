@@ -8,7 +8,7 @@ import {
     __experimentalVStack as VStack,
 } from "@wordpress/components";
 
-export default function Charts() {
+export default function Stats() {
     return (
         <VStack spacing={7}>
             <Heading align="left">Last 30 Days</Heading>
