@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;AACjB,C","sources":["webpack://wpui/./src/app.css"],"sourcesContent":["body {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100vh;\n}"],"names":[],"sourceRoot":""}

@@ -1,0 +1,30 @@
+{
+  "name": "wpui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build --webpack-no-externals",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start --webpack-no-externals",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "dependencies": {
+    "@wordpress/components": "^25.8.0",
+    "@wordpress/element": "^5.19.0",
+    "@wordpress/icons": "^9.33.0",
+    "@wordpress/scripts": "^26.13.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
