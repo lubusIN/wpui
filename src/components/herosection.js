@@ -10,9 +10,14 @@ import { arrowRight } from "@wordpress/icons";
 
 export default function HeroSection() {
     return (
-        <VStack spacing={4} style={{ backgroundColor: '#FFF6FA', padding: '100px' }}>
-
-
+        <VStack 
+            spacing={4} 
+            alignment="center" 
+            style={{ 
+                width: '100vw',
+                backgroundColor: '#FFF6FA', 
+                padding: '100px' 
+                }}>
             <Text size={30} align="center" style={{ maxWidth: '500px', fontWeight: '500' }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </Text>

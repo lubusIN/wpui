@@ -10,7 +10,14 @@ import {
 
 export default function Updates() {
     return (
-        <Card style={{ backgroundColor: '#9E1B42', padding: '60px', borderRadius: '10px' }}>
+        <Card 
+            style={{ 
+                width: '100vw',
+                boxSizing: 'border-box',
+                backgroundColor: '#9E1B42', 
+                padding: '60px', 
+                borderRadius: '10px'
+                }}>
             <HStack spacing={5}>
                 <Text size={30} align="left" style={{ maxWidth: '450px', color: 'white', }}>
                     Want product news and updates?
