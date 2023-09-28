@@ -23,6 +23,8 @@ import Users from "./Tailwind/users";
 import View from "./Tailwind/view";
 import HeroSection from "./Tatva/herosection";
 import ImageCard from "./Tatva/imagecard";
+import Updates from "./Tatva/updates";
+import Questions from "./Tatva/questions";
 
 export default function App() {
     return (
@@ -91,6 +93,14 @@ export default function App() {
                 <NavigationItem
                     navigateToMenu="imagecard"
                     title="Image Card"
+                />
+                <NavigationItem
+                    navigateToMenu="updates"
+                    title="News and Updates"
+                />
+                <NavigationItem
+                    navigateToMenu="questions"
+                    title="Asked Questions"
                 />
             </NavigationMenu>
             <NavigationMenu
@@ -219,6 +229,22 @@ export default function App() {
             >
                 <NavigationItem>
                     <ImageCard />
+                </NavigationItem>
+            </NavigationMenu>
+            <NavigationMenu
+                menu="updates"
+                parentMenu="root"
+            >
+                <NavigationItem>
+                    <Updates />
+                </NavigationItem>
+            </NavigationMenu>
+            <NavigationMenu
+                menu="questions"
+                parentMenu="root"
+            >
+                <NavigationItem>
+                    <Questions />
                 </NavigationItem>
             </NavigationMenu>
         </Navigation>
