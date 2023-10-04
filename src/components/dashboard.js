@@ -1,41 +1,67 @@
+import React, { useState } from 'react';
 import {
     Icon,
     Card,
     CardBody,
-    CardHeader,
-    ResponsiveWrapper,
+    SearchControl,
+    __experimentalText as Text,
+    __experimentalGrid as Grid,
+    __experimentalHeading as Heading,
     __experimentalNavigation as Navigation,
     __experimentalNavigationGroup as NavigationGroup,
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
-    __experimentalGrid as Grid,
-    __experimentalHStack as HStack,
-    __experimentalVStack as VStack,
-    __experimentalHeading as Heading,
-    __experimentalText as Text,
 } from "@wordpress/components";
-import { search, wordpress, trash, cog } from "@wordpress/icons";
-
+import { wordpress, cog } from "@wordpress/icons";
 
 export default function Dashboard() {
+    const [selectedNavItem, setSelectedNavItem] = useState('');
+
+    const handleNavigationItemClick = (title) => {
+        setSelectedNavItem(title);
+    };
+
+    const renderContent = () => {
+        switch (selectedNavItem) {
+            case 'Dashboard':
+                return (
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                );
+            case 'Teams':
+                return (
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only five centuries, remaining essentially unchanged.
+                    </p>
+                );
+            default:
+                return null;
+        }
+    };
+
+
     return (
         <Grid
             columns={2}
-            templateColumns="repeat(1,1fr) 3fr"
+            templateColumns="1fr 3fr"
+            isInline
         >
             <Card>
                 <CardBody>
                     <Icon icon={wordpress} size={50}></Icon>
                     <Navigation>
-                        <NavigationMenu hasSearch >
+                        <NavigationMenu>
                             <NavigationGroup>
                                 <NavigationItem
                                     icon={<Icon icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" /></svg>}></Icon>}
                                     title="Dashboard"
+                                    onClick={() => handleNavigationItemClick('Dashboard')}
                                 />
                                 <NavigationItem
                                     icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" /></svg>}
                                     title="Teams"
+                                    onClick={() => handleNavigationItemClick('Teams')}
                                 />
                                 <NavigationItem
                                     icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" /></svg>}
@@ -92,23 +118,11 @@ export default function Dashboard() {
 
             </Card>
             <Card>
-                <CardHeader>
-                    <HStack alignment="left">
-                        <Icon icon={search} size={30}></Icon>
-                        <Text size={20}>Search...</Text>
-                    </HStack>
-                    <Icon icon={trash} size={20}></Icon>
-                </CardHeader>
+                <SearchControl />
                 <CardBody>
-                    <ResponsiveWrapper
-                        naturalHeight={400}
-                        naturalWidth={900}
-                    >
-                        <img
-                            alt="WordPress"
-                            src="https://s.w.org/style/images/about/WordPress-logotype-standard.png"
-                        />
-                    </ResponsiveWrapper>
+                    <div style={{ width: '550px' }}>
+                        {renderContent()}
+                    </div>
                 </CardBody>
             </Card>
         </Grid >
