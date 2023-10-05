@@ -7,9 +7,17 @@ import {
     __experimentalHStack as HStack,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { moreHorizontalMobile } from "@wordpress/icons";
+import Ellipsis from "../img/Ellipsis.svg";
+
+
 
 export default function ImageCard() {
+    const loading = () => {
+        return (
+            <img src={Ellipsis} alt="Loading"></img>
+        );
+    }
+
     return (
         <VStack spacing="5">
             <HStack>
@@ -21,97 +29,98 @@ export default function ImageCard() {
                     <CardBody isShady style={{
                         backgroundColor: '#FFDCEC',
                         padding: '20px',
-                        height: '120px',
+                        height: '150px',
+                        width: '200px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <Icon icon={moreHorizontalMobile} size={50}></Icon>
+                        <Icon icon={loading} size={50}></Icon>
                     </CardBody>
 
                     <Heading level={5}>Ping</Heading>
-                    <Text size={10}>Animating Ping Notification</Text>
                 </VStack>
 
                 <VStack>
                     <CardBody isShady style={{
                         backgroundColor: '#FFDCEC',
                         padding: '20px',
-                        height: '120px',
+                        height: '150px',
+                        width: '200px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <Icon icon={moreHorizontalMobile} size={50}></Icon>
+                        <Icon icon={loading} size={50}></Icon>
                     </CardBody>
 
                     <Heading level={5}>Ping</Heading>
-                    <Text size={10}>Animating Ping Notification</Text>
                 </VStack>
 
                 <VStack>
                     <CardBody isShady style={{
                         backgroundColor: '#FFDCEC',
                         padding: '20px',
-                        height: '120px',
+                        height: '150px',
+                        width: '200px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <Icon icon={moreHorizontalMobile} size={50}></Icon>
+                        <Icon icon={loading} size={50}></Icon>
                     </CardBody>
 
                     <Heading level={5}>Ping</Heading>
-                    <Text size={10}>Animating Ping Notification</Text>
                 </VStack>
-            </HStack>
+
+            </HStack >
             <HStack alignment="center" justify="space-between" spacing="4">
                 <VStack>
                     <CardBody isShady style={{
                         backgroundColor: '#FFDCEC',
                         padding: '20px',
-                        height: '120px',
+                        height: '150px',
+                        width: '200px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <Icon icon={moreHorizontalMobile} size={50}></Icon>
+                        <Icon icon={loading} size={50}></Icon>
                     </CardBody>
 
                     <Heading level={5}>Ping</Heading>
-                    <Text size={10}>Animating Ping Notification</Text>
                 </VStack>
 
                 <VStack>
                     <CardBody isShady style={{
                         backgroundColor: '#FFDCEC',
                         padding: '20px',
-                        height: '120px',
+                        height: '150px',
+                        width: '200px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <Icon icon={moreHorizontalMobile} size={50}></Icon>
+                        <Icon icon={loading} size={50}></Icon>
                     </CardBody>
 
                     <Heading level={5}>Ping</Heading>
-                    <Text size={10}>Animating Ping Notification</Text>
                 </VStack>
 
                 <VStack>
                     <CardBody isShady style={{
                         backgroundColor: '#FFDCEC',
                         padding: '20px',
-                        height: '120px',
+                        height: '150px',
+                        width: '200px',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <Icon icon={moreHorizontalMobile} size={50}></Icon>
+                        <Icon icon={loading} size={50}></Icon>
                     </CardBody>
 
                     <Heading level={5}>Ping</Heading>
-                    <Text size={10}>Animating Ping Notification</Text>
                 </VStack>
             </HStack>
         </VStack >
