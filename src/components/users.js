@@ -44,7 +44,7 @@ export default function Users() {
                     gap={20}
                 >
                     <HStack alignment="left">
-                        <Icon size={60} icon={commentAuthorAvatar}></Icon>
+                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
                         <VStack>
                             <Heading level={5}>Wordpress</Heading>
                             <Text>xyz@example.com</Text>
@@ -60,8 +60,8 @@ export default function Users() {
                     <div>
                         <Text
                             style={{
-                                backgroundColor: '#90FEBF',
-                                color: 'green',
+                                backgroundColor: '#F0FDF4',
+                                color: '#166534',
                                 borderRadius: '5px',
                                 padding: '5px',
                             }}
@@ -82,7 +82,7 @@ export default function Users() {
                     gap={20}
                 >
                     <HStack alignment="left">
-                        <Icon size={60} icon={commentAuthorAvatar}></Icon>
+                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
                         <VStack>
                             <Heading level={5}>Wordpress</Heading>
                             <Text>xyz@example.com</Text>
@@ -98,8 +98,8 @@ export default function Users() {
                     <div>
                         <Text
                             style={{
-                                backgroundColor: '#90FEBF',
-                                color: 'green',
+                                backgroundColor: '#F0FDF4',
+                                color: '#166534',
                                 borderRadius: '5px',
                                 padding: '5px',
                             }}
@@ -120,7 +120,7 @@ export default function Users() {
                     gap={20}
                 >
                     <HStack alignment="left">
-                        <Icon size={60} icon={commentAuthorAvatar}></Icon>
+                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
                         <VStack>
                             <Heading level={5}>Wordpress</Heading>
                             <Text>xyz@example.com</Text>
@@ -136,8 +136,8 @@ export default function Users() {
                     <div>
                         <Text
                             style={{
-                                backgroundColor: '#90FEBF',
-                                color: 'green',
+                                backgroundColor: '#F0FDF4',
+                                color: '#166534',
                                 borderRadius: '5px',
                                 padding: '5px',
                             }}
@@ -158,7 +158,7 @@ export default function Users() {
                     gap={20}
                 >
                     <HStack alignment="left">
-                        <Icon size={60} icon={commentAuthorAvatar}></Icon>
+                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
                         <VStack>
                             <Heading level={5}>Wordpress</Heading>
                             <Text>xyz@example.com</Text>
@@ -174,8 +174,8 @@ export default function Users() {
                     <div>
                         <Text
                             style={{
-                                backgroundColor: '#90FEBF',
-                                color: 'green',
+                                backgroundColor: '#F0FDF4',
+                                color: '#166534',
                                 borderRadius: '5px',
                                 padding: '5px',
                             }}
@@ -196,7 +196,7 @@ export default function Users() {
                     gap={20}
                 >
                     <HStack alignment="left">
-                        <Icon size={60} icon={commentAuthorAvatar}></Icon>
+                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
                         <VStack>
                             <Heading level={5}>Wordpress</Heading>
                             <Text>xyz@example.com</Text>
@@ -212,8 +212,8 @@ export default function Users() {
                     <div>
                         <Text
                             style={{
-                                backgroundColor: '#90FEBF',
-                                color: 'green',
+                                backgroundColor: '#F0FDF4',
+                                color: '#166534',
                                 borderRadius: '5px',
                                 padding: '5px',
                             }}
@@ -234,7 +234,7 @@ export default function Users() {
                     gap={20}
                 >
                     <HStack alignment="left">
-                        <Icon size={60} icon={commentAuthorAvatar}></Icon>
+                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
                         <VStack>
                             <Heading level={5}>Wordpress</Heading>
                             <Text>xyz@example.com</Text>
@@ -250,8 +250,8 @@ export default function Users() {
                     <div>
                         <Text
                             style={{
-                                backgroundColor: '#90FEBF',
-                                color: 'green',
+                                backgroundColor: '#F0FDF4',
+                                color: '#166534',
                                 borderRadius: '5px',
                                 padding: '5px',
                             }}

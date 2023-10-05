@@ -10,7 +10,7 @@ import {
     __experimentalGrid as Grid,
 } from "@wordpress/components";
 
-import { addCard, edit, moreVertical, trash, wordpress } from "@wordpress/icons";
+import { addCard, edit, moreVertical, trash } from "@wordpress/icons";
 
 
 export default function View() {
@@ -19,12 +19,12 @@ export default function View() {
             <Grid>
                 <VStack>
                     <HStack alignment="left">
-                        <Heading>GraphQL API</Heading>
+                        <Heading level={3}>GraphQL API</Heading>
                         <Text style={{
-                            backgroundColor: '#90FEBF',
-                            color: 'green',
+                            backgroundColor: '#F0FDF4',
+                            color: '#38803D',
                             borderRadius: '5px',
-                            padding: '5px',
+                            padding: '7px',
                         }}
                         > Completed</Text>
                     </HStack>
@@ -60,12 +60,12 @@ export default function View() {
             <Grid>
                 <VStack>
                     <HStack alignment="left">
-                        <Heading>New Benefits Plan</Heading>
+                        <Heading level={3}>New Benefits Plan</Heading>
                         <Text style={{
-                            backgroundColor: '#D3DFD8',
+                            backgroundColor: '#F9FAFB',
                             color: 'black',
                             borderRadius: '5px',
-                            padding: '5px',
+                            padding: '7px',
                         }}
                         > In Progress</Text>
                     </HStack>
@@ -101,12 +101,12 @@ export default function View() {
             <Grid>
                 <VStack>
                     <HStack alignment="left">
-                        <Heading>Onboarding Emails</Heading>
+                        <Heading level={3}>Onboarding Emails</Heading>
                         <Text style={{
-                            backgroundColor: '#D3DFD8',
+                            backgroundColor: '#F9FAFB',
                             color: 'black',
                             borderRadius: '5px',
-                            padding: '5px',
+                            padding: '7px',
                         }}
                         > In Progress</Text>
                     </HStack>
@@ -142,12 +142,12 @@ export default function View() {
             <Grid>
                 <VStack>
                     <HStack alignment="left">
-                        <Heading>iOS app</Heading>
+                        <Heading level={3}>iOS app</Heading>
                         <Text style={{
-                            backgroundColor: '#D3DFD8',
+                            backgroundColor: '#F9FAFB',
                             color: 'black',
                             borderRadius: '5px',
-                            padding: '5px',
+                            padding: '7px',
                         }}
                         > In Progress</Text>
                     </HStack>
@@ -183,12 +183,12 @@ export default function View() {
             <Grid>
                 <VStack>
                     <HStack alignment="left">
-                        <Heading>Site Redesign</Heading>
+                        <Heading level={3}>Site Redesign</Heading>
                         <Text style={{
-                            backgroundColor: '#F7CB83',
-                            color: '#39280E',
+                            backgroundColor: '#FEFCE8',
+                            color: '#894D0E',
                             borderRadius: '5px',
-                            padding: '5px',
+                            padding: '7px',
                         }}
                         >Archived</Text>
                     </HStack>
