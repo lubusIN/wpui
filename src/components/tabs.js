@@ -67,7 +67,7 @@ export default function Tabs() {
     ];
 
     return (
-        <TabPanel tabs={tabs}>
+        <TabPanel selectOnMove tabs={tabs}>
             {(tab) => (
                 <HStack>
                     <Text>{tab.title}</Text>

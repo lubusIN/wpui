@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {
     Icon,
+    Card,
     Button,
     CardBody,
     __experimentalText as Text,
@@ -27,92 +28,98 @@ export default function SelectBox() {
 
             <HStack spacing={3}>
 
-                <Button style={{ height: '110px' }} onClick={() => handleButtonClick(0)}>
-                    <HStack alignment='top'>
-                        <VStack>
-                            <CardBody>
-                                <Heading align='left' level={4}>Newsletter</Heading>
-                                <Text>Last message sent an hour ago</Text>
-                            </CardBody>
-                            <CardBody>
-                                <Heading align='left' level={4}>621 users</Heading>
-                            </CardBody>
-                        </VStack>
-                        <div style={{ width: '15px', height: '15px' }}>
-                            {isButtonSelected(0) &&
-                                <Icon
-                                    size={15}
-                                    icon={check}
-                                    style={{
-                                        margin: '15px 0',
-                                        border: '1px solid',
-                                        borderRadius: '15px',
-                                        backgroundColor: 'blue',
-                                        color: 'white',
-                                    }}
-                                />
-                            }
-                        </div>
-                    </HStack>
+                <Button style={{ height: 'auto', backgroundColor: 'white', padding: '10px' }} onClick={() => handleButtonClick(0)}>
+                    <Card>
+                        <HStack alignment='top'>
+                            <VStack>
+                                <CardBody>
+                                    <Heading align='left' level={4}>Newsletter</Heading>
+                                    <Text>Last message sent an hour ago</Text>
+                                </CardBody>
+                                <CardBody>
+                                    <Heading align='left' level={4}>621 users</Heading>
+                                </CardBody>
+                            </VStack>
+                            <div style={{ width: '25px', height: '15px' }}>
+                                {isButtonSelected(0) &&
+                                    <Icon
+                                        size={15}
+                                        icon={check}
+                                        style={{
+                                            margin: '15px 0',
+                                            border: '1px solid',
+                                            borderRadius: '15px',
+                                            backgroundColor: 'blue',
+                                            color: 'white',
+                                        }}
+                                    />
+                                }
+                            </div>
+                        </HStack>
+                    </Card>
                 </Button>
 
-                <Button style={{ height: '110px' }} onClick={() => handleButtonClick(1)}>
-                    <HStack alignment='top'>
-                        <VStack>
-                            <CardBody>
-                                <Heading align='left' level={4}>Existing Customer</Heading>
-                                <Text>Last message sent 2 weeks ago</Text>
-                            </CardBody>
-                            <CardBody>
-                                <Heading align='left' level={4}>1200 users</Heading>
-                            </CardBody>
-                        </VStack>
-                        <div style={{ width: '15px', height: '15px' }}>
-                            {isButtonSelected(1) &&
-                                <Icon
-                                    size={15}
-                                    icon={check}
-                                    style={{
-                                        margin: '15px 0',
-                                        border: '1px solid',
-                                        borderRadius: '15px',
-                                        backgroundColor: 'blue',
-                                        color: 'white',
-                                    }}
-                                />
-                            }
-                        </div>
-                    </HStack>
+                <Button style={{ height: 'auto', backgroundColor: 'white', padding: '10px' }} onClick={() => handleButtonClick(1)}>
+                    <Card>
+                        <HStack alignment='top'>
+                            <VStack>
+                                <CardBody>
+                                    <Heading align='left' level={4}>Existing Customer</Heading>
+                                    <Text>Last message sent 2 weeks ago</Text>
+                                </CardBody>
+                                <CardBody>
+                                    <Heading align='left' level={4}>1200 users</Heading>
+                                </CardBody>
+                            </VStack>
+                            <div style={{ width: '25px', height: '15px' }}>
+                                {isButtonSelected(1) &&
+                                    <Icon
+                                        size={15}
+                                        icon={check}
+                                        style={{
+                                            margin: '15px 0',
+                                            border: '1px solid',
+                                            borderRadius: '15px',
+                                            backgroundColor: 'blue',
+                                            color: 'white',
+                                        }}
+                                    />
+                                }
+                            </div>
+                        </HStack>
+                    </Card>
                 </Button>
 
-                <Button style={{ height: '110px' }} onClick={() => handleButtonClick(2)}>
-                    <HStack alignment='top'>
-                        <VStack>
-                            <CardBody>
-                                <Heading align='left' level={4}>Trial Users</Heading>
-                                <Text>Last message sent 4 days ago</Text>
-                            </CardBody>
-                            <CardBody>
-                                <Heading align='left' level={4}>2740 users</Heading>
-                            </CardBody>
-                        </VStack>
+                <Button style={{ height: 'auto', backgroundColor: 'white', padding: '10px' }} onClick={() => handleButtonClick(2)}>
+                    <Card>
+                        <HStack alignment='top'>
+                            <VStack>
+                                <CardBody>
+                                    <Heading align='left' level={4}>Trial Users</Heading>
+                                    <Text>Last message sent 4 days ago</Text>
+                                </CardBody>
+                                <CardBody>
+                                    <Heading align='left' level={4}>2740 users</Heading>
+                                </CardBody>
+                            </VStack>
 
-                        <div style={{ width: '15px', height: '15px' }}>
-                            {isButtonSelected(2) &&
-                                <Icon
-                                    size={15}
-                                    icon={check}
-                                    style={{
-                                        margin: '15px 0',
-                                        border: '1px solid',
-                                        borderRadius: '15px',
-                                        backgroundColor: 'blue',
-                                        color: 'white',
-                                    }}
-                                />
-                            }
-                        </div>
-                    </HStack>
+                            <div style={{ width: '25px', height: '15px' }}>
+                                {isButtonSelected(2) &&
+                                    <Icon
+                                        size={15}
+                                        icon={check}
+                                        style={{
+                                            margin: '15px 0',
+                                            border: '1px solid',
+                                            borderRadius: '15px',
+                                            backgroundColor: 'blue',
+                                            color: 'white',
+                                        }}
+                                    />
+                                }
+                            </div>
+                        </HStack>
+                    </Card>
                 </Button>
 
             </HStack>
