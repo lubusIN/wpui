@@ -8,10 +8,10 @@ import * as Components from './components';
  */
 const components = [
     {
-        title: 'Header',
-        description: 'page header',
-        path: '/header',
-        component: Components.Header,
+        title: 'Heading',
+        description: 'page heading',
+        path: '/heading',
+        component: Components.Heading,
     },
     {
         title: 'Breadcrumb',
@@ -20,10 +20,10 @@ const components = [
         component: Components.Breadcrumb,
     },
     {
-        title: 'Signup',
+        title: 'Sign in',
         description: '',
-        path: '/signup',
-        component: Components.SignUp,
+        path: '/signIn',
+        component: Components.SignIn,
     },
     {
         title: 'Subscription',
@@ -37,12 +37,12 @@ const components = [
         path: '/placeholder',
         component: Components.Placeholder,
     },
-    {
-        title: 'Selectbox',
-        description: '',
-        path: '/selectbox',
-        component: Components.SelectBox,
-    },
+    // {
+    //     title: 'Selectbox',
+    //     description: '',
+    //     path: '/selectbox',
+    //     component: Components.SelectBox,
+    // },
     {
         title: 'Stats',
         description: '',
@@ -62,10 +62,10 @@ const components = [
         component: Components.Dashboard,
     },
     {
-        title: 'View',
-        description: '',
-        path: '/view',
-        component: Components.View,
+        title: 'Stacked List',
+        description: 'stacked list',
+        path: '/list',
+        component: Components.List,
     },
     {
         title: 'Form',
@@ -80,16 +80,16 @@ const components = [
         component: Components.Cards,
     },
     {
-        title: 'Users',
-        description: '',
-        path: '/users',
-        component: Components.Users,
+        title: 'Table',
+        description: 'table',
+        path: '/table',
+        component: Components.Table,
     },
     {
-        title: 'Timeline',
+        title: 'Feeds',
         description: '',
-        path: '/timeline',
-        component: Components.Timeline,
+        path: '/feeds',
+        component: Components.Feeds,
     },
     {
         title: 'Hero Section',
@@ -97,12 +97,12 @@ const components = [
         path: '/herosection',
         component: Components.HeroSection,
     },
-    {
-        title: 'Updates',
-        description: '',
-        path: '/updates',
-        component: Components.Updates,
-    },
+    // {
+    //     title: 'Updates',
+    //     description: '',
+    //     path: '/updates',
+    //     component: Components.Updates,
+    // },
     {
         title: 'Image Card',
         description: '',
@@ -110,10 +110,10 @@ const components = [
         component: Components.ImageCard,
     },
     {
-        title: 'Question',
+        title: 'FAQs',
         description: '',
-        path: '/question',
-        component: Components.Questions,
+        path: '/faqs',
+        component: Components.Faqs,
     },
 ];
 
