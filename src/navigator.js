@@ -68,7 +68,7 @@ function Navigator() {
             </NavigatorScreen>
 
             {
-                components.map(({ title, path, component }, index) => (
+                components.map(({ title, path, component: Component }, index) => (
 
                     <NavigatorScreen
                         path={path}
@@ -126,7 +126,7 @@ function Navigator() {
                                 <Card size="large" style={{ borderRadius: '4px' }}>
                                     {view == 'preview' &&
                                         <CardBody>
-                                            {component()}
+                                            <Component />
                                         </CardBody>
                                     }
                                     {view == 'code' &&
