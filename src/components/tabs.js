@@ -1,78 +1,76 @@
+/**
+ * WordPress dependencies.
+ */
 import {
     Icon,
     TabPanel,
     __experimentalText as Text,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { arrowDown, arrowRight, arrowUp, wordpress } from "@wordpress/icons";
+import { commentAuthorAvatar, home, payment, people } from "@wordpress/icons";
 
-export default function Tabs() {
+/**
+ * Render Tabs
+ */
+function Tabs() {
     const tabs = [
         {
             name: 'my-account',
             title: 'My Account',
-            className: 'my-account-tab',
             icon: (
                 <HStack>
-                    <Icon icon={wordpress} />
-                    <small>
+                    <Icon size={35} icon={commentAuthorAvatar} />
+                    <Text size={14}>
                         My Account
-                    </small>
+                    </Text>
                 </HStack>
-
             ),
         },
         {
             name: 'company',
             title: 'Company',
-            className: 'company-tab',
             icon: (
                 <HStack>
-                    <Icon icon={arrowDown} />
-                    <small>
+                    <Icon size={35} icon={home} />
+                    <Text size={14}>
                         Company
-                    </small>
+                    </Text>
                 </HStack>
-
             ),
         },
         {
             name: 'members',
             title: 'Team Members',
-            className: 'members-tab',
             icon: (
                 <HStack>
-                    <Icon icon={arrowUp} />
-                    <small>
+                    <Icon size={35} icon={people} />
+                    <Text size={14}>
                         Team Members
-                    </small>
+                    </Text>
                 </HStack>
-
             ),
         },
         {
             name: 'billing',
             title: 'Billing',
-            className: 'billing-tab',
             icon: (
                 <HStack>
-                    <Icon icon={arrowRight} />
-                    <small>
+                    <Icon size={35} icon={payment} />
+                    <Text size={14}>
                         Billing
-                    </small>
+                    </Text>
                 </HStack>
-
             ),
         },
     ];
 
     return (
-        <TabPanel tabs={tabs}>
-            {(tab) => (
-                <HStack>
-                    <Text>{tab.title}</Text>
-                </HStack>
-            )}
-        </TabPanel>
+        <HStack justify="center">
+            <TabPanel tabs={tabs}>
+                {(tab) => ('')}
+            </TabPanel>
+        </HStack>
     );
-}
+};
+
+export default Tabs;
