@@ -1,6 +1,9 @@
+/**
+ * WordPress dependencies.
+ */
+import { __ } from '@wordpress/i18n';
 import {
     Icon,
-    Button,
     Card,
     CardBody,
     DropZone,
@@ -12,11 +15,12 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-
 import { commentAuthorAvatar, media } from "@wordpress/icons";
 
-
-export default function Form() {
+/**
+ * Render Profile Form
+ */
+function Form() {
 
     return (
         <VStack spacing={10}>
@@ -25,40 +29,38 @@ export default function Form() {
                 <Text>This information will be displayed publicly so be careful what you share</Text>
             </VStack>
             <TextControl
-                label="Username"
-                onChange={function noRefCheck() { }}
+                label={__("Username")}
                 placeholder="workation.com/ lubus"
-                value=""
+                onChange={function noRefCheck() { }}
             />
             <TextareaControl
+                label={__("About")}
                 help="Write a few sentences about yourself"
-                label="About"
                 onChange={function noRefCheck() { }}
-                value=""
             />
             <VStack>
-                <Heading level={5}>Profile</Heading>
+                <Heading level={4}>Photo</Heading>
                 <HStack alignment="left">
-                    <Icon icon={commentAuthorAvatar} size={75}></Icon>
+                    <Icon icon={commentAuthorAvatar} size={55}></Icon>
                     <FormFileUpload
+                        variant="primary"
+                        isPressed
+                        accept="image/*"
                         onChange={function noRefCheck() { }}
-                        render={({ openFileDialog }) => <button onClick={openFileDialog}>Change</button>}
                     >
-                        Select file
+                        Change
                     </FormFileUpload>
                 </HStack>
             </VStack>
             <VStack>
-                <Heading level={5}>Cover Photo</Heading>
+                <Heading level={4}>Cover Photo</Heading>
                 <Card variant="dotted">
                     <CardBody>
                         <VStack style={{ alignItems: 'center' }}>
                             <Icon icon={media} style={{ fontSize: '48px' }} />
-                            <Text>
-                                <FormFileUpload accept="image/*" onChange={() => { }}>
-                                    Upload a file
-                                </FormFileUpload>
-                            </Text>
+                            <FormFileUpload accept="image/*" onChange={function noRefCheck() { }}>
+                                Upload a file
+                            </FormFileUpload>
                             <Text>or drag and drop PNG, JPG, GIF up to 10mb</Text>
                         </VStack>
                     </CardBody>
@@ -68,10 +70,11 @@ export default function Form() {
                         onHTMLDrop={function noRefCheck() { }}
                     />
                 </Card>
-
             </VStack>
         </VStack>
     );
-}
+};
+
+export default Form;
 
 

@@ -1,58 +1,44 @@
+/**
+ * WordPress dependencies.
+ */
 import {
-    Icon,
     Button,
+    Card,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
-
+    __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { arrowRight } from "@wordpress/icons";
 
-export default function HeroSection() {
+/**
+ * Render Hero Section
+ */
+function HeroSection() {
     return (
-        <VStack 
-            spacing={4} 
-            alignment="center" 
-            style={{ 
-                width: '100vw',
-                backgroundColor: '#FFF6FA', 
-                padding: '100px' 
-                }}>
-            <Text size={30} align="center" style={{ maxWidth: '500px', fontWeight: '500' }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </Text>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <Text align="center" style={{ maxWidth: '380px', }}>
-                    Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book.
-                </Text>
-            </div>
-            <HStack alignment="center">
-                <Button
-                    variant="primary"
-                    style={{
-                        borderRadius: '10px',
-                        backgroundColor: '#9E1B42',
-                        color: '#FFFFFF',
-                        padding: '10px 20px',
-                    }}>
-                    Browse Components
-                    <Icon icon={arrowRight}></Icon>
-                </Button>
-                <Button
-                    variant="secondary"
-                    style={{
-                        border: '2px solid #9E1B42',
-                        borderRadius: '10px',
-                        backgroundColor: '#FFF6FA',
-                        color: '#9E1B42',
-                        padding: '10px 20px',
-                    }}>
-                    Subscribe NewsLetter
-                    <Icon icon={arrowRight}></Icon>
-                </Button>
-            </HStack>
-        </VStack>
+        <Card isBorderless>
+            <VStack spacing={12}>
+                <VStack spacing={3}>
+                    <Text size={15} align="center">From the House of LUBUS</Text>
+                    <Heading size={40} align="center" lineHeight={1.3} weight={500}>
+                        Lorem Ipsum is simply dummy text of <br /> the printing and typesetting industry.
+                    </Heading>
+                    <Text size={16} align="center" lineHeight={1.5}>
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the <br /> 1500s, when an unknown printer took a galley
+                        of type and scrambled it to <br /> make a type specimen book.
+                    </Text>
+                </VStack>
+                <HStack alignment="center">
+                    <Button variant="primary" isPressed>
+                        Browse Components
+                    </Button>
+                    <Button>
+                        Subscribe NewsLetter
+                    </Button>
+                </HStack>
+            </VStack>
+        </Card>
     );
-}
+};
+
+export default HeroSection;

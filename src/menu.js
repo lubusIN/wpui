@@ -1,56 +1,64 @@
+/**
+ * WordPress dependencies.
+ */
 import {
     Card,
-    __experimentalText as Text,
     __experimentalGrid as Grid,
-    __experimentalHStack as HStack,
     __experimentalVStack as VStack,
+    __experimentalHStack as HStack,
+    __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalNavigatorButton as NavigatorButton,
 } from "@wordpress/components";
+
+/**
+ * Internal dependencies.
+ */
 import components from "./data";
+import { Banner } from "./cards";
 
+/**
+ * Render Component Menu
+ */
+function ComponentsMenu({setActivePath }) {
 
-export default function ComponentsMenu() {
     return (
         <>
-            <HStack>
-                <Text size={20}>Components</Text>
-            </HStack>
-            <Grid
-                alignment="bottom"
-                columns={4}
-                gap={4}
-            >
-                {
-                    components.map((component, index) =>
-                        <NavigatorButton
-                            key={index}
-                            path={component.path}
-                            variant="link"
-                            style={{
-                                textDecoration: 'none',
-                                boxShadow: 'none'
-                            }}>
-                            <VStack>
-                                <Card isRounded size="large" variant="grid" style={{
-                                    backgroundColor: '#e2e8f0',
-                                    width: '120px',
-                                    height: '60px',
-                                    padding: '20px',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    borderRadius: '8px'
-                                }}>
-                                </Card>
+            <Banner />
 
-                                <Heading level={5}>{component.title}</Heading>
-                            </VStack>
-                        </NavigatorButton>
-                    )
-                }
-            </Grid>
+            <VStack className="wpui_lcont" spacing={5}>
+                <HStack>
+                    <Heading>Latest Components</Heading>
+                    <Text>See all</Text>
+                </HStack>
+                <Grid
+                    className="wpui_cl"
+                    alignment="bottom"
+                    columns={3}
+                    columnGap={30}
+                    rowGap={25}
+                >
+                    {
+                        components.map((component, index) =>
+                            <NavigatorButton key={index} path={component.path} onClick={() => setActivePath(component.path)} >
+                                <VStack style={{ width: '100%' }}>
+                                    <Card className="wpui_preview" size="large" variant="secondary"></Card>
+                                    <Heading
+                                        adjustLineHeightForInnerControls={'small'}
+                                        align="left"
+                                        level={4}
+                                        weight={500}
+                                    >
+                                        {component.title}
+                                    </Heading>
+                                </VStack>
+                            </NavigatorButton>
+                        )
+                    }
+                </Grid>
+            </VStack>
         </>
-
     );
-}
+};
+
+export default ComponentsMenu;
