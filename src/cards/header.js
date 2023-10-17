@@ -17,7 +17,7 @@ function Header() {
         <Card className="wpui_header" isBorderless borderBottom>
             <HStack>
                 <Heading as={'a'} href="/">WPUI</Heading>
-                <Button href="https://lubus.in/" isPressed size='large'>Join us</Button>
+                <Button variant="primary" size='large'>Join us</Button>
             </HStack>
         </Card>
     );

@@ -34,14 +34,7 @@ function SignIn() {
                             checked
                             onChange={function noRefCheck() { }}
                         />
-                        <Text
-                            size={14}
-                            weight={600}
-                            as={"a"}
-                            href="https://wordpress.org"
-                            color='blue'
-                            style={{ textDecoration: 'none' }}
-                        >
+                        <Text size={14} weight={600} as={"a"} href="https://wordpress.org" color='blue' style={{ textDecoration: 'none' }}>
                             Forgot Password?
                         </Text>
                     </HStack>
@@ -49,18 +42,11 @@ function SignIn() {
                 </VStack>
 
                 <HStack spacing={2} justify='center'>
-                    <Heading size={14} weight={400} variant="muted" >
+                    <Heading size={14} weight={400} variant="muted">
                         Not a member?
                     </Heading>
-                    <Text
-                        size={14}
-                        weight={600}
-                        as={"a"}
-                        href="https://wordpress.org"
-                        color='blue'
-                        style={{ textDecoration: 'none' }}
-                    >
-                        Start a 14 day free trial
+                    <Text size={14} weight={600} as={"a"} href="https://wordpress.org" color='blue' style={{ textDecoration: 'none' }}>
+                        Create a new account
                     </Text>
                 </HStack>
             </VStack>

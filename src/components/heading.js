@@ -12,8 +12,8 @@ import {
  */
 function PageHeading() {
     return (
-        <HStack alignment="start" justify="space-between" direction={['column', 'row']}>
-            <Heading level={2}>Back End Developer</Heading>
+        <HStack alignment="start" justify="space-between" spacing={3} direction={['column', 'row']}>
+            <Heading level={2}>Unlocking the Secrets of Productivity</Heading>
             <HStack spacing={3} expanded={false}>
                 <Button variant="secondary">Edit</Button>
                 <Button variant="primary">Publish</Button>

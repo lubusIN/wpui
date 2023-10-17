@@ -17,7 +17,7 @@ import { moreHorizontalMobile } from "@wordpress/icons";
  */
 function ImageCard() {
     return (
-        <Grid columns={4} gap={8} alignment="center">
+        <Grid columns={[1, 2, 4]} gap={8} alignment="center">
             {Array.from({ length: 8 }, (_, index) => (
                 <VStack key={index} spacing={3}>
                     <Card variant="secondary" style={{ height: '150px', borderRadius: '4px' }}>

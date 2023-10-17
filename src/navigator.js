@@ -2,7 +2,7 @@
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element';
+import { useContext, useEffect } from '@wordpress/element';
 import {
     ResizableBox,
     Card,
@@ -24,7 +24,7 @@ import { chevronRight, copy } from "@wordpress/icons";
 /**
  * Internal dependencies.
  */
-import components from './data';
+import { components, WpuiContext } from './data';
 import ComponentsMenu from "./menu";
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -34,27 +34,35 @@ import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
  */
 function Navigator() {
 
-    const [hasCopied, setHasCopied] = useState(false);
-    const [view, setView] = useState('preview');
-    const [activePath, setActivePath] = useState('');
-    const [content, setContent] = useState('');
+    const {
+        width,
+        setWidth,
+        activePath,
+        setActivePath,
+        hasCopied,
+        setHasCopied,
+        view,
+        setView,
+        content,
+        setContent
+    } = useContext(WpuiContext);
 
     useEffect(() => {
         if (activePath) {
-    const fetchFileContent = async () => {
-        try {
-            setView('preview');
-            const response = await fetch(`src/components${activePath}.js`); // Adjust the path accordingly
-            if (!response.ok) {
-                throw new Error('Failed to fetch file');
-            }
+            const fetchFileContent = async () => {
+                try {
+                    setView('preview');
+                    const response = await fetch(`/src/components${activePath}.js`); // Adjust the path accordingly
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch file');
+                    }
 
-            const content = await response.text();
-            setContent(content);
-        } catch (error) {
-            console.error('Error loading file:', error);
-        }
-    };
+                    const content = await response.text();
+                    setContent(content);
+                } catch (error) {
+                    console.error('Error loading file:', error);
+                }
+            };
 
             fetchFileContent();
         }
@@ -64,13 +72,14 @@ function Navigator() {
     return (
         <NavigatorProvider className="wpui_navigator" initialPath="/">
             <NavigatorScreen path="/" style={{ overflowX: 'visible' }}>
-                <ComponentsMenu setActivePath={setActivePath} />
+                <ComponentsMenu />
             </NavigatorScreen>
 
             {
                 components.map(({ title, path, component: Component }, index) => (
 
                     <NavigatorScreen
+                        className='wpui_com_page'
                         path={path}
                         key={index}
                         style={{ overflowX: 'visible' }}
@@ -108,39 +117,34 @@ function Navigator() {
                                     </ClipboardButton>
                                 </HStack>
                             </HStack>
-                            <ResizableBox
-                                enable={{
-                                    bottom: false,
-                                    bottomLeft: false,
-                                    bottomRight: false,
-                                    left: false,
-                                    right: view == 'preview',
-                                    top: false,
-                                    topLeft: false,
-                                    topRight: false
-                                }}
-                                maxWidth={'100%'}
-                                minWidth={'380px'}
-                                className="resize_cont"
-                            >
-                                <Card size="large" style={{ borderRadius: '4px' }}>
-                                    {view == 'preview' &&
+                            {view == 'preview' &&
+                                <ResizableBox
+                                    className="resize_cont"
+                                    enable={{ right: true }}
+                                    __experimentalShowTooltip
+                                    onResize={(event, direction, elt, delta) => {
+                                        setWidth(elt.offsetWidth);
+                                    }}
+                                    maxWidth={'100%'}
+                                    minWidth={'380px'}
+                                >
+                                    <Card size="large" style={{ borderRadius: '4px' }}>
                                         <CardBody>
                                             <Component />
                                         </CardBody>
-                                    }
-                                    {view == 'code' &&
-                                        <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
-                                            {content}
-                                        </SyntaxHighlighter>
-                                    }
-                                </Card>
-                            </ResizableBox>
+                                    </Card>
+                                </ResizableBox>
+                            }
+                            {view == 'code' &&
+                                <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
+                                    {content}
+                                </SyntaxHighlighter>
+                            }
                         </VStack>
                     </NavigatorScreen>
                 ))
             }
-        </NavigatorProvider>
+        </NavigatorProvider >
     );
 };
 

@@ -19,25 +19,25 @@ import {
 function Footer() {
     return (
         <Card className="wpui_footer" size="large" isBorderless>
-            <CardBody isShady>
+            <CardBody>
                 <VStack className="sec_1" alignment="center" spacing={8}>
-                    <Heading>WPUI Components</Heading>
-                    <Text size={20} align="center">
+                    <Heading color='white'>WPUI Components</Heading>
+                    <Text size={20} align="center" weight={400} lineHeight={1.5} color='white'>
                         WPUI is a #BuildInPublic project from the house of LUBUS. We love getting
                         feedback from you! It really helps us know how we're doing, what you're
                         interested in, and what you'd like to see next. So please, don't hesitate to shareyour thoughts with us! We're all ears.
                     </Text>
                     <HStack alignment="center">
-                        <Button href="#" isPressed>Join us on Github</Button>
-                        <Button href="#">Send us a message</Button>
+                        <Button variant='primary'>Join us on Github</Button>
+                        <Button href="#" variant='primary'>Send us a message</Button>
                     </HStack>
                 </VStack>
             </CardBody>
-            <CardDivider />
+            <CardDivider color='white' />
             <CardBody>
                 <HStack direction={['column', 'row']}>
-                    <Text>@ 2023 WPUI. All Rights Reserved</Text>
-                    <Text>Made in India</Text>
+                    <Text color='white'>@ 2023 WPUI. All Rights Reserved</Text>
+                    <Text color='white'>Made in India</Text>
                 </HStack>
             </CardBody>
         </Card>
