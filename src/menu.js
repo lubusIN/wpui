@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { useContext } from "@wordpress/element";
 import {
     Card,
     __experimentalGrid as Grid,
@@ -14,18 +15,19 @@ import {
 /**
  * Internal dependencies.
  */
-import components from "./data";
+import { WpuiContext, components } from "./data";
 import { Banner } from "./cards";
 
 /**
  * Render Component Menu
  */
-function ComponentsMenu({setActivePath }) {
+function ComponentsMenu() {
+
+    const { setActivePath } = useContext(WpuiContext);
 
     return (
         <>
             <Banner />
-
             <VStack className="wpui_lcont" spacing={5}>
                 <HStack>
                     <Heading>Latest Components</Heading>
@@ -40,7 +42,12 @@ function ComponentsMenu({setActivePath }) {
                 >
                     {
                         components.map((component, index) =>
-                            <NavigatorButton key={index} path={component.path} onClick={() => setActivePath(component.path)} >
+                            <NavigatorButton
+                                key={index}
+                                path={component.path}
+                                variant="tertiary"
+                                onClick={() => setActivePath(component.path)}
+                            >
                                 <VStack style={{ width: '100%' }}>
                                     <Card className="wpui_preview" size="large" variant="secondary"></Card>
                                     <Heading

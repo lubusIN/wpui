@@ -16,9 +16,9 @@ function Breadcrumb() {
         <HStack alignment="center" spacing={4}>
             <Icon icon={home}></Icon>
             <Icon size={20} icon={chevronRight}></Icon>
-            <Heading level={4}>Projects</Heading>
+            <Heading level={4}>Posts</Heading>
             <Icon size={20} icon={chevronRight}></Icon>
-            <Heading level={4}>Lubus</Heading>
+            <Heading level={4}>Add new</Heading>
         </HStack>
     );
 };

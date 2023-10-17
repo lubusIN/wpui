@@ -50,7 +50,7 @@ function List() {
                             padding: '5px',
                         }}
                         >
-                            Completed
+                            Published
                         </Text>
                     </HStack>
                     <Text>Due on Marh 17,2023 . Created by LUBUS</Text>
@@ -74,7 +74,7 @@ function List() {
                             borderRadius: '4px',
                             padding: '5px',
                         }}
-                        > In Progress</Text>
+                        >Pending</Text>
                     </HStack>
                     <Text>Due on May 5,2023 . Created by LUBUS</Text>
                 </VStack>
@@ -97,7 +97,7 @@ function List() {
                             borderRadius: '4px',
                             padding: '5px',
                         }}
-                        > In Progress</Text>
+                        >Pending</Text>
                     </HStack>
                     <Text>Due on May 25,2023 . Created by LUBUS</Text>
                 </VStack>
@@ -114,13 +114,13 @@ function List() {
             <Grid>
                 <VStack>
                     <HStack alignment="left">
-                        <Heading level={3}>Site Redesign</Heading>
+                        <Heading level={4}>Site Redesign</Heading>
                         <Text color="#A16207" weight={600} style={{
                             backgroundColor: '#FEFCE8',
                             borderRadius: '4px',
                             padding: '5px',
                         }}
-                        >Archived</Text>
+                        >Draft</Text>
                     </HStack>
                     <Text>Due on June 10,2023 . Created by LUBUS</Text>
                 </VStack>

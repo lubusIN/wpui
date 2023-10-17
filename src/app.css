@@ -7,6 +7,57 @@ body {
     text-decoration: none;
 }
 
+.wpui_hero_Section {
+    background-image: url('http://127.0.0.1:5500/src/img/banner.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10vw 0px;
+}
+
+.wpui_newsletter {
+    padding: 60px 20px;
+}
+
+.wpui_newsletter .nl_container {
+    width: 50%;
+    margin: auto;
+}
+
+.wpui_newsletter .nl_container button {
+    background: #D9D9D9;
+    border-radius: 4px;
+    color: #5A6475;
+    height: auto;
+}
+
+.wpui_newsletter .nl_container button:hover {
+    background-color: #D9D9D9 !important;
+    color: #5A6475 !important;
+}
+
+.wpui_newsletter .nl_container button:focus {
+    --wp-admin-theme-color: #d9d9d9;
+}
+
+.wpui_newsletter .nl_container input:focus {
+    box-shadow: 0 0 0 0.5px #5A6475;
+}
+
+.wpui_newsletter .nl_container .nl_input {
+    width: 50%;
+}
+
+.wpui_newsletter .nl_container .nl_input input {
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    padding: 12px;
+    background: transparent
+}
+
+.wpui_newsletter .nl_container .nl_input * {
+    height: 100%;
+}
+
 .resize_cont .components-resizable-box__handle-right::after {
     width: 6px;
     height: 35px;
@@ -27,8 +78,8 @@ body {
     cursor: ew-resize !important;
 }
 
-.wpui_navigator {
-    padding: 2vw 3vw 3vw;
+.wpui_footer {
+    background-color: #3858E9 !important;
 }
 
 .wpui_header,
@@ -45,13 +96,11 @@ body {
     margin: auto;
 }
 
-.wpui_hero_Section {
-    padding-bottom: 5vw;
-}
-
-.wpui_lcont {
-    max-width: 1200px;
+.wpui_lcont,
+.wpui_com_page {
+    max-width: 1350px;
     margin: auto;
+    padding: 40px 20px;
 }
 
 div.wpui_preview {
@@ -62,7 +111,8 @@ div.wpui_preview {
 div.wpui_cl .components-navigator-button {
     height: auto;
     box-shadow: none !important;
-    padding: 0px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .wpui_copy {
@@ -81,6 +131,10 @@ div.wpui_cl .components-navigator-button {
 
     .wpui_footer .components-card__body .sec_1 {
         width: 100% !important;
+    }
+
+    div.wpui_newsletter .nl_container {
+        width: 100%;
     }
 }
 
