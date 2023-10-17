@@ -52,7 +52,7 @@ function Navigator() {
             const fetchFileContent = async () => {
                 try {
                     setView('preview');
-                    const response = await fetch(`http://127.0.0.1:5500/src/components${activePath}.js`); // Adjust the path accordingly
+                    const response = await fetch(`/src/components${activePath}.js`); // Adjust the path accordingly
                     if (!response.ok) {
                         throw new Error('Failed to fetch file');
                     }
