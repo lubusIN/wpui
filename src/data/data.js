@@ -8,11 +8,24 @@ import * as Components from '../components';
  */
 const components = [
     {
-        title: 'Heading',
+        title: 'Page Heading1',
         description: 'page heading',
-        path: '/heading',
-        component: Components.Heading,
+        path: '/pageheading1',
+        component: Components.PageHeading1,
     },
+    {
+        title: 'Page Heading2',
+        description: 'page heading',
+        path: '/pageheading2',
+        component: Components.PageHeading2,
+    },
+    {
+        title: 'Page Heading3',
+        description: 'page heading',
+        path: '/pageheading3',
+        component: Components.PageHeading3,
+    },
+
     {
         title: 'Breadcrumb',
         description: 'navigation',
@@ -20,29 +33,90 @@ const components = [
         component: Components.Breadcrumb,
     },
     {
-        title: 'Sign in',
-        description: '',
-        path: '/signIn',
-        component: Components.SignIn,
+        title: 'Breadcrumb1',
+        description: 'navigation',
+        path: '/breadcrumb1',
+        component: Components.Breadcrumb1,
     },
     {
-        title: 'Subscription',
+        title: 'Breadcrumb2',
+        description: 'navigation',
+        path: '/breadcrumb2',
+        component: Components.Breadcrumb2,
+    },
+
+    {
+        title: 'Sign in1',
         description: '',
-        path: '/subscription',
-        component: Components.Subscription,
+        path: '/signIn1',
+        component: Components.SignIn1,
     },
     {
-        title: 'Placeholder',
+        title: 'Sign in2',
         description: '',
-        path: '/placeholder',
-        component: Components.Placeholder,
+        path: '/signIn2',
+        component: Components.SignIn2,
     },
     {
-        title: 'Stats',
+        title: 'Sign in3',
         description: '',
-        path: '/stats',
-        component: Components.Stats,
+        path: '/signIn3',
+        component: Components.SignIn3,
     },
+
+
+    {
+        title: 'Action Panel1',
+        description: '',
+        path: '/panel1',
+        component: Components.Panel1,
+    },
+    {
+        title: 'Action Panel2',
+        description: '',
+        path: '/panel2',
+        component: Components.Panel2,
+    },
+    {
+        title: 'Action Panel3',
+        description: '',
+        path: '/panel3',
+        component: Components.Panel3,
+    },
+    {
+        title: 'Action Panel4',
+        description: '',
+        path: '/panel4',
+        component: Components.Panel4,
+    },
+
+    {
+        title: 'Empty State 1',
+        description: '',
+        path: '/emptystate1',
+        component: Components.Emptystate1,
+    },
+    {
+        title: 'Empty State 2',
+        description: '',
+        path: '/emptystate2',
+        component: Components.Emptystate2,
+    },
+
+
+    {
+        title: 'Stats 1',
+        description: '',
+        path: '/stats1',
+        component: Components.Stats1,
+    },
+    {
+        title: 'Stats 2',
+        description: '',
+        path: '/stats2',
+        component: Components.Stats2,
+    },
+
     {
         title: 'Dashboard',
         description: '',

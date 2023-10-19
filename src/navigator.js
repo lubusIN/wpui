@@ -35,10 +35,8 @@ import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 function Navigator() {
 
     const {
-        width,
         setWidth,
         activePath,
-        setActivePath,
         hasCopied,
         setHasCopied,
         view,
