@@ -15,7 +15,7 @@ import {
 import { addCard, edit, moreVertical, trash } from "@wordpress/icons";
 
 /**
- * Render Stacked List View
+ * Render List View
  */
 function List() {
 

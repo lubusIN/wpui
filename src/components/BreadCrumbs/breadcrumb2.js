@@ -19,7 +19,7 @@ function Breadcrumb2() {
             <CardBody
                 isShady
                 style={{
-                    width: '400px',
+                    maxwidth: '400px',
                     height: '35px',
                     margin: '20px',
                     display: 'flex',

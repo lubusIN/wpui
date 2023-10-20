@@ -26,7 +26,7 @@ function Panel3() {
                         <VStack spacing={3}>
                             <Heading level={3}>Renew Subscription automatically</Heading>
                             <HStack>
-                                <Text size={15} weight={400} style={{ width: '600px' }} variant="muted">
+                                <Text size={15} weight={400} style={{ maxwidth: '600px' }} variant="muted">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
                                 </Text>
                                 <ToggleControl

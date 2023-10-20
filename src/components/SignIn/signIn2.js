@@ -25,8 +25,8 @@ function SignIn2() {
             <Icon icon={wordpress} size={50}></Icon>
             <Heading>Sign in to your account</Heading>
 
-            <VStack spacing={5} style={{ width: '400px' }}>
-                <Card isRounded>
+            <VStack spacing={5}>
+                <Card isRounded style={{width: '350px' }}>
                     <TextControl placeholder='Username or Email Address' style={{ border: 'none' }} />
                     <CardDivider></CardDivider>
                     <TextControl type='password' placeholder='Password' style={{ border: 'none' }} />

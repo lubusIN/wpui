@@ -34,7 +34,7 @@ function PageHeading2() {
     ];
 
     return (
-        <HStack>
+        <HStack alignment="start" justify="space-between" spacing={3} direction={['column', 'row']}>
             <HStack alignment="left">
                 <Heading level={4}>Cashflow</Heading>
                 <Icon icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0h1v16H8V0z" /></svg>}></Icon>

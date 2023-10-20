@@ -14,6 +14,7 @@ export { default as Emptystate1 } from './EmptyState/emptystate1';
 export { default as Emptystate2 } from './EmptyState/emptystate2';
 
 export { default as Feeds } from './Feed/feeds';
+export { default as Feeds2 } from './Feed/feeds2';
 
 export { default as Cards } from './GridLists/cards';
 
@@ -23,7 +24,9 @@ export { default as PageHeading1 } from './PageHeadings/pageheading1';
 export { default as PageHeading2 } from './PageHeadings/pageheading2';
 export { default as PageHeading3 } from './PageHeadings/pageheading3';
 
-export { default as Dashboard } from './SidebarNavigation/dashboard';
+export { default as Sidebar1 } from './SidebarNavigation/sidebar1';
+export { default as Sidebar2 } from './SidebarNavigation/sidebar2';
+export { default as Sidebar3 } from './SidebarNavigation/sidebar3';
 
 export { default as SignIn1 } from './SignIn/signIn1';
 export { default as SignIn2 } from './SignIn/signIn2';
@@ -37,7 +40,9 @@ export { default as HeroSection } from './HeroSection/herosection';
 
 export { default as Stats1 } from './Stats/stats1';
 export { default as Stats2 } from './Stats/stats2';
+export { default as Stats3 } from './Stats/stats3';
 
 export { default as Table } from './Tables/table';
+export { default as Table2 } from './Tables/table2';
 
 export { default as ImageCard } from './ImageCard/imagecard';

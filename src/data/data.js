@@ -116,13 +116,32 @@ const components = [
         path: '/stats2',
         component: Components.Stats2,
     },
+    {
+        title: 'Stats 3',
+        description: '',
+        path: '/stats3',
+        component: Components.Stats3,
+    },
 
     {
-        title: 'Dashboard',
+        title: 'Sidebar 1',
         description: '',
-        path: '/dashboard',
-        component: Components.Dashboard,
+        path: '/sidebar1',
+        component: Components.Sidebar1,
     },
+    {
+        title: 'Sidebar 2',
+        description: '',
+        path: '/sidebar2',
+        component: Components.Sidebar2,
+    },
+    {
+        title: 'Sidebar 3',
+        description: '',
+        path: '/sidebar3',
+        component: Components.Sidebar3,
+    },
+
     {
         title: 'Stacked List',
         description: 'stacked list',
@@ -148,11 +167,25 @@ const components = [
         component: Components.Table,
     },
     {
+        title: 'Table2',
+        description: 'table2',
+        path: '/table2',
+        component: Components.Table2,
+    },
+
+    {
         title: 'Feeds',
         description: '',
         path: '/feeds',
         component: Components.Feeds,
     },
+    {
+        title: 'Feeds2',
+        description: '',
+        path: '/feeds2',
+        component: Components.Feeds2,
+    },
+
     {
         title: 'Hero Section',
         description: '',

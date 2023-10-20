@@ -16,7 +16,7 @@ import { chevronRight } from '@wordpress/icons';
 function PageHeading2() {
     return (
         <VStack>
-            <HStack alignment="left" spacing={4}>
+            <HStack alignment="left" direction={'row'}>
                 <Text>Jobs</Text>
                 <Icon size={20} icon={chevronRight}></Icon>
                 <Text>Engineering</Text>
