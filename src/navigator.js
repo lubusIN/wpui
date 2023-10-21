@@ -4,7 +4,6 @@
 import { __ } from '@wordpress/i18n';
 import { useContext, useEffect } from '@wordpress/element';
 import {
-    ResizableBox,
     Card,
     CardBody,
     ClipboardButton,
@@ -14,12 +13,12 @@ import {
     __experimentalNavigatorProvider as NavigatorProvider,
     __experimentalNavigatorBackButton as NavigatorBackButton,
     __experimentalToggleGroupControl as ToggleGroupControl,
-    __experimentalToggleGroupControlOption as ToggleGroupControlOption,
+    __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { chevronRight, copy } from "@wordpress/icons";
+import { chevronRight, code, copy, seen } from "@wordpress/icons";
 
 /**
  * Internal dependencies.
@@ -37,20 +36,22 @@ function Navigator() {
     const {
         setWidth,
         activePath,
+        setActivePath,
         hasCopied,
         setHasCopied,
         view,
         setView,
         content,
-        setContent
+        setContent,
+        selectedIndex,
+        setIndex
     } = useContext(WpuiContext);
 
     useEffect(() => {
         if (activePath) {
             const fetchFileContent = async () => {
                 try {
-                    setView('preview');
-                    const response = await fetch(`/src/components${activePath}.js`); // Adjust the path accordingly
+                    const response = await fetch(`/src/components${activePath}.js`);
                     if (!response.ok) {
                         throw new Error('Failed to fetch file');
                     }
@@ -74,7 +75,7 @@ function Navigator() {
             </NavigatorScreen>
 
             {
-                components.map(({ title, path, component: Component }, index) => (
+                components.map(({ title, path, variations }, index) => (
 
                     <NavigatorScreen
                         className='wpui_com_page'
@@ -82,8 +83,8 @@ function Navigator() {
                         key={index}
                         style={{ overflowX: 'visible' }}
                     >
-                        <VStack spacing={4}>
-                            <HStack alignment='left' spacing={0}>
+                        <VStack spacing={8}>
+                            <HStack className="wpui_back_navig" alignment='left' spacing={0}>
                                 <NavigatorBackButton
                                     icon={chevronRight}
                                     iconPosition='right'
@@ -92,52 +93,55 @@ function Navigator() {
                                 </NavigatorBackButton>
                                 <Text>{title}</Text>
                             </HStack>
-                            <HStack>
-                                <Heading weight={500}>{title}</Heading>
-                                <HStack expanded={false} justify='right' alignment='center'>
-                                    <ToggleGroupControl
-                                        __nextHasNoMarginBottom
-                                        isBlock
-                                        value={view}
-                                        onChange={(value) => setView(value)}
-                                    >
-                                        <ToggleGroupControlOption value="preview" label="Preview" />
-                                        <ToggleGroupControlOption value="code" label="Code" />
-                                    </ToggleGroupControl>
-                                    <ClipboardButton
-                                        className='wpui_copy'
-                                        icon={copy}
-                                        text={content}
-                                        onCopy={() => setHasCopied(true)}
-                                        onFinishCopy={() => setHasCopied(false)}
-                                    >
-                                        {hasCopied && <Popover className='copied_pop' position='top right'>Copied</Popover>}
-                                    </ClipboardButton>
-                                </HStack>
-                            </HStack>
-                            {view == 'preview' &&
-                                <ResizableBox
-                                    className="resize_cont"
-                                    enable={{ right: true }}
-                                    __experimentalShowTooltip
-                                    onResize={(event, direction, elt, delta) => {
-                                        setWidth(elt.offsetWidth);
-                                    }}
-                                    maxWidth={'100%'}
-                                    minWidth={'380px'}
-                                >
-                                    <Card size="large" style={{ borderRadius: '4px' }}>
-                                        <CardBody>
-                                            <Component />
-                                        </CardBody>
-                                    </Card>
-                                </ResizableBox>
-                            }
-                            {view == 'code' &&
-                                <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
-                                    {content}
-                                </SyntaxHighlighter>
-                            }
+
+                            <VStack spacing={24}>
+                                {variations.map(({ title, path, component: Component }, index) => (
+                                    <VStack key={index} spacing={4}>
+                                        <HStack>
+                                            <Heading level={4} weight={500}>{title}</Heading>
+                                            <HStack expanded={false} justify='right' alignment='center'>
+                                                <ToggleGroupControl
+                                                    className="wpui_view_toggle"
+                                                    hideLabelFromVision
+                                                    __nextHasNoMarginBottom
+                                                    isBlock
+                                                    value={selectedIndex == index ? view : 'preview'}
+                                                    onChange={(value) => {
+                                                        setView(value);
+                                                        setIndex(index);
+                                                        setActivePath(path);
+                                                    }}
+                                                >
+                                                    <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
+                                                    <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
+                                                </ToggleGroupControl>
+                                                <ClipboardButton
+                                                    className='wpui_copy'
+                                                    icon={copy}
+                                                    text={content}
+                                                    onCopy={() => setHasCopied(true)}
+                                                    onFinishCopy={() => setHasCopied(false)}
+                                                >
+                                                    {hasCopied && <Popover className='copied_pop' position='top right'>Copied</Popover>}
+                                                </ClipboardButton>
+                                            </HStack>
+                                        </HStack>
+
+                                        {
+                                            selectedIndex !== index || view !== 'code' ? (
+                                                <Card className="wpui_variation_card">
+                                                    <Component />
+                                                </Card>
+                                            ) : (
+                                                <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
+                                                    {content}
+                                                </SyntaxHighlighter>
+                                            )
+                                        }
+
+                                    </VStack>
+                                ))}
+                            </VStack>
                         </VStack>
                     </NavigatorScreen>
                 ))
