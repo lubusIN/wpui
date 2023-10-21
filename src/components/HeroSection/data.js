@@ -12,6 +12,11 @@ const HeroSection = [
         path: '/herosection/section1',
         component: Components.Section1
     },
+    {
+        title: 'Section 2',
+        path: '/herosection/section2',
+        component: Components.Section2
+    }
 ];
 
 export default HeroSection;

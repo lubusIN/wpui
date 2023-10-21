@@ -45,9 +45,9 @@ const components = [
     },
     {
         title: 'Feeds',
-        path: '/feed/feeds',
+        path: '/feed/feed1',
         src: '/feed.png',
-        variations: Components.Feed,
+        variations: Components.Feeds,
     },
     {
         title: 'Forms',
