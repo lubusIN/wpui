@@ -6,6 +6,10 @@ body {
     margin: 0px;
 }
 
+.wpui_site_logo .components-external-link__icon {
+    display: none;
+}
+
 .wpui_header a {
     text-decoration: none;
 }
@@ -109,6 +113,13 @@ body {
 div.wpui_preview {
     height: 180px;
     border-radius: 4px;
+    background: #b8cfffd4;
+    padding: 20px 0px;
+}
+
+div.wpui_preview img {
+    height: 100%;
+    box-shadow: 0 1px 20px 0 rgb(0 0 0 / 0.1), 0 1px 0px -1px rgb(0 0 0 / 0.1);
 }
 
 div.wpui_cl .components-navigator-button {
@@ -124,6 +135,22 @@ div.wpui_cl .components-navigator-button {
 
 .copied_pop .components-popover__content {
     padding: 8px !important;
+}
+
+.wpui_view_toggle .css-f6ebsm-backdropView {
+    transform: none !important;
+}
+
+.wpui_back_navig button,
+.wpui_back_navig span {
+    font-size: .875rem;
+    font-weight: 500;
+    color: rgb(83 83 83);
+}
+
+.wpui_variation_card {
+    padding: 45px 35px;
+    border-radius: 4px !important;
 }
 
 @media only screen and (max-width: 480px) {

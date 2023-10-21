@@ -13,7 +13,7 @@ import {
 /**
  * Render File uploader empty stats
  */
-function Emptystate2() {
+function EmptyState2() {
     return (
         <VStack alignment="center" spacing={6}>
             <Card style={{ border: 'dashed' }}>
@@ -28,4 +28,4 @@ function Emptystate2() {
     );
 };
 
-export default Emptystate2;
+export default EmptyState2;

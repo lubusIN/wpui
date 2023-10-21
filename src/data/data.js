@@ -8,169 +8,95 @@ import * as Components from '../components';
  */
 const components = [
     {
-        title: 'Page Heading1',
-        description: 'page heading',
-        path: '/pageheading1',
-        component: Components.PageHeading1,
+        title: 'Page Heading',
+        path: '/pageheading/heading1',
+        src: '',
+        variations: Components.PageHeading,
     },
     {
-        title: 'Page Heading2',
-        description: 'page heading',
-        path: '/pageheading2',
-        component: Components.PageHeading2,
+        title: 'Breadcrumbs',
+        path: '/breadcrumbs/breadcrumb1',
+        src: '/breadcrumb.png',
+        variations: Components.Breadcrumb,
     },
     {
-        title: 'Page Heading3',
-        description: 'page heading',
-        path: '/pageheading3',
-        component: Components.PageHeading3,
-    },
-
-    {
-        title: 'Breadcrumb',
-        description: 'navigation',
-        path: '/breadcrumb',
-        component: Components.Breadcrumb,
+        title: 'Empty State',
+        path: '/emptstate/emptystate1',
+        src: '/emptystate.png',
+        variations: Components.EmptyState,
     },
     {
-        title: 'Breadcrumb1',
-        description: 'navigation',
-        path: '/breadcrumb1',
-        component: Components.Breadcrumb1,
-    },
-    {
-        title: 'Breadcrumb2',
-        description: 'navigation',
-        path: '/breadcrumb2',
-        component: Components.Breadcrumb2,
-    },
-
-    {
-        title: 'Sign in1',
-        description: '',
-        path: '/signIn1',
-        component: Components.SignIn1,
-    },
-    {
-        title: 'Sign in2',
-        description: '',
-        path: '/signIn2',
-        component: Components.SignIn2,
-    },
-    {
-        title: 'Sign in3',
-        description: '',
-        path: '/signIn3',
-        component: Components.SignIn3,
-    },
-
-
-    {
-        title: 'Action Panel1',
-        description: '',
-        path: '/panel1',
-        component: Components.Panel1,
-    },
-    {
-        title: 'Action Panel2',
-        description: '',
-        path: '/panel2',
-        component: Components.Panel2,
-    },
-    {
-        title: 'Action Panel3',
-        description: '',
-        path: '/panel3',
-        component: Components.Panel3,
-    },
-    {
-        title: 'Action Panel4',
-        description: '',
-        path: '/panel4',
-        component: Components.Panel4,
-    },
-
-    {
-        title: 'Empty State 1',
-        description: '',
-        path: '/emptystate1',
-        component: Components.Emptystate1,
-    },
-    {
-        title: 'Empty State 2',
-        description: '',
-        path: '/emptystate2',
-        component: Components.Emptystate2,
-    },
-
-
-    {
-        title: 'Stats 1',
-        description: '',
-        path: '/stats1',
-        component: Components.Stats1,
-    },
-    {
-        title: 'Stats 2',
-        description: '',
-        path: '/stats2',
-        component: Components.Stats2,
-    },
-
-    {
-        title: 'Dashboard',
-        description: '',
-        path: '/dashboard',
-        component: Components.Dashboard,
-    },
-    {
-        title: 'Stacked List',
-        description: 'stacked list',
-        path: '/list',
-        component: Components.List,
-    },
-    {
-        title: 'Form',
-        description: '',
-        path: '/form',
-        component: Components.Form,
-    },
-    {
-        title: 'Cards',
-        description: '',
-        path: '/cards',
-        component: Components.Cards,
-    },
-    {
-        title: 'Table',
-        description: 'table',
-        path: '/table',
-        component: Components.Table,
-    },
-    {
-        title: 'Feeds',
-        description: '',
-        path: '/feeds',
-        component: Components.Feeds,
-    },
-    {
-        title: 'Hero Section',
-        description: '',
-        path: '/herosection',
-        component: Components.HeroSection,
+        title: 'FAQS',
+        path: '/faq/faqs',
+        src: '/faqs.png',
+        variations: Components.Faqs,
     },
     {
         title: 'Image Card',
-        description: '',
-        path: '/imagecard',
-        component: Components.ImageCard,
+        path: '/imagecard/imagecard',
+        src: '/cards.png',
+        variations: Components.ImageCard,
     },
     {
-        title: 'FAQs',
-        description: '',
-        path: '/faqs',
-        component: Components.Faqs,
+        title: 'Action Panels',
+        path: '/actionpanels/panel1',
+        src: '/actionpanel.png',
+        variations: Components.ActionPanels,
     },
+    {
+        title: 'Feeds',
+        path: '/feed/feeds',
+        src: '/feed.png',
+        variations: Components.Feed,
+    },
+    {
+        title: 'Forms',
+        path: '/form/form',
+        src: '/form.png',
+        variations: Components.Forms,
+    },
+    {
+        title: 'Hero Section',
+        path: '/herosection/section1',
+        src: '/herosection.png',
+        variations: Components.HeroSection,
+    },
+    {
+        title: 'Sign-in and Registration',
+        path: '/signin/signIn1',
+        src: '/signin.png',
+        variations: Components.SignIn,
+    },
+    {
+        title: 'Stats',
+        path: '/stats/stats1',
+        src: '',
+        variations: Components.Stats,
+    },
+    {
+        title: 'Grid Lists',
+        path: '/gridlists/grid1',
+        src: '',
+        variations: Components.GridLists,
+    },
+    {
+        title: 'Lists',
+        path: '/lists/list1',
+        src: '/list.png',
+        variations: Components.Lists,
+    },
+    {
+        title: 'Tables',
+        path: '/tables/table1',
+        src: '/table.png',
+        variations: Components.Tables,
+    },
+    {
+        title: 'Sidebar Navigation',
+        path: '/sidebarnavigation/sidebar1',
+        src: '/sidebarnavigation.png',
+        variations: Components.SidebarNavigation,
+    }
 ];
 
 export default components;

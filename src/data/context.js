@@ -15,19 +15,7 @@ const WpuiProvider = ({ children }) => {
     const [hasCopied, setHasCopied] = useState(false);
     const [view, setView] = useState('preview');
     const [content, setContent] = useState('');
-    const [direction, setDirection] = useState();
-
-    useEffect(() => {
-        if (width <= 480) {
-            setDirection('column');
-        }
-        // else if (width <= 920) {
-        //     setDirection('column'); // You can set a different direction if needed
-        // }
-        else {
-            setDirection(['column', 'row']);
-        }
-    }, [width])
+    const [selectedIndex, setIndex] = useState(0);
 
     return (
         <WpuiContext.Provider
@@ -42,8 +30,8 @@ const WpuiProvider = ({ children }) => {
                 setView,
                 content,
                 setContent,
-                direction,
-                setDirection
+                selectedIndex,
+                setIndex
             }}
         >
             {children}

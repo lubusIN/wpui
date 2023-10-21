@@ -13,7 +13,7 @@ import { file, plus } from "@wordpress/icons";
 /**
  * Render File uploader empty stats
  */
-function Emptystate1() {
+function EmptyState1() {
     return (
         <VStack alignment="center" spacing={6}>
             <VStack alignment="center" spacing={2}>
@@ -28,4 +28,4 @@ function Emptystate1() {
     );
 };
 
-export default Emptystate1;
+export default EmptyState1;
