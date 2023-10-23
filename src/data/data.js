@@ -96,7 +96,31 @@ const components = [
         path: '/sidebarnavigation/sidebar1',
         src: '/sidebarnavigation.png',
         variations: Components.SidebarNavigation,
-    }
+    },
+    {
+        title: 'Navigation',
+        path: '/navigation/Navigation1',
+        src: '',
+        variations: Components.Navigation,
+    },
+    {
+        title: 'Slide Over',
+        path: '/slideover/Slide1',
+        src: '',
+        variations: Components.SlideOver,
+    },
+    {
+        title: 'Card Heading',
+        path: '/cardheading/cardHeading1',
+        src: '',
+        variations: Components.CardHeading,
+    },
+    {
+        title: 'Modal',
+        path: '/modal/modal1',
+        src: '',
+        variations: Components.Modal,
+    },
 ];
 
 export default components;

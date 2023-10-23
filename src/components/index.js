@@ -16,5 +16,7 @@ export { default as GridLists } from './GridLists/data';
 export { default as Lists } from './Lists/data';
 export { default as Tables } from './Tables/data';
 export { default as SidebarNavigation } from './SidebarNavigation/data';
-
-
+export { default as Navigation } from './Navigation/data';
+export { default as SlideOver } from './SlideOver/data';
+export { default as CardHeading } from './CardHeading/data';
+export { default as Modal } from './Modals/data';
