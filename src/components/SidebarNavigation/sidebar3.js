@@ -5,13 +5,9 @@ import {
     Icon,
     Card,
     __experimentalGrid as Grid,
-<<<<<<<< HEAD:src/components/SidebarNavigation/sidebar3.js
-    __experimentalText as Text,
-========
     __experimentalVStack as VStack,
     __experimentalText as Text,
     __experimentalHeading as Heading,
->>>>>>>> main:src/components/SidebarNavigation/sidebar1.js
     __experimentalHStack as HStack,
     __experimentalNavigation as Navigation,
     __experimentalNavigationGroup as NavigationGroup,
@@ -21,18 +17,10 @@ import {
 } from "@wordpress/components";
 import { cog, home, file, calendar, pages, people, commentAuthorAvatar } from "@wordpress/icons";
 
-<<<<<<<< HEAD:src/components/SidebarNavigation/sidebar3.js
-
 /**
  * Render Dashboard
  */
 function Sidebar3() {
-========
-/**
- * Render Dashboard
- */
-function Sidebar1() {
->>>>>>>> main:src/components/SidebarNavigation/sidebar1.js
 
     const items = [
         {
@@ -110,9 +98,7 @@ function Sidebar1() {
 
             </Card>
             <Card>
-<<<<<<<< HEAD:src/components/SidebarNavigation/sidebar3.js
                 <Card variant="grid" style={{ margin: '15px', height: '70vh', width: 'auto' }}></Card>
-========
                 <VStack expanded>
                     <CardBody>
                         <VStack spacing={12}>
@@ -138,14 +124,9 @@ function Sidebar1() {
                         </VStack>
                     </CardBody>
                 </VStack>
->>>>>>>> main:src/components/SidebarNavigation/sidebar1.js
             </Card>
         </Grid>
     );
 };
 
-<<<<<<<< HEAD:src/components/SidebarNavigation/sidebar3.js
 export default Sidebar3;
-========
-export default Sidebar1;
->>>>>>>> main:src/components/SidebarNavigation/sidebar1.js
