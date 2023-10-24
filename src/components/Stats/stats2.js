@@ -10,7 +10,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
-
+    __experimentalSurface as Surface
 } from "@wordpress/components";
 import { arrowUp, arrowDown } from "@wordpress/icons";
 
@@ -19,88 +19,90 @@ import { arrowUp, arrowDown } from "@wordpress/icons";
  */
 function Stats2() {
     return (
-        <Card variant="secondary" isRounded>
-            <CardBody>
-                <VStack>
-                    <Heading level={3}>Last 30 days</Heading>
-                    <Card isRounded >
-
-                        <Grid
-                            columns={[1, 2, 3]}
-                        >
-                            <CardBody>
-                                <VStack>
-                                    <Heading level={3}>Total Subscribers</Heading>
-                                    <HStack alignment="left">
-                                        <Heading level={2} style={{ color: 'blue' }}>71,987</Heading>
-                                        <HStack alignment="bottomRight" justify="space-around">
-                                            <Text>from 70,900</Text>
-                                            <div style={{
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'flex-end',
-                                                backgroundColor: '#DCFCE6',
-                                                borderRadius: '10px',
-                                                padding: '0px 5px'
-                                            }}>
-                                                <Icon icon={arrowUp} fill="#22C55D"></Icon>
-                                                <Text style={{ color: '#176434' }}>12%</Text>
-                                            </div>
-                                        </HStack>
+        <Card isBorderless isRounded>
+            <VStack spacing={5}>
+                <Heading level={3}>Last 30 days</Heading>
+                <Grid columns={[1, 2, 3]} gap={0}>
+                    <Card>
+                        <CardBody>
+                            <VStack spacing={3}>
+                                <Heading level={3} weight={500}>Total Subscribers</Heading>
+                                <HStack>
+                                    <HStack justify="left">
+                                        <Heading level={2}>71,987</Heading>
+                                        <Text>from 70,900</Text>
                                     </HStack>
-                                </VStack>
-                            </CardBody>
-
-                            <CardBody>
-                                <VStack>
-                                    <Heading level={3}>Avg. Open Rate</Heading>
-                                    <HStack>
-                                        <Heading level={2} style={{ color: 'blue' }}>58.16%</Heading>
-                                        <HStack alignment="bottomRight" justify="space-around">
-                                            <Text>from 56.10%</Text>
-                                            <div style={{
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'flex-end',
-                                                backgroundColor: '#DCFCE6',
-                                                borderRadius: '10px',
-                                                padding: '0px 5px'
-                                            }}>
-                                                <Icon icon={arrowUp} fill="#22C55D"></Icon>
-                                                <Text style={{ color: '#176434' }}>2.02%</Text>
-                                            </div>
+                                    <Surface
+                                        style={{
+                                            backgroundColor: '#DCFCE6',
+                                            borderRadius: '10px',
+                                            padding: '0px 15px 0px 5px'
+                                        }}
+                                    >
+                                        <HStack spacing={0}>
+                                            <Icon icon={arrowUp} fill="#22C55D"></Icon>
+                                            <Text color='#176434'>12%</Text>
                                         </HStack>
-                                    </HStack>
-                                </VStack>
-                            </CardBody>
-
-                            <CardBody>
-                                <VStack>
-                                    <Heading level={3}>Avg. Click Rate</Heading>
-                                    <HStack>
-                                        <Heading level={2} style={{ color: 'blue' }}>24.57%</Heading>
-                                        <HStack alignment="bottomRight" justify="space-around">
-                                            <Text>from 28.62%</Text>
-                                            <div style={{
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'flex-end',
-                                                backgroundColor: '#FDE2E1',
-                                                borderRadius: '10px',
-                                                padding: '0px 5px'
-                                            }}>
-                                                <Icon icon={arrowDown} fill="#F04444"></Icon>
-                                                <Text style={{ color: '#B04A48' }}>4.04%</Text>
-                                            </div>
-                                        </HStack>
-                                    </HStack>
-                                </VStack>
-                            </CardBody>
-                        </Grid>
+                                    </Surface>
+                                </HStack>
+                            </VStack>
+                        </CardBody>
                     </Card>
-                </VStack>
-            </CardBody>
-        </Card >
+
+                    <Card>
+                        <CardBody>
+                            <VStack spacing={3}>
+                                <Heading level={3} weight={500}>Avg. Open Rate</Heading>
+                                <HStack>
+                                    <HStack justify="left">
+                                        <Heading level={2}>58.16%</Heading>
+                                        <Text>from 56.10%</Text>
+                                    </HStack>
+                                    <Surface
+                                        style={{
+                                            backgroundColor: '#DCFCE6',
+                                            borderRadius: '10px',
+                                            padding: '0px 15px 0px 5px'
+                                        }}
+                                    >
+                                        <HStack spacing={0}>
+                                            <Icon icon={arrowUp} fill="#22C55D"></Icon>
+                                            <Text color='#176434'>2.02%</Text>
+                                        </HStack>
+                                    </Surface>
+                                </HStack>
+                            </VStack>
+                        </CardBody>
+                    </Card>
+
+                    <Card>
+                        <CardBody>
+                            <VStack spacing={3}>
+                                <Heading level={3} weight={500}>Avg. Click Rate</Heading>
+                                <HStack>
+                                    <HStack justify="left">
+                                        <Heading level={2}>24.57%</Heading>
+                                        <Text>from 28.62%</Text>
+                                    </HStack>
+                                    <Surface
+                                        style={{
+                                            backgroundColor: '#FDE2E1',
+                                            borderRadius: '10px',
+                                            padding: '0px 15px 0px 5px'
+                                        }}
+                                    >
+                                        <HStack spacing={0}>
+                                            <Icon icon={arrowDown} fill="#F04444"></Icon>
+                                            <Text color='#B04A48'>4.04%</Text>
+                                        </HStack>
+                                    </Surface>
+                                </HStack>
+                            </VStack>
+                        </CardBody>
+                    </Card>
+                </Grid>
+            </VStack>
+        </Card>
     );
 };
 

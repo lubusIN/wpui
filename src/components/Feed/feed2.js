@@ -15,7 +15,7 @@ import {
     Button,
 
 } from "@wordpress/components";
-import { border, check, commentAuthorAvatar, pin } from "@wordpress/icons";
+import { border, check, commentAuthorAvatar } from "@wordpress/icons";
 
 /**
  * Render Feeds
@@ -69,13 +69,11 @@ function Feed2() {
                         <Icon icon={commentAuthorAvatar} style={{ marginTop: '-40px' }}></Icon>
                         <Card>
                             <CardBody>
-                                <VStack>
-                                    <HStack spacing={10}>
-                                        <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted">commented</Text> </Text>
-                                        <Text>6d ago</Text>
-                                    </HStack>
-                                    <Text variant="muted">Called client, they reassured me th invoice would be paid by 25th</Text>
-                                </VStack>
+                                <HStack spacing={10}>
+                                    <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted">commented</Text> </Text>
+                                    <Text>6d ago</Text>
+                                </HStack>
+                                <Text variant="muted">Called client, they reassured me th invoice would be paid by 25th</Text>
                             </CardBody>
                         </Card>
                     </HStack>

@@ -3,34 +3,33 @@
  */
 import {
     Button,
-    __experimentalDivider as Divider,
+    __experimentalSurface as Surface,
     __experimentalHStack as HStack,
+    __experimentalGrid as Grid,
+    __experimentalVStack as VStack,
+    __experimentalText as Text,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { create } from '@wordpress/icons';
+import { edit } from '@wordpress/icons';
 
 /**
  * Render Page Heading 3
  */
 function Heading3() {
     return (
-        <HStack alignment={'flex-start'} direction={['column', 'row']}>
-            <HStack alignment="center" justify="left" direction={['column', 'row']}>
-                <Heading level={4}>Cashflow</Heading>
-                <Divider
-                    margin="2"
-                    orientation="vertical"
-                />
-                <HStack expanded={false}>
-                    <Button>Last 7 days</Button>
-                    <Button>Last 30 days</Button>
-                    <Button>All time</Button>
-                </HStack>
+        <Grid columns={[1, 2]} rowGap={35}>
+            <HStack alignment="center" justify="left" spacing={5}>
+                <Surface as={'img'} src="https://placehold.co/80" style={{ borderRadius: '100%' }} />
+                <VStack expanded={false}>
+                    <Heading level={2}>Ricardo Cooper</Heading>
+                    <Text size={14} color="grey">Applied for <Text weight={500}>Front End Developer</Text> on August 25, 2020</Text>
+                </VStack>
             </HStack>
-            <Button variant="primary" icon={create} iconSize={40}>
-                New Invoice
-            </Button>
-        </HStack>
+            <HStack spacing={3} justify="right">
+                <Button icon={edit} variant="secondary">Edit</Button>
+                <Button variant="primary">Publish</Button>
+            </HStack>
+        </Grid>
     );
 }
 

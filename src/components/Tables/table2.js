@@ -2,8 +2,8 @@
  * WordPress dependencies.
  */
 import {
-    Icon,
     Button,
+    __experimentalScrollable as Scrollable,
     __experimentalTreeGrid as TreeGrid,
     __experimentalTreeGridRow as TreeGridRow,
     __experimentalTreeGridCell as TreeGridCell,
@@ -12,7 +12,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { commentAuthorAvatar } from "@wordpress/icons";
 
 /**
  * Render Users Table
@@ -52,7 +51,7 @@ function Table2() {
 
     return (
         <VStack spacing={10}>
-            <HStack>
+            <HStack direction={['column', 'row']} alignment="start" justify="space-between">
                 <VStack>
                     <Heading level={3} >Invoice</Heading>
                     <Text>For work completed</Text>
@@ -60,57 +59,64 @@ function Table2() {
                 <Button variant="primary">Print</Button>
             </HStack>
 
-            <TreeGrid style={{ width: '100%', borderCollapse: 'collapse' }}>
-                <TreeGridRow>
-                    <TreeGridCell withoutGridItem>
-                        <Heading level={4}>Project</Heading>
-                    </TreeGridCell>
-                    <TreeGridCell withoutGridItem>
-                        <Heading level={4}>Hours</Heading>
-                    </TreeGridCell>
-                    <TreeGridCell withoutGridItem>
-                        <Heading level={4}>Rate</Heading>
-                    </TreeGridCell>
-                    <TreeGridCell withoutGridItem>
-                        <Heading level={4}>Price</Heading>
-                    </TreeGridCell>
-                </TreeGridRow>
-                {data.map((item, index) => (
-                    <TreeGridRow key={index} style={{ borderTop: '1px solid rgba(0 0 0 / 0.1)' }}>
-                        <TreeGridCell>
-                            {(props) => (
-                                <HStack alignment="left">
-                                    <VStack>
-                                        <Heading level={5}>{item.name}</Heading>
-                                        <Text>{item.description}</Text>
-                                    </VStack>
-                                </HStack>
-                            )}
+            <Scrollable scrollDirection="x">
+                <TreeGrid className="wpui_table" style={{ width: '100%', borderCollapse: 'collapse' }}>
+                    <TreeGridRow>
+                        <TreeGridCell withoutGridItem>
+                            <Heading level={4}>Project</Heading>
                         </TreeGridCell>
-                        <TreeGridCell>
-                            {(props) => (
-                                <Text size={15}>{item.time}</Text>
-                            )}
+                        <TreeGridCell withoutGridItem>
+                            <Heading level={4}>Hours</Heading>
                         </TreeGridCell>
-                        <TreeGridCell>
-                            {(props) => (
-                                <Text size={15}>{item.rate}</Text>
-                            )}
+                        <TreeGridCell withoutGridItem>
+                            <Heading level={4}>Rate</Heading>
                         </TreeGridCell>
-                        <TreeGridCell>
-                            {(props) => (
-                                <Text>{item.price}</Text>
-                            )}
+                        <TreeGridCell withoutGridItem>
+                            <Heading level={4}>Price</Heading>
                         </TreeGridCell>
                     </TreeGridRow>
-                ))}
-            </TreeGrid>
+                    {data.map((item, index) => (
+                        <TreeGridRow key={index} style={{ borderTop: '1px solid rgba(0 0 0 / 0.1)' }}>
+                            <TreeGridCell>
+                                {(props) => (
+                                    <HStack alignment="left">
+                                        <VStack>
+                                            <Heading level={5}>{item.name}</Heading>
+                                            <Text>{item.description}</Text>
+                                        </VStack>
+                                    </HStack>
+                                )}
+                            </TreeGridCell>
+                            <TreeGridCell>
+                                {(props) => (
+                                    <Text size={15}>{item.time}</Text>
+                                )}
+                            </TreeGridCell>
+                            <TreeGridCell>
+                                {(props) => (
+                                    <Text size={15}>{item.rate}</Text>
+                                )}
+                            </TreeGridCell>
+                            <TreeGridCell>
+                                {(props) => (
+                                    <Text>{item.price}</Text>
+                                )}
+                            </TreeGridCell>
+                        </TreeGridRow>
+                    ))}
+                </TreeGrid>
+            </Scrollable>
 
             <style>
                 {`
                     td{
                         padding: 15px 0px
                     }
+                    @media only screen and (max-width: 480px){
+                        .wpui_table{
+                             width: 600px !important
+                        }
+                     }
                `}
             </style>
         </VStack>

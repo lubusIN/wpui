@@ -11,8 +11,8 @@ function NewsLetter() {
     return (
         <Card isBorderless variant="secondary" className="wpui_newsletter">
             <VStack className="nl_container" spacing={10}>
-                <Heading level={1} align="center" weight={500} lineHeight={1.5}>
-                    Be the trailblazer and stay one step ahead by signing up for updates on our future releases.
+                <Heading level={2} align="center" weight={500} lineHeight={1.5}>
+                    Stay one step ahead by signing up for updates.
                 </Heading>
                 <HStack alignment="stretch" spacing={3}>
                     <TextControl

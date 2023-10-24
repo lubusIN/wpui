@@ -21,6 +21,11 @@ const PageHeading = [
         title: 'Heading 3',
         path: '/pageheading/heading3',
         component: Components.Heading3
+    },
+    {
+        title: 'Heading 4',
+        path: '/pageheading/heading4',
+        component: Components.Heading4
     }
 ];
 

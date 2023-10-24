@@ -16,6 +16,11 @@ const HeroSection = [
         title: 'Section 2',
         path: '/herosection/section2',
         component: Components.Section2
+    },
+    {
+        title: 'Section 3',
+        path: '/herosection/section3',
+        component: Components.Section3
     }
 ];
 

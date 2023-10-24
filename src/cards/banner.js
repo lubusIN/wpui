@@ -17,20 +17,18 @@ import {
 function Banner() {
     return (
         <Card className="wpui_hero_Section" isBorderless>
-            <CardBody>
+            <CardBody className="wpui_hero_cont">
                 <VStack spacing={12}>
-                    <VStack spacing={3}>
-                        <Text size={15} align="center" color="white">From the House of LUBUS</Text>
-                        <Heading size={40} align="center" color="white" lineHeight={1.3} weight={500}>
-                            Lorem Ipsum is simply dummy text of <br /> the printing and typesetting industry.
+                    <VStack spacing={5}>
+                        <Text size={15} align="left" color="white">From the House of LUBUS</Text>
+                        <Heading size={40} align="left" color="white" lineHeight={1.3} weight={500}>
+                            Build your React Powered WordPress plugin or App with speed.
                         </Heading>
-                        <Text size={16} align="center" color="white" lineHeight={1.5}>
-                            Lorem Ipsum has been the industry's standard dummy text
-                            ever since the <br /> 1500s, when an unknown printer took a galley
-                            of type and scrambled it to <br /> make a type specimen book.
+                        <Text size={16} align="left" color="white" lineHeight={1.5}>
+                            WPUI is design pattern library build upon WordPress components that gives you the building blocks you need to build your React powered WordPress plugin or app. Spend less time on UI and more time building your idea.
                         </Text>
                     </VStack>
-                    <HStack alignment="center">
+                    <HStack alignment="center" justify="left">
                         <Button
                             variant="primary"
                             icon={<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -39,10 +37,7 @@ function Banner() {
                             iconSize={20}
                             href="https://github.com/lubusIN/wpui"
                         >
-                            Open source
-                        </Button>
-                        <Button variant="primary">
-                            Subscribe NewsLetter
+                            Opensource
                         </Button>
                     </HStack>
                 </VStack>

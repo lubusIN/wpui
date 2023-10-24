@@ -330,7 +330,7 @@
   color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
   background: transparent;
 }
-.components-button.is-secondary:hover:not(:disabled, [aria-disabled=true]) {
+.components-button.is-secondary:hover:not(:disabled) {
   box-shadow: inset 0 0 0 1px var(--wp-components-color-accent-darker-10, var(--wp-admin-theme-color-darker-10, #2145e6));
 }
 .components-button.is-tertiary {
@@ -444,15 +444,15 @@ p + .components-button.is-tertiary {
   padding-left: 8px;
   gap: 4px;
 }
-.components-button[aria-pressed=true], .components-button[aria-pressed=mixed] {
+.components-button.is-pressed {
   color: var(--wp-components-color-foreground-inverted, #fff);
   background: var(--wp-components-color-foreground, #1e1e1e);
 }
-.components-button[aria-pressed=true]:focus:not(:disabled), .components-button[aria-pressed=mixed]:focus:not(:disabled) {
+.components-button.is-pressed:focus:not(:disabled) {
   box-shadow: inset 0 0 0 1px var(--wp-components-color-background, #fff), 0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
   outline: 2px solid transparent;
 }
-.components-button[aria-pressed=true]:hover:not(:disabled), .components-button[aria-pressed=mixed]:hover:not(:disabled) {
+.components-button.is-pressed:hover:not(:disabled) {
   color: var(--wp-components-color-foreground-inverted, #fff);
   background: var(--wp-components-color-foreground, #1e1e1e);
 }
@@ -503,8 +503,8 @@ p + .components-button.is-tertiary {
   width: 24px;
   height: 24px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+          -moz-appearance: none;
+       appearance: none;
   transition: 0.1s border-color ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -722,13 +722,13 @@ svg.components-checkbox-control__indeterminate {
 .components-circular-option-picker__option:hover {
   box-shadow: inset 0 0 0 14px !important;
 }
-.components-circular-option-picker__option[aria-pressed=true], .components-circular-option-picker__option[aria-selected=true] {
+.components-circular-option-picker__option.is-pressed {
   box-shadow: inset 0 0 0 4px;
   position: relative;
   z-index: 1;
   overflow: visible;
 }
-.components-circular-option-picker__option[aria-pressed=true] + svg, .components-circular-option-picker__option[aria-selected=true] + svg {
+.components-circular-option-picker__option.is-pressed + svg {
   position: absolute;
   left: 2px;
   top: 2px;
@@ -1078,7 +1078,7 @@ input.components-combobox-control__input[type=text]:focus {
   cursor: default;
   line-height: 28px;
 }
-.components-custom-select-control__item:not(.is-next-40px-default-size) {
+.components-custom-select-control__item:not(.is-next-36px-default-size) {
   padding: 8px;
 }
 .components-custom-select-control__item.has-hint {
@@ -1563,7 +1563,6 @@ body.is-dragging-components-draggable {
   list-style: none;
   box-shadow: inset 0 1px 0 0 #949494;
   margin: 0;
-  padding: 0;
 }
 @media (prefers-reduced-motion: reduce) {
   .components-form-token-field__suggestions-list {
@@ -1580,7 +1579,6 @@ body.is-dragging-components-draggable {
   min-height: 32px;
   margin: 0;
   cursor: pointer;
-  box-sizing: border-box;
 }
 .components-form-token-field__suggestion.is-selected {
   background: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
@@ -1876,26 +1874,6 @@ body.is-dragging-components-draggable {
     width: calc(100% - 80px);
     height: calc(100% - 80px);
     max-width: none;
-  }
-}
-@media (min-width: 600px) {
-  .components-modal__frame.has-size-small, .components-modal__frame.has-size-medium, .components-modal__frame.has-size-large {
-    width: 100%;
-  }
-}
-@media (min-width: 600px) {
-  .components-modal__frame.has-size-small {
-    max-width: 384px;
-  }
-}
-@media (min-width: 600px) {
-  .components-modal__frame.has-size-medium {
-    max-width: 512px;
-  }
-}
-@media (min-width: 600px) {
-  .components-modal__frame.has-size-large {
-    max-width: 840px;
   }
 }
 @media (min-width: 960px) {
@@ -2278,6 +2256,16 @@ body.rtl .components-panel__body-toggle.components-button .dashicons-arrow-right
 .components-placeholder__fieldset form p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 13px;
+}
+
+.components-placeholder__fieldset.components-placeholder__fieldset {
+  border: none;
+  padding: 0;
+}
+.components-placeholder__fieldset.components-placeholder__fieldset .components-placeholder__instructions {
+  padding: 0;
+  font-weight: normal;
+  font-size: 1em;
 }
 
 .components-placeholder__fieldset.is-column-layout,
@@ -2912,8 +2900,6 @@ body.lockscroll {
 }
 .components-search-control.is-size-compact input[type=search].components-search-control__input {
   height: 32px;
-  padding-left: 8px;
-  padding-right: 32px;
 }
 
 .components-search-control__icon {
@@ -2925,9 +2911,6 @@ body.lockscroll {
   align-items: center;
   justify-content: center;
   width: 24px;
-}
-.is-size-compact .components-search-control__icon {
-  right: 4px;
 }
 
 .components-search-control__input-wrapper {
