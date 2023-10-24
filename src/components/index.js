@@ -13,7 +13,7 @@ export { default as HeroSection } from './HeroSection/data';
 export { default as SignIn } from './SignIn/data';
 export { default as Stats } from './Stats/data';
 export { default as GridLists } from './GridLists/data';
-export { default as Lists } from './lists/data';
+export { default as Lists } from './Lists/data';
 export { default as Tables } from './Tables/data';
 export { default as SidebarNavigation } from './SidebarNavigation/data';
 export { default as Navigations } from './Navigations/data';
