@@ -60,7 +60,6 @@ function Navigator() {
 
                     const content = await response.text();
                     setContent(content);
-                    console.log(response);
                 } catch (error) {
                     console.error('Error loading file:', error);
                 }
