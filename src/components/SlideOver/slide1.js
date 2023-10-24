@@ -1,6 +1,7 @@
 import {
     Card,
     Animate,
+    Notice,
     CardBody,
     Panel,
     PanelBody,
@@ -10,10 +11,14 @@ import {
 
 
 function Slide1() {
+    const MyAnimatedNotice = () => (
+        <Animate type="slide-in" options={{ origin: 'top' }}>
+            <Panel> </Panel>
+        </Animate>
+    );
+
     return (
-        <Panel header="Panel title">
-            <Animate type="slide-in" options={{ origin: 'top' }}> </Animate>
-        </Panel>
+        <MyAnimatedNotice />
     );
 }
 

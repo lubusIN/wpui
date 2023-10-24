@@ -20,3 +20,4 @@ export { default as Navigation } from './Navigation/data';
 export { default as SlideOver } from './SlideOver/data';
 export { default as CardHeading } from './CardHeading/data';
 export { default as Modal } from './Modals/data';
+export {default as PluginShell} from './PluginShell/data';

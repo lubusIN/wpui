@@ -3,6 +3,7 @@
  */
 import {
     Card,
+    Button,
     CardBody,
     __experimentalGrid as Grid,
     __experimentalVStack as VStack,
@@ -13,7 +14,6 @@ import {
     __experimentalNavigationGroup as NavigationGroup,
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
-    Button,
 } from "@wordpress/components";
 import { cog, home, file, calendar, pages, people } from "@wordpress/icons";
 

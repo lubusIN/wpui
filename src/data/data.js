@@ -121,6 +121,12 @@ const components = [
         src: '',
         variations: Components.Modal,
     },
+    {
+        title: 'Plugin Shell',
+        path: '/pluginshell/shell1',
+        src: '',
+        variations: Components.PluginShell,
+    },
 ];
 
 export default components;

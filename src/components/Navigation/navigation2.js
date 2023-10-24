@@ -56,15 +56,14 @@ function Navigation2() {
                 <NavigationMenu>
                     <NavigationGroup>
                         {items.map((item, index) => (
-                            <HStack alignment="left">
+                            <HStack>
                                 <NavigationItem
                                     key={index}
                                     item={item.slug}
                                     title={item.name}
                                     onClick={() => { }}
-                                    text={item.notificationCount}
                                 />
-                                
+                                <Text>{item.notificationCount}</Text>
                             </HStack>
 
                         ))}
