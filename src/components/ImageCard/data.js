@@ -9,7 +9,7 @@ import * as Components from '.';
 const ImageCard = [
     {
         title: 'Image Card 1',
-        path: '/imagecard/imagecard',
+        path: '/ImageCard/imagecard',
         component: Components.ImageCard
     },
 ];

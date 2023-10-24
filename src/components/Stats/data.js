@@ -9,17 +9,17 @@ import * as Components from '.';
 const Stats = [
     {
         title: 'Stats 1',
-        path: '/stats/stats1',
+        path: '/Stats/stats1',
         component: Components.Stats1
     },
     {
         title: 'Stats 2',
-        path: '/stats/stats2',
+        path: '/Stats/stats2',
         component: Components.Stats2
     },
     {
         title: 'Stats 3',
-        path: '/stats/stats3',
+        path: '/Stats/stats3',
         component: Components.Stats3
     }
 ];

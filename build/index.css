@@ -2,197 +2,197 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/app.css ***!
   \*****************************************************************************************************************************************************************/
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0px;
+    font-family: Inter, sans-serif;
+    margin: 0
 }
 
 .wpui_site_logo {
-    box-shadow: none !important;
+    box-shadow: none !important
 }
 
 .wpui_header a {
-    text-decoration: none;
+    text-decoration: none
 }
 
 .wpui_hero_Section {
     background-image: url(images/banner.86ca9c11.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10vw 0px;
+    padding: 10vw 0
 }
 
 .wpui_hero_cont {
-    width: 50%;
+    margin: auto 0 auto auto;
     padding-right: 140px !important;
-    margin: auto 0px auto auto;
+    width: 50%
 }
 
 .wpui_newsletter {
-    padding: 60px 20px;
+    padding: 60px 20px
 }
 
 .wpui_newsletter .nl_container {
-    width: 50%;
     margin: auto;
+    width: 50%
 }
 
 .wpui_newsletter .nl_container button {
-    background: #D9D9D9;
+    background: #d9d9d9;
     border-radius: 4px;
-    color: #5A6475;
-    height: auto;
+    color: #5a6475;
+    height: auto
 }
 
 .wpui_newsletter .nl_container button:hover {
-    background-color: #D9D9D9 !important;
-    color: #5A6475 !important;
+    background-color: #d9d9d9 !important;
+    color: #5a6475 !important
 }
 
 .wpui_newsletter .nl_container button:focus {
-    --wp-admin-theme-color: #d9d9d9;
+    --wp-admin-theme-color: #d9d9d9
 }
 
 .wpui_newsletter .nl_container input:focus {
-    box-shadow: 0 0 0 0.5px #5A6475;
+    box-shadow: 0 0 0 .5px #5a6475
 }
 
 .wpui_newsletter .nl_container .nl_input {
-    width: 50%;
+    width: 50%
 }
 
 .wpui_newsletter .nl_container .nl_input input {
+    background: transparent;
+    border: 1px solid #d9d9d9;
     border-radius: 4px;
-    border: 1px solid #D9D9D9;
-    padding: 12px;
-    background: transparent
+    padding: 12px
 }
 
 .wpui_newsletter .nl_container .nl_input * {
-    height: 100%;
+    height: 100%
 }
 
-.resize_cont .components-resizable-box__handle-right::after {
-    width: 6px;
-    height: 35px;
+.resize_cont .components-resizable-box__handle-right:after {
+    background: #94a3b8;
+    border: 0;
     border-radius: 4px;
-    border: 0px;
     box-shadow: none;
-    background: #94A3B8;
-    top: 50%;
+    height: 35px;
     right: calc(50% - 14px);
+    top: 50%;
     transform: translateY(-50%);
+    width: 6px
 }
 
 .resize_cont .components-resizable-box__handle-right:before {
-    display: none !important;
+    display: none !important
 }
 
 .resize_cont .components-resizable-box__handle-right {
-    cursor: ew-resize !important;
+    cursor: ew-resize !important
 }
 
 .wpui_footer {
-    background-color: #3858E9 !important;
+    background-color: #3858e9 !important
 }
 
-.wpui_header,
-.wpui_footer .components-card__body {
-    padding: 20px 3vw;
+.wpui_footer .components-card__body,
+.wpui_header {
+    padding: 20px 3vw
 }
 
-.wpui_footer .components-card__body:nth-child(1) {
-    padding: 60px 3vw;
+.wpui_footer .components-card__body:first-child {
+    padding: 60px 3vw
 }
 
 .wpui_footer .components-card__body .sec_1 {
-    width: 50%;
     margin: auto;
+    width: 50%
 }
 
-.wpui_lcont,
-.wpui_com_page {
-    max-width: 1350px;
+.wpui_com_page,
+.wpui_lcont {
     margin: auto;
-    padding: 40px 20px;
+    max-width: 1350px;
+    padding: 40px 20px
 }
 
 div.wpui_preview {
-    height: 180px;
-    border-radius: 4px;
     background: #b8cfff94;
-    padding: 20px 0px;
+    border-radius: 4px;
+    height: 180px;
+    padding: 20px 0
 }
 
 div.wpui_preview img {
-    height: 100%;
-    box-shadow: 0 1px 20px 0 rgb(0 0 0 / 0.1), 0 1px 0px -1px rgb(0 0 0 / 0.1);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .1), 0 1px 0 -1px rgba(0, 0, 0, .1);
+    height: 100%
 }
 
 div.wpui_cl .components-navigator-button {
-    height: auto;
-    box-shadow: none !important;
-    padding: 10px;
     border-radius: 10px;
+    box-shadow: none !important;
+    height: auto;
+    padding: 10px
 }
 
 .wpui_copy {
-    box-shadow: none !important;
+    box-shadow: none !important
 }
 
 .copied_pop .components-popover__content {
-    padding: 8px !important;
+    padding: 8px !important
 }
 
 .wpui_view_toggle .css-f6ebsm-backdropView {
-    transform: none !important;
+    transform: none !important
 }
 
 .wpui_back_navig button,
 .wpui_back_navig span {
+    color: #535353;
     font-size: .875rem;
-    font-weight: 500;
-    color: rgb(83 83 83);
+    font-weight: 500
 }
 
 .wpui_variation_card {
-    padding: 45px 35px;
     border-radius: 4px !important;
+    padding: 45px 35px
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width:480px) {
     div.wpui_cl {
-        grid-template-columns: repeat(1, 1fr);
         -moz-column-gap: 10px;
              column-gap: 10px;
+        grid-template-columns: repeat(1, 1fr)
     }
 
     .wpui_footer .components-card__body .sec_1 {
-        width: 100% !important;
+        width: 100% !important
     }
 
     div.wpui_newsletter .nl_container {
-        width: 100%;
+        width: 100%
     }
 
     .wpui_variation_card {
-        padding: 35px 20px;
+        padding: 35px 20px
     }
 
     div.wpui_hero_cont {
-        width: 100%;
         padding-right: 24px !important;
+        width: 100%
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 820px) {
+@media only screen and (min-width:481px) and (max-width:820px) {
     div.wpui_cl {
-        grid-template-columns: repeat(2, 1fr);
         -moz-column-gap: 10px;
              column-gap: 10px;
+        grid-template-columns: repeat(2, 1fr)
     }
 
     .wpui_hero_cont {
-        width: 100%;
+        width: 100%
     }
 }
 

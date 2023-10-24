@@ -9,7 +9,7 @@ import * as Components from '.';
 const Forms = [
     {
         title: 'Profile Form',
-        path: '/form/form',
+        path: '/Form/form',
         component: Components.Form
     },
 ];

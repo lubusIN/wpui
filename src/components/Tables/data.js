@@ -9,12 +9,12 @@ import * as Components from '.';
 const Tables = [
     {
         title: 'Table 1',
-        path: '/tables/table1',
+        path: '/Tables/table1',
         component: Components.Table1
     },
     {
         title: 'Table 2',
-        path: '/tables/table2',
+        path: '/Tables/table2',
         component: Components.Table2
     }
 ];

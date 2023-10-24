@@ -9,17 +9,17 @@ import * as Components from '.';
 const Modals = [
     {
         title: 'Modal 1',
-        path: '/modals/modal1',
+        path: '/Modals/modal1',
         component: Components.modal1
     },
     {
         title: 'Modal 2',
-        path: '/modals/modal2',
+        path: '/Modals/modal2',
         component: Components.modal2
     },
     {
         title: 'Modal 3',
-        path: '/modals/modal3',
+        path: '/Modals/modal3',
         component: Components.modal3
     }
 ];

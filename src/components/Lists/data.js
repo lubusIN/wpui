@@ -9,22 +9,22 @@ import * as Components from '.';
 const Lists = [
     {
         title: 'List 1',
-        path: '/lists/list1',
+        path: '/Lists/list1',
         component: Components.List1
     },
     {
         title: 'List 2',
-        path: '/lists/list2',
+        path: '/Lists/list2',
         component: Components.List2
     },
     {
         title: 'List 3',
-        path: '/lists/list3',
+        path: '/Lists/list3',
         component: Components.List3
     },
     {
         title: 'List 4',
-        path: '/lists/list4',
+        path: '/Lists/list4',
         component: Components.List4
     },
 ];

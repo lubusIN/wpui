@@ -9,12 +9,12 @@ import * as Components from '.';
 const EmptyState = [
     {
         title: 'EmptyState 1',
-        path: '/emptystate/emptystate1',
+        path: '/EmptyState/emptystate1',
         component: Components.EmptyState1
     },
     {
         title: 'Breadcrumb 2',
-        path: '/emptystate/emptystate2',
+        path: '/EmptyState/emptystate2',
         component: Components.EmptyState2
     },
 ];

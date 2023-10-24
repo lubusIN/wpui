@@ -9,17 +9,17 @@ import * as Components from '.';
 const Faqs = [
     {
         title: 'FAQs 1',
-        path: '/faq/faq1',
+        path: '/Faq/faq1',
         component: Components.Faq1
     },
     {
         title: 'FAQs 2',
-        path: '/faq/faq2',
+        path: '/Faq/faq2',
         component: Components.Faq2
     },
     {
         title: 'FAQs 3',
-        path: '/faq/faq3',
+        path: '/Faq/faq3',
         component: Components.Faq3
     }
 ];

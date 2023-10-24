@@ -9,22 +9,22 @@ import * as Components from '.';
 const GridLists = [
     {
         title: 'Grid 1',
-        path: '/gridlists/grid1',
+        path: '/GridLists/grid1',
         component: Components.Grid1
     },
     {
         title: 'Grid 2',
-        path: '/gridlists/grid2',
+        path: '/GridLists/grid2',
         component: Components.Grid2
     },
     {
         title: 'Grid 3',
-        path: '/gridlists/grid3',
+        path: '/GridLists/grid3',
         component: Components.Grid3
     },
     {
         title: 'Grid 4',
-        path: '/gridlists/grid4',
+        path: '/GridLists/grid4',
         component: Components.Grid4
     }
 ];

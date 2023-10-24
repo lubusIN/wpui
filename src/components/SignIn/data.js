@@ -9,12 +9,12 @@ import * as Components from '.';
 const SignIn = [
     {
         title: 'Sign 1',
-        path: '/signin/signIn1',
+        path: '/SignIn/signIn1',
         component: Components.SignIn1
     },
     {
         title: 'Sign 3',
-        path: '/signin/signIn3',
+        path: '/SignIn/signIn3',
         component: Components.SignIn3
     },
 ];

@@ -9,12 +9,12 @@ import * as Components from '.';
 const Feeds = [
     {
         title: 'Feed 1',
-        path: '/feed/feed1',
+        path: '/Feed/feed1',
         component: Components.Feed1
     },
     {
         title: 'Feed 2',
-        path: '/feed/feed2',
+        path: '/Feed/feed2',
         component: Components.Feed2
     }
 ];

@@ -9,17 +9,17 @@ import * as Components from '.';
 const Navigations = [
     {
         title: 'Navigate 1',
-        path: '/navigations/navigate1',
+        path: '/Navigations/navigate1',
         component: Components.navigate1
     },
     {
         title: 'Navigate 2',
-        path: '/navigations/navigate2',
+        path: '/Navigations/navigate2',
         component: Components.navigate2
     },
     {
         title: 'Navigate 3',
-        path: '/navigations/navigate3',
+        path: '/Navigations/navigate3',
         component: Components.navigate3
     }
 ];
