@@ -138,7 +138,6 @@ function Table1() {
                     ))}
                 </TreeGrid>
             </Scrollable>
-
             <style>
                 {`
                     td{
