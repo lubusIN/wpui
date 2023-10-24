@@ -51,7 +51,6 @@ function Navigator() {
 
     useEffect(() => {
         if (activePath) {
-            console.log(activePath);
             const fetchFileContent = async () => {
                 try {
                     const response = await fetch(`/src/components${activePath}.js`);
@@ -61,6 +60,7 @@ function Navigator() {
 
                     const content = await response.text();
                     setContent(content);
+                    console.log(content);
                 } catch (error) {
                     console.error('Error loading file:', error);
                 }
