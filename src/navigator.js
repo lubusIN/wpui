@@ -16,7 +16,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { chevronRight, code, copy, seen } from "@wordpress/icons";
+import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
 
 /**
  * Internal dependencies.
@@ -29,6 +29,7 @@ import ComponentsMenu from "./menu";
  */
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useCopyToClipboard } from '@wordpress/compose';
 
 /**
  * Render Navigator
@@ -68,25 +69,24 @@ function Navigator() {
         }
     }, [activePath, setContent]);
 
-    const CopyButton = ({ path, index }) => {
+    const CopyButton = ({ index }) => {
 
         const handleCopyClick = () => {
             setIndex(index)
-            setActivePath(path);
             setHasCopied(true);
             setTimeout(() => {
                 setHasCopied(false);
-            }, 2000);
+            }, 1000);
         };
-        navigator.clipboard.writeText(content);
 
         return (
             <Button
                 className='wpui_copy'
-                icon={copy}
+                icon={hasCopied ? check : copy}
                 onClick={handleCopyClick}
+                ref={useCopyToClipboard(content)}
             >
-                {selectedIndex == index && hasCopied ? <Popover className='copied_pop' position='top right'>Copied</Popover> : ''}
+                {selectedIndex == index && hasCopied ? <Popover className='copied_pop' position='middle right'>Copied</Popover> : ''}
             </Button>
         );
     }
@@ -141,7 +141,6 @@ function Navigator() {
                                                     <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
                                                     <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
                                                 </ToggleGroupControl>
-                                                <CopyButton path={path} index={index}></CopyButton>
                                             </HStack>
                                         </HStack>
 
@@ -151,9 +150,12 @@ function Navigator() {
                                                     <Component />
                                                 </Card>
                                             ) : (
-                                                <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
-                                                    {content}
-                                                </SyntaxHighlighter>
+                                                <VStack style={{ position: 'relative' }}>
+                                                    <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
+                                                        {content}
+                                                    </SyntaxHighlighter>
+                                                    <CopyButton index={index}></CopyButton>
+                                                </VStack>
                                             )
                                         }
 

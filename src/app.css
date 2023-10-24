@@ -94,7 +94,7 @@ body {
 
 .wpui_footer .components-card__body,
 .wpui_header {
-    padding: 20px 3vw
+    padding: 12px 3vw
 }
 
 .wpui_footer .components-card__body:first-child {
@@ -133,7 +133,13 @@ div.wpui_cl .components-navigator-button {
 }
 
 .wpui_copy {
-    box-shadow: none !important
+    box-shadow: none !important;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.wpui_copy svg{
+    fill: white !important;
 }
 
 .copied_pop .components-popover__content {
@@ -154,6 +160,19 @@ div.wpui_cl .components-navigator-button {
 .wpui_variation_card {
     border-radius: 4px !important;
     padding: 45px 35px
+}
+
+.wpui_view_toggle .css-f6ebsm-backdropView {
+    background-color: #cecece;
+}
+
+.wpui_view_toggle button[data-active-item] svg {
+    fill: #5b5b5b;
+}
+
+.wpui_view_toggle:focus-within {
+    box-shadow: none !important;
+    border-color: grey !important;
 }
 
 @media only screen and (max-width:480px) {
