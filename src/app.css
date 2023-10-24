@@ -3,8 +3,8 @@ body {
     margin: 0px;
 }
 
-.wpui_site_logo .components-external-link__icon {
-    display: none;
+.wpui_site_logo {
+    box-shadow: none !important;
 }
 
 .wpui_header a {
@@ -12,10 +12,16 @@ body {
 }
 
 .wpui_hero_Section {
-    background-image: url('/src/img/banner.webp');
+    background-image: url('/src/img/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10vw 0px;
+}
+
+.wpui_hero_cont {
+    width: 50%;
+    padding-right: 140px !important;
+    margin: auto 0px auto auto;
 }
 
 .wpui_newsletter {
@@ -110,7 +116,7 @@ body {
 div.wpui_preview {
     height: 180px;
     border-radius: 4px;
-    background: #b8cfffd4;
+    background: #b8cfff94;
     padding: 20px 0px;
 }
 
@@ -163,11 +169,24 @@ div.wpui_cl .components-navigator-button {
     div.wpui_newsletter .nl_container {
         width: 100%;
     }
+
+    .wpui_variation_card {
+        padding: 35px 20px;
+    }
+
+    div.wpui_hero_cont {
+        width: 100%;
+        padding-right: 24px !important;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 820px) {
     div.wpui_cl {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10px;
+    }
+
+    .wpui_hero_cont {
+        width: 100%;
     }
 }

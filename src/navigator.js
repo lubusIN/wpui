@@ -5,12 +5,10 @@ import { __ } from '@wordpress/i18n';
 import { useContext, useEffect } from '@wordpress/element';
 import {
     Card,
-    CardBody,
-    ClipboardButton,
     Popover,
+    Button,
     __experimentalHeading as Heading,
     __experimentalNavigatorScreen as NavigatorScreen,
-    __experimentalNavigatorProvider as NavigatorProvider,
     __experimentalNavigatorBackButton as NavigatorBackButton,
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
@@ -25,6 +23,10 @@ import { chevronRight, code, copy, seen } from "@wordpress/icons";
  */
 import { components, WpuiContext } from './data';
 import ComponentsMenu from "./menu";
+
+/**
+ * External dependencies.
+ */
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -62,14 +64,36 @@ function Navigator() {
                     console.error('Error loading file:', error);
                 }
             };
-
             fetchFileContent();
         }
-    }, [activePath]);
+    }, [activePath, setContent]);
+
+    const CopyButton = ({ path, index }) => {
+
+        const handleCopyClick = () => {
+            setIndex(index)
+            setActivePath(path);
+            setHasCopied(true);
+            setTimeout(() => {
+                setHasCopied(false);
+            }, 2000);
+        };
+        navigator.clipboard.writeText(content);
+
+        return (
+            <Button
+                className='wpui_copy'
+                icon={copy}
+                onClick={handleCopyClick}
+            >
+                {selectedIndex == index && hasCopied ? <Popover className='copied_pop' position='top right'>Copied</Popover> : ''}
+            </Button>
+        );
+    }
 
 
     return (
-        <NavigatorProvider className="wpui_navigator" initialPath="/">
+        <>
             <NavigatorScreen path="/" style={{ overflowX: 'visible' }}>
                 <ComponentsMenu />
             </NavigatorScreen>
@@ -89,7 +113,9 @@ function Navigator() {
                                     icon={chevronRight}
                                     iconPosition='right'
                                     text='Home'
-                                    style={{ boxShadow: 'none' }}>
+                                    style={{ boxShadow: 'none' }}
+                                    onClick={() => setView('preview')}
+                                >
                                 </NavigatorBackButton>
                                 <Text>{title}</Text>
                             </HStack>
@@ -115,15 +141,7 @@ function Navigator() {
                                                     <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
                                                     <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
                                                 </ToggleGroupControl>
-                                                <ClipboardButton
-                                                    className='wpui_copy'
-                                                    icon={copy}
-                                                    text={content}
-                                                    onCopy={() => setHasCopied(true)}
-                                                    onFinishCopy={() => setHasCopied(false)}
-                                                >
-                                                    {hasCopied && <Popover className='copied_pop' position='top right'>Copied</Popover>}
-                                                </ClipboardButton>
+                                                <CopyButton path={path} index={index}></CopyButton>
                                             </HStack>
                                         </HStack>
 
@@ -146,7 +164,7 @@ function Navigator() {
                     </NavigatorScreen>
                 ))
             }
-        </NavigatorProvider >
+        </>
     );
 };
 

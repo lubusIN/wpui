@@ -18,7 +18,7 @@ import { arrowUp, box, trendingUp } from "@wordpress/icons";
 function Stats1() {
     return (
         <HStack spacing={5} direction={['column', 'row']}>
-            <Card isBorderless style={{ width: '100%' }}>
+            <Card isBorderless isElevated style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
@@ -42,7 +42,7 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-            <Card isBorderless style={{ width: '100%' }}>
+            <Card isBorderless isElevated style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
@@ -66,7 +66,7 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-            <Card isBorderless style={{ width: '100%' }}>
+            <Card isBorderless isElevated style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon

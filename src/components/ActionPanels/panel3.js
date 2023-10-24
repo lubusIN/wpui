@@ -19,26 +19,32 @@ function Panel3() {
     const [value, setValue] = useState(false);
 
     return (
-        <VStack alignment="center">
+        <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
                 <CardBody>
-                    <VStack spacing={6} alignment="baseline">
-                        <VStack spacing={3}>
-                            <Heading level={3}>Renew Subscription automatically</Heading>
-                            <HStack>
-                                <Text size={15} weight={400} style={{ width: '600px' }} variant="muted">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
-                                </Text>
-                                <ToggleControl
-                                    checked={value}
-                                    onChange={() => setValue((state) => !state)}
-                                />
-                            </HStack>
+                    <HStack direction={['column', 'row']} alignment={'start'}  justify='left' >
+                        <VStack>
+                            <Heading level={4}>Renew Subscription automatically</Heading>
+                            <Text
+                                size={14}
+                                lineHeight={1.6}
+                                weight={400}
+                                style={{ maxWidth: '600px' }}
+                                variant="muted"
+                            >
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Explicabo totam non cumque deserunt officiis ex maiores nostrum.
+                            </Text>
                         </VStack>
-                    </VStack>
+                        <ToggleControl
+                            __nextHasNoMarginBottom
+                            checked={value}
+                            onChange={() => setValue((state) => !state)}
+                        />
+                    </HStack>
                 </CardBody>
             </Card>
-        </VStack>
+        </HStack >
     );
 };
 

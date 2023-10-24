@@ -2,11 +2,9 @@
  * WordPress dependencies.
  */
 import {
-    Card,
     Button,
     CardDivider,
     Icon,
-    CardBody,
     __experimentalText as Text,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
@@ -18,7 +16,7 @@ import { plus, reset } from "@wordpress/icons";
 /**
  * Render FAQs.
  */
-function Faqs() {
+function Faq1() {
     const [contentVisible, setContentVisible] = useState([false]);
 
     const handleToggleContent = (index) => {
@@ -51,10 +49,10 @@ function Faqs() {
     ];
 
     return (
-        <Card size="large" style={{ borderRadius: '10px' }}>
-            <CardBody>
-                <Heading size={28}>Frequently Asked Questions</Heading>
-                {faqs.map((faq, index) => (
+        <>
+            <Heading size={28}>Frequently Asked Questions</Heading>
+            {
+                faqs.map((faq, index) => (
                     <VStack key={index} spacing={2}>
                         <CardDivider marginEnd={4} marginStart={5}></CardDivider>
                         <Button style={{ boxShadow: 'none', padding: '0px' }} onClick={() => handleToggleContent(index)}>
@@ -64,13 +62,13 @@ function Faqs() {
                             </HStack>
                         </Button>
                         {contentVisible[index] && (
-                            <Text size={16} lineHeight={1.6}>{faq.answer}</Text>
+                            <Text size={16} lineHeight={1.6} color="grey">{faq.answer}</Text>
                         )}
                     </VStack>
-                ))}
-            </CardBody>
-        </Card>
+                ))
+            }
+        </>
     );
 };
 
-export default Faqs;
+export default Faq1;

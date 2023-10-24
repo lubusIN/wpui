@@ -17,7 +17,7 @@ function Section1() {
     return (
         <Card isBorderless>
             <VStack spacing={12}>
-                <VStack spacing={3}>
+                <VStack spacing={5}>
                     <Text size={15} align="center">From the House of LUBUS</Text>
                     <Heading size={40} align="center" lineHeight={1.3} weight={500}>
                         Lorem Ipsum is simply dummy text of <br /> the printing and typesetting industry.

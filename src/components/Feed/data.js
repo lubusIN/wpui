@@ -6,12 +6,17 @@ import * as Components from '.';
 /**
  * Component Mapping
  */
-const Feed = [
+const Feeds = [
     {
-        title: 'Feeds',
-        path: '/feed/feeds',
-        component: Components.Feeds
+        title: 'Feed 1',
+        path: '/feed/feed1',
+        component: Components.Feed1
     },
+    {
+        title: 'Feed 2',
+        path: '/feed/feed2',
+        component: Components.Feed2
+    }
 ];
 
-export default Feed;
+export default Feeds;

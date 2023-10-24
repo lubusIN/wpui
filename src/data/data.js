@@ -10,8 +10,14 @@ const components = [
     {
         title: 'Page Heading',
         path: '/pageheading/heading1',
-        src: '',
+        src: '/pageheading.png',
         variations: Components.PageHeading,
+    },
+    {
+        title: 'Card Heading',
+        path: '/cardheading/cardheading1',
+        src: '/cardheading.png',
+        variations: Components.CardHeadings,
     },
     {
         title: 'Breadcrumbs',
@@ -27,15 +33,9 @@ const components = [
     },
     {
         title: 'FAQS',
-        path: '/faq/faqs',
+        path: '/faq/faq1',
         src: '/faqs.png',
         variations: Components.Faqs,
-    },
-    {
-        title: 'Image Card',
-        path: '/imagecard/imagecard',
-        src: '/cards.png',
-        variations: Components.ImageCard,
     },
     {
         title: 'Action Panels',
@@ -45,9 +45,9 @@ const components = [
     },
     {
         title: 'Feeds',
-        path: '/feed/feeds',
+        path: '/feed/feed1',
         src: '/feed.png',
-        variations: Components.Feed,
+        variations: Components.Feeds,
     },
     {
         title: 'Forms',
@@ -70,13 +70,13 @@ const components = [
     {
         title: 'Stats',
         path: '/stats/stats1',
-        src: '',
+        src: '/stats.png',
         variations: Components.Stats,
     },
     {
         title: 'Grid Lists',
         path: '/gridlists/grid1',
-        src: '',
+        src: '/cards.png',
         variations: Components.GridLists,
     },
     {
@@ -96,6 +96,18 @@ const components = [
         path: '/sidebarnavigation/sidebar1',
         src: '/sidebarnavigation.png',
         variations: Components.SidebarNavigation,
+    },
+    {
+        title: 'Modals',
+        path: '/modals/modal1',
+        src: '/modal.png',
+        variations: Components.Modals,
+    },
+    {
+        title: 'Navigations',
+        path: '/navigations/navigate1',
+        src: '/navigation.png',
+        variations: Components.Navigations,
     }
 ];
 

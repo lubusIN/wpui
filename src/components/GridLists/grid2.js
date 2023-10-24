@@ -15,7 +15,7 @@ import { moreHorizontalMobile } from "@wordpress/icons";
 /**
  * Render Image card.
  */
-function ImageCard() {
+function Grid2() {
     return (
         <Grid columns={[1, 2, 4]} gap={8} alignment="center">
             {Array.from({ length: 8 }, (_, index) => (
@@ -35,4 +35,4 @@ function ImageCard() {
     );
 };
 
-export default ImageCard;
+export default Grid2;

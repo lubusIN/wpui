@@ -24,11 +24,10 @@ function Panel4() {
                         <VStack spacing={3}>
                             <Heading level={3}>Update your email</Heading>
                             <Text size={15} weight={400} variant="muted">
-                                Change the email address you want associated with your account.
-                            </Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit Explicabo totam non.</Text>
                         </VStack>
-                        <HStack alignment="left">
-                            <TextControl placeholder="you@example.com" type="email" style={{ marginTop: '7px', height: '35px', borderRadius: '5px' }}></TextControl>
+                        <HStack alignment="stretch" justify="left">
+                            <TextControl placeholder="you@example.com" type="email" style={{ width: '48vmin', height: '35px', borderRadius: '5px' }}></TextControl>
                             <Button variant="primary" style={{ borderRadius: '5px' }}>Save</Button>
                         </HStack>
                     </VStack>

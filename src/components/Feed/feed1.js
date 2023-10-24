@@ -14,7 +14,7 @@ import { check, commentAuthorAvatar, pin } from "@wordpress/icons";
 /**
  * Render Feeds
  */
-function Feeds() {
+function Feed1() {
 
     const line = (<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M10 .5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 1 0V1a.5.5 0 0 0-.5-.5Z" clip-rule="evenodd" /></svg>)
 
@@ -75,4 +75,4 @@ function Feeds() {
     );
 };
 
-export default Feeds;
+export default Feed1;

@@ -5,7 +5,6 @@ import {
     Card,
     __experimentalGrid as Grid,
     __experimentalVStack as VStack,
-    __experimentalHStack as HStack,
     __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalNavigatorButton as NavigatorButton,

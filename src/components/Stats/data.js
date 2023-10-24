@@ -17,6 +17,11 @@ const Stats = [
         path: '/stats/stats2',
         component: Components.Stats2
     },
+    {
+        title: 'Stats 3',
+        path: '/stats/stats3',
+        component: Components.Stats3
+    }
 ];
 
 export default Stats;

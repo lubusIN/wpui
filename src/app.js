@@ -1,7 +1,12 @@
 /**
+ * WordPress dependencies.
+ */
+import { __experimentalNavigatorProvider as NavigatorProvider } from "@wordpress/components";
+
+/**
  * Internal dependencies.
  */
-import { Footer, Header, NewsLetter } from './cards';
+import { Footer, Header } from './cards';
 import { WpuiProvider } from './data';
 import Navigator from './navigator';
 
@@ -11,10 +16,11 @@ import Navigator from './navigator';
 function App() {
     return (
         <WpuiProvider>
-            <Header />
-            <Navigator />
-            <NewsLetter />
-            <Footer />
+            <NavigatorProvider className="wpui_navigator" initialPath="/">
+                <Header />
+                <Navigator />
+                <Footer />
+            </NavigatorProvider>
         </WpuiProvider>
     );
 };
