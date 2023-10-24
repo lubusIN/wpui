@@ -141,7 +141,8 @@ div.wpui_cl .components-navigator-button {
     top: 20px;
     right: 20px;
 }
-.wpui_copy svg{
+
+.wpui_copy svg {
     fill: white !important;
 }
 
@@ -149,7 +150,7 @@ div.wpui_cl .components-navigator-button {
     padding: 8px !important
 }
 
-.wpui_view_toggle .css-f6ebsm-backdropView {
+.wpui_view_toggle [role="presentation"] {
     transform: none !important
 }
 
@@ -165,7 +166,7 @@ div.wpui_cl .components-navigator-button {
     padding: 45px 35px
 }
 
-.wpui_view_toggle .css-f6ebsm-backdropView {
+.wpui_view_toggle [role="presentation"] {
     background-color: #cecece;
 }
 
