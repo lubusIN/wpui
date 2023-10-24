@@ -51,6 +51,7 @@ function Navigator() {
 
     useEffect(() => {
         if (activePath) {
+            console.log(activePath);
             const fetchFileContent = async () => {
                 try {
                     const response = await fetch(`/src/components${activePath}.js`);
