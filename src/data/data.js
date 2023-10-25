@@ -97,17 +97,23 @@ const components = [
         src: '/sidebarnavigation.png',
         variations: Components.SidebarNavigation,
     },
-    {
-        title: 'Modals',
-        path: '/modals/modal1',
-        src: '/modal.png',
-        variations: Components.Modals,
-    },
+    // {
+    //     title: 'Modals',
+    //     path: '/modals/modal1',
+    //     src: '/modal.png',
+    //     variations: Components.Modals,
+    // },
     {
         title: 'Navigations',
         path: '/navigations/navigate1',
         src: '/navigation.png',
         variations: Components.Navigations,
+    },
+    {
+        title: 'Plugin Shell',
+        path: '/pluginshell/shell1',
+        src: '',
+        variations: Components.PluginShell,
     }
 ];
 

@@ -2,18 +2,21 @@
  * WordPress dependencies.
  */
 import {
-    Card,
     __experimentalNavigation as Navigation,
     __experimentalNavigationGroup as NavigationGroup,
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
+    __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
 } from "@wordpress/components";
-import { home, file, calendar, pages, people } from "@wordpress/icons";
+import { useState } from "@wordpress/element";
 
 /**
- * Render Dashboard
+ * Render Navigation
  */
 function Navigation1() {
+
+    const [activeItem, setItemActive] = useState('dashboard');
 
     const items = [
         {
@@ -21,41 +24,47 @@ function Navigation1() {
             slug: 'dashboard',
         },
         {
-            name: 'Teams',
-            slug: 'teams',
+            name: 'Posts',
+            slug: 'posts',
         },
         {
-            name: 'Projects',
-            slug: 'projects',
+            name: 'Pages',
+            slug: 'pages',
         },
         {
-            name: 'Calendar',
-            slug: 'calendar',
+            name: 'Users',
+            slug: 'users',
         },
         {
-            name: 'Documents',
-            slug: 'documents',
+            name: 'Comments',
+            slug: 'comments',
+        },
+        {
+            name: 'Settings',
+            slug: 'settings',
         }
     ];
 
     return (
-        <Card isBorderless>
-            <Navigation activeItem="dashboard">
-                <NavigationMenu>
+        <Navigation activeItem={activeItem}>
+            <NavigationMenu>
+                <HStack alignment="center">
                     <NavigationGroup>
-                        {items.map((item, index) => (
-                            <NavigationItem
-                                key={index}
-                                item={item.slug}
-                                title={item.name}
-                                onClick={() => { }}
-                            />
-                        ))}
+                        <VStack spacing={2}>
+                            {items.map((item, index) => (
+                                <NavigationItem
+                                    key={index}
+                                    item={item.slug}
+                                    title={item.name}
+                                    onClick={() => setItemActive(item.slug)}
+                                    style={{ width: '20rem' }}
+                                />
+                            ))}
+                        </VStack>
                     </NavigationGroup>
-                </NavigationMenu>
-            </Navigation>
-        </Card>
-
+                </HStack>
+            </NavigationMenu>
+        </Navigation>
     );
 };
 

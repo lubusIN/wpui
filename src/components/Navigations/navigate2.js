@@ -2,18 +2,22 @@
  * WordPress dependencies.
  */
 import {
-    Card,
     __experimentalNavigation as Navigation,
     __experimentalNavigationGroup as NavigationGroup,
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
+    __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
+    __experimentalText as Text,
 } from "@wordpress/components";
-import { home, file, calendar, pages, people } from "@wordpress/icons";
+import { useState } from "@wordpress/element";
 
 /**
- * Render Dashboard
+ * Render Navigation
  */
-function Navigation1() {
+function Navigation2() {
+
+    const [activeItem, setItemActive] = useState('dashboard');
 
     const items = [
         {
@@ -21,42 +25,75 @@ function Navigation1() {
             slug: 'dashboard',
         },
         {
-            name: 'Teams',
-            slug: 'teams',
+            name: 'Posts',
+            slug: 'posts',
+            count: 5
         },
         {
-            name: 'Projects',
-            slug: 'projects',
+            name: 'Pages',
+            slug: 'pages',
+            count: '20+'
         },
         {
-            name: 'Calendar',
-            slug: 'calendar',
+            name: 'Users',
+            slug: 'users',
+            count: 7
         },
         {
-            name: 'Documents',
-            slug: 'documents',
+            name: 'Comments',
+            slug: 'comments',
+        },
+        {
+            name: 'Settings',
+            slug: 'settings',
         }
     ];
 
     return (
-        <Card isBorderless>
-            <Navigation activeItem="dashboard">
+        <>
+            <Navigation activeItem={activeItem}>
                 <NavigationMenu>
-                    <NavigationGroup>
-                        {items.map((item, index) => (
-                            <NavigationItem
-                                key={index}
-                                item={item.slug}
-                                title={item.name}
-                                onClick={() => { }}
-                            />
-                        ))}
-                    </NavigationGroup>
+                    <HStack alignment="center">
+                        <NavigationGroup>
+                            <VStack spacing={4}>
+                                {items.map((item, index) => (
+                                    <NavigationItem
+                                        className="wpui_nav_item"
+                                        key={index}
+                                        item={item.slug}
+                                        title={item.name}
+                                        badge={
+                                            item.count && (
+                                                <Text
+                                                    style={{
+                                                        padding: '5px 10px',
+                                                        borderRadius: '20px',
+                                                        border: '1px solid grey',
+                                                        background: 'white',
+                                                    }}
+                                                >
+                                                    {item.count}
+                                                </Text>
+                                            )
+                                        }
+                                        onClick={() => setItemActive(item.slug)}
+                                        style={{ width: '20rem' }}
+                                    />
+                                ))}
+                            </VStack>
+                        </NavigationGroup>
+                    </HStack>
                 </NavigationMenu>
             </Navigation>
-        </Card>
-
+            <style>
+                {`
+                       .wpui_nav_item .components-navigation__item-badge {
+                             padding: 0px;
+                        }
+                    `}
+            </style>
+        </>
     );
 };
 
-export default Navigation1;
+export default Navigation2;
