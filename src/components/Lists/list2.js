@@ -15,7 +15,7 @@ import {
 function List2() {
     return (
         <HStack alignment="center">
-            <VStack alignment="center" spacing={4}>
+            <VStack spacing={4}>
                 <HStack spacing={20}>
                     <HStack spacing={3} alignment="start">
                         <img

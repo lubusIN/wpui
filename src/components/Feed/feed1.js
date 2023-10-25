@@ -7,7 +7,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalTreeGrid as TreeGrid,
     __experimentalTreeGridRow as TreeGridRow,
-    __experimentalSurface as Surface,
 } from "@wordpress/components";
 import { check, commentAuthorAvatar, pin } from "@wordpress/icons";
 

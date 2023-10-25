@@ -27,9 +27,8 @@ function Feed2() {
     return (
         <HStack justify="center">
             <TreeGrid>
-
                 <TreeGridRow>
-                    <HStack>
+                    <HStack >
                         <Icon icon={border}></Icon>
                         <HStack spacing={10}>
                             <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted" >Created the invoice </Text> </Text>
@@ -103,12 +102,14 @@ function Feed2() {
                     </HStack>
                 </TreeGridRow>
 
+                <Icon icon={line} />
+
                 <TreeGridRow>
                     <HStack alignment="left">
-                        <Icon icon={commentAuthorAvatar} style={{ marginTop: '-70px' }}></Icon>
-                        <Card style={{ width: "450px", marginTop: '20px' }}>
+                        <Icon icon={commentAuthorAvatar} style={{ marginTop: '-90px' }}></Icon>
+                        <Card style={{ width: '100%' }}>
                             <CardBody>
-                                <VStack spacing={8}>
+                                <VStack spacing={6}>
                                     <InputControl placeholder="Add your comment..." />
                                     <HStack>
                                         <FormFileUpload icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m4.828 10.485l5.657-5.657a3 3 0 0 1 4.243 4.243L8.01 15.788a1.5 1.5 0 0 1-2.121-2.121l6.01-6.01a.5.5 0 1 0-.707-.708l-6.01 6.01a2.5 2.5 0 0 0 3.535 3.536l6.718-6.717A4 4 0 1 0 9.778 4.12L4.12 9.778a.5.5 0 0 0 .707.707Z" /></svg>}></FormFileUpload>
@@ -121,7 +122,7 @@ function Feed2() {
                 </TreeGridRow>
 
             </TreeGrid>
-        </HStack>
+        </HStack >
     );
 };
 

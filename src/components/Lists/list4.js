@@ -17,11 +17,11 @@ import { commentAuthorAvatar } from "@wordpress/icons";
  */
 function List4() {
     return (
-        <CardBody>
-            <VStack alignment="center" spacing={4}>
+        <HStack alignment="center">
+            <VStack spacing={4}>
                 <HStack alignment="left">
-                    <Icon size={40} icon={commentAuthorAvatar}></Icon>
-                    <HStack>
+                    <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                    <HStack spacing={30}>
                         <VStack>
                             <Heading level={4}>Ajit Bohra</Heading>
                             <Text variant="muted">Ajit@example.com</Text>
@@ -36,15 +36,15 @@ function List4() {
                 <CardDivider></CardDivider>
 
                 <HStack alignment="left">
-                    <Icon size={40} icon={commentAuthorAvatar}></Icon>
-                    <HStack>
+                    <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                    <HStack spacing={30}>
                         <VStack>
-                            <Heading level={4}>Pravin Prajapati</Heading>
-                            <Text variant="muted">Pravin@example.com</Text>
+                            <Heading level={4}>Ajit Bohra</Heading>
+                            <Text variant="muted">Ajit@example.com</Text>
                         </VStack>
                         <VStack alignment="right">
                             <Text size={15}>Founder</Text>
-                            <Text variant="muted">Last seen 2h ago</Text>
+                            <Text variant="muted">Last seen 3h ago</Text>
                         </VStack>
                     </HStack>
                 </HStack>
@@ -52,15 +52,15 @@ function List4() {
                 <CardDivider></CardDivider>
 
                 <HStack alignment="left">
-                    <Icon size={40} icon={commentAuthorAvatar}></Icon>
-                    <HStack>
+                    <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                    <HStack spacing={30}>
                         <VStack>
-                            <Heading level={4}>Punit Verma</Heading>
-                            <Text variant="muted">Punit@example.com</Text>
+                            <Heading level={4}>Ajit Bohra</Heading>
+                            <Text variant="muted">Ajit@example.com</Text>
                         </VStack>
                         <VStack alignment="right">
-                            <Text size={15}>Developer</Text>
-                            <Icon></Icon>
+                            <Text size={15}>Founder</Text>
+                            <Text variant="muted">Last seen 3h ago</Text>
                         </VStack>
                     </HStack>
                 </HStack>
@@ -68,20 +68,20 @@ function List4() {
                 <CardDivider></CardDivider>
 
                 <HStack alignment="left">
-                    <Icon size={40} icon={commentAuthorAvatar}></Icon>
-                    <HStack>
+                    <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                    <HStack spacing={30}>
                         <VStack>
-                            <Heading level={4}>Nikhil Sharma</Heading>
-                            <Text variant="muted">Nikhil@example.com</Text>
+                            <Heading level={4}>Ajit Bohra</Heading>
+                            <Text variant="muted">Ajit@example.com</Text>
                         </VStack>
                         <VStack alignment="right">
-                            <Text size={15}>React Developer</Text>
-                            <Text variant="muted">Last seen 1h ago</Text>
+                            <Text size={15}>Founder</Text>
+                            <Text variant="muted">Last seen 3h ago</Text>
                         </VStack>
                     </HStack>
                 </HStack>
             </VStack>
-        </CardBody>
+        </HStack>
     )
 };
 
