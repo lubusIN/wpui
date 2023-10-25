@@ -176,6 +176,16 @@ div.wpui_cl .components-navigator-button {
     border-color: grey !important;
 }
 
+.wpui_hero_cta .components-button {
+    padding: 20px !important;
+    color: white !important;
+}
+
+.wpui_hero_cta .components-button:nth-child(2) {
+    box-shadow: none !important;
+    border: 1px solid white;
+}
+
 @media only screen and (max-width:480px) {
     div.wpui_cl {
         column-gap: 10px;
