@@ -181,6 +181,10 @@ div.wpui_cl .components-navigator-button {
     color: white !important;
 }
 
+.wpui_hero_cta .components-button:nth-child(1) {
+    border: 1px solid transparent;
+}
+
 .wpui_hero_cta .components-button:nth-child(2) {
     box-shadow: none !important;
     border: 1px solid white;
