@@ -3,7 +3,6 @@
  */
 import {
     Button,
-    Card,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
