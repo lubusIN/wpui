@@ -21,7 +21,7 @@ function CardHeading1() {
     return (
         <Card size="medium" style={{ borderRadius: '4px' }}>
             <CardHeader style={{ paddingTop: '25px', paddingBottom: '25px' }}>
-                <Heading level={3}>Job Postings</Heading>
+                <Heading level={4}>Latest Blog Posts</Heading>
             </CardHeader>
             <div style={{ opacity: '0.2' }}>
                 <CardBody>

@@ -26,7 +26,7 @@ function Feed1() {
                         <Icon icon={commentAuthorAvatar}></Icon>
                         <HStack spacing={10}>
                             <Text size={14}>Applied to <Text weight={600}>Front End Developer </Text> </Text>
-                            <Text>Sep 20</Text>
+                            <Text >Sep 20</Text>
                         </HStack>
                     </HStack>
                 </TreeGridRow>

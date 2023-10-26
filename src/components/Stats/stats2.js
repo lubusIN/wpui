@@ -26,7 +26,7 @@ function Stats2() {
                     <Card>
                         <CardBody>
                             <VStack spacing={3}>
-                                <Heading level={3} weight={500}>Total Subscribers</Heading>
+                                <Heading level={3} weight={500}>Total Orders</Heading>
                                 <HStack>
                                     <HStack justify="left">
                                         <Heading level={2}>71,987</Heading>
@@ -52,11 +52,11 @@ function Stats2() {
                     <Card>
                         <CardBody>
                             <VStack spacing={3}>
-                                <Heading level={3} weight={500}>Avg. Open Rate</Heading>
+                                <Heading level={3} weight={500}>Avg. Order Value</Heading>
                                 <HStack>
                                     <HStack justify="left">
-                                        <Heading level={2}>58.16%</Heading>
-                                        <Text>from 56.10%</Text>
+                                        <Heading level={2}>₹50,000</Heading>
+                                        <Text>from ₹100,000</Text>
                                     </HStack>
                                     <Surface
                                         style={{
@@ -67,7 +67,7 @@ function Stats2() {
                                     >
                                         <HStack spacing={0}>
                                             <Icon icon={arrowUp} fill="#22C55D"></Icon>
-                                            <Text color='#176434'>2.02%</Text>
+                                            <Text color='#176434'>10%</Text>
                                         </HStack>
                                     </Surface>
                                 </HStack>
@@ -78,7 +78,7 @@ function Stats2() {
                     <Card>
                         <CardBody>
                             <VStack spacing={3}>
-                                <Heading level={3} weight={500}>Avg. Click Rate</Heading>
+                                <Heading level={3} weight={500}>Order Conversion Rate</Heading>
                                 <HStack>
                                     <HStack justify="left">
                                         <Heading level={2}>24.57%</Heading>

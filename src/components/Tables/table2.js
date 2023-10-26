@@ -11,106 +11,153 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
+    Card,
+    CheckboxControl,
 } from "@wordpress/components";
+import { useState } from "@wordpress/element";
 
 /**
  * Render Users Table
  */
 function Table2() {
 
-    const data = [
+    const [isCheckedAll, setCheckedAll] = useState(false);
+    const [checkedItems, setCheckedItems] = useState({});
+
+    const handleCheckboxChangeAll = () => {
+        setCheckedAll(!isCheckedAll);
+        const newCheckedItems = {};
+        products.forEach((_, index) => {
+            newCheckedItems[index] = !isCheckedAll;
+        });
+        setCheckedItems(newCheckedItems);
+    };
+
+    const handleCheckboxChange = (index) => {
+        setCheckedItems((prevCheckedItems) => ({
+            ...prevCheckedItems,
+            [index]: !prevCheckedItems[index],
+        }));
+    };
+
+    const products = [
         {
-            name: 'Logo Redesign',
-            description: 'New logo and gigital asset playbook',
-            time: '20.0',
-            rate: '$100.00',
-            price: '$2000.00'
+            name: 'Laptop - Model X',
+            category: 'Electronics',
+            price: 999.99,
+            quanity: 50,
+            desc: 'Powerful laptop with advanced features for professional use.',
         },
         {
-            name: 'Website Design',
-            description: 'Design and production of business cards',
-            time: '52.0',
-            rate: '$100.00',
-            price: '$5200.00'
+            name: 'Smartphone - Galaxy 20',
+            category: 'Electronics',
+            price: 599.99,
+            quanity: 100,
+            desc: 'Sleek smartphone with high-quality camera and fast performance.',
         },
         {
-            name: 'Business Cards ',
-            description: 'New logo and gigital asset playbook',
-            time: '12.0',
-            rate: '$100.00',
-            price: '$1200.00'
+            name: "Men's Watch - Chrono",
+            category: 'Fashion',
+            price: 149.99,
+            quanity: 75,
+            desc: 'Elegant men\'s watch with chronograph functionality.',
         },
         {
-            name: 'Tshirt Redesign',
-            description: 'Tshirt design concept',
-            time: '2.0',
-            rate: '$100.00',
-            price: '$400.00'
+            name: 'Blender - Pro Series',
+            category: 'Home Appliances',
+            price: 79.99,
+            quanity: 30,
+            desc: 'Professional-grade blender for smoothies and more.',
+        },
+        {
+            name: 'Running Shoes - SpeedFit',
+            category: 'Sports & Outdoors',
+            price: 129.99,
+            quanity: 40,
+            desc: 'Comfortable running shoes designed for speed and agility.',
         },
     ];
 
     return (
-        <VStack spacing={10}>
+        <VStack spacing={10} >
             <HStack direction={['column', 'row']} alignment="start" justify="space-between">
                 <VStack>
-                    <Heading level={3} >Invoice</Heading>
-                    <Text>For work completed</Text>
+                    <Heading level={3} >Products</Heading>
+                    <Text size={14} variant="muted">A comprehensive overview of our featured products, including electronics, fashion, home appliances, and more.</Text>
                 </VStack>
-                <Button variant="primary">Print</Button>
+                <Button variant="primary" style={{ minWidth: 'auto' }}>Export</Button>
             </HStack>
 
-            <Scrollable scrollDirection="x">
-                <TreeGrid className="wpui_table" style={{ width: '100%', borderCollapse: 'collapse' }}>
-                    <TreeGridRow>
-                        <TreeGridCell withoutGridItem>
-                            <Heading level={4}>Project</Heading>
-                        </TreeGridCell>
-                        <TreeGridCell withoutGridItem>
-                            <Heading level={4}>Hours</Heading>
-                        </TreeGridCell>
-                        <TreeGridCell withoutGridItem>
-                            <Heading level={4}>Rate</Heading>
-                        </TreeGridCell>
-                        <TreeGridCell withoutGridItem>
-                            <Heading level={4}>Price</Heading>
-                        </TreeGridCell>
-                    </TreeGridRow>
-                    {data.map((item, index) => (
-                        <TreeGridRow key={index} style={{ borderTop: '1px solid rgba(0 0 0 / 0.1)' }}>
-                            <TreeGridCell>
-                                {(props) => (
-                                    <HStack alignment="left">
-                                        <VStack>
-                                            <Heading level={5}>{item.name}</Heading>
-                                            <Text>{item.description}</Text>
-                                        </VStack>
-                                    </HStack>
-                                )}
+            <Card style={{ borderRadius: '4px' }}>
+                <Scrollable scrollDirection="x">
+                    <TreeGrid className="wpui_table" style={{ width: '100%', borderCollapse: 'collapse' }}>
+                        <TreeGridRow>
+                            <TreeGridCell withoutGridItem style={{ paddingRight: '0px', width: '20px' }}>
+                                <CheckboxControl
+                                    __nextHasNoMarginBottom
+                                    checked={isCheckedAll}
+                                    onChange={handleCheckboxChangeAll}
+                                />
                             </TreeGridCell>
-                            <TreeGridCell>
-                                {(props) => (
-                                    <Text size={15}>{item.time}</Text>
-                                )}
+                            <TreeGridCell withoutGridItem>
+                                <Heading level={4}>Name</Heading>
                             </TreeGridCell>
-                            <TreeGridCell>
-                                {(props) => (
-                                    <Text size={15}>{item.rate}</Text>
-                                )}
+                            <TreeGridCell withoutGridItem>
+                                <Heading level={4}>Category</Heading>
                             </TreeGridCell>
-                            <TreeGridCell>
-                                {(props) => (
-                                    <Text>{item.price}</Text>
-                                )}
+                            <TreeGridCell withoutGridItem>
+                                <Heading level={4}>Quantity</Heading>
+                            </TreeGridCell>
+                            <TreeGridCell withoutGridItem>
+                                <Heading level={4}>Price</Heading>
                             </TreeGridCell>
                         </TreeGridRow>
-                    ))}
-                </TreeGrid>
-            </Scrollable>
+                        {products.map((product, index) => (
+                            <TreeGridRow key={index} style={{ borderTop: '1px solid rgba(0 0 0 / 0.1)' }}>
+                                <TreeGridCell style={{ paddingRight: '0px' }}>
+                                    {(props) => (
+                                        <CheckboxControl
+                                            __nextHasNoMarginBottom
+                                            checked={checkedItems[index] || false}
+                                            onChange={() => handleCheckboxChange(index)}
+                                        />
+                                    )}
+                                </TreeGridCell>
+                                <TreeGridCell>
+                                    {(props) => (
+                                        <HStack alignment="left">
+                                            <VStack>
+                                                <Heading level={5}>{product.name}</Heading>
+                                                <Text>{product.desc}</Text>
+                                            </VStack>
+                                        </HStack>
+                                    )}
+                                </TreeGridCell>
+                                <TreeGridCell>
+                                    {(props) => (
+                                        <Text size={15}>{product.category}</Text>
+                                    )}
+                                </TreeGridCell>
+                                <TreeGridCell>
+                                    {(props) => (
+                                        <Text size={15}>{product.quanity}</Text>
+                                    )}
+                                </TreeGridCell>
+                                <TreeGridCell>
+                                    {(props) => (
+                                        <Text>${product.price}</Text>
+                                    )}
+                                </TreeGridCell>
+                            </TreeGridRow>
+                        ))}
+                    </TreeGrid>
+                </Scrollable>
+            </Card>
 
             <style>
                 {`
                     td{
-                        padding: 15px 0px
+                        padding: 18px;
                     }
                     @media only screen and (max-width: 480px){
                         .wpui_table{

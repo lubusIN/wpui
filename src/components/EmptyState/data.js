@@ -13,7 +13,7 @@ const EmptyState = [
         component: Components.EmptyState1
     },
     {
-        title: 'Breadcrumb 2',
+        title: 'EmptyState 2',
         path: '/EmptyState/emptystate2',
         component: Components.EmptyState2
     },

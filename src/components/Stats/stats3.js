@@ -24,8 +24,8 @@ function Stats3() {
                     <Card>
                         <CardBody>
                             <VStack>
-                                <Text size={14}>Total Subscribers</Text>
-                                <Heading level={2}>71,000</Heading>
+                                <Text size={14}>Total Orders</Text>
+                                <Heading level={2}>71,987</Heading>
                             </VStack>
                         </CardBody>
                     </Card>
@@ -33,8 +33,8 @@ function Stats3() {
                     <Card>
                         <CardBody>
                             <VStack>
-                                <Text size={14}>Avg. Open Rate</Text>
-                                <Heading level={2}>58.16%</Heading>
+                                <Text size={14}>Avg. Order Value</Text>
+                                <Heading level={2}>₹100,000</Heading>
                             </VStack>
                         </CardBody>
                     </Card>
@@ -42,7 +42,7 @@ function Stats3() {
                     <Card>
                         <CardBody>
                             <VStack>
-                                <Text size={14}>Avg. Click Rate</Text>
+                                <Text size={14}>Order Conversion Rate</Text>
                                 <Heading level={2}>24.57%</Heading>
                             </VStack>
                         </CardBody>

@@ -23,16 +23,16 @@ function Shell1() {
             slug: 'dashboard',
         },
         {
-            name: 'Teams',
-            slug: 'teams',
+            name: 'Posts',
+            slug: 'posts',
         },
         {
-            name: 'Projects',
-            slug: 'projects',
+            name: 'Pages',
+            slug: 'pages',
         },
         {
-            name: 'Calendar',
-            slug: 'calendar',
+            name: 'Comments',
+            slug: 'comments',
         }
     ];
 
@@ -71,14 +71,15 @@ function Shell1() {
                     <Icon icon={commentAuthorAvatar} size={35}></Icon>
                 </HStack>
             </CardHeader>
-            <CardBody><Heading>{activeItem}</Heading></CardBody>
+            <CardBody>
+                <Heading>
+                    {activeItem}
+                </Heading>
+            </CardBody>
             <CardBody>
                 <Card
                     variant="grid"
-                    style={{
-                        minWidth: '100px',
-                        height: '250px'
-                    }}>
+                    style={{ height: '250px' }}>
                     <CardBody>{cardBodyContent}</CardBody>
                 </Card>
             </CardBody>

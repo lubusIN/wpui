@@ -18,15 +18,15 @@ function Heading2() {
     return (
         <VStack spacing={3}>
             <HStack alignment="left" spacing={4}>
-                <Text>Jobs</Text>
+                <Text>Home</Text>
                 <Icon size={20} icon={chevronRight}></Icon>
-                <Text>Engineering</Text>
+                <Text>Blog</Text>
                 <Icon size={20} icon={chevronRight}></Icon>
-                <Text>Developer</Text>
+                <Text>Technology</Text>
             </HStack>
 
             <HStack alignment="start" justify="space-between" spacing={3} direction={['column', 'row']}>
-                <Heading level={2}>Unlocking the Secrets of Productivity</Heading>
+                <Heading level={2}>The Future of Artificial Intelligence</Heading>
                 <HStack spacing={3} expanded={false}>
                     <Button icon={edit} variant="secondary">Edit</Button>
                     <Button variant="primary">Publish</Button>

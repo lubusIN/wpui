@@ -24,11 +24,11 @@ function CardHeading3() {
             <CardHeader style={{ paddingTop: '25px', paddingBottom: '25px' }}>
                 <HStack direction={['column', 'row']}>
                     <VStack>
-                        <Heading level={3}>Job Postings</Heading>
-                        <Text size={16} color="#6b7280">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                        <Heading level={4}>Upcoming Events</Heading>
+                        <Text size={14} color="#6b7280">Join us for exciting moments ahead!</Text>
                     </VStack>
                     <HStack alignment="right" expanded={false}>
-                        <Button variant="primary" style={{ borderRadius: '5px' }}>Create New Job</Button>
+                        <Button variant="primary" style={{ borderRadius: '5px' }}>Create New Event</Button>
                     </HStack>
                 </HStack>
             </CardHeader>

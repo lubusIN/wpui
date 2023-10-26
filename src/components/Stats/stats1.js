@@ -27,9 +27,9 @@ function Stats1() {
                             size={30}
                         ></Icon>
                         <VStack>
-                            <Text size={20} variant="muted">Total Sales</Text>
+                            <Text size={18} variant="muted">Total Sales</Text>
                             <HStack>
-                                <Heading level={1}>₹5,957,551</Heading>
+                                <Heading level={2}>₹5,957,551</Heading>
                                 <HStack alignment="bottomRight" spacing={0}>
                                     <Icon icon={arrowUp} fill="green" />
                                     <Text color="green" size={14}>122</Text>
@@ -51,9 +51,9 @@ function Stats1() {
                             size={30}
                         ></Icon>
                         <VStack>
-                            <Text size={20} variant="muted">Net Sales</Text>
+                            <Text size={18} variant="muted">Net Sales</Text>
                             <HStack>
-                                <Heading level={1}>₹5,140,956</Heading>
+                                <Heading level={2}>₹5,140,956</Heading>
                                 <HStack alignment="bottomRight" spacing={0}>
                                     <Icon icon={arrowUp} fill="green" />
                                     <Text color="green" size={14}>5.4%</Text>
@@ -75,9 +75,9 @@ function Stats1() {
                             size={30}
                         ></Icon>
                         <VStack>
-                            <Text size={20} variant="muted">Orders</Text>
+                            <Text size={18} variant="muted">Orders</Text>
                             <HStack>
-                                <Heading level={1}>300</Heading>
+                                <Heading level={2}>300</Heading>
                                 <HStack alignment="bottomRight" spacing={0}>
                                     <Icon icon={arrowUp} fill="green" />
                                     <Text color="green" size={14}>3.2%</Text>

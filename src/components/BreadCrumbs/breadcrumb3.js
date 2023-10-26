@@ -4,7 +4,6 @@
 import {
     Card,
     Icon,
-    CardBody,
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
@@ -15,26 +14,23 @@ import { chevronRight, home } from "@wordpress/icons";
  */
 function Breadcrumb3() {
     return (
-        <Card isRounded style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <CardBody
-                isShady
-                style={{
-                    width: '400px',
-                    height: '35px',
-                    margin: '20px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}>
-                <HStack alignment="center" spacing={4}>
-                    <Icon icon={home}></Icon>
-                    <Icon size={50} icon={chevronRight}></Icon>
-                    <Heading level={4}>Posts</Heading>
-                    <Icon size={50} icon={chevronRight}></Icon>
-                    <Heading level={4}>Add new</Heading>
+        <HStack alignment="center" spacing={4}>
+            <Card
+                isBorderless
+                variant="secondary"
+                style={{ borderRadius: '6px', padding: '15px 20px' }}>
+                <HStack alignment="center" spacing={3}>
+                    <HStack expanded={false} alignment="center">
+                        <Icon icon={home}></Icon>
+                        <Heading size={14}>Home</Heading>
+                    </HStack>
+                    <Icon size={30} icon={chevronRight}></Icon>
+                    <Heading size={14}>Posts</Heading>
+                    <Icon size={30} icon={chevronRight}></Icon>
+                    <Heading size={14}>Add new</Heading>
                 </HStack>
-            </CardBody>
-        </Card>
+            </Card>
+        </HStack>
     );
 };
 

@@ -5,13 +5,16 @@ import {
     Icon,
     Card,
     CardBody,
+    CardDivider,
     DropdownMenu,
+    __experimentalGrid as Grid,
     __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
     __experimentalText as Text,
     __experimentalHeading as Heading,
-    CardDivider,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { moreHorizontal, wordpress, addCard, edit, trash } from "@wordpress/icons";
+import { moreHorizontal, edit, seen } from "@wordpress/icons";
 
 /**
  * Render Cards
@@ -20,149 +23,106 @@ function Grid1() {
 
     const control = [
         {
-            icon: <Icon icon={addCard}></Icon>,
+            icon: <Icon icon={seen}></Icon>,
             onClick: function noRefCheck() { },
-            title: 'Add data'
+            title: 'View'
         },
         {
             icon: <Icon icon={edit}></Icon>,
             onClick: function noRefCheck() { },
-            title: 'Edit data'
-        },
-        {
-            icon: <Icon icon={trash}></Icon>,
-            onClick: function noRefCheck() { },
-            title: 'Delete data'
+            title: 'Edit'
         },
 
     ];
 
+    const status = {
+        'Paid': { color: '#166434', backgroundColor: '#EFFDF4', borderRadius: '5px', padding: '6px 10px' },
+        'Overdue': { color: '#981B1B', backgroundColor: '#FEF1F2', borderRadius: '5px', padding: '6px 10px' }
+    };
+
+    const users = [
+        {
+            invoice: '001',
+            name: 'John Doe',
+            amount: '$2,000.00',
+            date: 'November 14,2022',
+            status: 'Overdue'
+        },
+        {
+            invoice: '002',
+            name: 'Jane Smith',
+            amount: '$14,000.00',
+            date: 'March 20,2023',
+            status: 'Paid'
+        },
+        {
+            invoice: '003',
+            name: 'Kevin Lee',
+            amount: '$7,000.00',
+            date: 'April 18,2023',
+            status: 'Paid'
+        }
+    ];
+
     return (
-        <HStack
-            direction={[
-                'column',
-                'row'
-            ]}
-            justify={'space-between'}
-        >
-            <Card style={{ width: '100%', borderRadius: '4px' }}>
-                <CardBody isShady>
-                    <HStack>
-                        <HStack alignment="left">
-                            <Icon icon={wordpress}></Icon>
-                            <Heading level={5}>Wordpress</Heading>
+        <Grid columns={[1, 2, 3]}>
+            {users.map((user, index) => (
+                <Card key={index} style={{ borderRadius: '4px' }}>
+                    <CardBody isShady>
+                        <HStack>
+                            <HStack alignment="left">
+                                <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%' }} />
+                                <VStack spacing={2}>
+                                    <Heading
+                                        level={4}
+                                        style={{
+                                            whiteSpace: 'nowrap',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                        }}>
+                                        {user.name}
+                                    </Heading>
+                                    <Text
+                                        size={12}
+                                        style={{
+                                            whiteSpace: 'nowrap',
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                        }}>
+                                        INV - {user.invoice}
+                                    </Text>
+                                </VStack>
+                            </HStack>
+                            <DropdownMenu
+                                controls={control}
+                                icon={moreHorizontal}
+                                onToggle={function noRefCheck() { }}
+                            />
                         </HStack>
-                        <DropdownMenu
-                            controls={control}
-                            icon={moreHorizontal}
-                            onToggle={function noRefCheck() { }}
-                        />
-                    </HStack>
-                </CardBody>
-                <CardBody>
-                    <HStack>
-                        <Text size={15}>Last Invoice</Text>
-                        <Text size={15}>December 13,2022</Text>
-                    </HStack>
-                    <CardDivider margin={3} />
-                    <HStack>
-                        <Text size={15}>Amount</Text>
-                        <HStack justify="right">
-                            <Heading level={15}>$2,000.00</Heading>
-                            <Heading
-                                size={13}
-                                color="#981B1B"
-                                style={{
-                                    backgroundColor: '#FEF1F2',
-                                    borderRadius: '5px',
-                                    padding: '6px 10px',
-                                }}
-                            >
-                                Overdue
-                            </Heading>
+                    </CardBody>
+                    <CardBody>
+                        <HStack>
+                            <Text size={15}>Date</Text>
+                            <Text size={15}>{user.date}</Text>
                         </HStack>
-                    </HStack>
-                </CardBody>
-            </Card>
-            <Card style={{ width: '100%', borderRadius: '4px' }}>
-                <CardBody isShady>
-                    <HStack>
-                        <HStack alignment="left">
-                            <Icon icon={wordpress}></Icon>
-                            <Heading level={5}>Wordpress</Heading>
+                        <CardDivider margin={3} />
+                        <HStack>
+                            <Text size={15}>Amount</Text>
+                            <HStack justify="right">
+                                <Heading level={15}>{user.amount}</Heading>
+                                <Heading
+                                    size={13}
+                                    color={status[user.status].color}
+                                    style={status[user.status]}
+                                >
+                                    {user.status}
+                                </Heading>
+                            </HStack>
                         </HStack>
-                        <DropdownMenu
-                            controls={control}
-                            icon={moreHorizontal}
-                            onToggle={function noRefCheck() { }}
-                        />
-                    </HStack>
-                </CardBody>
-                <CardBody>
-                    <HStack alignment="edge">
-                        <Text size={15}>Last Invoice</Text>
-                        <Text size={15}>January 22,2023</Text>
-                    </HStack>
-                    <CardDivider margin={3} />
-                    <HStack>
-                        <Text size={15}>Amount</Text>
-                        <HStack alignment="right">
-                            <Heading level={15}>$14,000.00</Heading>
-                            <Heading
-                                size={13}
-                                color="#166434"
-                                style={{
-                                    backgroundColor: '#EFFDF4',
-                                    borderRadius: '5px',
-                                    padding: '6px 10px',
-                                }}
-                            >
-                                Paid
-                            </Heading>
-                        </HStack>
-                    </HStack>
-                </CardBody>
-            </Card>
-            <Card style={{ width: '100%', borderRadius: '4px' }}>
-                <CardBody isShady>
-                    <HStack>
-                        <HStack alignment="left">
-                            <Icon icon={wordpress}></Icon>
-                            <Heading level={5}>Wordpress</Heading>
-                        </HStack>
-                        <DropdownMenu
-                            controls={control}
-                            icon={moreHorizontal}
-                            onToggle={function noRefCheck() { }}
-                        />
-                    </HStack>
-                </CardBody>
-                <CardBody>
-                    <HStack alignment="edge">
-                        <Text size={15}>Last Invoice</Text>
-                        <Text size={15}>January 23,2023</Text>
-                    </HStack>
-                    <CardDivider margin={3} />
-                    <HStack>
-                        <Text size={15}>Amount</Text>
-                        <HStack alignment="right">
-                            <Heading level={15}>$7,000.00</Heading>
-                            <Heading
-                                size={13}
-                                color="#166434"
-                                style={{
-                                    backgroundColor: '#EFFDF4',
-                                    borderRadius: '5px',
-                                    padding: '6px 10px',
-                                }}
-                            >
-                                Paid
-                            </Heading>
-                        </HStack>
-                    </HStack>
-                </CardBody>
-            </Card>
-        </HStack>
+                    </CardBody>
+                </Card>
+            ))}
+        </Grid>
     );
 };
 
