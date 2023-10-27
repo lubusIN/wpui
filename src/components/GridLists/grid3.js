@@ -9,6 +9,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalGrid as Grid,
     __experimentalHeading as Heading,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
 
 /**
@@ -21,10 +22,10 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Ajit Bohra</Heading>
-                                <Text size={16} variant="muted">Founder</Text>
+                                <Heading level={4} weight={500}>John Doe</Heading>
+                                <Text size={16} variant="muted">Administrator</Text>
                             </VStack>
                         </HStack>
                     </CardBody>
@@ -32,10 +33,10 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Pravin Prajapati</Heading>
-                                <Text size={16} variant="muted">Founder</Text>
+                                <Heading level={4} weight={500}>Jane Smith</Heading>
+                                <Text size={16} variant="muted">Editor</Text>
                             </VStack>
                         </HStack>
                     </CardBody>
@@ -43,10 +44,10 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Punit Verma</Heading>
-                                <Text size={16} variant="muted">Developer</Text>
+                                <Heading level={4} weight={500}>Emily Davis</Heading>
+                                <Text size={16} variant="muted">Author</Text>
                             </VStack>
                         </HStack>
                     </CardBody>
@@ -54,10 +55,10 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <img src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Nikhil Sharma</Heading>
-                                <Text size={16} variant="muted">React Developer</Text>
+                                <Heading level={4} weight={500}>Kevin Lee</Heading>
+                                <Text size={16} variant="muted">Contributor</Text>
                             </VStack>
                         </HStack>
                     </CardBody>

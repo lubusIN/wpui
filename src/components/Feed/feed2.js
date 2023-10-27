@@ -3,125 +3,175 @@
  */
 import {
     Icon,
-    Card,
-    CardBody,
-    FormFileUpload,
     __experimentalText as Text,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
     __experimentalTreeGrid as TreeGrid,
     __experimentalTreeGridRow as TreeGridRow,
-    __experimentalInputControl as InputControl,
-    Button,
-
+    __experimentalSurface as Surface,
+    Card,
+    CardBody,
 } from "@wordpress/components";
-import { border, check, commentAuthorAvatar } from "@wordpress/icons";
+import { comment, postAuthor, trash } from "@wordpress/icons";
 
 /**
  * Render Feeds
  */
 function Feed2() {
 
-    const line = (<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M10 .5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 1 0V1a.5.5 0 0 0-.5-.5Z" clip-rule="evenodd" /></svg>)
-
     return (
-        <HStack justify="center">
-            <TreeGrid>
-
-                <TreeGridRow>
-                    <HStack>
-                        <Icon icon={border}></Icon>
-                        <HStack spacing={10}>
-                            <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted" >Created the invoice </Text> </Text>
-                            <Text>7d ago</Text>
+        <>
+            <HStack className="wpui_post_timeline" justify="center">
+                <TreeGrid>
+                    <TreeGridRow>
+                        <HStack className="timeline_item" alignment="start">
+                            <Surface as={'span'}></Surface>
+                            <Surface className="timeline_icon">
+                                <Icon size={25} icon={postAuthor}></Icon>
+                            </Surface>
+                            <HStack className="timeline_update">
+                                <Card size="medium" style={{ borderRadius: '4px', width: '100%' }}>
+                                    <CardBody>
+                                        <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
+                                            <VStack>
+                                                <Text size={14}>Teresa created a post <Text weight={600}>"Tips for Effective Time Management"</Text></Text>
+                                            </VStack>
+                                            <Text className="timeline_date" variant="muted">just now</Text>
+                                        </HStack>
+                                    </CardBody>
+                                </Card>
+                            </HStack>
                         </HStack>
-                    </HStack>
-                </TreeGridRow>
-
-                <Icon icon={line} />
-
-                <TreeGridRow>
-                    <HStack>
-                        <Icon icon={border}></Icon>
-                        <HStack spacing={10}>
-                            <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted">Edited the invoice </Text> </Text>
-                            <Text>6d ago</Text>
+                    </TreeGridRow>
+                    <TreeGridRow>
+                        <HStack className="timeline_item" alignment="start">
+                            <Surface as={'span'}></Surface>
+                            <Surface className="timeline_icon">
+                                <Icon size={25} icon={comment}></Icon>
+                            </Surface>
+                            <HStack className="timeline_update">
+                                <Card size="medium" style={{ borderRadius: '4px', width: '100%' }}>
+                                    <CardBody>
+                                        <VStack spacing={5}>
+                                            <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
+                                                <Text size={14}>Rick M. Walters commented on <Text weight={600}>"Tips for Effective Time Management"</Text></Text>
+                                                <Text className="timeline_date" variant="muted">3 hours ago</Text>
+                                            </HStack>
+                                            <Card size="small" style={{ borderRadius: '4px' }}>
+                                                <CardBody>
+                                                    <Text size={12}>"Very helpful tips! I struggle with time management, so this is timely advice."</Text>
+                                                </CardBody>
+                                            </Card>
+                                        </VStack>
+                                    </CardBody>
+                                </Card>
+                            </HStack>
                         </HStack>
-                    </HStack>
-                </TreeGridRow>
-
-                <Icon icon={line} />
-
-                <TreeGridRow>
-                    <HStack>
-                        <Icon icon={border}></Icon>
-                        <HStack spacing={10}>
-                            <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted" >Sent the invoice </Text> </Text>
-                            <Text>6d ago</Text>
+                    </TreeGridRow>
+                    <TreeGridRow>
+                        <HStack className="timeline_item" alignment="start">
+                            <Surface as={'span'}></Surface>
+                            <Surface className="timeline_icon">
+                                <Icon size={25} icon={comment}></Icon>
+                            </Surface>
+                            <HStack spacing={10} className="timeline_update">
+                                <Card size="medium" style={{ borderRadius: '4px', width: '100%' }}>
+                                    <CardBody>
+                                        <VStack spacing={5}>
+                                            <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
+                                                <Text size={14}>Christopher J. Lockhart commented on <Text weight={600}>"Our Recent Achievements and Milestones"</Text></Text>
+                                                <Text className="timeline_date" variant="muted">4 minu ago</Text>
+                                            </HStack>
+                                            <Card size="small" style={{ borderRadius: '4px' }}>
+                                                <CardBody>
+                                                    <Text size={12}>"Impressive! How can we be a part of your success story?"</Text>
+                                                </CardBody>
+                                            </Card>
+                                        </VStack>
+                                    </CardBody>
+                                </Card>
+                            </HStack>
                         </HStack>
-                    </HStack>
-                </TreeGridRow>
-
-                <Icon icon={line} />
-
-                <TreeGridRow>
-                    <HStack>
-                        <Icon icon={commentAuthorAvatar} style={{ marginTop: '-40px' }}></Icon>
-                        <Card>
-                            <CardBody>
-                                <HStack spacing={10}>
-                                    <Text size={14} weight={600}>Chelsea Hagon <Text variant="muted">commented</Text> </Text>
-                                    <Text>6d ago</Text>
-                                </HStack>
-                                <Text variant="muted">Called client, they reassured me th invoice would be paid by 25th</Text>
-                            </CardBody>
-                        </Card>
-                    </HStack>
-                </TreeGridRow>
-
-                <Icon icon={line} style={{ marginTop: '-90px', height: '40px' }} />
-
-                <TreeGridRow>
-                    <HStack>
-                        <Icon icon={border}></Icon>
-                        <HStack spacing={10}>
-                            <Text size={14} weight={600}>Alex Curren <Text variant="muted" >Viewed the invoice </Text> </Text>
-                            <Text>2d ago</Text>
+                    </TreeGridRow>
+                    <TreeGridRow>
+                        <HStack className="timeline_item" alignment="start">
+                            <Surface as={'span'}></Surface>
+                            <Surface className="timeline_icon">
+                                <Icon size={25} icon={trash}></Icon>
+                            </Surface>
+                            <HStack spacing={10} className="timeline_update">
+                                <Card size="medium" style={{ borderRadius: '4px', width: '100%' }}>
+                                    <CardBody>
+                                        <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
+                                            <VStack>
+                                                <Text size={14}>Marjory S. Dames deleted a post <Text weight={600}>"Exploring New Markets: Expansion Plans"</Text></Text>
+                                            </VStack>
+                                            <Text className="timeline_date" variant="muted">2 minu ago</Text>
+                                        </HStack>
+                                    </CardBody>
+                                </Card>
+                            </HStack>
                         </HStack>
-                    </HStack>
-                </TreeGridRow>
-
-                <Icon icon={line} />
-
-                <TreeGridRow>
-                    <HStack>
-                        <Icon icon={check} fill="white" size={14} style={{ marginLeft: '3px', border: '0.5px solid', borderRadius: '15px', backgroundColor: '#5046E5' }}></Icon>
-                        <HStack spacing={10}>
-                            <Text size={14} weight={600}>Alex Curren <Text variant="muted" >Paid the invoice </Text> </Text>
-                            <Text>1d ago</Text>
+                    </TreeGridRow>
+                    <TreeGridRow>
+                        <HStack alignment="start">
+                            <Surface style={{ minWidth: 'auto' }}>
+                                <Icon size={25} icon={comment}></Icon>
+                            </Surface>
+                            <HStack spacing={10} className="timeline_update">
+                                <Card size="medium" style={{ borderRadius: '4px', width: '100%' }}>
+                                    <CardBody>
+                                        <VStack spacing={5}>
+                                            <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
+                                                <Text size={14}>Allene D. Peters commented on <Text weight={600}>"Our Recent Achievements and Milestones"</Text></Text>
+                                                <Text className="timeline_date" variant="muted">4 minu ago</Text>
+                                            </HStack>
+                                            <Card size="small" style={{ borderRadius: '4px' }}>
+                                                <CardBody>
+                                                    <Text size={12}>"Heartiest congratulations on your recent achievements and milestones! It's truly inspiring to witness the fruits of your hard work and dedication. "</Text>
+                                                </CardBody>
+                                            </Card>
+                                        </VStack>
+                                    </CardBody>
+                                </Card>
+                            </HStack>
                         </HStack>
-                    </HStack>
-                </TreeGridRow>
-
-                <TreeGridRow>
-                    <HStack alignment="left">
-                        <Icon icon={commentAuthorAvatar} style={{ marginTop: '-70px' }}></Icon>
-                        <Card style={{ width: "450px", marginTop: '20px' }}>
-                            <CardBody>
-                                <VStack spacing={8}>
-                                    <InputControl placeholder="Add your comment..." />
-                                    <HStack>
-                                        <FormFileUpload icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="m4.828 10.485l5.657-5.657a3 3 0 0 1 4.243 4.243L8.01 15.788a1.5 1.5 0 0 1-2.121-2.121l6.01-6.01a.5.5 0 1 0-.707-.708l-6.01 6.01a2.5 2.5 0 0 0 3.535 3.536l6.718-6.717A4 4 0 1 0 9.778 4.12L4.12 9.778a.5.5 0 0 0 .707.707Z" /></svg>}></FormFileUpload>
-                                        <Button variant="secondary">Comment</Button>
-                                    </HStack>
-                                </VStack>
-                            </CardBody>
-                        </Card>
-                    </HStack>
-                </TreeGridRow>
-
-            </TreeGrid>
-        </HStack>
+                    </TreeGridRow>
+                </TreeGrid>
+            </HStack>
+            <style>
+                {`
+                    .wpui_post_timeline .timeline_icon{
+                        min-width: auto;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .wpui_post_timeline .timeline_item{
+                        position: relative;
+                        padding-bottom: 40px;
+                    }
+                    .wpui_post_timeline .timeline_item > span{
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        left: 1.6rem;
+                        top: 0;
+                        background-color: #E4E7EB;
+                    }
+                    .wpui_post_timeline .components-surface svg{
+                        border-radius: 100% ;
+                        background: #f8f8f8 ;
+                        padding: 15px
+                    }
+                    .wpui_post_timeline .timeline_date{
+                        min-width: fit-content;
+                    }
+                    .wpui_post_timeline .timeline_update{
+                        align-self: center;
+                    }
+                `}
+            </style>
+        </>
     );
 };
 

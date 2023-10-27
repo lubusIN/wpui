@@ -32,12 +32,6 @@ const components = [
         variations: Components.EmptyState,
     },
     {
-        title: 'FAQS',
-        path: '/faq/faq1',
-        src: '/faqs.png',
-        variations: Components.Faqs,
-    },
-    {
         title: 'Action Panels',
         path: '/actionpanels/panel1',
         src: '/actionpanel.png',
@@ -54,12 +48,6 @@ const components = [
         path: '/form/form',
         src: '/form.png',
         variations: Components.Forms,
-    },
-    {
-        title: 'Hero Section',
-        path: '/herosection/section1',
-        src: '/herosection.png',
-        variations: Components.HeroSection,
     },
     {
         title: 'Sign-in and Registration',
@@ -92,29 +80,11 @@ const components = [
         variations: Components.Tables,
     },
     {
-        title: 'Sidebar Navigation',
-        path: '/sidebarnavigation/sidebar1',
-        src: '/sidebarnavigation.png',
-        variations: Components.SidebarNavigation,
-    },
-    // {
-    //     title: 'Modals',
-    //     path: '/modals/modal1',
-    //     src: '/modal.png',
-    //     variations: Components.Modals,
-    // },
-    {
         title: 'Navigations',
         path: '/navigations/navigate1',
         src: '/navigation.png',
         variations: Components.Navigations,
     },
-    {
-        title: 'Plugin Shell',
-        path: '/pluginshell/shell1',
-        src: '',
-        variations: Components.PluginShell,
-    }
 ];
 
 export default components;

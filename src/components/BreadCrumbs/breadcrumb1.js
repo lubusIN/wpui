@@ -15,10 +15,10 @@ function Breadcrumb1() {
     return (
         <HStack alignment="center" spacing={4}>
             <Icon icon={home}></Icon>
-            <Icon size={20} icon={chevronRight}></Icon>
-            <Heading level={4}>Posts</Heading>
-            <Icon size={20} icon={chevronRight}></Icon>
-            <Heading level={4}>Add new</Heading>
+            <Icon size={30} icon={chevronRight}></Icon>
+            <Heading size={14}>Posts</Heading>
+            <Icon size={30} icon={chevronRight}></Icon>
+            <Heading size={14}>Add new</Heading>
         </HStack>
     );
 };

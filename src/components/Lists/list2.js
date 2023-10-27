@@ -13,169 +13,88 @@ import {
  * Render Stacked List View
  */
 function List2() {
+
+    const users = [
+        {
+            name: 'David K. Williams',
+            role: 'Administrator',
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+        },
+        {
+            name: 'Jeramy D. Johnson',
+            role: 'Contributor',
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+        },
+        {
+            name: 'Diane C. Cotter',
+            role: 'Author',
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+        },
+        {
+            name: 'Cody I. Curran',
+            role: 'Editor',
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+        }
+    ];
+
+    const truncate = {
+        maxWidth: '100%',
+        overflow: 'hidden',
+        display: '-webkit-box',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: 2,
+    }
+
     return (
-        <HStack alignment="center">
-            <VStack alignment="center" spacing={4}>
-                <HStack spacing={20}>
-                    <HStack spacing={3} alignment="start">
-                        <img
-                            width={'100%'}
-                            src="https://placehold.co/50"
-                            style={{ borderRadius: '100%', maxWidth: '50px' }}
-                        />
-                        <VStack spacing={3}>
-                            <HStack>
-                                <Heading level={4} weight={500}>Ajit Bohra</Heading>
-                                <Text size={16}>2d</Text>
+        <>
+            <HStack alignment="center">
+                <VStack className="wpui_user_list" alignment="center" spacing={4}>
+                    {users.map((user, index) => (
+                        <>
+                            <HStack key={index} spacing={20}>
+                                <HStack spacing={3} alignment="start">
+                                    <img
+                                        src="https://placehold.co/50"
+                                        style={{ borderRadius: '100%', minWidth: 'auto' }}
+                                    />
+                                    <VStack spacing={3} style={{ width: '30rem' }}>
+                                        <HStack>
+                                            <Heading
+                                                level={4}
+                                                weight={500}
+                                                style={{
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
+                                                    whiteSpace: 'nowrap',
+                                                }}>
+                                                {user.name}
+                                            </Heading>
+                                            <Text size={16} style={{ minWidth: 'auto' }} >{user.role}</Text>
+                                        </HStack>
+                                        <Text
+                                            size={16}
+                                            variant="muted"
+                                            lineHeight={1.6}
+                                            style={truncate}>
+                                            {user.about}
+                                        </Text>
+                                    </VStack>
+                                </HStack>
                             </HStack>
-                            <Text
-                                size={16}
-                                variant="muted"
-                                lineHeight={1.6}
-                                style={{
-                                    width: '30rem',
-                                    maxWidth: '100%',
-                                    overflow: 'hidden',
-                                    display: '-webkit-box',
-                                    WebkitBoxOrient: 'vertical',
-                                    WebkitLineClamp: 2,
-                                }}>
-                                Explicabo nihil laborum. Saepe facilis consequuntur in eaque. Consequatur perspiciatis quam. Sed est illo quia. Culpa vitae placeat vitae. Repudiandae sunt exercitationem nihil nisi facilis placeat minima eveniet.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                </HStack>
 
-                <CardDivider margin={3} />
-
-                <HStack spacing={20}>
-                    <HStack spacing={3} alignment="start">
-                        <img
-                            width={'100%'}
-                            src="https://placehold.co/50"
-                            style={{ borderRadius: '100%', maxWidth: '50px' }}
-                        />
-                        <VStack spacing={3}>
-                            <HStack>
-                                <Heading level={4} weight={500}>Ajit Bohra</Heading>
-                                <Text size={16}>2d</Text>
-                            </HStack>
-                            <Text
-                                size={16}
-                                variant="muted"
-                                lineHeight={1.6}
-                                style={{
-                                    width: '30rem',
-                                    maxWidth: '100%',
-                                    overflow: 'hidden',
-                                    display: '-webkit-box',
-                                    WebkitBoxOrient: 'vertical',
-                                    WebkitLineClamp: 2,
-                                }}>
-                                Explicabo nihil laborum. Saepe facilis consequuntur in eaque. Consequatur perspiciatis quam. Sed est illo quia. Culpa vitae placeat vitae. Repudiandae sunt exercitationem nihil nisi facilis placeat minima eveniet.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                </HStack>
-
-                <CardDivider margin={3} />
-
-                <HStack spacing={20}>
-                    <HStack spacing={3} alignment="start">
-                        <img
-                            width={'100%'}
-                            src="https://placehold.co/50"
-                            style={{ borderRadius: '100%', maxWidth: '50px' }}
-                        />
-                        <VStack spacing={3}>
-                            <HStack>
-                                <Heading level={4} weight={500}>Ajit Bohra</Heading>
-                                <Text size={16}>2d</Text>
-                            </HStack>
-                            <Text
-                                size={16}
-                                variant="muted"
-                                lineHeight={1.6}
-                                style={{
-                                    width: '30rem',
-                                    maxWidth: '100%',
-                                    overflow: 'hidden',
-                                    display: '-webkit-box',
-                                    WebkitBoxOrient: 'vertical',
-                                    WebkitLineClamp: 2,
-                                }}>
-                                Explicabo nihil laborum. Saepe facilis consequuntur in eaque. Consequatur perspiciatis quam. Sed est illo quia. Culpa vitae placeat vitae. Repudiandae sunt exercitationem nihil nisi facilis placeat minima eveniet.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                </HStack>
-
-                <CardDivider margin={3} />
-
-                <HStack spacing={20}>
-                    <HStack spacing={3} alignment="start">
-                        <img
-                            width={'100%'}
-                            src="https://placehold.co/50"
-                            style={{ borderRadius: '100%', maxWidth: '50px' }}
-                        />
-                        <VStack spacing={3}>
-                            <HStack>
-                                <Heading level={4} weight={500}>Ajit Bohra</Heading>
-                                <Text size={16}>2d</Text>
-                            </HStack>
-                            <Text
-                                size={16}
-                                variant="muted"
-                                lineHeight={1.6}
-                                style={{
-                                    width: '30rem',
-                                    maxWidth: '100%',
-                                    overflow: 'hidden',
-                                    display: '-webkit-box',
-                                    WebkitBoxOrient: 'vertical',
-                                    WebkitLineClamp: 2,
-                                }}>
-                                Explicabo nihil laborum. Saepe facilis consequuntur in eaque. Consequatur perspiciatis quam. Sed est illo quia. Culpa vitae placeat vitae. Repudiandae sunt exercitationem nihil nisi facilis placeat minima eveniet.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                </HStack>
-
-                <CardDivider margin={3} />
-
-                <HStack spacing={20}>
-                    <HStack spacing={3} alignment="start">
-                        <img
-                            width={'100%'}
-                            src="https://placehold.co/50"
-                            style={{ borderRadius: '100%', maxWidth: '50px' }}
-                        />
-                        <VStack spacing={3}>
-                            <HStack>
-                                <Heading level={4} weight={500}>Ajit Bohra</Heading>
-                                <Text size={16}>2d</Text>
-                            </HStack>
-                            <Text
-                                size={16}
-                                variant="muted"
-                                lineHeight={1.6}
-                                style={{
-                                    width: '30rem',
-                                    maxWidth: '100%',
-                                    overflow: 'hidden',
-                                    display: '-webkit-box',
-                                    WebkitBoxOrient: 'vertical',
-                                    WebkitLineClamp: 2,
-                                }}>
-                                Explicabo nihil laborum. Saepe facilis consequuntur in eaque. Consequatur perspiciatis quam. Sed est illo quia. Culpa vitae placeat vitae. Repudiandae sunt exercitationem nihil nisi facilis placeat minima eveniet.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                </HStack>
-
-            </VStack>
-        </HStack>
+                            <CardDivider margin={3} />
+                        </>
+                    ))}
+                </VStack>
+            </HStack>
+            <style>
+                {`
+                    .wpui_user_list hr:last-child{
+                        display: none;
+                    }
+            `}
+            </style>
+        </>
     )
 };
 

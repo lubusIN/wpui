@@ -10,7 +10,6 @@ import {
     __experimentalText as Text,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { edit } from '@wordpress/icons';
 
 /**
  * Render Page Heading 3
@@ -19,15 +18,15 @@ function Heading3() {
     return (
         <Grid columns={[1, 2]} rowGap={35}>
             <HStack alignment="center" justify="left" spacing={5}>
-                <Surface as={'img'} src="https://placehold.co/80" style={{ borderRadius: '100%' }} />
+                <Surface as={'img'} src="https://placehold.co/80" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
                 <VStack expanded={false}>
-                    <Heading level={2}>Ricardo Cooper</Heading>
-                    <Text size={14} color="grey">Applied for <Text weight={500}>Front End Developer</Text> on August 25, 2020</Text>
+                    <Heading level={2}>Sarah Weaver</Heading>
+                    <Text size={14} color="grey"><Text weight={500}>Wordpress Developer</Text> Contributing to WordPress community since 2015</Text>
                 </VStack>
             </HStack>
             <HStack spacing={3} justify="right">
-                <Button icon={edit} variant="secondary">Edit</Button>
-                <Button variant="primary">Publish</Button>
+                <Button variant="secondary">Profile</Button>
+                <Button variant="primary">Contact</Button>
             </HStack>
         </Grid>
     );

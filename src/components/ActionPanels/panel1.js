@@ -20,12 +20,12 @@ function Panel1() {
                 <CardBody>
                     <VStack spacing={6} alignment="baseline">
                         <VStack spacing={3}>
-                            <Heading level={3}>Manage Subscription</Heading>
+                            <Heading level={3}>Update Your Profile</Heading>
                             <Text size={15} weight={400} variant="muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
+                                Elevate your online presence by personalizing your user profile with the latest information.
                             </Text>
                         </VStack>
-                        <Button variant="primary">Change Plan</Button>
+                        <Button variant="primary">Update Profile</Button>
                     </VStack>
                 </CardBody>
             </Card>

@@ -2,7 +2,6 @@
  * WordPress dependencies.
  */
 import {
-    Icon,
     Button,
     __experimentalScrollable as Scrollable,
     __experimentalTreeGrid as TreeGrid,
@@ -12,8 +11,8 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { commentAuthorAvatar } from "@wordpress/icons";
 
 /**
  * Render Users Table
@@ -22,43 +21,33 @@ function Table1() {
 
     const data = [
         {
-            name: 'wordpress',
-            email: 'test@gmail.com',
-            role: 'Member',
-            title: 'Front-end Developer',
-            desc: 'Optimization',
+            name: 'Harry D. Mead',
+            email: 'harry@gmail.com',
+            role: 'Administrator',
             status: 'Active'
         },
         {
-            name: 'Punit Verma',
-            email: 'punit@gmail.com',
-            role: 'Member',
-            title: 'Developer',
-            desc: 'Optimization',
+            name: 'Justina M. Plummer',
+            email: 'justina@gmail.com',
+            role: 'Editor',
             status: 'Active'
         },
         {
-            name: 'Ajit Bohra',
-            email: 'ajit@gmail.com',
-            role: 'Member',
-            title: 'Developer',
-            desc: 'Optimization',
+            name: 'John J. Davis',
+            email: 'john@gmail.com',
+            role: 'Contributor',
             status: 'Active'
         },
         {
-            name: 'Pravin Prajapati',
-            email: 'pravin@gmail.com',
-            role: 'Member',
-            title: 'Designer',
-            desc: 'Optimization',
+            name: 'Herman M. Monson',
+            email: 'herman@gmail.com',
+            role: 'Author',
             status: 'Active'
         },
         {
-            name: 'Nikhil Sharma',
-            email: 'nikhil@gmail.com',
-            role: 'Member',
-            title: 'React Developer',
-            desc: 'Optimization',
+            name: 'Joseph E. Schlater',
+            email: 'joseph@gmail.com',
+            role: 'Subscriber',
             status: 'Active'
         }
     ];
@@ -68,9 +57,11 @@ function Table1() {
             <HStack direction={['column', 'row']} alignment="start" justify="space-between">
                 <VStack>
                     <Heading level={3} >Users</Heading>
-                    <Text>A list of all the users in your account including their name, title, email and role</Text>
+                    <Text size={14} variant="muted">
+                        Welcome to our WordPress Users page featuring a list of user data, including names, emails, and roles.
+                    </Text>
                 </VStack>
-                <Button variant="primary">Add User</Button>
+                <Button variant="primary" style={{ minWidth: 'auto' }}>Add User</Button>
             </HStack>
 
             <Scrollable scrollDirection="x">
@@ -80,7 +71,7 @@ function Table1() {
                             <Heading level={4}>Name</Heading>
                         </TreeGridCell>
                         <TreeGridCell withoutGridItem>
-                            <Heading level={4}>Title</Heading>
+                            <Heading level={4}>Email</Heading>
                         </TreeGridCell>
                         <TreeGridCell withoutGridItem>
                             <Heading level={4}>Status</Heading>
@@ -94,19 +85,15 @@ function Table1() {
                             <TreeGridCell>
                                 {(props) => (
                                     <HStack alignment="left">
-                                        <Icon size={60} icon={commentAuthorAvatar} style={{ fill: 'grey' }}></Icon>
-                                        <VStack>
-                                            <Heading level={5}>{item.name}</Heading>
-                                            <Text>{item.email}</Text>
-                                        </VStack>
+                                        <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
+                                        <Heading level={5}>{item.name}</Heading>
                                     </HStack>
                                 )}
                             </TreeGridCell>
                             <TreeGridCell>
                                 {(props) => (
                                     <VStack>
-                                        <Text size={15}>{item.title}</Text>
-                                        <Text >{item.desc}</Text>
+                                        <Text>{item.email}</Text>
                                     </VStack>
                                 )}
                             </TreeGridCell>

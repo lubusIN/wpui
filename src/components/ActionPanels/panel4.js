@@ -22,13 +22,14 @@ function Panel4() {
                 <CardBody>
                     <VStack spacing={6} alignment="baseline">
                         <VStack spacing={3}>
-                            <Heading level={3}>Update your email</Heading>
+                            <Heading level={3}>View Email Log</Heading>
                             <Text size={15} weight={400} variant="muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit Explicabo totam non.</Text>
+                                Review a log of all email notifications sent from your WordPress site.
+                            </Text>
                         </VStack>
                         <HStack alignment="stretch" justify="left">
-                            <TextControl placeholder="you@example.com" type="email" style={{ width: '48vmin', height: '35px', borderRadius: '5px' }}></TextControl>
-                            <Button variant="primary" style={{ borderRadius: '5px' }}>Save</Button>
+                            <TextControl placeholder="you@example.com" type="date" style={{ width: '48vmin', height: '35px', borderRadius: '5px' }}></TextControl>
+                            <Button variant="primary" style={{ borderRadius: '5px' }}>View Log</Button>
                         </HStack>
                     </VStack>
                 </CardBody>

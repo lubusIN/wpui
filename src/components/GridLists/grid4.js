@@ -12,7 +12,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { navigation, check, people, payment, receipt, postAuthor, external } from "@wordpress/icons";
+import { check, people, payment, receipt, postAuthor, external, mobile } from "@wordpress/icons";
 
 /**
  * Render Cards
@@ -24,19 +24,19 @@ function Grid4() {
                 <CardBody>
                     <VStack spacing={8}>
                         <HStack>
-                            <Icon
-                                size={40}
-                                icon={navigation}
-                                fill="#0C766E"
-                                style={{
-                                    borderRadius: '1px',
-                                    backgroundColor: '#EFFEFA'
-                                }}></Icon>
+                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
+                                <Icon
+                                    size={40}
+                                    icon={mobile}
+                                />
+                            </CardBody>
                             <Button icon={external} size={40} variant="Tertiary"></Button>
                         </HStack>
                         <VStack>
-                            <Heading level={4} weight={500}>Request time off</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Heading level={4} weight={500}>Responsive Design</Heading>
+                            <Text size={15} lineHeight={1.6} variant="muted">
+                                Our WordPress theme ensures a seamless experience across all devices, providing a user-friendly interface on desktops, tablets, and smartphones.
+                            </Text>
                         </VStack>
                     </VStack>
                 </CardBody>
@@ -46,19 +46,19 @@ function Grid4() {
                 <CardBody>
                     <VStack spacing={8}>
                         <HStack>
-                            <Icon
-                                size={40}
-                                icon={check}
-                                fill="#9547D7"
-                                style={{
-                                    borderRadius: '1px',
-                                    backgroundColor: '#FAF5FF'
-                                }}></Icon>
+                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
+                                <Icon
+                                    size={40}
+                                    icon={check}
+                                />
+                            </CardBody>
                             <Button icon={external} size={40} variant="Tertiary"></Button>
                         </HStack>
                         <VStack>
-                            <Heading level={4} weight={500}>Benefits</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Heading level={4} weight={500}>SEO Optimization</Heading>
+                            <Text size={15} lineHeight={1.6} variant="muted">
+                                Boost your website's visibility with our built-in SEO optimization tools. Improve your search engine rankings and attract more organic traffic.
+                            </Text>
                         </VStack>
                     </VStack>
                 </CardBody>
@@ -68,19 +68,19 @@ function Grid4() {
                 <CardBody>
                     <VStack spacing={8}>
                         <HStack>
-                            <Icon
-                                size={40}
-                                icon={people}
-                                fill="#3482B1"
-                                style={{
-                                    borderRadius: '1px',
-                                    backgroundColor: '#F1F9FF'
-                                }}></Icon>
+                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
+                                <Icon
+                                    size={40}
+                                    icon={people}
+                                />
+                            </CardBody>
                             <Button icon={external} size={40} variant="Tertiary"></Button>
                         </HStack>
                         <VStack>
-                            <Heading level={4} weight={500}>Schedule a one-on-one</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Heading level={4} weight={500}>E-commerce Solutions</Heading>
+                            <Text size={15} lineHeight={1.6} variant="muted">
+                                Take your business online with our e-commerce solutions. From secure payment gateways to customizable product pages, we help you build a successful online store.
+                            </Text>
                         </VStack>
                     </VStack>
                 </CardBody>
@@ -90,19 +90,19 @@ function Grid4() {
                 <CardBody>
                     <VStack spacing={8}>
                         <HStack>
-                            <Icon
-                                size={40}
-                                icon={payment}
-                                fill="#A76C18"
-                                style={{
-                                    borderRadius: '1px',
-                                    backgroundColor: '#FEFCE8'
-                                }}></Icon>
+                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
+                                <Icon
+                                    size={40}
+                                    icon={payment}
+                                />
+                            </CardBody>
                             <Button icon={external} size={40} variant="Tertiary"></Button>
                         </HStack>
                         <VStack>
-                            <Heading level={4} weight={500}>Payroll</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Heading level={4} weight={500}> Premium Blog Templates</Heading>
+                            <Text size={15} lineHeight={1.6} variant="muted">
+                                Explore a collection of beautifully crafted blog templates, designed to make your content stand out. Choose from a variety of styles to suit your unique taste.
+                            </Text>
                         </VStack>
                     </VStack>
                 </CardBody>
@@ -112,19 +112,19 @@ function Grid4() {
                 <CardBody>
                     <VStack spacing={8}>
                         <HStack>
-                            <Icon
-                                size={40}
-                                icon={receipt}
-                                fill="#BD123C"
-                                style={{
-                                    borderRadius: '1px',
-                                    backgroundColor: '#FFF1F2'
-                                }}></Icon>
+                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
+                                <Icon
+                                    size={40}
+                                    icon={receipt}
+                                />
+                            </CardBody>
                             <Button icon={external} size={40} variant="Tertiary"></Button>
                         </HStack>
                         <VStack>
-                            <Heading level={4} weight={500}>Submit an expense</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Heading level={4} weight={500}>24/7 Customer Support</Heading>
+                            <Text size={15} lineHeight={1.6} variant="muted">
+                                We pride ourselves on providing exceptional customer support. Our dedicated team is available 24/7 to assist you with any queries or issues you may encounter.
+                            </Text>
                         </VStack>
                     </VStack>
                 </CardBody>
@@ -134,19 +134,19 @@ function Grid4() {
                 <CardBody>
                     <VStack spacing={8}>
                         <HStack>
-                            <Icon
-                                size={40}
-                                icon={postAuthor}
-                                fill="#4338CA"
-                                style={{
-                                    borderRadius: '1px',
-                                    backgroundColor: '#EEF2FF'
-                                }}></Icon>
+                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
+                                <Icon
+                                    size={40}
+                                    icon={postAuthor}
+                                />
+                            </CardBody>
                             <Button icon={external} size={40} variant="Tertiary"></Button>
                         </HStack>
                         <VStack>
-                            <Heading level={4} weight={500}>Training</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Heading level={4} weight={500}> One-Click Installation</Heading>
+                            <Text size={15} lineHeight={1.6} variant="muted">
+                                Get started in minutes with our easy one-click installation. No technical expertise required – launch your WordPress site effortlessly and focus on what you do best.
+                            </Text>
                         </VStack>
                     </VStack>
                 </CardBody>

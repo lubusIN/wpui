@@ -18,11 +18,11 @@ function EmptyState1() {
         <VStack alignment="center" spacing={6}>
             <VStack alignment="center" spacing={2}>
                 <Icon size={40} icon={file}></Icon>
-                <Heading level={3}>No Projects</Heading>
-                <Text size={15}>Get started by creating a new project</Text>
+                <Heading level={3}>No items found</Heading>
+                <Text size={15}>Maximum upload file size: 200 MB.</Text>
             </VStack>
             <FormFileUpload variant="primary" icon={plus}>
-                New Project
+                Upload File
             </FormFileUpload>
         </VStack>
     );

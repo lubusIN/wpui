@@ -23,15 +23,15 @@ function Panel2() {
                 <CardBody>
                     <VStack spacing={6} alignment="left">
                         <VStack spacing={3}>
-                            <Heading level={3}>Continuous Integration</Heading>
+                            <Heading level={3}>View Site Analytics</Heading>
                             <Text size={15} weight={400} variant="muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
+                                Gain insights into your website's performance, track visitor behavior, and measure engagement with our comprehensive analytics tool.
                             </Text>
                         </VStack>
 
                         <Button style={{ padding: 0 }}>
                             <Text size={14} weight={600} as={"a"} href="https://wordpress.org" color='blue' style={{ textDecoration: 'none' }} >
-                                Learn more about Wordpress
+                                Explore Analytics
                             </Text>
                             <Icon icon={arrowRight} color="blue"></Icon>
                         </Button>
