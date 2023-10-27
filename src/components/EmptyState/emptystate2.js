@@ -7,6 +7,7 @@ import {
     FormFileUpload,
     __experimentalVStack as VStack,
     __experimentalText as Text,
+    DropZone,
 } from "@wordpress/components";
 import { cloudUpload } from "@wordpress/icons";
 
@@ -23,6 +24,7 @@ function EmptyState2() {
                         <Text><Text weight={500}>Click to upload</Text> or drag and drop</Text>
                         <Text>SVG, PNG, JPG or GIF (MAX. 800x400px)</Text>
                     </VStack>
+                    <DropZone onDrop={function noRefCheck() { }} onFilesDrop={function noRefCheck() { }} />
                 </FormFileUpload>
             </Card>
         </VStack>
