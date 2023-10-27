@@ -122,7 +122,7 @@ function Feed2() {
                 </TreeGridRow>
 
             </TreeGrid>
-        </HStack >
+        </HStack>
     );
 };
 

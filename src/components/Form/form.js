@@ -5,8 +5,6 @@ import { __ } from '@wordpress/i18n';
 import {
     Icon,
     Card,
-    CardBody,
-    DropZone,
     TextControl,
     TextareaControl,
     FormFileUpload,
@@ -14,8 +12,10 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
+    __experimentalSurface as Surface,
+    DropZone,
 } from "@wordpress/components";
-import { commentAuthorAvatar, media } from "@wordpress/icons";
+import { cloudUpload } from "@wordpress/icons";
 
 /**
  * Render Profile Form
@@ -23,54 +23,45 @@ import { commentAuthorAvatar, media } from "@wordpress/icons";
 function Form() {
 
     return (
-        <VStack spacing={10}>
+        <VStack spacing={10} style={{ maxWidth: '40rem', margin: 'auto' }}>
             <VStack>
                 <Heading level={3}>Profile</Heading>
-                <Text>This information will be displayed publicly so be careful what you share</Text>
+                <Text variant='muted' size={14}>This information will be displayed publicly so be careful what you share</Text>
             </VStack>
             <TextControl
                 label={__("Username")}
-                placeholder="workation.com/ lubus"
                 onChange={function noRefCheck() { }}
+                style={{ borderRadius: '6px', padding: '10px 8px' }}
             />
             <TextareaControl
                 label={__("About")}
                 help="Write a few sentences about yourself"
                 onChange={function noRefCheck() { }}
+                style={{ borderRadius: '6px' }}
             />
             <VStack>
                 <Heading level={4}>Photo</Heading>
                 <HStack alignment="left">
-                    <Icon icon={commentAuthorAvatar} size={55}></Icon>
+                    <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%' }} />
                     <FormFileUpload
                         variant="primary"
                         isPressed
                         accept="image/*"
-                        onChange={function noRefCheck() { }}
-                    >
+                        onChange={function noRefCheck() { }}>
                         Change
                     </FormFileUpload>
                 </HStack>
             </VStack>
-            <VStack>
-                <Heading level={4}>Cover Photo</Heading>
-                <Card variant="dotted">
-                    <CardBody>
-                        <VStack style={{ alignItems: 'center' }}>
-                            <Icon icon={media} style={{ fontSize: '48px' }} />
-                            <FormFileUpload accept="image/*" onChange={function noRefCheck() { }}>
-                                Upload a file
-                            </FormFileUpload>
-                            <Text>or drag and drop PNG, JPG, GIF up to 10mb</Text>
-                        </VStack>
-                    </CardBody>
-                    <DropZone
-                        onDrop={function noRefCheck() { }}
-                        onFilesDrop={function noRefCheck() { }}
-                        onHTMLDrop={function noRefCheck() { }}
-                    />
-                </Card>
-            </VStack>
+            <Card isBorderless style={{ border: '3px dashed #E5E5E5', borderRadius: '8px' }}>
+                <FormFileUpload style={{ width: '100%', justifyContent: 'center', height: '200px', borderRadius: '8px' }}>
+                    <VStack alignment="center" spacing={2}>
+                        <Icon icon={cloudUpload} size={60} />
+                        <Text><Text weight={500}>Click to upload</Text> or drag and drop</Text>
+                        <Text>SVG, PNG, JPG or GIF (MAX. 800x400px)</Text>
+                    </VStack>
+                    <DropZone onDrop={function noRefCheck() { }} onFilesDrop={function noRefCheck() { }} />
+                </FormFileUpload>
+            </Card>
         </VStack>
     );
 };

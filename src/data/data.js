@@ -80,12 +80,6 @@ const components = [
         variations: Components.Tables,
     },
     {
-        title: 'Sidebar Navigation',
-        path: '/sidebarnavigation/sidebar1',
-        src: '/sidebarnavigation.png',
-        variations: Components.SidebarNavigation,
-    },
-    {
         title: 'Navigations',
         path: '/navigations/navigate1',
         src: '/navigation.png',
