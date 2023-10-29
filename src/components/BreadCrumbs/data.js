@@ -9,17 +9,17 @@ import * as Components from '.';
 const Breadcrumb = [
     {
         title: 'Breadcrumb 1',
-        path: '/Breadcrumbs/breadcrumb1',
+        path: '/BreadCrumbs/breadcrumb1',
         component: Components.Breadcrumb1
     },
     {
-        title: 'Breadcrumb 2',
-        path: '/Breadcrumbs/breadcrumb2',
+        title: 'Breadrumb 2',
+        path: '/BreadCrumbs/breadcrumb2',
         component: Components.Breadcrumb2
     },
     {
         title: 'Breadcrumb 3',
-        path: '/Breadcrumbs/breadcrumb3',
+        path: '/BreadCrumbs/breadcrumb3',
         component: Components.Breadcrumb3
     }
 ];
