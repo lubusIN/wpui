@@ -26,7 +26,7 @@ function Heading2() {
             </HStack>
 
             <HStack alignment="start" justify="space-between" spacing={3} direction={['column', 'row']}>
-                <Heading level={2}>The Future of Artificial Intelligence</Heading>
+                <Heading level={2}>The Future of Artificial Intelligence.</Heading>
                 <HStack spacing={3} expanded={false}>
                     <Button icon={edit} variant="secondary">Edit</Button>
                     <Button variant="primary">Publish</Button>

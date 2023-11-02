@@ -18,7 +18,7 @@ import { arrowRight } from '@wordpress/icons';
  */
 function Panel2() {
     return (
-        <VStack alignment="center">
+        <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack spacing={6} alignment="left">
@@ -39,7 +39,7 @@ function Panel2() {
                     </VStack>
                 </CardBody>
             </Card>
-        </VStack>
+        </HStack>
     );
 };
 

@@ -36,7 +36,7 @@ function Table1() {
             name: 'John J. Davis',
             email: 'john@gmail.com',
             role: 'Contributor',
-            status: 'Active'
+            status: 'Inactive'
         },
         {
             name: 'Herman M. Monson',
@@ -48,7 +48,7 @@ function Table1() {
             name: 'Joseph E. Schlater',
             email: 'joseph@gmail.com',
             role: 'Subscriber',
-            status: 'Active'
+            status: 'Inactive'
         }
     ];
 
@@ -86,7 +86,9 @@ function Table1() {
                                 {(props) => (
                                     <HStack alignment="left">
                                         <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
-                                        <Heading level={5}>{item.name}</Heading>
+                                        <Heading level={5} style={{ whiteSpace: 'nowrap'}}>
+                                            {item.name}
+                                        </Heading>
                                     </HStack>
                                 )}
                             </TreeGridCell>
@@ -101,13 +103,13 @@ function Table1() {
                                 {(props) => (
                                     <Text
                                         style={{
-                                            backgroundColor: '#F0FDF4',
-                                            color: '#166534',
+                                            backgroundColor: item.status === 'Inactive' ? '#FDE2E1' : '#F0FDF4',
+                                            color: item.status === 'Inactive' ? '#B04A48' : '#166534',
                                             borderRadius: '5px',
                                             padding: '5px',
                                         }}
                                     >
-                                        Active
+                                        {item.status}
                                     </Text>
                                 )}
                             </TreeGridCell>

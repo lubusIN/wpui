@@ -21,7 +21,7 @@ function Heading3() {
                 <Surface as={'img'} src="https://placehold.co/80" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
                 <VStack expanded={false}>
                     <Heading level={2}>Sarah Weaver</Heading>
-                    <Text size={14} color="grey"><Text weight={500}>Wordpress Developer</Text> Contributing to WordPress community since 2015</Text>
+                    <Text size={14} color="grey"><Text weight={500}>"WordPress Developer:</Text> Contributing to WordPress community since 2015."</Text>
                 </VStack>
             </HStack>
             <HStack spacing={3} justify="right">

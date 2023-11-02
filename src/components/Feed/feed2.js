@@ -80,7 +80,7 @@ function Feed2() {
                                         <VStack spacing={5}>
                                             <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
                                                 <Text size={14}>Christopher J. Lockhart commented on <Text weight={600}>"Our Recent Achievements and Milestones"</Text></Text>
-                                                <Text className="timeline_date" variant="muted">4 minu ago</Text>
+                                                <Text className="timeline_date" variant="muted">4 mins ago</Text>
                                             </HStack>
                                             <Card size="small" style={{ borderRadius: '4px' }}>
                                                 <CardBody>
@@ -106,7 +106,7 @@ function Feed2() {
                                             <VStack>
                                                 <Text size={14}>Marjory S. Dames deleted a post <Text weight={600}>"Exploring New Markets: Expansion Plans"</Text></Text>
                                             </VStack>
-                                            <Text className="timeline_date" variant="muted">2 minu ago</Text>
+                                            <Text className="timeline_date" variant="muted">2 mins ago</Text>
                                         </HStack>
                                     </CardBody>
                                 </Card>
@@ -124,7 +124,7 @@ function Feed2() {
                                         <VStack spacing={5}>
                                             <HStack spacing={4} direction={['column-reverse', 'row']} alignment="start" justify="space-between">
                                                 <Text size={14}>Allene D. Peters commented on <Text weight={600}>"Our Recent Achievements and Milestones"</Text></Text>
-                                                <Text className="timeline_date" variant="muted">4 minu ago</Text>
+                                                <Text className="timeline_date" variant="muted">4 mins ago</Text>
                                             </HStack>
                                             <Card size="small" style={{ borderRadius: '4px' }}>
                                                 <CardBody>

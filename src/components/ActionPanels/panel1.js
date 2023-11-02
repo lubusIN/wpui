@@ -8,6 +8,7 @@ import {
     __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalVStack as VStack,
+    __experimentalHStack as HStack,
 } from "@wordpress/components";
 
 /**
@@ -15,7 +16,7 @@ import {
  */
 function Panel1() {
     return (
-        <VStack alignment="center">
+        <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack spacing={6} alignment="baseline">
@@ -29,7 +30,7 @@ function Panel1() {
                     </VStack>
                 </CardBody>
             </Card>
-        </VStack>
+        </HStack>
     );
 };
 

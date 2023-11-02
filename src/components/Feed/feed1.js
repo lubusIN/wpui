@@ -45,7 +45,7 @@ function Feed1() {
                             <HStack spacing={10} className="timeline_update">
                                 <VStack>
                                     <Text size={14}>Payment Processed</Text>
-                                    <Text size={12}>Payment for the order was successfully processed.</Text>
+                                    <Text size={12}>Payment for the order was successfully processed</Text>
                                 </VStack>
                                 <Text className="timeline_date">Oct 2 2023</Text>
                             </HStack>
@@ -60,7 +60,7 @@ function Feed1() {
                             <HStack spacing={10} className="timeline_update">
                                 <VStack>
                                     <Text size={14}>Order Shipped</Text>
-                                    <Text size={12}>The ordered items were packaged and shipped.</Text>
+                                    <Text size={12}>The ordered items were packaged and shipped</Text>
                                     <Text size={12}>Tracking ID <Text weight={600}>XYZ123456789</Text></Text>
                                 </VStack>
                                 <Text className="timeline_date">Oct 4 2023</Text>
@@ -88,7 +88,7 @@ function Feed1() {
                             <HStack spacing={10} className="timeline_update">
                                 <VStack>
                                     <Text size={14}>Out for Delivery</Text>
-                                    <Text size={12}>The package has reached the local delivery facility and is out for delivery.</Text>
+                                    <Text size={12}>The package has reached the local delivery facility and is out for delivery</Text>
                                 </VStack>
                                 <Text className="timeline_date">Oct 8 2023</Text>
                             </HStack>

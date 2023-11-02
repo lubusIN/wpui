@@ -26,7 +26,7 @@ function Form() {
         <VStack spacing={10} style={{ maxWidth: '40rem', margin: 'auto' }}>
             <VStack>
                 <Heading level={3}>Profile</Heading>
-                <Text variant='muted' size={14}>This information will be displayed publicly so be careful what you share</Text>
+                <Text variant='muted' size={14}>"This information will be displayed publicly, so be careful about what you share"</Text>
             </VStack>
             <TextControl
                 label={__("Username")}
