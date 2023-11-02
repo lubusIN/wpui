@@ -17,7 +17,7 @@ import {
  */
 function Panel4() {
     return (
-        <VStack alignment="center">
+        <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack spacing={6} alignment="baseline">
@@ -34,7 +34,7 @@ function Panel4() {
                     </VStack>
                 </CardBody>
             </Card>
-        </VStack>
+        </HStack>
     );
 };
 

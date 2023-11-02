@@ -22,7 +22,7 @@ function EmptyState2() {
                     <VStack alignment="center" spacing={2}>
                         <Icon icon={cloudUpload} size={60} />
                         <Text><Text weight={500}>Click to upload</Text> or drag and drop</Text>
-                        <Text>SVG, PNG, JPG or GIF (MAX. 800x400px)</Text>
+                        <Text>SVG, PNG, JPG or GIF <br /> (MAX. 800x400px)</Text>
                     </VStack>
                     <DropZone onDrop={function noRefCheck() { }} onFilesDrop={function noRefCheck() { }} />
                 </FormFileUpload>

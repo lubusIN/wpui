@@ -75,7 +75,7 @@ function List4() {
                                             {user.email}</Text>
                                     </VStack>
                                 </HStack>
-                                <VStack style={{ minWidth: 'fit-content' }}>
+                                <VStack style={{ minWidth: 'fit-content' }} alignment="right">
                                     <Text weight={500} size={15}>{user.role}</Text>
                                     <Text size={12} variant="muted">{user.status}</Text>
                                 </VStack>

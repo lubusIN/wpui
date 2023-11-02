@@ -23,82 +23,76 @@ function Stats2() {
             <VStack spacing={5}>
                 <Heading level={3}>Last 30 days</Heading>
                 <Grid columns={[1, 2, 3]} gap={0}>
-                    <Card>
-                        <CardBody>
-                            <VStack spacing={3}>
-                                <Heading level={3} weight={500}>Total Orders</Heading>
-                                <HStack>
-                                    <HStack justify="left">
-                                        <Heading level={2}>71,987</Heading>
-                                        <Text>from 70,900</Text>
-                                    </HStack>
-                                    <Surface
-                                        style={{
-                                            backgroundColor: '#DCFCE6',
-                                            borderRadius: '10px',
-                                            padding: '0px 15px 0px 5px'
-                                        }}
-                                    >
-                                        <HStack spacing={0}>
-                                            <Icon icon={arrowUp} fill="#22C55D"></Icon>
-                                            <Text color='#176434'>12%</Text>
-                                        </HStack>
-                                    </Surface>
+                    <Card style={{ padding: '10px' }}>
+                        <VStack spacing={3}>
+                            <Heading level={4} weight={500}>Total Orders</Heading>
+                            <HStack expanded={false}>
+                                <HStack justify="left" spacing={1}>
+                                    <Heading level={2}>71,987</Heading>
+                                    <Text>from 70,900</Text>
                                 </HStack>
-                            </VStack>
-                        </CardBody>
+                                <Surface
+                                    style={{
+                                        backgroundColor: '#DCFCE6',
+                                        borderRadius: '10px',
+                                        padding: '0px 15px 0px 5px'
+                                    }}
+                                >
+                                    <HStack spacing={0}>
+                                        <Icon icon={arrowUp} fill="#22C55D"></Icon>
+                                        <Text color='#176434'>12%</Text>
+                                    </HStack>
+                                </Surface>
+                            </HStack>
+                        </VStack>
                     </Card>
 
-                    <Card>
-                        <CardBody>
-                            <VStack spacing={3}>
-                                <Heading level={3} weight={500}>Avg. Order Value</Heading>
-                                <HStack>
-                                    <HStack justify="left">
-                                        <Heading level={2}>₹50,000</Heading>
-                                        <Text>from ₹100,000</Text>
-                                    </HStack>
-                                    <Surface
-                                        style={{
-                                            backgroundColor: '#DCFCE6',
-                                            borderRadius: '10px',
-                                            padding: '0px 15px 0px 5px'
-                                        }}
-                                    >
-                                        <HStack spacing={0}>
-                                            <Icon icon={arrowUp} fill="#22C55D"></Icon>
-                                            <Text color='#176434'>10%</Text>
-                                        </HStack>
-                                    </Surface>
+                    <Card style={{ padding: '10px' }}>
+                        <VStack spacing={3}>
+                            <Heading level={4} weight={500}>Avg. Order Value</Heading>
+                            <HStack>
+                                <HStack justify="left" spacing={1}>
+                                    <Heading level={2}>₹50,000</Heading>
+                                    <Text>from ₹100,000</Text>
                                 </HStack>
-                            </VStack>
-                        </CardBody>
+                                <Surface
+                                    style={{
+                                        backgroundColor: '#DCFCE6',
+                                        borderRadius: '10px',
+                                        padding: '0px 15px 0px 5px'
+                                    }}
+                                >
+                                    <HStack spacing={0}>
+                                        <Icon icon={arrowUp} fill="#22C55D"></Icon>
+                                        <Text color='#176434'>10%</Text>
+                                    </HStack>
+                                </Surface>
+                            </HStack>
+                        </VStack>
                     </Card>
 
-                    <Card>
-                        <CardBody>
-                            <VStack spacing={3}>
-                                <Heading level={3} weight={500}>Order Conversion Rate</Heading>
-                                <HStack>
-                                    <HStack justify="left">
-                                        <Heading level={2}>24.57%</Heading>
-                                        <Text>from 28.62%</Text>
-                                    </HStack>
-                                    <Surface
-                                        style={{
-                                            backgroundColor: '#FDE2E1',
-                                            borderRadius: '10px',
-                                            padding: '0px 15px 0px 5px'
-                                        }}
-                                    >
-                                        <HStack spacing={0}>
-                                            <Icon icon={arrowDown} fill="#F04444"></Icon>
-                                            <Text color='#B04A48'>4.04%</Text>
-                                        </HStack>
-                                    </Surface>
+                    <Card style={{ padding: '10px' }}>
+                        <VStack spacing={3}>
+                            <Heading level={4} weight={500}>Order Conversion Rate</Heading>
+                            <HStack>
+                                <HStack alignment="left" spacing={1}>
+                                    <Heading level={2}>24.57%</Heading>
+                                    <Text>from 28.62%</Text>
                                 </HStack>
-                            </VStack>
-                        </CardBody>
+                                <Surface
+                                    style={{
+                                        backgroundColor: '#FDE2E1',
+                                        borderRadius: '10px',
+                                        padding: '0px 15px 0px 5px'
+                                    }}
+                                >
+                                    <HStack spacing={0}>
+                                        <Icon icon={arrowDown} fill="#B04A48"></Icon>
+                                        <Text color='#B04A48'>4.04%</Text>
+                                    </HStack>
+                                </Surface>
+                            </HStack>
+                        </VStack>
                     </Card>
                 </Grid>
             </VStack>
