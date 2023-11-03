@@ -28,7 +28,7 @@ function Panel4() {
                             </Text>
                         </VStack>
                         <HStack alignment="stretch" justify="left">
-                            <TextControl placeholder="you@example.com" type="date" style={{ width: '48vmin', height: '35px', borderRadius: '5px' }}></TextControl>
+                            <TextControl placeholder="you@example.com" type="date" style={{ width: '25vw', height: '35px', borderRadius: '5px' }}></TextControl>
                             <Button variant="primary" style={{ borderRadius: '5px' }}>View Log</Button>
                         </HStack>
                     </VStack>
