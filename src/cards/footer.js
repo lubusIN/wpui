@@ -26,7 +26,7 @@ function Footer() {
                         WPUI is a #BuildInPublic project from the house of LUBUS. We love getting feedback from you! It really helps us know how we’re doing, what you’re interested in, and what you’d like to see next. So please, don’t hesitate to share your thoughts with us! We’re all.
                     </Text>
                     <Button variant='primary' href='https://github.com/lubusIN/wpui/discussions' style={{ border: '1px solid white' }}>
-                        join us on github
+                        Join Discussion
                     </Button>
                 </VStack>
             </CardBody>
