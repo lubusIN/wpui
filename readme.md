@@ -1,12 +1,9 @@
-<p  align="center"><img width="180px" src="https://raw.githubusercontent.com/lubusIN/wpui/9495122a127424b01d2c71d0e4ffb82d8a7bcf3c/src/img/wpui_logo.svg"></p>
+<p align="center"><img width="180px" src="https://raw.githubusercontent.com/lubusIN/wpui/9495122a127424b01d2c71d0e4ffb82d8a7bcf3c/src/img/wpui_logo.svg"></p>
 
 
 # WPUI
 ### Build Your React Powered WordPress Plugin Or App With Speed.
 WPUI is a design pattern library built upon wordpress components Which gives you the building blocks you need to build your react-powered WordPress plugin or app. spend less time on UI and more time building your idea.
-
-
-<img src="assets/screenshot.png" alt="Open In Playgrpund" />
 
 ## Usage
 - Visit https://wpui.lubus.in/
