@@ -5,15 +5,12 @@ import {
     Icon,
     Card,
     __experimentalGrid as Grid,
-    __experimentalVStack as VStack,
     __experimentalText as Text,
-    __experimentalHeading as Heading,
     __experimentalHStack as HStack,
     __experimentalNavigation as Navigation,
     __experimentalNavigationGroup as NavigationGroup,
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
-    Button,
 } from "@wordpress/components";
 import { cog, home, file, calendar, pages, people, commentAuthorAvatar } from "@wordpress/icons";
 
