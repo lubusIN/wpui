@@ -3,6 +3,8 @@
  */
 import {
     Button,
+    Card,
+    CheckboxControl,
     __experimentalScrollable as Scrollable,
     __experimentalTreeGrid as TreeGrid,
     __experimentalTreeGridRow as TreeGridRow,
@@ -11,8 +13,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
-    Card,
-    CheckboxControl,
 } from "@wordpress/components";
 import { useState } from "@wordpress/element";
 

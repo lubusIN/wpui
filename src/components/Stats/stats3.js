@@ -6,7 +6,6 @@ import {
     CardBody,
     __experimentalText as Text,
     __experimentalHeading as Heading,
-    __experimentalHStack as HStack,
     __experimentalGrid as Grid,
     __experimentalVStack as VStack,
 

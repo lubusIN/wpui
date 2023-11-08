@@ -6,15 +6,12 @@ import {
     Icon,
     Card,
     Button,
-    CardBody,
     TextControl,
     CheckboxControl,
-    __experimentalDivider as Divider,
     __experimentalHeading as Heading,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
-    __experimentalGrid as Grid,
 } from "@wordpress/components";
 import { wordpress } from "@wordpress/icons"
 

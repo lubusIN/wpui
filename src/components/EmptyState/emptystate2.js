@@ -4,10 +4,10 @@
 import {
     Icon,
     Card,
+    DropZone,
     FormFileUpload,
     __experimentalVStack as VStack,
     __experimentalText as Text,
-    DropZone,
 } from "@wordpress/components";
 import { cloudUpload } from "@wordpress/icons";
 

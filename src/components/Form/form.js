@@ -5,6 +5,7 @@ import { __ } from '@wordpress/i18n';
 import {
     Icon,
     Card,
+    DropZone,
     TextControl,
     TextareaControl,
     FormFileUpload,
@@ -13,7 +14,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
-    DropZone,
 } from "@wordpress/components";
 import { cloudUpload } from "@wordpress/icons";
 

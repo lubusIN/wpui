@@ -2,9 +2,9 @@
  * WordPress dependencies.
  */
 import {
+    Icon,
     Button,
     CardDivider,
-    Icon,
     __experimentalText as Text,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,

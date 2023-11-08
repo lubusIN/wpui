@@ -10,7 +10,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { arrowRight } from "@wordpress/icons";
 
 /**
  * Render Banner

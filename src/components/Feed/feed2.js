@@ -3,14 +3,14 @@
  */
 import {
     Icon,
+    Card,
+    CardBody,
     __experimentalText as Text,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
     __experimentalTreeGrid as TreeGrid,
     __experimentalTreeGridRow as TreeGridRow,
     __experimentalSurface as Surface,
-    Card,
-    CardBody,
 } from "@wordpress/components";
 import { comment, postAuthor, trash } from "@wordpress/icons";
 
