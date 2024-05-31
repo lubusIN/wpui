@@ -1,14 +1,10 @@
 /**
- * WordPress dependencies.
- */
-import { __experimentalNavigatorProvider as NavigatorProvider } from "@wordpress/components";
-
-/**
  * Internal dependencies.
  */
 import { Footer, Header } from './cards';
 import { WpuiProvider } from './data';
 import Navigator from './navigator';
+import { BrowserRouter, Routes, Route, router, Link } from "react-router-dom";
 
 /**
  * Render App
@@ -16,11 +12,11 @@ import Navigator from './navigator';
 function App() {
     return (
         <WpuiProvider>
-            <NavigatorProvider className="wpui_navigator" initialPath="/">
+            <BrowserRouter>
                 <Header />
-                <Navigator />
+                <Navigator/>
                 <Footer />
-            </NavigatorProvider>
+            </BrowserRouter>
         </WpuiProvider>
     );
 };

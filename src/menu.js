@@ -7,7 +7,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
     __experimentalHeading as Heading,
-    __experimentalNavigatorButton as NavigatorButton,
 } from "@wordpress/components";
 
 /**
@@ -15,6 +14,7 @@ import {
  */
 import { components } from "./data";
 import { Banner } from "./cards";
+import { BrowserRouter , Routes, Route, router , Link } from "react-router-dom";
 
 /**
  * Render Component Menu
@@ -35,15 +35,13 @@ function ComponentsMenu() {
                 >
                     {
                         components.map((component, index) => (
-                            <NavigatorButton
-                                key={index}
-                                path={component.path}
-                                variant="tertiary"
-                            >
+                            
                                 <VStack style={{ width: '100%' }}>
+                                    <Link to={component.routepath}>
                                     <Card className="wpui_preview" size="large" isBorderless>
                                         <img src={'/src/img' + component.src} />
                                     </Card>
+                                    </Link>
                                     <VStack spacing={0}>
                                         <Heading
                                             adjustLineHeightForInnerControls={'small'}
@@ -58,7 +56,6 @@ function ComponentsMenu() {
                                         </Text>
                                     </VStack>
                                 </VStack>
-                            </NavigatorButton>
                         ))}
                 </Grid>
             </VStack>

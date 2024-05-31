@@ -25,6 +25,7 @@
     "@wordpress/element": "^5.19.0",
     "@wordpress/icons": "^9.33.0",
     "@wordpress/scripts": "^26.13.0",
+    "react-router-dom": "^6.23.1",
     "react-syntax-highlighter": "^15.5.0"
   },
   "author": "",

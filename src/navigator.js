@@ -8,8 +8,6 @@ import {
     Popover,
     Button,
     __experimentalHeading as Heading,
-    __experimentalNavigatorScreen as NavigatorScreen,
-    __experimentalNavigatorBackButton as NavigatorBackButton,
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
     __experimentalHStack as HStack,
@@ -23,6 +21,7 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  */
 import { components, WpuiContext } from './data';
 import ComponentsMenu from "./menu";
+import { BrowserRouter, Routes, Route, router, Link } from "react-router-dom";
 
 /**
  * External dependencies.
@@ -94,78 +93,71 @@ function Navigator() {
 
     return (
         <>
-            <NavigatorScreen path="/" style={{ overflowX: 'visible' }}>
-                <ComponentsMenu />
-            </NavigatorScreen>
+            <Routes>
+                <Route path="/" element={<ComponentsMenu />} style={{ overflowX: 'visible' }} />
+                {
+                    components.map(({ title, path, routepath, variations }, index) => (
 
-            {
-                components.map(({ title, path, variations }, index) => (
-
-                    <NavigatorScreen
-                        className='wpui_com_page'
-                        path={path}
-                        key={index}
-                        style={{ overflowX: 'visible' }}
-                    >
-                        <VStack spacing={8}>
-                            <HStack className="wpui_back_navig" alignment='left' spacing={0}>
-                                <NavigatorBackButton
-                                    icon={chevronRight}
-                                    iconPosition='right'
-                                    text='Home'
-                                    style={{ boxShadow: 'none' }}
-                                    onClick={() => setView('preview')}
-                                >
-                                </NavigatorBackButton>
-                                <Text>{title}</Text>
-                            </HStack>
-
-                            <VStack spacing={24}>
-                                {variations.map(({ title, path, component: Component }, index) => (
-                                    <VStack key={index} spacing={4}>
-                                        <HStack>
-                                            <Heading level={4} weight={500}>{title}</Heading>
-                                            <HStack expanded={false} justify='right' alignment='center'>
-                                                <ToggleGroupControl
-                                                    className="wpui_view_toggle"
-                                                    hideLabelFromVision
-                                                    __nextHasNoMarginBottom
-                                                    isBlock
-                                                    value={selectedIndex == index ? view : 'preview'}
-                                                    onChange={(value) => {
-                                                        setView(value);
-                                                        setIndex(index);
-                                                        setActivePath(path);
-                                                    }}
-                                                >
-                                                    <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
-                                                    <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
-                                                </ToggleGroupControl>
+                        <Route path={routepath} element={
+                            <VStack spacing={8}>
+                                <HStack className="wpui_back_navig" alignment='left' spacing={0}>
+                                    <Link to={'/'}
+                                        icon={chevronRight}
+                                        iconPosition='right'
+                                        text='Home'
+                                        style={{ boxShadow: 'none' }}
+                                        onClick={() => setView('preview')}
+                                    >
+                                    </Link>
+                                    <Text>{title}</Text>
+                                </HStack>
+                                <VStack spacing={24}>
+                                    {variations.map(({ title, path, component: Component }, index) => (
+                                        <VStack key={index} spacing={4}>
+                                            <HStack>
+                                                <Heading level={4} weight={500}>{title}</Heading>
+                                                <HStack expanded={false} justify='right' alignment='center'>
+                                                    <ToggleGroupControl
+                                                        className="wpui_view_toggle"
+                                                        hideLabelFromVision
+                                                        __nextHasNoMarginBottom
+                                                        isBlock
+                                                        value={selectedIndex == index ? view : 'preview'}
+                                                        onChange={(value) => {
+                                                            setView(value);
+                                                            setIndex(index);
+                                                            setActivePath(path);
+                                                        }}
+                                                    >
+                                                        <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
+                                                        <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
+                                                    </ToggleGroupControl>
+                                                </HStack>
                                             </HStack>
-                                        </HStack>
 
-                                        {
-                                            selectedIndex !== index || view !== 'code' ? (
-                                                <Card className="wpui_variation_card">
-                                                    <Component />
-                                                </Card>
-                                            ) : (
-                                                <VStack style={{ position: 'relative' }}>
-                                                    <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
-                                                        {content}
-                                                    </SyntaxHighlighter>
-                                                    <CopyButton index={index}></CopyButton>
-                                                </VStack>
-                                            )
-                                        }
+                                            {
+                                                selectedIndex !== index || view !== 'code' ? (
+                                                    <Card className="wpui_variation_card">
+                                                        <Component />
+                                                    </Card>
+                                                ) : (
+                                                    <VStack style={{ position: 'relative' }}>
+                                                        <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
+                                                            {content}
+                                                        </SyntaxHighlighter>
+                                                        <CopyButton index={index}></CopyButton>
+                                                    </VStack>
+                                                )
+                                            }
 
-                                    </VStack>
-                                ))}
-                            </VStack>
-                        </VStack>
-                    </NavigatorScreen>
-                ))
-            }
+                                        </VStack>
+                                    ))}
+                                </VStack>
+                            </VStack>}>
+                        </Route >
+                    ))
+                }
+            </Routes >
         </>
     );
 };
