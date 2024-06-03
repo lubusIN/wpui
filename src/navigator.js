@@ -1,4 +1,12 @@
 /**
+ * External dependencies.
+ */
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
+import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useCopyToClipboard } from '@wordpress/compose';
+import { Routes, Route, Link } from "react-router-dom";
+
+/**
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
@@ -21,14 +29,6 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  */
 import { components, WpuiContext } from './data';
 import ComponentsMenu from "./menu";
-import { BrowserRouter, Routes, Route, router, Link } from "react-router-dom";
-
-/**
- * External dependencies.
- */
-import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
-import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { useCopyToClipboard } from '@wordpress/compose';
 
 /**
  * Render Navigator
@@ -94,20 +94,17 @@ function Navigator() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<ComponentsMenu />} style={{ overflowX: 'visible' }} />
+                <Route path="/" element={<ComponentsMenu /> } style={{ overflowX: 'visible' }} />
                 {
-                    components.map(({ title, path, routepath, variations }, index) => (
+                    components.map(({ title, path, variations }, index) => (
 
-                        <Route path={routepath} element={
-                            <VStack spacing={8}>
+                        <Route path={path} element={ 
+                            <VStack className='wpui_com_page' spacing={8}>
                                 <HStack className="wpui_back_navig" alignment='left' spacing={0}>
-                                    <Link to={'/'}
-                                        icon={chevronRight}
-                                        iconPosition='right'
-                                        text='Home'
-                                        style={{ boxShadow: 'none' }}
-                                        onClick={() => setView('preview')}
-                                    >
+                                    <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none' }}>
+                                        <div>
+                                            <span style={{ display: "flex" }}>Home <div style={{ width: '20px', height: '20px' }}>{chevronRight}</div> </span>
+                                        </div>
                                     </Link>
                                     <Text>{title}</Text>
                                 </HStack>

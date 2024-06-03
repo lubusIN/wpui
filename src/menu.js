@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { Link } from "react-router-dom";
+
+/**
  * WordPress dependencies.
  */
 import {
@@ -14,7 +19,6 @@ import {
  */
 import { components } from "./data";
 import { Banner } from "./cards";
-import { BrowserRouter , Routes, Route, router , Link } from "react-router-dom";
 
 /**
  * Render Component Menu
@@ -37,7 +41,7 @@ function ComponentsMenu() {
                         components.map((component, index) => (
                             
                                 <VStack style={{ width: '100%' }}>
-                                    <Link to={component.routepath}>
+                                    <Link to={component.path}>
                                     <Card className="wpui_preview" size="large" isBorderless>
                                         <img src={'/src/img' + component.src} />
                                     </Card>

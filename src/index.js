@@ -1,6 +1,12 @@
+/**
+ * WordPress dependencies.
+ */
 import { createRoot, render } from '@wordpress/element';
 import '@wordpress/components/build-style/style.css';
 
+/**
+ * Internal dependencies.
+ */
 import './app.css';
 import App from './app';
 
