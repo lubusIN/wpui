@@ -4,11 +4,13 @@ body {
 }
 
 .wpui_site_logo {
-    box-shadow: none !important
+    box-shadow: none !important;
+    margin-top: 2.3px;
 }
 
 .wpui_header a {
-    text-decoration: none
+    text-decoration: none;
+    margin-left: 12px;
 }
 
 .wpui_hero_Section {
@@ -40,7 +42,7 @@ body {
     height: auto
 }
 
-.wpui_newsletter .nl_container button:hover {
+.wpui_ .wpui_newsletter .nl_container button:hover {
     background-color: #d9d9d9 !important;
     color: #5a6475 !important
 }
@@ -115,9 +117,24 @@ body {
 
 div.wpui_preview {
     background: #b8cfff94;
+    border: 10px;
     border-radius: 4px;
     height: 180px;
-    padding: 20px 0
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.wpui_preview1{
+   border: 10px solid rgb(255, 255, 255);
+   border-radius: 10px;
+}
+
+div.wpui_preview1:hover {
+    border-color: #e7eefa00;
+    background-color:#e7eefa49;
+    opacity: 1;
+    white-space: nowrap;
 }
 
 div.wpui_preview img {
@@ -125,7 +142,7 @@ div.wpui_preview img {
     height: 100%
 }
 
-div.wpui_cl .components-navigator-button {
+div.wpui_cl {
     border-radius: 10px;
     box-shadow: none !important;
     height: auto;
@@ -150,12 +167,15 @@ div.wpui_cl .components-navigator-button {
 .wpui_view_toggle [role="presentation"] {
     transform: none !important
 }
-
-.wpui_back_navig button,
-.wpui_back_navig span {
+.wpui_back_navig span,
+.wpui_back_navig button
+ {
     color: #535353;
     font-size: .875rem;
     font-weight: 500
+}
+.wpui_back_navig .home:hover{
+    color: #3858e9;
 }
 
 .wpui_variation_card {

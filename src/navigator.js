@@ -103,7 +103,7 @@ function Navigator() {
                                 <HStack className="wpui_back_navig" alignment='left' spacing={0}>
                                     <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none' }}>
                                         <div>
-                                            <span style={{ display: "flex" }}>Home <div style={{ width: '20px', height: '20px' }}>{chevronRight}</div> </span>
+                                            <span className="home" style={{ display: "flex" }}>Home <div style={{ width: '20px', height: '20px' }}>{chevronRight}</div> </span>
                                         </div>
                                     </Link>
                                     <Text>{title}</Text>

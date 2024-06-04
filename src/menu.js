@@ -40,9 +40,9 @@ function ComponentsMenu() {
                     {
                         components.map((component, index) => (
                             
-                                <VStack style={{ width: '100%' }}>
+                                <VStack className="wpui_preview1" style={{ width: '100%' }}>
                                     <Link to={component.path}>
-                                    <Card className="wpui_preview" size="large" isBorderless>
+                                    <Card className="wpui_preview" size="large" isBorderless >
                                         <img src={'/src/img' + component.src} />
                                     </Card>
                                     </Link>

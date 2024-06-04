@@ -25,7 +25,7 @@ function Header() {
     return (
 
         <Card className="wpui_header" isBorderless borderBottom>
-            <HStack>
+            <HStack >
 
                 <Link to={"/"} className='wpui_site_logo'>
                     <Logo />

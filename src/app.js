@@ -1,14 +1,10 @@
 /**
- * External dependencies.
- */
-import { BrowserRouter } from "react-router-dom";
-
-/**
  * Internal dependencies.
  */
 import { Footer, Header } from './cards';
 import { WpuiProvider } from './data';
 import Navigator from './navigator';
+import ScrollToTop from './scrolltitop';
 
 
 /**
@@ -17,11 +13,12 @@ import Navigator from './navigator';
 function App() {
     return (
         <WpuiProvider>
-            <BrowserRouter>
-                <Header />
-                <Navigator/>
+            <div className='wpui_container'>
+                <ScrollToTop/>
+            <Header/>
+                <Navigator />
                 <Footer />
-            </BrowserRouter>
+            </div>
         </WpuiProvider>
     );
 };
