@@ -3,7 +3,6 @@
  */
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { useCopyToClipboard } from '@wordpress/compose';
 import { Routes, Route, Link } from "react-router-dom";
 
 /**
@@ -11,6 +10,7 @@ import { Routes, Route, Link } from "react-router-dom";
  */
 import { __ } from '@wordpress/i18n';
 import { useContext, useEffect } from '@wordpress/element';
+import { useCopyToClipboard } from '@wordpress/compose';
 import {
     Card,
     Popover,
@@ -33,7 +33,7 @@ import ComponentsMenu from "./menu";
 /**
  * Render Navigator
  */
-function Navigator() {
+function Component_page() {
 
     const {
         setWidth,
@@ -100,7 +100,7 @@ function Navigator() {
 
                         <Route path={path} element={ 
                             <VStack className='wpui_com_page' spacing={8}>
-                                <HStack className="wpui_back_navig" alignment='left' spacing={0}>
+                                <HStack className="wpui_back_button" alignment='left' spacing={0}>
                                     <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none' }}>
                                         <div>
                                             <span className="home" style={{ display: "flex" }}>Home <div style={{ width: '20px', height: '20px' }}>{chevronRight}</div> </span>
@@ -159,4 +159,4 @@ function Navigator() {
     );
 };
 
-export default Navigator;
+export default Component_page;

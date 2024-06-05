@@ -31,7 +31,7 @@ function ComponentsMenu() {
             <VStack className="wpui_lcont" spacing={5}>
                 <Heading>UI Patterns</Heading>
                 <Grid
-                    className="wpui_cl"
+                    className="wpui_column"
                     alignment="bottom"
                     columns={3}
                     columnGap={30}
@@ -40,9 +40,9 @@ function ComponentsMenu() {
                     {
                         components.map((component, index) => (
                             
-                                <VStack className="wpui_preview1" style={{ width: '100%' }}>
+                                <VStack className="wpui_preview" style={{ width: '100%' }}>
                                     <Link to={component.path}>
-                                    <Card className="wpui_preview" size="large" isBorderless >
+                                    <Card className="wpui_card_preview" size="large" isBorderless >
                                         <img src={'/src/img' + component.src} />
                                     </Card>
                                     </Link>
