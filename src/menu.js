@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { Link } from "react-router-dom";
+
+/**
  * WordPress dependencies.
  */
 import {
@@ -7,7 +12,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
     __experimentalHeading as Heading,
-    __experimentalNavigatorButton as NavigatorButton,
 } from "@wordpress/components";
 
 /**
@@ -27,7 +31,7 @@ function ComponentsMenu() {
             <VStack className="wpui_lcont" spacing={5}>
                 <Heading>UI Patterns</Heading>
                 <Grid
-                    className="wpui_cl"
+                    className="wpui_column"
                     alignment="bottom"
                     columns={3}
                     columnGap={30}
@@ -35,15 +39,13 @@ function ComponentsMenu() {
                 >
                     {
                         components.map((component, index) => (
-                            <NavigatorButton
-                                key={index}
-                                path={component.path}
-                                variant="tertiary"
-                            >
-                                <VStack style={{ width: '100%' }}>
-                                    <Card className="wpui_preview" size="large" isBorderless>
+                            
+                                <VStack className="wpui_preview" style={{ width: '100%' }}>
+                                    <Link to={component.path}>
+                                    <Card className="wpui_card_preview" size="large" isBorderless >
                                         <img src={'/src/img' + component.src} />
                                     </Card>
+                                    </Link>
                                     <VStack spacing={0}>
                                         <Heading
                                             adjustLineHeightForInnerControls={'small'}
@@ -58,7 +60,6 @@ function ComponentsMenu() {
                                         </Text>
                                     </VStack>
                                 </VStack>
-                            </NavigatorButton>
                         ))}
                 </Grid>
             </VStack>

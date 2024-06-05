@@ -1,14 +1,11 @@
 /**
- * WordPress dependencies.
- */
-import { __experimentalNavigatorProvider as NavigatorProvider } from "@wordpress/components";
-
-/**
  * Internal dependencies.
  */
 import { Footer, Header } from './cards';
 import { WpuiProvider } from './data';
-import Navigator from './navigator';
+import Component_page from './component_page';
+import ScrollToTop from './scrolltotop';
+
 
 /**
  * Render App
@@ -16,11 +13,13 @@ import Navigator from './navigator';
 function App() {
     return (
         <WpuiProvider>
-            <NavigatorProvider className="wpui_navigator" initialPath="/">
-                <Header />
-                <Navigator />
-                <Footer />
-            </NavigatorProvider>
+            <ScrollToTop>
+                <div className='wpui_container'>
+                    <Header />
+                    <Component_page />
+                    <Footer />
+                </div>
+            </ScrollToTop>
         </WpuiProvider>
     );
 };

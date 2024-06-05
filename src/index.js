@@ -1,14 +1,29 @@
+/**
+ * External dependencies.
+ */
+import React from "react"
+import ReactDom from "react-dom/client"
+import { BrowserRouter } from "react-router-dom";
+
+/**
+ * WordPress dependencies.
+ */
 import { createRoot, render } from '@wordpress/element';
-import '@wordpress/components/build-style/style.css';
+import styles from '@wordpress/components/build-style/style.css';
+
+/**
+ * Internal dependencies.
+ */
 
 import './app.css';
 import App from './app';
 
 
-const root = document.getElementById('root');
-
-if (createRoot) {
-    createRoot(root).render(<App />);
-} else {
-    render(<App />, root);
-}
+const root = ReactDom.createRoot(document.getElementById('root'))
+root.render(
+    <React.StrictMode>
+        <BrowserRouter>
+        <App/>
+        </BrowserRouter>
+    </React.StrictMode>
+)
