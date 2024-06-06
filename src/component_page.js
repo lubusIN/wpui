@@ -9,7 +9,7 @@ import { Routes, Route, Link } from "react-router-dom";
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
-import { useContext, useEffect } from '@wordpress/element';
+import { useContext, useEffect, useState } from '@wordpress/element';
 import { useCopyToClipboard } from '@wordpress/compose';
 import {
     Card,
@@ -29,6 +29,7 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  */
 import { components, WpuiContext } from './data';
 import ComponentsMenu from "./menu";
+import MyLoader from './myloader';
 
 /**
  * Render Navigator
@@ -43,30 +44,31 @@ function Component_page() {
         setHasCopied,
         view,
         setView,
-        content,
-        setContent,
         selectedIndex,
         setIndex
     } = useContext(WpuiContext);
 
-    useEffect(() => {
-        if (activePath) {
-            const fetchFileContent = async () => {
-                try {
-                    const response = await fetch(`/src/components${activePath}.js`);
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch file');
-                    }
+    const [isLoading, setIsLoading] = useState(true);
+    const [content, setContent] = useState('');
 
-                    const content = await response.text();
-                    setContent(content);
-                } catch (error) {
-                    console.error('Error loading file:', error);
+
+    useEffect(() => {
+        const fetchFileContent = async () => {
+            try {
+                const response = await fetch(`/src/components${activePath}.js`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch file');
                 }
-            };
-            fetchFileContent();
-        }
-    }, [activePath, setContent]);
+                const content = await response.text();
+                setContent(content);
+                setIsLoading(false);
+            } catch (error) {
+                console.error('Error loading file:', error);
+            }
+        };
+        fetchFileContent();
+    }, [activePath], setContent);
+
 
     const CopyButton = ({ index }) => {
 
@@ -94,11 +96,11 @@ function Component_page() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<ComponentsMenu /> } style={{ overflowX: 'visible' }} />
+                <Route path="/" element={<ComponentsMenu />} style={{ overflowX: 'visible' }} />
                 {
                     components.map(({ title, path, variations }, index) => (
 
-                        <Route path={path} element={ 
+                        <Route path={path} element={
                             <VStack className='wpui_com_page' spacing={8}>
                                 <HStack className="wpui_back_button" alignment='left' spacing={0}>
                                     <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none' }}>
@@ -139,9 +141,13 @@ function Component_page() {
                                                     </Card>
                                                 ) : (
                                                     <VStack style={{ position: 'relative' }}>
-                                                        <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
-                                                            {content}
-                                                        </SyntaxHighlighter>
+                                                        {isLoading ? (
+                                                            <div ><MyLoader /></div>
+                                                        ) : (
+                                                            <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
+                                                                {content}
+                                                            </SyntaxHighlighter>
+                                                        )}
                                                         <CopyButton index={index}></CopyButton>
                                                     </VStack>
                                                 )
