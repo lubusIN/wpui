@@ -19,7 +19,6 @@ import {
  */
 import { components } from "./data";
 import { Banner } from "./cards";
-import MyLoader from "./myloader";
 
 /**
  * Render Component Menu

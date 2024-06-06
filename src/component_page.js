@@ -29,7 +29,7 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  */
 import { components, WpuiContext } from './data';
 import ComponentsMenu from "./menu";
-import MyLoader from './myloader';
+import ContentLoader from './contentloader';
 
 /**
  * Render Navigator
@@ -138,7 +138,6 @@ function Component_page() {
                                                     </ToggleGroupControl>
                                                 </HStack>
                                             </HStack>
-
                                             {
                                                 selectedIndex !== index || view !== 'code' ? (
                                                     <Card className="wpui_variation_card">
@@ -147,7 +146,7 @@ function Component_page() {
                                                 ) : (
                                                     <VStack style={{ position: 'relative' }}>
                                                         {isLoading ? (
-                                                            <div ><MyLoader /></div>
+                                                            <div ><ContentLoader /></div>
                                                         ) : (
                                                             <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
                                                                 {content}
@@ -157,7 +156,6 @@ function Component_page() {
                                                     </VStack>
                                                 )
                                             }
-
                                         </VStack>
                                     ))}
                                 </VStack>

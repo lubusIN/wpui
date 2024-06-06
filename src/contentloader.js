@@ -1,7 +1,7 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const MyLoader = (props) => (
+const Contentloader = (props) => (
   <div style={{backgroundColor:'rgb(17, 27, 39)'}}>
    <ContentLoader 
     speed={2}
@@ -25,4 +25,4 @@ const MyLoader = (props) => (
 
 )
 
-export default MyLoader;
+export default Contentloader;
