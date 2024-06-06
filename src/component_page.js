@@ -48,26 +48,31 @@ function Component_page() {
         setIndex
     } = useContext(WpuiContext);
 
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const [content, setContent] = useState('');
 
 
     useEffect(() => {
-        const fetchFileContent = async () => {
-            try {
-                const response = await fetch(`/src/components${activePath}.js`);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch file');
+        if (activePath) {
+            setIsLoading(true);
+            const fetchFileContent = async () => {
+                try {
+                    const response = await fetch(`/src/components${activePath}.js`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch file');
+                    }
+
+                    const content = await response.text();
+                    setContent(content);
+                } catch (error) {
+                    console.error('Error loading file:', error);
+                } finally{
+                    setIsLoading(false);
                 }
-                const content = await response.text();
-                setContent(content);
-                setIsLoading(false);
-            } catch (error) {
-                console.error('Error loading file:', error);
-            }
-        };
-        fetchFileContent();
-    }, [activePath], setContent);
+            };
+            fetchFileContent();
+        }
+    }, [activePath, setContent]);
 
 
     const CopyButton = ({ index }) => {
