@@ -1,10 +1,10 @@
 /**
  * Internal dependencies.
  */
-import { Footer, Header } from './cards';
+import { Footer, Header } from './components';
 import { WpuiProvider } from './data';
-import Component_page from './component_page';
-import ScrollToTop from './scrolltotop';
+import Component_page from './pages/component_page';
+import ScrollToTop from './pages/scrolltotop';
 
 
 /**

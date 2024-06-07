@@ -1,7 +1,7 @@
 /**
  * Internal Dependencies
  */
-import * as Components from '../components';
+import * as Components from '../patterns';
 
 /**
  * Component Mapping
