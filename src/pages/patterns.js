@@ -28,7 +28,7 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  * Internal dependencies.
  */
 import { components, WpuiContext } from '../data';
-import ComponentsMenu from './menu';
+import Home from './home';
 import ContentLoader from './contentloader';
 
 /**
@@ -101,7 +101,7 @@ function Component_page() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<ComponentsMenu />} style={{ overflowX: 'visible' }} />
+                <Route path="/" element={<Home />} style={{ overflowX: 'visible' }} />
                 {
                     components.map(({ title, path, variations }, index) => (
 

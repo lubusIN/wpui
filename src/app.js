@@ -3,8 +3,8 @@
  */
 import { Footer, Header } from './components';
 import { WpuiProvider } from './data';
-import Component_page from './pages/component_page';
-import ScrollToTop from './pages/scrolltotop';
+import Patterns from './pages/patterns';
+import ScrollToTop from './pages/scroll-to-top';
 
 
 /**
@@ -16,7 +16,7 @@ function App() {
             <ScrollToTop>
                 <div className='wpui_container'>
                     <Header />
-                    <Component_page />
+                    <Patterns />
                     <Footer />
                 </div>
             </ScrollToTop>
