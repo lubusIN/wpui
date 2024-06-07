@@ -28,7 +28,7 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  * Internal dependencies.
  */
 import { components, WpuiContext } from '../data';
-import ComponentsMenu from "./menu";
+import ComponentsMenu from './menu';
 import ContentLoader from './contentloader';
 
 /**
