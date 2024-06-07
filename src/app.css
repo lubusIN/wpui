@@ -26,50 +26,6 @@ body {
     width: 50%
 }
 
-.wpui_newsletter {
-    padding: 60px 20px
-}
-
-.wpui_newsletter .nl_container {
-    margin: auto;
-    width: 50%
-}
-
-.wpui_newsletter .nl_container button {
-    background: #d9d9d9;
-    border-radius: 4px;
-    color: #5a6475;
-    height: auto
-}
-
-.wpui_newsletter .nl_container button:hover {
-    background-color: #d9d9d9 !important;
-    color: #5a6475 !important
-}
-
-.wpui_newsletter .nl_container button:focus {
-    --wp-admin-theme-color: #d9d9d9
-}
-
-.wpui_newsletter .nl_container input:focus {
-    box-shadow: 0 0 0 .5px #5a6475
-}
-
-.wpui_newsletter .nl_container .nl_input {
-    width: 50%
-}
-
-.wpui_newsletter .nl_container .nl_input input {
-    background: transparent;
-    border: 1px solid #d9d9d9;
-    border-radius: 4px;
-    padding: 12px
-}
-
-.wpui_newsletter .nl_container .nl_input * {
-    height: 100%
-}
-
 .resize_cont .components-resizable-box__handle-right:after {
     background: #94a3b8;
     border: 0;
@@ -218,10 +174,6 @@ div.wpui_column {
 
     .wpui_footer .components-card__body .sec_1 {
         width: 100% !important
-    }
-
-    div.wpui_newsletter .nl_container {
-        width: 100%
     }
 
     .wpui_variation_card {

@@ -1,11 +1,9 @@
 /**
  * Internal dependencies.
  */
-import { Footer, Header } from './cards';
+import { Footer, Header,ScrollToTop } from './components';
 import { WpuiProvider } from './data';
-import Component_page from './component_page';
-import ScrollToTop from './scrolltotop';
-
+import Patterns from './pages/patterns';
 
 /**
  * Render App
@@ -16,7 +14,7 @@ function App() {
             <ScrollToTop>
                 <div className='wpui_container'>
                     <Header />
-                    <Component_page />
+                    <Patterns />
                     <Footer />
                 </div>
             </ScrollToTop>
