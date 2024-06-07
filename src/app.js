@@ -1,11 +1,9 @@
 /**
  * Internal dependencies.
  */
-import { Footer, Header } from './components';
+import { Footer, Header,ScrollToTop } from './components';
 import { WpuiProvider } from './data';
 import Patterns from './pages/patterns';
-import ScrollToTop from './pages/scroll-to-top';
-
 
 /**
  * Render App

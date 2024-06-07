@@ -28,13 +28,13 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  * Internal dependencies.
  */
 import { components, WpuiContext } from '../data';
-import Home from './home';
-import ContentLoader from './contentloader';
+import{Home} from '../pages'
+import {ContentLoader} from '../components';
 
 /**
  * Render Navigator
  */
-function Component_page() {
+function Patterns() {
 
     const {
         setWidth,
@@ -47,6 +47,7 @@ function Component_page() {
         selectedIndex,
         setIndex
     } = useContext(WpuiContext);
+    
 
     const [isLoading, setIsLoading] = useState(false);
     const [content, setContent] = useState('');
@@ -168,4 +169,4 @@ function Component_page() {
     );
 };
 
-export default Component_page;
+export default Patterns;

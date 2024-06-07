@@ -16,7 +16,7 @@ import {
 /**
  * Internal dependencies.
  */
-import Logo from './logo';
+import {Logo} from '../components';
 
 /**
  * Render Header
