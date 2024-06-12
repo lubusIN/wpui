@@ -29,7 +29,7 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  */
 import { components, WpuiContext } from '../data';
 import{Home} from '../pages'
-import {ContentLoader} from '../components';
+import {ContentLoader, Gettingstarted} from '../components';
 
 /**
  * Render Navigator
@@ -103,6 +103,7 @@ function Patterns() {
         <>
             <Routes>
                 <Route path="/" element={<Home />} style={{ overflowX: 'visible' }} />
+                <Route path="/gettingstarted" element={<Gettingstarted />} style={{ overflowX: 'visible' }} />
                 {
                     components.map(({ title, path, variations }, index) => (
 

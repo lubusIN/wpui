@@ -25,14 +25,18 @@
     "@wordpress/element": "^5.19.0",
     "@wordpress/icons": "^9.33.0",
     "@wordpress/scripts": "^26.13.0",
+    "markdown": "^0.5.0",
     "react-content-loader": "^7.0.0",
+    "react-markdown": "^9.0.1",
     "react-router-dom": "^6.23.1",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^4.0.0"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "raw-loader": "^4.0.2",
     "serve": "^14.2.1"
   }
 }
