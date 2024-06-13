@@ -1,8 +1,16 @@
+/**
+ * External dependencies.
+ */
 import ReactMarkdown from "react-markdown";
-import Gs from "./gs.md"
 import Markdown  from "react-markdown";
 import remarkGfm from 'remark-gfm';
-import "./md.css"
+
+/**
+ * internal dependencies.
+ */
+
+import Gs from "../Doc/getting-started.md"
+import "../Doc/doc.css" 
 
 const Gettingstarted = () => {
   return (

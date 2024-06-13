@@ -28,8 +28,8 @@ import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
  * Internal dependencies.
  */
 import { components, WpuiContext } from '../data';
-import{Home} from '../pages'
-import {ContentLoader, Gettingstarted} from '../components';
+import{Home, Gettingstarted} from '../pages'
+import {ContentLoader} from '../components';
 
 /**
  * Render Navigator
