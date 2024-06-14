@@ -55,7 +55,6 @@ function Banner() {
                         </Button>
                         <Link to="gettingstarted">
                         <Button
-                            variant="secondary"
                             style={{ border: '1.5px solid #ffffff' }}
                             iconSize={20}
                         >
