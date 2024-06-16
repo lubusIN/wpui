@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 /**
  * internal dependencies.
  */
-import Gs from "../Doc/getting-started.md"
+import Gs from "../doc/getting-started.md"
 import "../styles/doc.css" 
 
 const Gettingstarted = () => {

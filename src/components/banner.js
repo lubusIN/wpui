@@ -12,7 +12,7 @@ import {
 } from "@wordpress/components";
 
 /**
- * WordPress dependencies.
+ * External dependencies.
  */
 import { Link } from "react-router-dom";
 
