@@ -12,6 +12,11 @@ import {
 } from "@wordpress/components";
 
 /**
+ * External dependencies.
+ */
+import { Link } from "react-router-dom";
+
+/**
  * Render Banner
  */
 function Banner() {
@@ -48,6 +53,14 @@ function Banner() {
                         >
                             Opensource
                         </Button>
+                        <Link to="gettingstarted">
+                        <Button
+                            style={{ border: '1.5px solid #ffffff' }}
+                            iconSize={20}
+                        >
+                            Getting Started
+                        </Button>
+                        </Link>
                     </HStack>
                 </VStack>
             </CardBody>
