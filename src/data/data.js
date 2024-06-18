@@ -86,9 +86,9 @@ const components = [
         variations: Components.Navigations,
     },
     {
-        title: 'Newpattern',
-        path:'/Newpattern',
-        variations: Components.Newpattern,
+        title: 'Woocommerce_Card',
+        path:'/Woocommerce_Card',
+        variations: Components.Woocommerce_Card,
     },
 ];
 
