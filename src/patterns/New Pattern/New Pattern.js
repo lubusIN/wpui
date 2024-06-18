@@ -13,7 +13,7 @@ import {
 import { edit, layout, styles } from "@wordpress/icons";
 
 /**
- * Render Subscription action panel
+ * Render new patter
  */
 function Newpattern() {
     return (
