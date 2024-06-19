@@ -85,6 +85,11 @@ const components = [
         src: '/navigation.png',
         variations: Components.Navigations,
     },
+    {
+        title: 'actionpanel2',
+        path:'/actionpanel2',
+        variations: Components.Actionpanel2,
+    },
 ];
 
 export default components;
