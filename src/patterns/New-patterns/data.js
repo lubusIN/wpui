@@ -9,7 +9,7 @@ import * as Components from '.';
 const Actionpanel2 = [
     {
         title: 'actionpanel2',
-        path: '/actionpanel2',
+        path: '/New-patterns/actionpanel2',
         component: Components.Actionpanel2
     },
 ];
