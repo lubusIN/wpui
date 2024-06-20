@@ -14,7 +14,7 @@ import { edit, layout, styles } from "@wordpress/icons";
 /**
  * Render Subscription action panel
  */
-function Newpatterns() {
+function Welcomescreen() {
     return (
         <VStack>
             <VStack>
@@ -68,4 +68,4 @@ function Newpatterns() {
     );
 };
 
-export default Newpatterns;
+export default Welcomescreen;

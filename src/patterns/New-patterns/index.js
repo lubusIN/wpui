@@ -1,4 +1,4 @@
 /**
  * Components
  */
-export { default as Newpatterns } from './new-patterns'
+export { default as Welcomescreen } from './welcomescreen'
