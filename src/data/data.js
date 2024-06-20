@@ -85,6 +85,11 @@ const components = [
         src: '/navigation.png',
         variations: Components.Navigations,
     },
+    {
+        title: 'New patterns',
+        path:'/newpatterns',
+        variations: Components.Newpatterns,
+    },
 ];
 
 export default components;

@@ -19,6 +19,7 @@ export { default as SidebarNavigation } from './SidebarNavigation/data';
 export { default as Navigations } from './Navigations/data';
 export { default as Modals } from './Modals/data';
 export {default as PluginShell} from './PluginShell/data';
+export {default as Newpatterns} from './New-patterns/data';
 
 
 
