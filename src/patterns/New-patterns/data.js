@@ -8,6 +8,11 @@ import * as Components from '.';
  */
 const Newpatterns = [
     {
+        title: 'Welcome Screen',
+        path: '/New-patterns/welcomescreen',
+        component: Components.Welcomescreen
+    },
+    {
         title: 'Action Panel 1',
         path: '/New-patterns/actionpanel1',
         component: Components.Actionpanel1
