@@ -2,14 +2,12 @@
  * WordPress dependencies.
  */
 import {
-    Icon,
     Button,
     Card,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { chevronDown } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
@@ -18,7 +16,7 @@ function Newpatterns() {
     return (
         <Card>
             <VStack>
-                <Card style={{ padding: "21px", }}>
+                <Card isBorderless style={{ padding: "21px", borderBottom: "0.5px solid #DCDCDC" }}>
                     <Text style={{ fontSize: "20px", fontWeight: "600" }}>
                         Channels
                     </Text>
@@ -74,20 +72,6 @@ function Newpatterns() {
                         <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
                     </HStack>
                 </HStack>
-
-                <Card>
-                    <HStack expanded={false} style={{ padding: "21px" }}>
-                        <HStack expanded={false} justify="space-between">
-                            <Button>
-                                <Text style={{ color: "#0093ff", fontWeight: "700", fontSize: "15px" }}>
-                                    Add Channel
-                                </Text>
-                                <Icon size={28} icon={chevronDown}></Icon>
-                            </Button>
-                        </HStack>
-                    </HStack>
-                </Card>
-
             </VStack>
         </Card>
     );

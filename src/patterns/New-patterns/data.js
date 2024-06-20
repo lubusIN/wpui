@@ -8,7 +8,7 @@ import * as Components from '.';
  */
 const Newpatterns = [
     {
-        title: 'New Patterns',
+        title: 'Action Panel 1',
         path: '/New-patterns/new-patterns',
         component: Components.Newpatterns
     },
