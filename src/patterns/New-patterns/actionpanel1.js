@@ -12,7 +12,7 @@ import {
 /**
  * Render Subscription action panel
  */
-function Newpatterns() {
+function Actionpanel1() {
     return (
         <Card>
             <VStack>
@@ -77,4 +77,4 @@ function Newpatterns() {
     );
 };
 
-export default Newpatterns;
+export default Actionpanel1;
