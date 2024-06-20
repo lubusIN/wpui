@@ -2,94 +2,69 @@
  * WordPress dependencies.
  */
 import {
+    ExternalLink,
     Icon,
-    Button,
     Card,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { chevronDown } from "@wordpress/icons";
+import { edit, layout, styles } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
  */
 function Newpatterns() {
     return (
-        <Card>
+        <VStack>
             <VStack>
-                <Card style={{ padding: "21px", }}>
-                    <Text style={{ fontSize: "20px", fontWeight: "600" }}>
-                        Channels
-                    </Text>
+                <Card style={{ backgroundColor: "black", padding: "50px" }}>
+                    <Text size="large" style={{ color: "white", fontSize: "30px", fontWeight: "600" }}>
+                        Welcome To Wordpress!
+                    </Text><br /><br />
+                    <ExternalLink href="" style={{ color: "white", fontSize: "15px" }}>
+                        Learn more about the 6.3.2 Version
+                    </ExternalLink>
                 </Card>
-
-                <HStack>
-                    <HStack style={{ padding: "20px" }} alignment="left" spacing={5} expanded={false}>
-                        <img style={{ height: "40px", width: "40px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGSrJfSchrm52z1ynMNJM8xMMuxtfWgPHE5w&s"></img>
-                        <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                                Google Listing and Ads
-                            </Text>
-                            <Text style={{ fontSize: "15px" }}>
-                                Native integration with google that allows merchants to easily display their products across Google's network.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <HStack style={{ padding: "20px" }} expanded={false}>
-                        <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
-                    </HStack>
-                </HStack>
-
-                <HStack>
-                    <HStack style={{ padding: "20px" }} alignment="left" expanded={false}>
-                        <img style={{ height: "40px", width: "40px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJHH6aoXJfdAScGlfLHNln2tjqUwkCDbxt8Q&s"></img>
-                        <VStack style={{ padding: "10px" }}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                                Pinterest for Woocommerce
-                            </Text>
-                            <Text style={{ fontSize: "15px" }}>
-                                Grow your business on Pinterest! Use this official plugin to allow shoppers to Pin products while browsing your store,track conversion,<br />and advertise on Pinterest.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <HStack style={{ padding: "20px" }} expanded={false}>
-                        <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
-                    </HStack>
-                </HStack>
-
-                <HStack>
-                    <HStack style={{ padding: "20px" }} alignment="left" expanded={false}>
-                        <img style={{ height: "40px", width: "40px" }} src="https://www.mailpoet.com/wp-content/uploads/2020/05/mailpoet-symbol.png"></img>
-                        <VStack style={{ padding: "10px" }}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                                MailPoet
-                            </Text>
-                            <Text style={{ fontSize: "15px" }}>
-                                Create and send newsletter, post notofications and Welcome emails from your Wordpress
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <HStack style={{ padding: "20px" }} expanded={false}>
-                        <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
-                    </HStack>
-                </HStack>
-
-                <Card>
-                    <HStack expanded={false} style={{ padding: "21px" }}>
-                        <HStack expanded={false} justify="space-between">
-                            <Button>
-                                <Text style={{ color: "#0093ff", fontWeight: "700", fontSize: "15px" }}>
-                                    Add Channel
-                                </Text>
-                                <Icon size={28} icon={chevronDown}></Icon>
-                            </Button>
-                        </HStack>
-                    </HStack>
-                </Card>
-
             </VStack>
-        </Card>
+
+            <HStack>
+
+                <Card isBorderless style={{ padding: "30px", fontWeight: "600" }}>
+                    <HStack>
+                        <Icon size={50} icon={edit}></Icon>
+                        <Card isBorderless>
+                            Author rich content  with block and patterns<br /><br />
+                            <Text >Block patterns are pre-configured block layout. use them to get inspired or create new pages in a flash.</Text><br /><br />
+                            <ExternalLink href="">Add a new page</ExternalLink>
+                        </Card>
+                    </HStack>
+                </Card>
+
+                <Card isBorderless style={{ padding: "30px", fontWeight: "600" }}>
+                    <HStack>
+                        <Icon size={50} icon={layout}></Icon>
+                        <Card isBorderless>
+                            Customize your site with block themes<br /><br />
+                            <Text >Design everything on your site - from the header down to the footer, all using blocks and patterns.</Text><br /><br />
+                            <ExternalLink href="">Open site editor.</ExternalLink>
+                        </Card>
+                    </HStack>
+                </Card>
+
+                <Card isBorderless style={{ padding: "30px", fontWeight: "600" }}>
+                    <HStack>
+                        <Icon size={50} icon={styles}></Icon>
+                        <Card isBorderless>
+                            Switch up your site's look and feel with style.<br /><br />
+                            <Text >Tweak your site, or give it a whole new look! Get creative-how about a new color palette or font?</Text><br /><br />
+                            <ExternalLink href="">Edit Styles</ExternalLink>
+                        </Card>
+                    </HStack>
+                </Card>
+
+            </HStack>
+        </VStack>
     );
 };
 
