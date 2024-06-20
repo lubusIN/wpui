@@ -6,66 +6,49 @@ import {
     Icon,
     Card,
     __experimentalText as Text,
-    __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { edit, layout, styles } from "@wordpress/icons";
+import { currencyDollar, store } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
  */
-function Newpatterns() {
+function Panel1() {
     return (
-        <VStack>
-            <VStack>
-                <Card style={{ backgroundColor: "black", padding: "50px" }}>
-                    <Text size="large" style={{ color: "white", fontSize: "30px", fontWeight: "600" }}>
-                        Welcome To Wordpress!
-                    </Text><br /><br />
-                    <ExternalLink href="" style={{ color: "white", fontSize: "15px" }}>
-                        Learn more about the 6.3.2 Version
-                    </ExternalLink>
-                </Card>
-            </VStack>
+        <HStack>
+            <Card style={{ padding: "12px" ,width:"50%" }}>
+                <HStack alignment="left">
+                    <Card isBorderless>
+                        <Icon size={60} icon={store}></Icon>
+                    </Card>
+                    <Card isBorderless >
+                        <Text style={{ fontWeight: "bold", fontSize: "20px" }}>Open/Close Store Hours & Maintenance mode</Text><br />
+                        <Text style={{ fontSize: "15px" }}>By  <ExternalLink style={{ fontWeight: "600", textDecoration: "none", color: "#4094e8" }} href="">FmeAddons</ExternalLink></Text>
+                    </Card>
+                </HStack><br/>
+                <Text style={{ fontWeight: "500", fontSize: "15px" }}>Set a Daily schedule to allow customers to shop during specific hours with open and close store functionality. Display holiday, coming soon & Maintenance mode banners.</Text><br /><br />
+                <HStack>
+                    <Text style={{ fontWeight: "bold" }}>$49 <Text>anually</Text> </Text>
+                </HStack>
+            </Card>
 
-            <HStack>
-
-                <Card isBorderless style={{ padding: "30px", fontWeight: "600" }}>
-                    <HStack>
-                        <Icon size={50} icon={edit}></Icon>
-                        <Card isBorderless>
-                            Author rich content  with block and patterns<br /><br />
-                            <Text >Block patterns are pre-configured block layout. use them to get inspired or create new pages in a flash.</Text><br /><br />
-                            <ExternalLink href="">Add a new page</ExternalLink>
-                        </Card>
-                    </HStack>
-                </Card>
-
-                <Card isBorderless style={{ padding: "30px", fontWeight: "600" }}>
-                    <HStack>
-                        <Icon size={50} icon={layout}></Icon>
-                        <Card isBorderless>
-                            Customize your site with block themes<br /><br />
-                            <Text >Design everything on your site - from the header down to the footer, all using blocks and patterns.</Text><br /><br />
-                            <ExternalLink href="">Open site editor.</ExternalLink>
-                        </Card>
-                    </HStack>
-                </Card>
-
-                <Card isBorderless style={{ padding: "30px", fontWeight: "600" }}>
-                    <HStack>
-                        <Icon size={50} icon={styles}></Icon>
-                        <Card isBorderless>
-                            Switch up your site's look and feel with style.<br /><br />
-                            <Text >Tweak your site, or give it a whole new look! Get creative-how about a new color palette or font?</Text><br /><br />
-                            <ExternalLink href="">Edit Styles</ExternalLink>
-                        </Card>
-                    </HStack>
-                </Card>
-
-            </HStack>
-        </VStack>
+            <Card style={{ padding: "12px", width:"50%" }}>
+                <HStack alignment="left">
+                    <Card isBorderless>
+                        <Icon size={60} icon={currencyDollar}></Icon>
+                    </Card>
+                    <Card isBorderless >
+                        <Text style={{ fontWeight: "bold", fontSize: "20px" }}>Price Per Unit Pro</Text><br />
+                        <Text style={{ fontSize: "15px" }}>By  <ExternalLink style={{ fontWeight: "600", textDecoration: "none", color: "#4094e8" }} href="">MechComp</ExternalLink></Text>
+                    </Card>
+                </HStack><br/>
+                <Text style={{ fontWeight: "500", fontSize: "15px" }}>The Price Per Unit PRO extension automatically calculates the cost of one unit of your product and then display the calculated price.</Text><br /><br />
+                <HStack>
+                    <Text style={{ fontWeight: "bold" }}>$29 <Text>anually</Text> </Text>
+                </HStack>
+            </Card>
+        </HStack>
     );
 };
 
-export default Newpatterns;
+export default Panel1;
