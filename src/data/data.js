@@ -86,9 +86,9 @@ const components = [
         variations: Components.Navigations,
     },
     {
-        title: 'actionpanel2',
-        path:'/actionpanel2',
-        variations: Components.Actionpanel2,
+        title: 'New patterns',
+        path:'/newpatterns',
+        variations: Components.Newpatterns,
     },
 ];
 

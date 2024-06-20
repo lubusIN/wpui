@@ -6,12 +6,12 @@ import * as Components from '.';
 /**
  * Component Mapping
  */
-const Actionpanel2 = [
+const Newpatterns = [
     {
-        title: 'actionpanel2',
-        path: '/New-patterns/actionpanel2',
-        component: Components.Actionpanel2
+        title: 'New Patterns',
+        path: '/New-patterns/new-patterns',
+        component: Components.Newpatterns
     },
 ];
 
-export default Actionpanel2;
+export default Newpatterns;

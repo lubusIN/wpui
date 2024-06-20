@@ -1,4 +1,4 @@
 /**
  * Components
  */
-export { default as Actionpanel2 } from './actionpanel2';
+export { default as Newpatterns } from './new-patterns'
