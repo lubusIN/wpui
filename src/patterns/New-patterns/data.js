@@ -27,6 +27,11 @@ const Newpatterns = [
         path: '/New-patterns/Card1',
         component: Components.Card1
     },
+    {
+        title: 'Empty State 1',
+        path: '/New-patterns/Emptystate1',
+        component: Components.Emptystate1
+    },
 ];
 
 export default Newpatterns;
