@@ -13,7 +13,7 @@ import { currencyDollar, store } from "@wordpress/icons";
 /**
  * Render Subscription action panel
  */
-function Panel1() {
+function Card1() {
     return (
         <HStack>
             <Card style={{ padding: "12px" ,width:"50%" }}>
@@ -51,4 +51,4 @@ function Panel1() {
     );
 };
 
-export default Panel1;
+export default Card1;
