@@ -24,12 +24,12 @@ const Newpatterns = [
     },
     {
         title: 'Card 1',
-        path: '/New-patterns/Card1',
+        path: '/New-patterns/card1',
         component: Components.Card1
     },
     {
         title: 'Empty State 1',
-        path: '/New-patterns/Emptystate1',
+        path: '/New-patterns/emptystate1',
         component: Components.Emptystate1
     },
 ];
