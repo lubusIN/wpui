@@ -28,6 +28,11 @@ const Newpatterns = [
         component: Components.Actionpanel3
     },
     {
+        title: 'Action Panel 4',
+        path: '/New-patterns/actionpanel4',
+        component: Components.Actionpanel4
+    },
+    {
         title: 'Card 1',
         path: '/New-patterns/card1',
         component: Components.Card1
