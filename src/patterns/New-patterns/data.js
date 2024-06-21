@@ -23,8 +23,13 @@ const Newpatterns = [
         component: Components.Actionpanel2
     },
     {
+        title: 'Action Panel 3',
+        path: '/New-patterns/actionpanel3',
+        component: Components.Actionpanel3
+    },
+    {
         title: 'Card 1',
-        path: '/New-patterns/Card1',
+        path: '/New-patterns/card1',
         component: Components.Card1
     },
 ];
