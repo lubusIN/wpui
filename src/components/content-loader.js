@@ -1,9 +1,16 @@
+/**
+ * External dependencies.
+ */
 import React from "react"
-import ContentLoader from "react-content-loader"
+import ReactContentLoader from "react-content-loader"
 
-const Contentloader = (props) => (
+/***
+ * Render Content Loader
+ */
+
+const ContentLoader = (props) => (
   <div style={{backgroundColor:'rgb(17, 27, 39)'}}>
-   <ContentLoader 
+   <ReactContentLoader 
     speed={2}
     width={340}
     height={84}
@@ -20,9 +27,9 @@ const Contentloader = (props) => (
     <rect x="0" y="71" rx="3" ry="3" width="37" height="11" /> 
     <rect x="18" y="23" rx="3" ry="3" width="140" height="11" /> 
     <rect x="166" y="23" rx="3" ry="3" width="173" height="11" />
-  </ContentLoader>
+  </ReactContentLoader>
   </div>
 
 )
 
-export default Contentloader;
+export default ContentLoader;

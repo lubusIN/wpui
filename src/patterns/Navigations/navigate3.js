@@ -1,6 +1,12 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "react";
+
+/**
  * WordPress dependencies.
  */
+import { comment, home, pages, people, post, settings } from "@wordpress/icons";
 import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
@@ -10,8 +16,6 @@ import {
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
-import { useState } from "@wordpress/element";
-import { comment, home, pages, people, post, settings } from "@wordpress/icons";
 
 /**
  * Render Dashboard

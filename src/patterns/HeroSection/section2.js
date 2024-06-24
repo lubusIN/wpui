@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { chevronRight } from "@wordpress/icons";
 import {
     Button,
     Card,
@@ -12,7 +13,6 @@ import {
     __experimentalGrid as Grid,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { chevronRight } from "@wordpress/icons";
 
 /**
  * Render Hero Section

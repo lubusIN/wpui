@@ -1,6 +1,15 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    home, 
+    file, 
+    calendar, 
+    pages, 
+    people, 
+    commentAuthorAvatar 
+} from "@wordpress/icons";
+
 import {
     Icon,
     Card,
@@ -12,7 +21,7 @@ import {
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
-import { home, file, calendar, pages, people, commentAuthorAvatar } from "@wordpress/icons";
+
 
 
 /**

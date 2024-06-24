@@ -1,6 +1,13 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    box, 
+    check, 
+    payment, 
+    pin, 
+    shipping 
+} from "@wordpress/icons";
 import {
     Icon,
     __experimentalText as Text,
@@ -10,7 +17,6 @@ import {
     __experimentalTreeGridRow as TreeGridRow,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { box, check, payment, pin, shipping } from "@wordpress/icons";
 
 /**
  * Render Feeds

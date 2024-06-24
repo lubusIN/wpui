@@ -1,6 +1,8 @@
 /**
  * WordPress dependencies.
  */
+import { chevronRight, edit } from '@wordpress/icons';
+
 import {
     Button,
     Icon,
@@ -9,7 +11,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { chevronRight, edit } from '@wordpress/icons';
 
 /**
  * Render Page Heading 2

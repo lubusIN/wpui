@@ -1,4 +1,11 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
+
+/**
+ * Render BreadCrumbs
+ */
 
 function BreadCrumbs() {
     return (

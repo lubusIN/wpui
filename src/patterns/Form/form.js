@@ -2,6 +2,7 @@
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
+import { cloudUpload } from "@wordpress/icons";
 import {
     Icon,
     Card,
@@ -15,7 +16,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { cloudUpload } from "@wordpress/icons";
 
 /**
  * Render Profile Form
