@@ -1,3 +1,15 @@
+/**
+ * External dependencies.
+ */
+import { useState } from "@wordpress/element";
+
+/**
+ * WordPress dependencies.
+ */
+import { 
+    wordpress, 
+    commentAuthorAvatar 
+} from "@wordpress/icons";
 import {
     Card,
     Icon,
@@ -10,9 +22,10 @@ import {
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
-import { wordpress, commentAuthorAvatar } from "@wordpress/icons";
-import { useState } from "@wordpress/element";
 
+/**
+ * Render Shell2
+ */
 function Shell2() {
 
     const items = [

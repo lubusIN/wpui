@@ -2,6 +2,7 @@
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
+import { wordpress } from "@wordpress/icons"
 import {
     Icon,
     Button,
@@ -12,7 +13,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { wordpress } from "@wordpress/icons"
+
 
 /**
  * Render Sign in Form

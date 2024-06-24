@@ -1,6 +1,15 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    check, 
+    people, 
+    payment, 
+    receipt, 
+    postAuthor, 
+    external, 
+    mobile 
+} from "@wordpress/icons";
 import {
     Icon,
     Card,
@@ -12,7 +21,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { check, people, payment, receipt, postAuthor, external, mobile } from "@wordpress/icons";
 
 /**
  * Render Cards

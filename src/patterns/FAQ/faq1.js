@@ -1,6 +1,15 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "react";
+
+/**
  * WordPress dependencies.
  */
+import { 
+    plus, 
+    reset 
+} from "@wordpress/icons";
 import {
     Icon,
     Button,
@@ -10,8 +19,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { useState } from "@wordpress/element";
-import { plus, reset } from "@wordpress/icons";
 
 /**
  * Render FAQs.

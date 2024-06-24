@@ -2,6 +2,7 @@
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
+import { wordpress } from "@wordpress/icons"
 import {
     Icon,
     Button,
@@ -15,7 +16,7 @@ import {
     __experimentalDivider as Divider,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { wordpress } from "@wordpress/icons"
+
 
 /**
  * Render Sign in Form

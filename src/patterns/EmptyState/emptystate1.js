@@ -1,6 +1,10 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    file, 
+    plus 
+} from "@wordpress/icons";
 import {
     Icon,
     FormFileUpload,
@@ -8,7 +12,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { file, plus } from "@wordpress/icons";
 
 /**
  * Render File uploader empty stats

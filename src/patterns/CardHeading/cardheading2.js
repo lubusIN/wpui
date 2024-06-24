@@ -1,6 +1,12 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    heading, 
+    moreVertical, 
+    seen, 
+    starFilled 
+} from "@wordpress/icons";
 import {
     Icon,
     Card,
@@ -12,7 +18,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { heading, moreVertical, seen, starFilled } from "@wordpress/icons";
 
 /**
  * Render Card Heading

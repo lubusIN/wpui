@@ -2,6 +2,7 @@
  * Internal Dependencies
  */
 import * as Components from '../patterns';
+import { ActionPanels, BreadCrumbs, CardHeading, EmptyState, Feed, Form, GridList, Lists, Navigations, PageHeading, SignIn, Stats, Tables } from "../categories"
 
 /**
  * Component Mapping
@@ -9,80 +10,80 @@ import * as Components from '../patterns';
 const components = [
     {
         title: 'Page Heading',
-        path:'/pageheading',
-        src: '/pageheading.png',
+        path: '/pageheading',
+        src: <PageHeading />,
         variations: Components.PageHeading,
     },
     {
         title: 'Card Heading',
-        path:'/cardheading',
-        src: '/cardheading.png',
+        path: '/cardheading',
+        src: <CardHeading />,
         variations: Components.CardHeadings,
     },
     {
         title: 'Breadcrumbs',
-        path:'/breadcrumbs',
-        src: '/breadcrumb.png',
+        path: '/breadcrumbs',
+        src: <BreadCrumbs />,
         variations: Components.Breadcrumb,
     },
     {
         title: 'Empty State',
-        path:'/emptstate',
-        src: '/emptystate.png',
+        path: '/emptstate',
+        src: <EmptyState />,
         variations: Components.EmptyState,
     },
     {
         title: 'Action Panels',
-        path:'/actionpanels',
-        src: '/actionpanel.png',
+        path: '/actionpanels',
+        src: <ActionPanels />,
         variations: Components.ActionPanels,
     },
     {
         title: 'Feeds',
-        path:'/feed',
-        src: '/feed.png',
+        path: '/feed',
+        src: <Feed />,
         variations: Components.Feeds,
     },
     {
         title: 'Forms',
-        path:'/form',
-        src: '/form.png',
+        path: '/form',
+        src: <Form />,
         variations: Components.Forms,
     },
     {
         title: 'Sign-in and Registration',
-        path:'/signin',
-        src: '/signin.png',
+        path: '/signin',
+        src: <SignIn />,
         variations: Components.SignIn,
     },
     {
         title: 'Stats',
-        path:'/stats',
-        src: '/stats.png',
+        path: '/stats',
+        src: <Stats />,
         variations: Components.Stats,
     },
     {
         title: 'Grid Lists',
-        path:'/gridlists',
-        src: '/cards.png',
+        path: '/gridlists',
+        src: <GridList />,
         variations: Components.GridLists,
     },
     {
         title: 'Lists',
-        path:'/lists',
-        src: '/list.png',
+        path: '/lists',
+        src: <Lists />,
         variations: Components.Lists,
     },
     {
         title: 'Tables',
-        path:'/tables',
-        src: '/table.png',
+        path: '/tables',
+        src: <Tables />,
         variations: Components.Tables,
     },
     {
         title: 'Navigations',
-        path:'/navigations',
-        src: '/navigation.png',
+        path: '/navigations',
+        src: <Navigations />,
         variations: Components.Navigations,
     },
     {

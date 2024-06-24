@@ -43,7 +43,7 @@ function ComponentsMenu() {
                                 <VStack className="wpui_preview" style={{ width: '100%' }}>
                                     <Link to={component.path}>
                                     <Card className="wpui_card_preview" size="large" isBorderless >
-                                        <img src={'/src/img' + component.src} />
+                                       {component.src}
                                     </Card>
                                     </Link>
                                     <VStack spacing={0}>

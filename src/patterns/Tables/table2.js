@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "react";
+
+/**
  * WordPress dependencies.
  */
 import {
@@ -14,7 +19,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { useState } from "@wordpress/element";
 
 /**
  * Render Users Table

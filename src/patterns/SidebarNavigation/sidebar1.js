@@ -1,6 +1,15 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    cog, 
+    home, 
+    file, 
+    calendar, 
+    pages, 
+    people 
+} from "@wordpress/icons";
+
 import {
     Card,
     Button,
@@ -15,7 +24,6 @@ import {
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
-import { cog, home, file, calendar, pages, people } from "@wordpress/icons";
 
 /**
  * Render Dashboard

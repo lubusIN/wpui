@@ -93,8 +93,7 @@ div.wpui_preview:hover {
     white-space: nowrap;
 }
 
-div.wpui_card_preview img {
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .1), 0 1px 0 -1px rgba(0, 0, 0, .1);
+div.wpui_card_preview Svg {
     height: 100%
 }
 
@@ -164,6 +163,19 @@ div.wpui_column {
 .wpui_hero_cta .components-button:nth-child(2) {
     box-shadow: none !important;
     border: 1px solid white;
+}
+
+/* Docs */
+pre {
+    background-color: rgb(181, 181, 181);
+    padding: 20px;
+}
+
+.main {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 10px;
+    
 }
 
 @media only screen and (max-width:480px) {

@@ -1,6 +1,12 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "react";
+
+/**
  * WordPress dependencies.
  */
+import { check } from "@wordpress/icons";
 import {
     Icon,
     Modal,
@@ -9,8 +15,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { check, } from "@wordpress/icons";
-import { useState } from "@wordpress/element";
 
 /**
  * Render Image card.
