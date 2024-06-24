@@ -18,7 +18,7 @@ import {
  * Internal dependencies.
  */
 import { components } from "../data";
-import { Banner } from "../components";
+import { Banner, CategoryCard } from "../components";
 
 /**
  * Render Component Menu
@@ -38,28 +38,14 @@ function ComponentsMenu() {
                     rowGap={25}
                 >
                     {
-                        components.map((component, index) => (
-                            
-                                <VStack className="wpui_preview" style={{ width: '100%' }}>
-                                    <Link to={component.path}>
-                                    <Card className="wpui_card_preview" size="large" isBorderless >
-                                       {component.src}
-                                    </Card>
-                                    </Link>
-                                    <VStack spacing={0}>
-                                        <Heading
-                                            adjustLineHeightForInnerControls={'small'}
-                                            align="left"
-                                            level={4}
-                                            weight={500}
-                                        >
-                                            {component.title}
-                                        </Heading>
-                                        <Text align="left" size={13} weight={400} color="grey">
-                                            {component.variations.length} components
-                                        </Text>
-                                    </VStack>
-                                </VStack>
+                        components.map(({ src, title, path, variations }, index) => (
+                            <CategoryCard
+                                key={`${index}-${path}`}
+                                thumbnail={src}
+                                title={title}
+                                path={path}
+                                patterns={variations}
+                            />
                         ))}
                 </Grid>
             </VStack>
