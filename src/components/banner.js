@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { Link } from "react-router-dom";
+
+/**
  * WordPress dependencies.
  */
 import {
@@ -10,11 +15,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-
-/**
- * External dependencies.
- */
-import { Link } from "react-router-dom";
 
 /**
  * Render Banner

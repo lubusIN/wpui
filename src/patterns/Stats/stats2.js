@@ -1,6 +1,10 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    arrowUp, 
+    arrowDown 
+} from "@wordpress/icons";
 import {
     Card,
     Icon,
@@ -12,7 +16,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalSurface as Surface
 } from "@wordpress/components";
-import { arrowUp, arrowDown } from "@wordpress/icons";
 
 /**
  * Render Stats

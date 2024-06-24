@@ -1,6 +1,11 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    comment, 
+    postAuthor, 
+    trash 
+} from "@wordpress/icons";
 import {
     Icon,
     Card,
@@ -12,7 +17,6 @@ import {
     __experimentalTreeGridRow as TreeGridRow,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { comment, postAuthor, trash } from "@wordpress/icons";
 
 /**
  * Render Feeds

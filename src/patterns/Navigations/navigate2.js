@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "react";
+
+/**
  * WordPress dependencies.
  */
 import {
@@ -10,7 +15,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { useState } from "@wordpress/element";
 
 /**
  * Render Navigation

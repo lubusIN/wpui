@@ -1,13 +1,16 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    chevronRight, 
+    home 
+} from "@wordpress/icons";
 import {
     Card,
     Icon,
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { chevronRight, home } from "@wordpress/icons";
 
 /**
  * Render Breadcrumb

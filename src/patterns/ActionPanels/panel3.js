@@ -1,7 +1,11 @@
 /**
  * WordPress dependencies.
  */
-import { useState } from '@wordpress/element';
+import { useState } from 'react';
+
+/**
+ * WordPress dependencies.
+ */
 import {
     Card,
     CardBody,

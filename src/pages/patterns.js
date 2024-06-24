@@ -1,16 +1,23 @@
 /**
  * External dependencies.
  */
+import { useContext, useEffect, useState } from 'react';
+import { Routes, Route, Link } from "react-router-dom";
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
 import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Routes, Route, Link } from "react-router-dom";
 
 /**
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
-import { useContext, useEffect, useState } from '@wordpress/element';
 import { useCopyToClipboard } from '@wordpress/compose';
+import {
+    check,
+    chevronRight,
+    code,
+    copy,
+    seen
+} from "@wordpress/icons";
 import {
     Card,
     Popover,
@@ -22,14 +29,13 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { check, chevronRight, code, copy, seen } from "@wordpress/icons";
 
 /**
  * Internal dependencies.
  */
 import { components, WpuiContext } from '../data';
-import{Home, Gettingstarted} from '../pages'
-import {ContentLoader} from '../components';
+import { Home, GettingStarted } from '../pages'
+import { ContentLoader } from '../components';
 
 /**
  * Render Navigator
@@ -47,7 +53,7 @@ function Patterns() {
         selectedIndex,
         setIndex
     } = useContext(WpuiContext);
-    
+
 
     const [isLoading, setIsLoading] = useState(false);
     const [content, setContent] = useState('');
@@ -67,7 +73,7 @@ function Patterns() {
                     setContent(content);
                 } catch (error) {
                     console.error('Error loading file:', error);
-                } finally{
+                } finally {
                     setIsLoading(false);
                 }
             };
@@ -103,7 +109,7 @@ function Patterns() {
         <>
             <Routes>
                 <Route path="/" element={<Home />} style={{ overflowX: 'visible' }} />
-                <Route path="/gettingstarted" element={<Gettingstarted />} style={{ overflowX: 'visible' }} />
+                <Route path="/gettingstarted" element={<GettingStarted />} style={{ overflowX: 'visible' }} />
                 {
                     components.map(({ title, path, variations }, index) => (
 

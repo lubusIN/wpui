@@ -1,6 +1,13 @@
 /**
  * WordPress dependencies.
  */
+
+import { 
+    arrowUp, 
+    box, 
+    trendingUp 
+} from "@wordpress/icons";
+
 import {
     Card,
     Icon,
@@ -10,7 +17,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
 } from "@wordpress/components";
-import { arrowUp, box, trendingUp } from "@wordpress/icons";
 
 /**
  * Render Stats

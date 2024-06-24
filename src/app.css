@@ -165,6 +165,19 @@ div.wpui_column {
     border: 1px solid white;
 }
 
+/* Docs */
+pre {
+    background-color: rgb(181, 181, 181);
+    padding: 20px;
+}
+
+.main {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 10px;
+    
+}
+
 @media only screen and (max-width:480px) {
     div.wpui_column {
         column-gap: 10px;
