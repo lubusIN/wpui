@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 /**
  * Render Scroll To Top
  */
-const ScrollToTop = ({ children }) => {
+function ScrollToTop({ children }) {
     const { pathname } = useLocation();
 
     useEffect(() => {

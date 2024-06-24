@@ -6,7 +6,7 @@ import React from 'react'
 /**
  *  Render Logo
  */
-const Logo = () => {
+function Logo() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width='100px' height='30px' id="Layer_2" data-name="Layer 2" viewBox="0 0 357.68 95.12">
             <g id="Layer_1-2" data-name="Layer 1">
