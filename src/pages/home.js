@@ -1,13 +1,7 @@
 /**
- * External dependencies.
- */
-import { Link } from "react-router-dom";
-
-/**
  * WordPress dependencies.
  */
 import {
-    Card,
     __experimentalGrid as Grid,
     __experimentalVStack as VStack,
     __experimentalText as Text,
@@ -23,7 +17,7 @@ import { Banner, CategoryCard } from "../components";
 /**
  * Render Component Menu
  */
-function ComponentsMenu() {
+function Home() {
 
     return (
         <>
@@ -53,4 +47,4 @@ function ComponentsMenu() {
     );
 };
 
-export default ComponentsMenu;
+export default Home;

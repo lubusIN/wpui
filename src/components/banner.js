@@ -53,7 +53,7 @@ function Banner() {
                         >
                             Opensource
                         </Button>
-                        <Link to="gettingstarted">
+                        <Link to="getting-started">
                         <Button
                             style={{ border: '1.5px solid #ffffff' }}
                             iconSize={20}

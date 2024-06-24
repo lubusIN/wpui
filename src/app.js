@@ -1,8 +1,13 @@
 /**
+ * External dependencies.
+ */
+import { Routes, Route } from "react-router-dom";
+
+/**
  * Internal dependencies.
  */
-import { WpuiProvider } from './data';
-import { Patterns } from './pages';
+import { components, WpuiProvider } from './data';
+import { Home, Patterns, GettingStarted } from './pages'
 import { Footer, Header, ScrollToTop } from './components';
 
 /**
@@ -14,7 +19,16 @@ function App() {
             <ScrollToTop>
                 <div className='wpui_container'>
                     <Header />
-                    <Patterns />
+
+                    <Routes>
+                        <Route path="/" element={<Home />} style={{ overflowX: 'visible' }} />
+                        <Route path="/getting-started" element={<GettingStarted />} style={{ overflowX: 'visible' }} />
+                        {/* Render pattern category routes */}
+                        {components.map(({ title, path, variations }, index) => (
+                            <Route key={index} title={title} path={path} element={<Patterns patterns={variations} />} />
+                        ))}
+                    </Routes >
+
                     <Footer />
                 </div>
             </ScrollToTop>
