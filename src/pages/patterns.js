@@ -34,7 +34,7 @@ import {
  * Internal dependencies.
  */
 import { components, WpuiContext } from '../data';
-import { Home, Gettingstarted } from '../pages'
+import { Home, GettingStarted } from '../pages'
 import { ContentLoader } from '../components';
 
 /**
@@ -109,7 +109,7 @@ function Patterns() {
         <>
             <Routes>
                 <Route path="/" element={<Home />} style={{ overflowX: 'visible' }} />
-                <Route path="/gettingstarted" element={<Gettingstarted />} style={{ overflowX: 'visible' }} />
+                <Route path="/gettingstarted" element={<GettingStarted />} style={{ overflowX: 'visible' }} />
                 {
                     components.map(({ title, path, variations }, index) => (
 
