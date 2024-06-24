@@ -1,7 +1,13 @@
+/**
+ * External dependencies.
+ */
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const ScrollToTop = ({ children }) => {
+/**
+ * Render Scroll To Top
+ */
+function ScrollToTop({ children }) {
     const { pathname } = useLocation();
 
     useEffect(() => {

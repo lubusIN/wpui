@@ -1,12 +1,13 @@
 /**
  * WordPress dependencies.
  */
+import { edit } from "@wordpress/icons";
+
 import {
     Button,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { edit } from "@wordpress/icons";
 
 /**
  * Render Page Heading

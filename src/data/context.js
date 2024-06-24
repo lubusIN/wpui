@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies.
  */
-import { useState, createContext, useEffect } from '@wordpress/element';
+import { useState, createContext } from 'react';
 
 /**
  * Context Component.

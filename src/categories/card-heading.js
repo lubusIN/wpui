@@ -1,4 +1,11 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
+
+/**
+ * Render CardHeading
+ */
 
 function CardHeading() {
     return (

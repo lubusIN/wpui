@@ -8,16 +8,13 @@ import { BrowserRouter } from "react-router-dom";
 /**
  * WordPress dependencies.
  */
-import { createRoot, render } from '@wordpress/element';
-import styles from '@wordpress/components/build-style/style.css';
+import '@wordpress/components/build-style/style.css';
 
 /**
  * Internal dependencies.
  */
-
 import './app.css';
 import App from './app';
-
 
 const root = ReactDom.createRoot(document.getElementById('root'))
 root.render(

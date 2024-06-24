@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { arrowRight } from '@wordpress/icons';
 import {
     Button,
     Card,
@@ -11,7 +12,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { arrowRight } from '@wordpress/icons';
 
 /**
  * Render Subscription action panel

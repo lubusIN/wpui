@@ -1,4 +1,11 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
+
+/**
+ * Render Navigations
+ */
 
 function Navigations() {
     return (

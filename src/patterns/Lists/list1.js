@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { edit, moreVertical, trash } from "@wordpress/icons";
 import {
     Icon,
     Button,
@@ -11,7 +12,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { edit, moreVertical, trash } from "@wordpress/icons";
 
 /**
  * Render Stacked List View

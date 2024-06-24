@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { cloudUpload } from "@wordpress/icons";
 import {
     Icon,
     Card,
@@ -9,7 +10,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
-import { cloudUpload } from "@wordpress/icons";
 
 /**
  * Render File uploader empty stats

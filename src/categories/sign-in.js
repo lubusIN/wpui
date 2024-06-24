@@ -1,5 +1,12 @@
 
+/**
+ * External dependencies.
+ */
 import React from 'react'
+
+/**
+ * Render SignIn
+ */
 
 function SignIn() {
     return (

@@ -1,6 +1,11 @@
 /**
  * WordPress dependencies.
  */
+import { 
+    moreHorizontal, 
+    edit, 
+    seen 
+} from "@wordpress/icons";
 import {
     Icon,
     Card,
@@ -14,7 +19,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import { moreHorizontal, edit, seen } from "@wordpress/icons";
 
 /**
  * Render Cards
