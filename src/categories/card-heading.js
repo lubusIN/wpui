@@ -7,7 +7,6 @@ import * as Components from '../patterns';
 /**
  * Render CardHeading
  */
-
 function CardHeading() {
     return (
         <svg width="307" height="230" viewBox="0 0 307 230" fill="none" xmlns="http://www.w3.org/2000/svg">
