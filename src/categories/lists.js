@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render Lists
@@ -41,8 +45,7 @@ function Lists() {
 Lists.meta = {
     title: 'Lists',
     path: '/lists',
-    src: <Lists/>,
-    variations: Components.Lists,
+    pattern: patterns.Lists,
 };
 
 export default Lists;

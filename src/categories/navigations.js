@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render Navigations
@@ -30,8 +34,7 @@ function Navigations() {
 Navigations.meta = {
     title: 'Navigations',
     path: '/navigations',
-    src: <Navigations/>,
-    variations: Components.Navigations,
+    pattern: patterns.Navigations,
 };
 
 export default Navigations;

@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render PageHeading
@@ -27,8 +31,7 @@ function PageHeading() {
 PageHeading.meta = {
     title: 'Pageheading',
     path: '/pageheading',
-    src: <PageHeading/>,
-    variations: Components.PageHeading,
+    pattern: patterns.PageHeading,
 };
 
 export default PageHeading;

@@ -3,7 +3,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render SignIn
@@ -30,8 +34,7 @@ function SignIn() {
 SignIn.meta = {
     title: 'Sign In',
     path: '/signin',
-    src: <SignIn />,
-    variations: Components.SignIn
+    pattern: patterns.SignIn
 };
 
 export default SignIn;

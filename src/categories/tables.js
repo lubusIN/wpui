@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render Tables 
@@ -49,8 +53,7 @@ function Tables() {
 Tables.meta = {
     title: 'Tables',
     path: '/tables',
-    src: <Tables/>,
-    variations: Components.Tables,
+    pattern: patterns.Tables,
 };
 
 export default Tables;

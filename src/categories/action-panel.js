@@ -2,6 +2,10 @@
  * External dependencies.
  */
 import React from 'react'
+
+/**
+ * Internal dependencies.
+ */
 import * as patterns from '../patterns/';
 
 /**
@@ -28,8 +32,7 @@ function ActionPanels() {
 ActionPanels.meta = {
     title: 'Action Panels',
     path: '/actionpanels',
-    src: <ActionPanels/>,
-    variations: patterns.ActionPanels,
+    pattern: patterns.ActionPanels,
 };
 
 export default ActionPanels;

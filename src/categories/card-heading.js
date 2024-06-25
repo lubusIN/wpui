@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render CardHeading
@@ -44,8 +48,7 @@ function CardHeading() {
 CardHeading.meta = {
     title: 'Card Heading',
     path: '/cardheading',
-    src: <CardHeading />,
-    variations: Components.CardHeadings,
+    pattern: patterns.CardHeadings,
 };
 
 export default CardHeading;

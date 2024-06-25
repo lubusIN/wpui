@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render Form
@@ -31,8 +35,7 @@ function Form() {
 Form.meta = {
     title: 'Form',
     path: '/form',
-    src: <Form/>,
-    variations: Components.Forms,
+    pattern: patterns.Forms,
 };
 
 export default Form;

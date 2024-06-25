@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render EmptyState
@@ -34,8 +38,7 @@ function EmptyState() {
 EmptyState.meta = {
     title: 'Empty State',
     path: '/emptystate',
-    src: <EmptyState />,
-    variations: Components.EmptyState,
+    pattern: patterns.EmptyState,
 };
 
 

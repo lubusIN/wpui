@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render Stats
@@ -37,8 +41,7 @@ function Stats() {
 Stats.meta = {
     title: 'Stats',
     path: '/stats',
-    src: <Stats/>,
-    variations: Components.Stats,
+    pattern: patterns.Stats,
 };
 
 export default Stats;

@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render BreadCrumbs
@@ -36,8 +40,7 @@ function BreadCrumbs() {
 BreadCrumbs.meta = {
     title: 'Bread Crumbs',
     path: '/breadcrubms',
-    src: <BreadCrumbs/>,
-    variations: Components.BreadCrumbs,
+    pattern: patterns.BreadCrumbs,
 };
 
 export default BreadCrumbs;

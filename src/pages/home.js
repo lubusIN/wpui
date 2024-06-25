@@ -33,14 +33,14 @@ function Home() {
                 >
                     {
                         Object.values(categories).map((category, index) => {
-                            const {title, path, variations} = category.meta;
+                            const {title, path, pattern} = category.meta;
                             return (
                                 <CategoryCard
                                     key={`${index}-${path}`}
                                     thumbnail={category}
                                     title={title}
                                     path={path}
-                                    patterns={variations}
+                                    patterns={pattern}
                                 />
                             )
                         })

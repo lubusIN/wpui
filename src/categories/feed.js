@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render Feed
@@ -34,8 +38,7 @@ function Feed() {
 Feed.meta = {
     title: 'Feed',
     path: '/feed',
-    src: <Feed />,
-    variations: Components.Feeds,
+    pattern: patterns.Feeds,
 };
 
 

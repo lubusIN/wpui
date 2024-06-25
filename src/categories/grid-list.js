@@ -2,7 +2,11 @@
  * External dependencies.
  */
 import React from 'react'
-import * as Components from '../patterns';
+
+/**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
 
 /**
  * Render GridList
@@ -43,8 +47,7 @@ function GridList() {
 GridList.meta = {
     title: 'Action Panels',
     path: '/actionpanels',
-    src: <GridList/>,
-    variations: Components.GridLists,
+    pattern: patterns.GridLists,
 };
 
 export default GridList;
