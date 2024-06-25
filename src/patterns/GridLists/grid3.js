@@ -11,7 +11,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Cards
@@ -72,7 +71,6 @@ function Grid3() {
 Grid3.meta = {
     title: 'Grid 3',
     path: '/GridLists/grid3',
-    component: Components.Grid3
 };
 
 

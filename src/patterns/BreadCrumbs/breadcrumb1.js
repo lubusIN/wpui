@@ -10,7 +10,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Breadcrumb
@@ -29,7 +28,6 @@ function Breadcrumb1() {
 Breadcrumb1.meta = {
     title: 'Breadcrumb 1',
     path: '/BreadCrumbs/breadcrumb1',
-    component: Components.Breadcrumb1
 };
 
 export default Breadcrumb1;

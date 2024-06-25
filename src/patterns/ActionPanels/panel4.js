@@ -11,7 +11,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Subscription action panel
@@ -41,8 +40,7 @@ function Panel4() {
 
 Panel4.meta = {
     title: 'Panel 4',
-    path: '/ActionPanels/panel4',
-    component: Components.Panel4
+    path: '/ActionPanels/panel4'
 };
 
 export default Panel4;

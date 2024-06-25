@@ -8,7 +8,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Page Heading
@@ -28,7 +27,6 @@ function Heading1() {
 Heading1.meta = {
     title: 'Heading 1',
     path: '/PageHeading/heading1',
-    component: Components.Heading1
 };
 
 export default Heading1;

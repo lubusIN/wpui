@@ -19,7 +19,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Users Table
@@ -178,7 +177,6 @@ function Table2() {
 Table2.meta = {
     title: 'Table 2',
     path: '/Tables/table2',
-    component: Components.Table2
 };
 
 export default Table2;

@@ -6,7 +6,6 @@ import {
     CardHeader,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Card Heading.
@@ -25,7 +24,6 @@ function CardHeading1() {
 CardHeading1.meta = {
     title: 'CardHeading 1',
     path: '/CardHeading/cardheading1',
-    component: Components.CardHeading1
 };
 
 export default CardHeading1;

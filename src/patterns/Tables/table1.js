@@ -13,7 +13,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Users Table
@@ -147,7 +146,6 @@ function Table1() {
 Table1.meta = {
     title: 'Table 1',
     path: '/Tables/table1',
-    component: Components.Table1
 };
 
 export default Table1;

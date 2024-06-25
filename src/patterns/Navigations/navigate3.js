@@ -16,7 +16,6 @@ import {
     __experimentalNavigationItem as NavigationItem,
     __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Dashboard
@@ -112,7 +111,6 @@ function Navigation3() {
 Navigation3.meta = {
     title: 'Navigate 3',
     path: '/Navigations/navigate3',
-    component: Components.navigate3
 };
 
 

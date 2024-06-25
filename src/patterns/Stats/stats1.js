@@ -17,7 +17,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Stats
@@ -104,7 +103,6 @@ function Stats1() {
 Stats1.meta = {
     title: 'Stats 1',
     path: '/Stats/stats1',
-    component: Components.Stats1
 };
 
 export default Stats1;

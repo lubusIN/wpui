@@ -10,7 +10,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Card Heading.
@@ -46,7 +45,6 @@ function CardHeading3() {
 CardHeading3.meta = {
     title: 'CardHeading 3',
     path: '/CardHeading/cardheading3',
-    component: Components.CardHeading1
 };
 
 export default CardHeading3;

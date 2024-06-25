@@ -99,7 +99,7 @@ function PatternList({ patterns }) {
     }
     return (
         <VStack spacing={24}>
-            {patterns.map(({ title, path, component: Component }, index) => (
+            {/* {patterns.map(({ title, path, component: Component }, index) => (
                 <VStack key={index} spacing={4}>
                     <HStack>
                         <Heading level={4} weight={500}>{title}</Heading>
@@ -140,7 +140,55 @@ function PatternList({ patterns }) {
                         )
                     }
                 </VStack>
-            ))}
+            ))} */}
+
+            {
+                Object.values(patterns).map((Pattern, index) => {
+                    const { title, path } = Pattern.meta;
+                    return (
+                        <VStack key={index} spacing={4}>
+                            <HStack>
+                                <Heading level={4} weight={500}>{title}</Heading>
+                                <HStack expanded={false} justify='right' alignment='center'>
+                                    <ToggleGroupControl
+                                        className="wpui_view_toggle"
+                                        hideLabelFromVision
+                                        __nextHasNoMarginBottom
+                                        isBlock
+                                        value={selectedIndex == index ? view : 'preview'}
+                                        onChange={(value) => {
+                                            setView(value);
+                                            setIndex(index);
+                                            setActivePath(path);
+                                        }}
+                                    >
+                                        <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
+                                        <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
+                                    </ToggleGroupControl>
+                                </HStack>
+                            </HStack>
+                            {
+                                selectedIndex !== index || view !== 'code' ? (
+                                    <Card className="wpui_variation_card">
+                                        <Pattern />
+                                    </Card>
+                                ) : (
+                                    <VStack style={{ position: 'relative' }}>
+                                        {isLoading ? (
+                                            <div ><ContentLoader /></div>
+                                        ) : (
+                                            <SyntaxHighlighter language="javascript" style={coldarkDark} customStyle={{ borderRadius: '8px' }}>
+                                                {content}
+                                            </SyntaxHighlighter>
+                                        )}
+                                        <CopyButton index={index}></CopyButton>
+                                    </VStack>
+                                )
+                            }
+                        </VStack>
+                    )
+                })
+            }
         </VStack>
     );
 }

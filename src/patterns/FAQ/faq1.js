@@ -19,8 +19,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
-
 
 /**
  * Render FAQs.
@@ -83,7 +81,6 @@ function Faq1() {
 Faq1.meta = {
     title: 'FAQs 1',
     path: '/Faq/faq1',
-    component: Components.Faq1
 };
 
 export default Faq1;

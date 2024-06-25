@@ -5,7 +5,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Breadcrumb
@@ -25,7 +24,6 @@ function Breadcrumb2() {
 Breadcrumb2.meta = {
     title: 'Breadcrumb 2',
     path: '/BreadCrumbs/breadcrumb2',
-    component: Components.Breadcrumb2
 };
 
 

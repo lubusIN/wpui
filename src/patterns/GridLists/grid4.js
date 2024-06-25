@@ -21,7 +21,6 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Cards
@@ -167,7 +166,6 @@ function Grid4() {
 Grid4.meta = {
     title: 'Grid 4',
     path: '/GridLists/grid4',
-    component: Components.Grid4
 };
 
 

@@ -13,7 +13,6 @@ import {
     __experimentalGrid as Grid,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Hero Section
@@ -57,7 +56,6 @@ function Section2() {
 Section2.meta = {
     title: 'Section 2',
     path: '/HeroSection/section2',
-    component: Components.Section2
 };
 
 export default Section2;

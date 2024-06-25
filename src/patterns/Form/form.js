@@ -16,7 +16,6 @@ import {
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Profile Form
@@ -70,7 +69,6 @@ function Form() {
 Form.meta = {
     title: 'Form',
     path: '/Form/form',
-    component: Components.Form
 };
 
 export default Form;

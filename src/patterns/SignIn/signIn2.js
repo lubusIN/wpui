@@ -16,7 +16,6 @@ import {
     __experimentalDivider as Divider,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Sign in Form
@@ -101,7 +100,6 @@ function SignIn2() {
 SignIn2.meta = {
     title: 'Sign In 2',
     path: '/SignIn/signIn2',
-    component: Components.SignIn2
 };
 
 export default SignIn2; 

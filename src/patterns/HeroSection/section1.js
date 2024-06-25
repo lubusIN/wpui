@@ -9,7 +9,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Hero Section
@@ -45,7 +44,6 @@ function Section1() {
 Section1.meta = {
     title: 'Section 1',
     path: '/HeroSection/section1',
-    component: Components.Section1
 };
 
 export default Section1;

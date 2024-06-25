@@ -18,7 +18,6 @@ import {
     __experimentalHStack as HStack,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Card Heading
@@ -74,7 +73,6 @@ function CardHeading2() {
 CardHeading2.meta = {
     title: 'CardHeading 2',
     path: '/CardHeading/cardheading2',
-    component: Components.CardHeading2
 };
 
 export default CardHeading2;

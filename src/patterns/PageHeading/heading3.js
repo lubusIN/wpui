@@ -10,7 +10,6 @@ import {
     __experimentalText as Text,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Page Heading 3
@@ -36,7 +35,6 @@ function Heading3() {
 Heading3.meta = {
     title: 'Heading 3',
     path: '/PageHeading/heading3',
-    component: Components.Heading3
 };
 
 export default Heading3;

@@ -17,7 +17,6 @@ import {
     __experimentalTreeGridRow as TreeGridRow,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
-import * as Components from '.';
 
 /**
  * Render Feeds
@@ -156,7 +155,6 @@ function Feed1() {
 Feed1.meta = {
     title: 'Feed 1',
     path: '/Feed/feed1',
-    component: Components.Feed1
 };
 
 
