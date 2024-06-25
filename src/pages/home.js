@@ -4,7 +4,6 @@
 import {
     __experimentalGrid as Grid,
     __experimentalVStack as VStack,
-    __experimentalText as Text,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
 

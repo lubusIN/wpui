@@ -19,7 +19,7 @@ import {
 /**
  * Internal dependencies.
  */
-import { PatternList } from '../components';
+import { PatternView } from '../components';
 
 /**
  * Render Patterns Page
@@ -31,7 +31,7 @@ function Patterns({ title, patterns }) {
                 <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none' }}>
                     <div>
                         <span className="home" style={{ display: "flex" }}>
-                            Home 
+                            Home
                             <div style={{ width: '20px', height: '20px' }}>
                                 {chevronRight}
                             </div> </span>
@@ -40,7 +40,20 @@ function Patterns({ title, patterns }) {
                 <Text>{title}</Text>
             </HStack>
 
-            <PatternList patterns={patterns} />
+            <VStack spacing={24}>
+                {
+                    Object.values(patterns).map((Pattern, index) => {
+                        const { title, path } = Pattern.meta;
+                        return (
+                            <PatternView
+                                key={index}
+                                title={title}
+                                path={path}
+                                component={Pattern} />
+                        )
+                    })
+                }
+            </VStack>
         </VStack>
     );
 };
