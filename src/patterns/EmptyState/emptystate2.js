@@ -10,6 +10,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render File uploader empty stats
@@ -29,6 +30,12 @@ function EmptyState2() {
             </Card>
         </VStack>
     );
+};
+
+EmptyState2.meta = {
+    title: 'EmptyState 2',
+    path: '/EmptyState/emptystate2',
+    component: Components.EmptyState2
 };
 
 export default EmptyState2;

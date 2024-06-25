@@ -14,6 +14,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Sign in Form
@@ -53,6 +54,12 @@ function SignIn3() {
             </HStack>
         </VStack>
     );
+};
+
+SignIn3.meta = {
+    title: 'Sign In 3',
+    path: '/SignIn/signIn3',
+    component: Components.SignIn3
 };
 
 export default SignIn3; 

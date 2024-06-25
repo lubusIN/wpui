@@ -10,6 +10,7 @@ import {
     __experimentalVStack as VStack,
 
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Stats
@@ -50,6 +51,12 @@ function Stats3() {
             </VStack>
         </Card>
     );
+};
+
+Stats3.meta = {
+    title: 'Stats 3',
+    path: '/Stats/stats3',
+    component: Components.Stats3
 };
 
 export default Stats3;

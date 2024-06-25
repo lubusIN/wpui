@@ -14,6 +14,7 @@ import {
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Navigation
@@ -70,6 +71,12 @@ function Navigation1() {
             </NavigationMenu>
         </Navigation>
     );
+};
+
+Navigation1.meta = {
+    title: 'Navigate 1',
+    path: '/Navigations/navigate1',
+    component: Components.navigate1
 };
 
 export default Navigation1;

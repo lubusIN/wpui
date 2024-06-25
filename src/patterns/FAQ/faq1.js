@@ -6,9 +6,9 @@ import { useState } from "react";
 /**
  * WordPress dependencies.
  */
-import { 
-    plus, 
-    reset 
+import {
+    plus,
+    reset
 } from "@wordpress/icons";
 import {
     Icon,
@@ -19,6 +19,8 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
+import * as Components from '.';
+
 
 /**
  * Render FAQs.
@@ -76,6 +78,12 @@ function Faq1() {
             }
         </>
     );
+};
+
+Faq1.meta = {
+    title: 'FAQs 1',
+    path: '/Faq/faq1',
+    component: Components.Faq1
 };
 
 export default Faq1;

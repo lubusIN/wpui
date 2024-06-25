@@ -1,15 +1,16 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    chevronRight, 
-    home 
+import {
+    chevronRight,
+    home
 } from "@wordpress/icons";
 import {
     Icon,
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Breadcrumb
@@ -24,6 +25,11 @@ function Breadcrumb1() {
             <Heading size={14}>Add new</Heading>
         </HStack>
     );
+};
+Breadcrumb1.meta = {
+    title: 'Breadcrumb 1',
+    path: '/BreadCrumbs/breadcrumb1',
+    component: Components.Breadcrumb1
 };
 
 export default Breadcrumb1;

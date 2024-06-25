@@ -8,6 +8,7 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Stacked List View
@@ -94,6 +95,12 @@ function List4() {
             </style>
         </>
     )
+};
+
+List4.meta = {
+    title: 'List 4',
+    path: '/Lists/list4',
+    component: Components.List4
 };
 
 export default List4;

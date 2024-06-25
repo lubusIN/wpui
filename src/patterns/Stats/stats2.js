@@ -16,6 +16,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalSurface as Surface
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Stats
@@ -101,6 +102,12 @@ function Stats2() {
             </VStack>
         </Card>
     );
+};
+
+Stats2.meta = {
+    title: 'Stats 2',
+    path: '/Stats/stats2',
+    component: Components.Stats2
 };
 
 export default Stats2;

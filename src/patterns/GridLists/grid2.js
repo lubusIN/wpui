@@ -8,6 +8,7 @@ import {
     __experimentalText as Text,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Image card.
@@ -26,5 +27,12 @@ function Grid2() {
         </Grid >
     );
 };
+
+Grid2.meta = {
+    title: 'Grid 2',
+    path: '/GridLists/grid2',
+    component: Components.Grid2
+};
+
 
 export default Grid2;

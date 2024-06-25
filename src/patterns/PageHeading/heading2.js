@@ -11,6 +11,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Page Heading 2
@@ -35,6 +36,12 @@ function Heading2() {
             </HStack>
         </VStack>
     );
+};
+
+Heading2.meta = {
+    title: 'Heading 2',
+    path: '/PageHeading/heading2',
+    component: Components.Heading2
 };
 
 export default Heading2;

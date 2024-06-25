@@ -15,6 +15,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalText as Text,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Navigation
@@ -98,6 +99,12 @@ function Navigation2() {
             </style>
         </>
     );
+};
+
+Navigation2.meta = {
+    title: 'Navigate 2',
+    path: '/Navigations/navigate2',
+    component: Components.navigate2
 };
 
 export default Navigation2;

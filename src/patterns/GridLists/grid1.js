@@ -1,10 +1,10 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    moreHorizontal, 
-    edit, 
-    seen 
+import {
+    moreHorizontal,
+    edit,
+    seen
 } from "@wordpress/icons";
 import {
     Icon,
@@ -19,6 +19,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Cards
@@ -128,6 +129,12 @@ function Grid1() {
             ))}
         </Grid>
     );
+};
+
+Grid1.meta = {
+    title: 'Grid 1',
+    path: '/GridLists/grid1',
+    component: Components.Grid1
 };
 
 export default Grid1;

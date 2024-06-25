@@ -1,9 +1,9 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    file, 
-    plus 
+import {
+    file,
+    plus
 } from "@wordpress/icons";
 import {
     Icon,
@@ -12,6 +12,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalText as Text,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render File uploader empty stats
@@ -29,6 +30,12 @@ function EmptyState1() {
             </FormFileUpload>
         </VStack>
     );
+};
+
+EmptyState1.meta = {
+    title: 'EmptyState 1',
+    path: '/EmptyState/emptystate1',
+    component: Components.EmptyState1
 };
 
 export default EmptyState1;

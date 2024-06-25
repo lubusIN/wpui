@@ -1,12 +1,12 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    box, 
-    check, 
-    payment, 
-    pin, 
-    shipping 
+import {
+    box,
+    check,
+    payment,
+    pin,
+    shipping
 } from "@wordpress/icons";
 import {
     Icon,
@@ -17,6 +17,7 @@ import {
     __experimentalTreeGridRow as TreeGridRow,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
+import * as Components from '.';
 
 /**
  * Render Feeds
@@ -151,5 +152,12 @@ function Feed1() {
         </>
     );
 };
+
+Feed1.meta = {
+    title: 'Feed 1',
+    path: '/Feed/feed1',
+    component: Components.Feed1
+};
+
 
 export default Feed1;

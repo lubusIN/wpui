@@ -7,6 +7,8 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
+import * as Components from '.';
+
 
 /**
  * Render FAQs.
@@ -50,6 +52,12 @@ function Faq3() {
             </VStack>
         </Grid>
     );
+};
+
+Faq3.meta = {
+    title: 'FAQs 3',
+    path: '/Faq/faq3',
+    component: Components.Faq3
 };
 
 export default Faq3;
