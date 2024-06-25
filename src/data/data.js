@@ -24,7 +24,7 @@ const components = [
         title: 'Breadcrumbs',
         path: '/breadcrumbs',
         src: <BreadCrumbs />,
-        variations: Components.Breadcrumb,
+        variations: Components.BreadCrumbs,
     },
     {
         title: 'Empty State',

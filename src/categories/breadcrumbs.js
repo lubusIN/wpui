@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react'
+import * as Components from '../patterns';
 
 /**
  * Render BreadCrumbs
@@ -29,7 +30,14 @@ function BreadCrumbs() {
 </clipPath>
 </defs>
 </svg>
-    )
-}
+    );
+};
+
+BreadCrumbs.meta = {
+    title: 'Bread Crumbs',
+    path: '/breadcrubms',
+    src: <BreadCrumbs/>,
+    variations: Components.BreadCrumbs,
+};
 
 export default BreadCrumbs;

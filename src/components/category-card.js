@@ -34,7 +34,7 @@ function CategoryCard({ thumbnail, title, path, patterns }) {
                     {title}
                 </Heading>
                 <Text align="left" size={13} weight={400} color="grey">
-                    {`${patterns.length} components`}
+                    {/* {`${patterns.length} components`} */}
                 </Text>
             </VStack>
         </VStack>

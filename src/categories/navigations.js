@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react'
+import * as Components from '../patterns';
 
 /**
  * Render Navigations
@@ -23,7 +24,14 @@ function Navigations() {
             <rect x="15" y="124" width="31" height="6" rx="1.89362" fill="#D6E4FF" />
             <rect x="78.5" y="50.5" width="220" height="155" rx="6.1246" stroke="#B8CFFF" />
         </svg>
-    )
-}
+    );
+};
+
+Navigations.meta = {
+    title: 'Navigations',
+    path: '/navigations',
+    src: <Navigations/>,
+    variations: Components.Navigations,
+};
 
 export default Navigations;

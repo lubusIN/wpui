@@ -6,7 +6,7 @@ import * as Components from '.';
 /**
  * Component Mapping
  */
-const Breadcrumb = [
+const BreadCrumbs = [
     {
         title: 'Breadcrumb 1',
         path: '/BreadCrumbs/breadcrumb1',
@@ -24,4 +24,4 @@ const Breadcrumb = [
     }
 ];
 
-export default Breadcrumb;
+export default BreadCrumbs;

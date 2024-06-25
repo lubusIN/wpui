@@ -3,7 +3,7 @@
  */
 export { default as PageHeading } from './PageHeading/data';
 export { default as CardHeadings } from './CardHeading/data';
-export { default as Breadcrumb } from './BreadCrumbs/data';
+export { default as BreadCrumbs } from './BreadCrumbs/data';
 export { default as EmptyState } from './EmptyState/data';
 export { default as Faqs } from './FAQ/data';
 export { default as ActionPanels } from './ActionPanels/data';

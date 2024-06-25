@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react'
+import * as Components from '../patterns/';
 
 /**
  * Render ActionPanels
@@ -21,7 +22,14 @@ function ActionPanels() {
             <rect x="44.0606" y="82.2424" width="167.273" height="14" rx="4" fill="white" />
             <path fillRule="evenodd" clipRule="evenodd" d="M71.697 118.485C70.5924 118.485 69.697 119.38 69.697 120.485V127.636C69.697 128.741 70.5924 129.636 71.697 129.636H234.97C236.074 129.636 236.97 128.741 236.97 127.636V120.485C236.97 119.38 236.074 118.485 234.97 118.485H71.697ZM88.4242 136.606C87.3197 136.606 86.4242 137.501 86.4242 138.606V145.758C86.4242 146.862 87.3197 147.758 88.4242 147.758H218.242C219.347 147.758 220.242 146.862 220.242 145.758V138.606C220.242 137.501 219.347 136.606 218.242 136.606H88.4242Z" fill="#B8CFFF" />
         </svg>
-    )
-}
+    );
+};
+
+ActionPanels.meta = {
+    title: 'Action Panels',
+    path: '/actionpanels',
+    src: <ActionPanels/>,
+    variations: Components.ActionPanels,
+};
 
 export default ActionPanels;

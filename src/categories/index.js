@@ -11,4 +11,3 @@ export { default as PageHeading } from './page-heading';
 export { default as SignIn } from './sign-in';
 export { default as Stats } from './stats';
 export { default as Tables } from './tables';
-export { default as Banner } from './banner';

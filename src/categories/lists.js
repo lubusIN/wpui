@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react'
+import * as Components from '../patterns';
 
 /**
  * Render Lists
@@ -34,7 +35,14 @@ function Lists() {
         <line x1="24.0002" y1="118.005" x2="285" y2="118.005" stroke="white" strokeWidth="0.92226"/>
         <line x1="24.0002" y1="152.129" x2="285" y2="152.129" stroke="white" strokeWidth="0.92226"/>
         </svg>
-    )
-}
+    );
+};
+
+Lists.meta = {
+    title: 'Lists',
+    path: '/lists',
+    src: <Lists/>,
+    variations: Components.Lists,
+};
 
 export default Lists;

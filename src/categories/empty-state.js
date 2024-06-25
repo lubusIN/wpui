@@ -2,6 +2,7 @@
  * External dependencies.
  */
 import React from 'react'
+import * as Components from '../patterns';
 
 /**
  * Render EmptyState
@@ -27,8 +28,16 @@ function EmptyState() {
                 </clipPath>
             </defs>
         </svg>
-    )
-}
+    );
+};
+
+EmptyState.meta = {
+    title: 'Empty State',
+    path: '/emptystate',
+    src: <EmptyState />,
+    variations: Components.EmptyState,
+};
+
 
 export default EmptyState;
 

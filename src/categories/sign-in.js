@@ -3,6 +3,7 @@
  * External dependencies.
  */
 import React from 'react'
+import * as Components from '../patterns';
 
 /**
  * Render SignIn
@@ -23,7 +24,14 @@ function SignIn() {
             <rect x="104" y="187" width="71" height="4" rx="1.84725" fill="#D6E4FF" />
             <rect x="104" y="198" width="45" height="4" rx="1.84725" fill="#D6E4FF" />
         </svg>
-    )
-}
+    );
+};
+
+SignIn.meta = {
+    title: 'Sign In',
+    path: '/signin',
+    src: <SignIn />,
+    variations: Components.SignIn
+};
 
 export default SignIn;
