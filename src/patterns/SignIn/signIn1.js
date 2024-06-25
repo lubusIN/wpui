@@ -14,7 +14,6 @@ import {
     __experimentalHStack as HStack,
 } from "@wordpress/components";
 
-
 /**
  * Render Sign in Form
  */
@@ -51,6 +50,11 @@ function SignIn1() {
             </HStack>
         </VStack>
     );
+};
+
+SignIn1.meta = {
+    title: 'Sign In 1',
+    path: '/SignIn/signIn1',
 };
 
 export default SignIn1;

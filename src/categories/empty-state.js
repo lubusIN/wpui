@@ -4,6 +4,11 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render EmptyState
  */
 function EmptyState() {
@@ -27,8 +32,15 @@ function EmptyState() {
                 </clipPath>
             </defs>
         </svg>
-    )
-}
+    );
+};
+
+EmptyState.meta = {
+    title: 'Empty State',
+    path: '/emptystate',
+    patterns: patterns.EmptyState,
+};
+
 
 export default EmptyState;
 

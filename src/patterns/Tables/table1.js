@@ -86,7 +86,7 @@ function Table1() {
                                 {(props) => (
                                     <HStack alignment="left">
                                         <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
-                                        <Heading level={5} style={{ whiteSpace: 'nowrap'}}>
+                                        <Heading level={5} style={{ whiteSpace: 'nowrap' }}>
                                             {item.name}
                                         </Heading>
                                     </HStack>
@@ -142,4 +142,10 @@ function Table1() {
         </VStack>
     );
 };
+
+Table1.meta = {
+    title: 'Table 1',
+    path: '/Tables/table1',
+};
+
 export default Table1;

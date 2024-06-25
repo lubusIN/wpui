@@ -100,4 +100,9 @@ function Navigation2() {
     );
 };
 
+Navigation2.meta = {
+    title: 'Navigate 2',
+    path: '/Navigations/navigate2',
+};
+
 export default Navigation2;

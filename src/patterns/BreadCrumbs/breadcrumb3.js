@@ -37,4 +37,11 @@ function Breadcrumb3() {
     );
 };
 
+Breadcrumb3.meta = {
+    title: 'Breadcrumb 3',
+    path: '/BreadCrumbs/breadcrumb3',
+};
+
+
+
 export default Breadcrumb3;

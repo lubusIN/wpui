@@ -4,9 +4,13 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render CardHeading
  */
-
 function CardHeading() {
     return (
         <svg width="307" height="230" viewBox="0 0 307 230" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,8 +42,14 @@ function CardHeading() {
                 <rect x="43" y="162.138" width="39.4789" height="2.74636" rx="1.37318" fill="#D6E4FF" />
             </g>
         </svg>
-    )
-}
+    );
+};
+
+CardHeading.meta = {
+    title: 'Card Heading',
+    path: '/cardheading',
+    patterns: patterns.CardHeadings,
+};
 
 export default CardHeading;
 

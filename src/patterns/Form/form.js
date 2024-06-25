@@ -66,6 +66,11 @@ function Form() {
     );
 };
 
+Form.meta = {
+    title: 'Form',
+    path: '/Form/form',
+};
+
 export default Form;
 
 

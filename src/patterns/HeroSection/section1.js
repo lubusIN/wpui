@@ -41,4 +41,9 @@ function Section1() {
     );
 };
 
+Section1.meta = {
+    title: 'Section 1',
+    path: '/HeroSection/section1',
+};
+
 export default Section1;

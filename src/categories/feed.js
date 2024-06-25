@@ -4,6 +4,11 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render Feed
  */
 function Feed() {
@@ -27,8 +32,15 @@ function Feed() {
             <line x1="61.5" y1="93" x2="61.5" y2="113" stroke="#B8CFFF" />
             <line x1="61.5" y1="144" x2="61.5" y2="164" stroke="#B8CFFF" />
         </svg>
-    )
-}
+    );
+};
+
+Feed.meta = {
+    title: 'Feed',
+    path: '/feed',
+    patterns: patterns.Feeds,
+};
+
 
 export default Feed;
 

@@ -38,4 +38,9 @@ function Panel4() {
     );
 };
 
+Panel4.meta = {
+    title: 'Panel 4',
+    path: '/ActionPanels/panel4'
+};
+
 export default Panel4;

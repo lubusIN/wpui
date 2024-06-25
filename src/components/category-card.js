@@ -16,12 +16,12 @@ import {
 /**
  * Render Category Card 
  */
-function CategoryCard({ thumbnail, title, path, patterns }) {
+function CategoryCard({ thumbnail: Thumbnail, title, path, patterns }) {
     return (
         <VStack className="wpui_preview" style={{ width: '100%' }}>
             <Link to={path}>
                 <Card className="wpui_card_preview" size="large" isBorderless >
-                    {thumbnail}
+                    <Thumbnail />
                 </Card>
             </Link>
             <VStack spacing={0}>
@@ -34,7 +34,7 @@ function CategoryCard({ thumbnail, title, path, patterns }) {
                     {title}
                 </Heading>
                 <Text align="left" size={13} weight={400} color="grey">
-                    {`${patterns.length} components`}
+                    {`${Object.keys(patterns).length} components`}
                 </Text>
             </VStack>
         </VStack>

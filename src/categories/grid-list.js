@@ -4,6 +4,11 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render GridList
  */
 function GridList() {
@@ -36,8 +41,14 @@ function GridList() {
             <rect x="84" y="66" width="35.7778" height="2.48889" rx="1.24444" fill="#D6E4FF" />
             <rect x="84" y="70.9778" width="42" height="2.48889" rx="1.24444" fill="#D6E4FF" />
         </svg>
-    )
-}
+    );
+};
+
+GridList.meta = {
+    title: 'Action Panels',
+    path: '/actionpanels',
+    patterns: patterns.GridLists,
+};
 
 export default GridList;
 

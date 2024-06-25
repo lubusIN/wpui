@@ -50,6 +50,11 @@ function CardHeading4() {
             <Card style={{ opacity: '0.5', height: '200px' }} variant="grid" backgroundSize={20} isBorderless ></Card>
         </Card>
     );
-}
+};
+
+CardHeading4.meta = {
+    title: 'CardHeading 4',
+    path: '/CardHeading/cardheading4',
+};
 
 export default CardHeading4;

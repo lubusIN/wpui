@@ -52,4 +52,9 @@ function Faq3() {
     );
 };
 
+Faq3.meta = {
+    title: 'FAQs 3',
+    path: '/Faq/faq3',
+};
+
 export default Faq3;

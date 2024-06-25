@@ -4,6 +4,11 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render BreadCrumbs
  */
 
@@ -29,7 +34,13 @@ function BreadCrumbs() {
 </clipPath>
 </defs>
 </svg>
-    )
-}
+    );
+};
+
+BreadCrumbs.meta = {
+    title: 'Bread Crumbs',
+    path: '/breadcrubms',
+    patterns: patterns.BreadCrumbs,
+};
 
 export default BreadCrumbs;

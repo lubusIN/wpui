@@ -4,6 +4,11 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render Form
  */
 
@@ -24,8 +29,14 @@ function Form() {
             <rect x="116.678" y="138.328" width="73.7188" height="30.8438" rx="1.42188" stroke="#B8CFFF" strokeWidth="0.656251" />
             <rect x="136.037" y="176.5" width="35" height="10.5" rx="5.25" fill="#3858E9" />
         </svg>
-    )
-}
+    );
+};
+
+Form.meta = {
+    title: 'Form',
+    path: '/form',
+    patterns: patterns.Forms,
+};
 
 export default Form;
 

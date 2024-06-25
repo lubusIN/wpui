@@ -17,7 +17,6 @@ import {
     __experimentalHeading as Heading,
 } from "@wordpress/components";
 
-
 /**
  * Render Sign in Form
  */
@@ -96,6 +95,11 @@ function SignIn2() {
             </style>
         </>
     );
+};
+
+SignIn2.meta = {
+    title: 'Sign In 2',
+    path: '/SignIn/signIn2',
 };
 
 export default SignIn2; 

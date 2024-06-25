@@ -4,6 +4,11 @@
 import React from 'react'
 
 /**
+ * Internal dependencies.
+ */
+import * as patterns from '../patterns/';
+
+/**
  * Render Tables 
  */
 function Tables() {
@@ -42,7 +47,13 @@ function Tables() {
             <rect x="256" y="140" width="27" height="8" rx="4" fill="#3858E9" />
             <rect x="256" y="169" width="27" height="8" rx="4" fill="#3858E9" />
         </svg>
-    )
-}
+    );
+};
+
+Tables.meta = {
+    title: 'Tables',
+    path: '/tables',
+    patterns: patterns.Tables,
+};
 
 export default Tables;

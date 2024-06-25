@@ -163,4 +163,10 @@ function Grid4() {
     );
 };
 
+Grid4.meta = {
+    title: 'Grid 4',
+    path: '/GridLists/grid4',
+};
+
+
 export default Grid4;

@@ -11,8 +11,8 @@ import {
 /**
  * Internal dependencies.
  */
-import { components } from "../data";
 import { Banner, CategoryCard } from "../components";
+import * as categories from '../categories';
 
 /**
  * Render Component Menu
@@ -32,15 +32,19 @@ function Home() {
                     rowGap={25}
                 >
                     {
-                        components.map(({ src, title, path, variations }, index) => (
-                            <CategoryCard
-                                key={`${index}-${path}`}
-                                thumbnail={src}
-                                title={title}
-                                path={path}
-                                patterns={variations}
-                            />
-                        ))}
+                        Object.values(categories).map((category, index) => {
+                            const {title, path, patterns} = category.meta;
+                            return (
+                                <CategoryCard
+                                    key={`${index}-${path}`}
+                                    thumbnail={category}
+                                    title={title}
+                                    path={path}
+                                    patterns={patterns}
+                                />
+                            )
+                        })
+                    }
                 </Grid>
             </VStack>
         </>

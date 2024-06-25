@@ -58,4 +58,9 @@ function Faq2() {
     );
 };
 
+Faq2.meta = {
+    title: 'FAQs 2',
+    path: '/Faq/faq2',
+};
+
 export default Faq2;

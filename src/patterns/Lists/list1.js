@@ -110,4 +110,9 @@ function List1() {
     );
 };
 
+List1.meta = {
+    title: 'List 1',
+    path: '/Lists/list1',
+};
+
 export default List1;

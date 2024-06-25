@@ -51,4 +51,9 @@ function Panel3() {
     );
 };
 
+Panel3.meta = {
+    title: 'Panel 3',
+    path: '/ActionPanels/panel3',
+};
+
 export default Panel3;

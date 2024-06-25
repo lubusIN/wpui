@@ -173,4 +173,10 @@ function Table2() {
         </VStack>
     );
 };
+
+Table2.meta = {
+    title: 'Table 2',
+    path: '/Tables/table2',
+};
+
 export default Table2;

@@ -103,4 +103,9 @@ function Stats2() {
     );
 };
 
+Stats2.meta = {
+    title: 'Stats 2',
+    path: '/Stats/stats2',
+};
+
 export default Stats2;
