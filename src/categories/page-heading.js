@@ -31,7 +31,7 @@ function PageHeading() {
 PageHeading.meta = {
     title: 'Pageheading',
     path: '/pageheading',
-    pattern: patterns.PageHeading,
+    patterns: patterns.PageHeading,
 };
 
 export default PageHeading;

@@ -26,9 +26,9 @@ function App() {
                         <Route path="/getting-started" element={<GettingStarted />} style={{ overflowX: 'visible' }} />
                         {/* Render pattern category routes */}
                         {Object.values(categories).map((category, index) => {
-                            const { title, path, pattern } = category.meta;
+                            const { title, path, patterns } = category.meta;
                             return (
-                                <Route key={index} title={title} path={path} element={<Patterns patterns={pattern} />} />
+                                <Route key={index} title={title} path={path} element={<Patterns patterns={patterns} />} />
                             )
                         })}
                     </Routes >

@@ -45,7 +45,7 @@ function Lists() {
 Lists.meta = {
     title: 'Lists',
     path: '/lists',
-    pattern: patterns.Lists,
+    patterns: patterns.Lists,
 };
 
 export default Lists;

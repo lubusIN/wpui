@@ -38,7 +38,7 @@ function EmptyState() {
 EmptyState.meta = {
     title: 'Empty State',
     path: '/emptystate',
-    pattern: patterns.EmptyState,
+    patterns: patterns.EmptyState,
 };
 
 

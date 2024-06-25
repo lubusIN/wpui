@@ -38,7 +38,7 @@ function Feed() {
 Feed.meta = {
     title: 'Feed',
     path: '/feed',
-    pattern: patterns.Feeds,
+    patterns: patterns.Feeds,
 };
 
 

@@ -53,7 +53,7 @@ function Tables() {
 Tables.meta = {
     title: 'Tables',
     path: '/tables',
-    pattern: patterns.Tables,
+    patterns: patterns.Tables,
 };
 
 export default Tables;

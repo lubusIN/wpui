@@ -34,7 +34,7 @@ function Navigations() {
 Navigations.meta = {
     title: 'Navigations',
     path: '/navigations',
-    pattern: patterns.Navigations,
+    patterns: patterns.Navigations,
 };
 
 export default Navigations;

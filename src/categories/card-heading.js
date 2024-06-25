@@ -48,7 +48,7 @@ function CardHeading() {
 CardHeading.meta = {
     title: 'Card Heading',
     path: '/cardheading',
-    pattern: patterns.CardHeadings,
+    patterns: patterns.CardHeadings,
 };
 
 export default CardHeading;

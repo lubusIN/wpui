@@ -47,7 +47,7 @@ function GridList() {
 GridList.meta = {
     title: 'Action Panels',
     path: '/actionpanels',
-    pattern: patterns.GridLists,
+    patterns: patterns.GridLists,
 };
 
 export default GridList;

@@ -35,7 +35,7 @@ function Form() {
 Form.meta = {
     title: 'Form',
     path: '/form',
-    pattern: patterns.Forms,
+    patterns: patterns.Forms,
 };
 
 export default Form;

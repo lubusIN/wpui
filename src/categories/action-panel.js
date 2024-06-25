@@ -32,7 +32,7 @@ function ActionPanels() {
 ActionPanels.meta = {
     title: 'Action Panels',
     path: '/actionpanels',
-    pattern: patterns.ActionPanels,
+    patterns: patterns.ActionPanels,
 };
 
 export default ActionPanels;

@@ -40,7 +40,7 @@ function BreadCrumbs() {
 BreadCrumbs.meta = {
     title: 'Bread Crumbs',
     path: '/breadcrubms',
-    pattern: patterns.BreadCrumbs,
+    patterns: patterns.BreadCrumbs,
 };
 
 export default BreadCrumbs;

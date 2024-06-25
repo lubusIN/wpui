@@ -41,7 +41,7 @@ function Stats() {
 Stats.meta = {
     title: 'Stats',
     path: '/stats',
-    pattern: patterns.Stats,
+    patterns: patterns.Stats,
 };
 
 export default Stats;

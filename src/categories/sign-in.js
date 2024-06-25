@@ -34,7 +34,7 @@ function SignIn() {
 SignIn.meta = {
     title: 'Sign In',
     path: '/signin',
-    pattern: patterns.SignIn
+    patterns: patterns.SignIn
 };
 
 export default SignIn;
