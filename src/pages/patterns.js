@@ -19,7 +19,7 @@ import {
 /**
  * Internal dependencies.
  */
-import { PatternList } from '../components';
+import { PatternList } from '@wpui/components';
 
 /**
  * Render Patterns Page
