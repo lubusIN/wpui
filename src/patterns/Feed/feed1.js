@@ -152,10 +152,11 @@ function Feed1() {
     );
 };
 
+// @meta-start
 Feed1.meta = {
     title: 'Feed 1',
     path: '/Feed/feed1',
 };
-
+// @meta-end
 
 export default Feed1;

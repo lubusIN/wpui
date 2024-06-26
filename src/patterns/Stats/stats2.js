@@ -103,9 +103,11 @@ function Stats2() {
     );
 };
 
+// @meta-start
 Stats2.meta = {
     title: 'Stats 2',
     path: '/Stats/stats2',
 };
+// @meta-end
 
 export default Stats2;

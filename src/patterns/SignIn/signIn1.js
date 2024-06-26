@@ -52,9 +52,11 @@ function SignIn1() {
     );
 };
 
+// @meta-start
 SignIn1.meta = {
     title: 'Sign In 1',
     path: '/SignIn/signIn1',
 };
+// @meta-end
 
 export default SignIn1;

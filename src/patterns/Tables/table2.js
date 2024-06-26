@@ -174,9 +174,11 @@ function Table2() {
     );
 };
 
+// @meta-start
 Table2.meta = {
     title: 'Table 2',
     path: '/Tables/table2',
 };
+// @meta-end
 
 export default Table2;

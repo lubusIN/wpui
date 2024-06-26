@@ -66,10 +66,12 @@ function Form() {
     );
 };
 
+// @meta-start
 Form.meta = {
     title: 'Form',
     path: '/Form/form',
 };
+// @meta-end
 
 export default Form;
 

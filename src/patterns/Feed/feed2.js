@@ -179,10 +179,12 @@ function Feed2() {
     );
 };
 
+// @meta-start
 Feed2.meta = {
     title: 'Feed 2',
     path: '/Feed/feed2',
 };
+// @meta-end
 
 
 export default Feed2;

@@ -34,9 +34,10 @@ function Panel1() {
     );
 };
 
+// @meta-start
 Panel1.meta = {
     title: 'Panel 1',
     path: '/ActionPanels/panel1',
 };
-
+// @meta-end
 export default Panel1;

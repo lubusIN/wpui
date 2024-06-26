@@ -52,9 +52,11 @@ function CardHeading4() {
     );
 };
 
+// @meta-start
 CardHeading4.meta = {
     title: 'CardHeading 4',
     path: '/CardHeading/cardheading4',
 };
+// @meta-end
 
 export default CardHeading4;

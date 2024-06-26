@@ -72,9 +72,11 @@ function Navigation1() {
     );
 };
 
+// @meta-start
 Navigation1.meta = {
     title: 'Navigate 1',
     path: '/Navigations/navigate1',
 };
+// @meta-end
 
 export default Navigation1;

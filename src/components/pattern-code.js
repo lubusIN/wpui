@@ -38,7 +38,8 @@ function PatternCode({ path }) {
             }
 
             const content = await response.text();
-            setPatternCode(content);
+            const codeText = content.replace(/^\s*\/\/ @meta-start[\s\S]*?\/\/ @meta-end\s*$/gm, '');
+            setPatternCode(codeText);
         } catch (error) {
             console.error('Error loading file:', error);
         } finally {
