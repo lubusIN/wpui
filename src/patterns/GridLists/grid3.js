@@ -68,10 +68,12 @@ function Grid3() {
     );
 };
 
+// @meta-start
 Grid3.meta = {
     title: 'Grid 3',
     path: '/GridLists/grid3',
 };
+// @meta-end
 
 
 export default Grid3;

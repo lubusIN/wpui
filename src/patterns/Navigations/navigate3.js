@@ -108,10 +108,11 @@ function Navigation3() {
     );
 };
 
+// @meta-start
 Navigation3.meta = {
     title: 'Navigate 3',
     path: '/Navigations/navigate3',
 };
-
+// @meta-end
 
 export default Navigation3;

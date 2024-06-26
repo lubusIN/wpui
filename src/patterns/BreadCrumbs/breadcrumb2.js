@@ -21,10 +21,12 @@ function Breadcrumb2() {
     );
 };
 
+// @meta-start
 Breadcrumb2.meta = {
     title: 'Breadcrumb 2',
     path: '/BreadCrumbs/breadcrumb2',
 };
+// @meta-end
 
 
 export default Breadcrumb2;

@@ -32,9 +32,11 @@ function Heading3() {
     );
 };
 
+// @meta-start
 Heading3.meta = {
     title: 'Heading 3',
     path: '/PageHeading/heading3',
 };
+// @meta-end
 
 export default Heading3;

@@ -70,9 +70,11 @@ function CardHeading2() {
     );
 };
 
+// @meta-start
 CardHeading2.meta = {
     title: 'CardHeading 2',
     path: '/CardHeading/cardheading2',
 };
+// @meta-end
 
 export default CardHeading2;

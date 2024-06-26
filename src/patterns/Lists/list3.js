@@ -76,9 +76,11 @@ function List3() {
     )
 };
 
+// @meta-start
 List3.meta = {
     title: 'List 3',
     path: '/Lists/list3',
 };
+// @meta-end
 
 export default List3;

@@ -143,9 +143,11 @@ function Table1() {
     );
 };
 
+// @meta-start
 Table1.meta = {
     title: 'Table 1',
     path: '/Tables/table1',
 };
+// @meta-end
 
 export default Table1;

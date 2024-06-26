@@ -130,9 +130,11 @@ function Grid1() {
     );
 };
 
+// @meta-start
 Grid1.meta = {
     title: 'Grid 1',
     path: '/GridLists/grid1',
 };
+// @meta-end
 
 export default Grid1;

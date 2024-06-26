@@ -27,10 +27,12 @@ function Grid2() {
     );
 };
 
+// @meta-start
 Grid2.meta = {
     title: 'Grid 2',
     path: '/GridLists/grid2',
 };
+// @meta-end
 
 
 export default Grid2;
