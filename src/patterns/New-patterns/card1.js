@@ -53,7 +53,7 @@ function Card1() {
 
 Card1.meta = {
     title: 'Card 1',
-    path: '/new-patterns/Card1',
+    path: '/New-patterns/card1',
 };
 
 export default Card1;

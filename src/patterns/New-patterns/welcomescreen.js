@@ -70,7 +70,7 @@ function Welcomescreen() {
 
 Welcomescreen.meta = {
     title: 'Welcomescreen',
-    path: '/new-patterns/Welcomescreen',
+    path: '/New-patterns/welcomescreen',
 };
 
 export default Welcomescreen;

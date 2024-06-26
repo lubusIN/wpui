@@ -133,8 +133,8 @@ function Emptystate3() {
 };
 
 Emptystate3.meta = {
-    title: 'EMpty State 5',
-    path: '/new-patterns/Emptystate3',
+    title: 'Empty State 3',
+    path: '/New-patterns/emptystate3',
 };
 
 export default Emptystate3;

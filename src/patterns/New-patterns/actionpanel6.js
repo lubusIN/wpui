@@ -84,7 +84,7 @@ function Actionpanel6() {
 
 Actionpanel6.meta = {
     title: 'Action Panel 6',
-    path: '/new-patterns/Actionpanel6',
+    path: '/New-patterns/actionpanel6',
 };
 
 export default Actionpanel6;
