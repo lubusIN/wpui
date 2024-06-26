@@ -1,74 +1,78 @@
 body {
     font-family: Inter, sans-serif;
-    margin: 0
+    margin: 0;
+}
+
+.wpui_header {
+    padding: 12px 3vw;
+
+    a {
+        text-decoration: none;
+        margin-left: 12px;
+    }
 }
 
 .wpui_site_logo {
-    box-shadow: none !important;
     margin-top: 2.3px;
-}
-
-.wpui_header a {
-    text-decoration: none;
-    margin-left: 12px;
 }
 
 .wpui_hero_Section {
     background-image: url(img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10vw 0
+    padding: 10vw 0;
 }
 
 .wpui_hero_cont {
     margin: auto 0 auto auto;
     padding-right: 140px !important;
-    width: 50%
+    width: 50%;
 }
 
-.resize_cont .components-resizable-box__handle-right:after {
-    background: #94a3b8;
-    border: 0;
-    border-radius: 4px;
-    box-shadow: none;
-    height: 35px;
-    right: calc(50% - 14px);
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px
-}
+.resize_cont {
+    .components-resizable-box__handle-right {
+        cursor: ew-resize !important;
 
-.resize_cont .components-resizable-box__handle-right:before {
-    display: none !important
-}
+        &:after {
+            background: #94a3b8;
+            border: 0;
+            border-radius: 4px;
+            box-shadow: none;
+            height: 35px;
+            right: calc(50% - 14px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+        }
 
-.resize_cont .components-resizable-box__handle-right {
-    cursor: ew-resize !important
+        &:before {
+            display: none !important;
+        }
+    }
 }
 
 .wpui_footer {
-    background-color: #3858e9 !important
-}
+    background-color: #3858e9 !important;
 
-.wpui_footer .components-card__body,
-.wpui_header {
-    padding: 12px 3vw
-}
+    .components-card__body {
+        padding: 12px 3vw;
 
-.wpui_footer .components-card__body:first-child {
-    padding: 60px 3vw
-}
+        &:first-child {
+            padding: 60px 3vw;
+        }
 
-.wpui_footer .components-card__body .sec_1 {
-    margin: auto;
-    width: 50%
+        .sec_1 {
+            margin: auto;
+            width: 50%;
+        }
+    }
 }
 
 .wpui_com_page,
 .wpui_lcont {
     margin: auto;
     max-width: 1350px;
-    padding: 40px 20px
+    padding: 40px 20px;
 }
 
 div.wpui_card_preview {
@@ -79,29 +83,29 @@ div.wpui_card_preview {
     padding: 20px 0;
     display: flex;
     justify-content: center;
+
+    Svg {
+        height: 100%;
+    }
 }
 
 div.wpui_preview{
    border: 10px solid rgb(255, 255, 255);
    border-radius: 10px;
-}
 
-div.wpui_preview:hover {
-    border-color: #e7eefa00;
-    background-color:#e7eefa49;
-    opacity: 1;
-    white-space: nowrap;
-}
-
-div.wpui_card_preview Svg {
-    height: 100%
+   &:hover {
+        border-color: #e7eefa00;
+        background-color:#e7eefa49;
+        opacity: 1;
+        white-space: nowrap;
+    }
 }
 
 div.wpui_column {
     border-radius: 10px;
     box-shadow: none !important;
     height: auto;
-    padding: 10px
+    padding: 10px;
 }
 
 .wpui_copy {
@@ -109,25 +113,23 @@ div.wpui_column {
     position: absolute;
     top: 20px;
     right: 20px;
-}
 
-.wpui_copy svg {
-    fill: white !important;
+    svg {
+        fill: white !important;
+    }
 }
 
 .copied_pop .components-popover__content {
     padding: 6px !important
 }
 
-.wpui_view_toggle [role="presentation"] {
-    transform: none !important
-}
+.wpui_view_toggle 
 .wpui_back_button span,
 .wpui_back_button button
  {
     color: #535353;
     font-size: .875rem;
-    font-weight: 500
+    font-weight: 500;
 }
 .wpui_back_button .home:hover{
     color: #3858e9;
@@ -135,34 +137,39 @@ div.wpui_column {
 
 .wpui_variation_card {
     border-radius: 4px !important;
-    padding: 45px 35px
+    padding: 45px 35px;
 }
 
-.wpui_view_toggle [role="presentation"] {
-    background-color: #cecece;
+.wpui_view_toggle {
+    [role="presentation"] {
+        background-color: #cecece;
+        transform: none !important;
+    }
+
+    button[data-active-item] svg {
+        fill: #5b5b5b;
+    }
+
+    &:focus-within {
+        box-shadow: none !important;
+        border-color: grey !important;
+    }
 }
 
-.wpui_view_toggle button[data-active-item] svg {
-    fill: #5b5b5b;
-}
+.wpui_hero_cta {
+    .components-button {
+        padding: 20px !important;
+        color: white !important;
 
-.wpui_view_toggle:focus-within {
-    box-shadow: none !important;
-    border-color: grey !important;
-}
+        &:nth-child(1) {
+            border: 1px solid transparent;
+        }
 
-.wpui_hero_cta .components-button {
-    padding: 20px !important;
-    color: white !important;
-}
-
-.wpui_hero_cta .components-button:nth-child(1) {
-    border: 1px solid transparent;
-}
-
-.wpui_hero_cta .components-button:nth-child(2) {
-    box-shadow: none !important;
-    border: 1px solid white;
+        &:nth-child(2) {
+            box-shadow: none !important;
+            border: 1px solid white;
+        }
+    }
 }
 
 /* Docs */
