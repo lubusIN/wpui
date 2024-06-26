@@ -7,7 +7,7 @@ import remarkGfm from 'remark-gfm';
 /**
  * internal dependencies.
  */
-import gettingStarted from "../docs/getting-started.md"
+import gettingStarted from "@wpui/docs/getting-started.md"
 
 function GettingStarted() {
   return (

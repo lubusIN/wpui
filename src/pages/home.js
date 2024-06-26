@@ -10,8 +10,8 @@ import {
 /**
  * Internal dependencies.
  */
-import { Banner, CategoryCard } from "../components";
-import * as categories from '../categories';
+import { Banner, CategoryCard } from "@wpui/components";
+import * as categories from '@wpui/categories';
 
 /**
  * Render Component Menu

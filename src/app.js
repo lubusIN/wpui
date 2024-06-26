@@ -6,9 +6,9 @@ import { Routes, Route } from "react-router-dom";
 /**
  * Internal dependencies.
  */
-import * as categories from './categories';
-import { Home, Patterns, GettingStarted } from './pages'
-import { Footer, Header, ScrollToTop } from './components';
+import * as categories from '@wpui/categories';
+import { Home, Patterns, GettingStarted } from '@wpui/pages'
+import { Footer, Header, ScrollToTop } from '@wpui/components';
 
 /**
  * Render App
