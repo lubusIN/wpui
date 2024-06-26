@@ -8,3 +8,4 @@ export { default as Actionpanel5 } from './actionpanel5';
 export { default as Actionpanel6 } from './actionpanel6';
 export { default as Card1 } from './card1';
 export { default as Emptystate3 } from './emptystate3';
+export { default as Actionpanel7 } from './actionpanel7';
