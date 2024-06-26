@@ -45,8 +45,8 @@ function GridList() {
 };
 
 GridList.meta = {
-    title: 'Action Panels',
-    path: '/actionpanels',
+    title: 'Grid List',
+    path: '/gridlist',
     patterns: patterns.GridLists,
 };
 
