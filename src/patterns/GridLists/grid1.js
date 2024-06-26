@@ -1,10 +1,10 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    moreHorizontal, 
-    edit, 
-    seen 
+import {
+    moreHorizontal,
+    edit,
+    seen
 } from "@wordpress/icons";
 import {
     Icon,
@@ -128,6 +128,11 @@ function Grid1() {
             ))}
         </Grid>
     );
+};
+
+Grid1.meta = {
+    title: 'Grid 1',
+    path: '/GridLists/grid1',
 };
 
 export default Grid1;

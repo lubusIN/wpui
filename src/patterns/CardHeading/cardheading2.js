@@ -68,6 +68,11 @@ function CardHeading2() {
             </CardBody>
         </Card>
     );
-}
+};
+
+CardHeading2.meta = {
+    title: 'CardHeading 2',
+    path: '/CardHeading/cardheading2',
+};
 
 export default CardHeading2;

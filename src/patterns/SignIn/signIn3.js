@@ -55,4 +55,9 @@ function SignIn3() {
     );
 };
 
+SignIn3.meta = {
+    title: 'Sign In 3',
+    path: '/SignIn/signIn3',
+};
+
 export default SignIn3; 

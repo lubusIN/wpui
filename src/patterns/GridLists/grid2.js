@@ -27,4 +27,10 @@ function Grid2() {
     );
 };
 
+Grid2.meta = {
+    title: 'Grid 2',
+    path: '/GridLists/grid2',
+};
+
+
 export default Grid2;

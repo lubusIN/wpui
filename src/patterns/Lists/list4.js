@@ -96,4 +96,9 @@ function List4() {
     )
 };
 
+List4.meta = {
+    title: 'List 4',
+    path: '/Lists/list4',
+};
+
 export default List4;

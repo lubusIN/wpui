@@ -19,6 +19,11 @@ function CardHeading1() {
             <Card style={{ opacity: '0.5', height: '200px' }} variant="grid" backgroundSize={20} isBorderless ></Card>
         </Card>
     );
-}
+};
+
+CardHeading1.meta = {
+    title: 'CardHeading 1',
+    path: '/CardHeading/cardheading1',
+};
 
 export default CardHeading1;

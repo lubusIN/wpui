@@ -98,4 +98,9 @@ function List2() {
     )
 };
 
+List2.meta = {
+    title: 'List 2',
+    path: '/Lists/list2',
+};
+
 export default List2;

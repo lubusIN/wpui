@@ -31,4 +31,9 @@ function EmptyState2() {
     );
 };
 
+EmptyState2.meta = {
+    title: 'EmptyState 2',
+    path: '/EmptyState/emptystate2',
+};
+
 export default EmptyState2;

@@ -1,9 +1,9 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    file, 
-    plus 
+import {
+    file,
+    plus
 } from "@wordpress/icons";
 import {
     Icon,
@@ -29,6 +29,11 @@ function EmptyState1() {
             </FormFileUpload>
         </VStack>
     );
+};
+
+EmptyState1.meta = {
+    title: 'EmptyState 1',
+    path: '/EmptyState/emptystate1',
 };
 
 export default EmptyState1;

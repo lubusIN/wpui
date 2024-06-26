@@ -100,4 +100,9 @@ function Stats1() {
     );
 };
 
+Stats1.meta = {
+    title: 'Stats 1',
+    path: '/Stats/stats1',
+};
+
 export default Stats1;

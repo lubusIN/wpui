@@ -8,17 +8,16 @@ import ReactContentLoader from "react-content-loader"
  * Render Content Loader
  */
 
-function ContentLoader(props) {
+function ContentLoader() {
   return (
-    <div style={{ backgroundColor: 'rgb(17, 27, 39)' }}>
+    <div style={{ backgroundColor: 'rgb(17, 27, 39)', padding: '60px', borderRadius: '5px' }}>
       <ReactContentLoader
-        speed={2}
+        speed={1}
         width={340}
         height={84}
         viewBox="0 0 340 84"
         backgroundColor="#f5f5f5"
         foregroundColor="#cccccc"
-        {...props}
       >
         <rect x="0" y="0" rx="3" ry="3" width="67" height="11" />
         <rect x="76" y="0" rx="3" ry="3" width="140" height="11" />

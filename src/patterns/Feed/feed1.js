@@ -1,12 +1,12 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    box, 
-    check, 
-    payment, 
-    pin, 
-    shipping 
+import {
+    box,
+    check,
+    payment,
+    pin,
+    shipping
 } from "@wordpress/icons";
 import {
     Icon,
@@ -151,5 +151,11 @@ function Feed1() {
         </>
     );
 };
+
+Feed1.meta = {
+    title: 'Feed 1',
+    path: '/Feed/feed1',
+};
+
 
 export default Feed1;

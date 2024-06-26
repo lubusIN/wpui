@@ -1,9 +1,9 @@
 /**
  * WordPress dependencies.
  */
-import { 
-    chevronRight, 
-    home 
+import {
+    chevronRight,
+    home
 } from "@wordpress/icons";
 import {
     Icon,
@@ -24,6 +24,10 @@ function Breadcrumb1() {
             <Heading size={14}>Add new</Heading>
         </HStack>
     );
+};
+Breadcrumb1.meta = {
+    title: 'Breadcrumb 1',
+    path: '/BreadCrumbs/breadcrumb1',
 };
 
 export default Breadcrumb1;

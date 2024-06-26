@@ -40,6 +40,11 @@ function CardHeading3() {
             </style>
         </>
     );
-}
+};
+
+CardHeading3.meta = {
+    title: 'CardHeading 3',
+    path: '/CardHeading/cardheading3',
+};
 
 export default CardHeading3;

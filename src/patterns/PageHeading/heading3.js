@@ -30,6 +30,11 @@ function Heading3() {
             </HStack>
         </Grid>
     );
-}
+};
+
+Heading3.meta = {
+    title: 'Heading 3',
+    path: '/PageHeading/heading3',
+};
 
 export default Heading3;

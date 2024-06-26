@@ -43,4 +43,9 @@ function Panel2() {
     );
 };
 
+Panel2.meta = {
+    title: 'Panel 2',
+    path: '/ActionPanels/panel2',
+};
+
 export default Panel2;

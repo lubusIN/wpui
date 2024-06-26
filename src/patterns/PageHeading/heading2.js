@@ -37,4 +37,9 @@ function Heading2() {
     );
 };
 
+Heading2.meta = {
+    title: 'Heading 2',
+    path: '/PageHeading/heading2',
+};
+
 export default Heading2;
