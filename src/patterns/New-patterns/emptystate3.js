@@ -15,7 +15,7 @@ import { info } from "@wordpress/icons";
 /**
  * Render Subscription action panel
  */
-function Emptystate1() {
+function Emptystate3() {
     return (
         <VStack alignment="center" spacing={5}>
             <Icon icon={info} size={100}></Icon>
@@ -132,4 +132,9 @@ function Emptystate1() {
     );
 };
 
-export default Emptystate1;
+Emptystate3.meta = {
+    title: 'EMpty State 5',
+    path: '/new-patterns/Emptystate3',
+};
+
+export default Emptystate3;

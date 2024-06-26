@@ -68,4 +68,9 @@ function Welcomescreen() {
     );
 };
 
+Welcomescreen.meta = {
+    title: 'Welcomescreen',
+    path: '/new-patterns/Welcomescreen',
+};
+
 export default Welcomescreen;

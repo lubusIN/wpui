@@ -2,84 +2,75 @@
  * WordPress dependencies.
  */
 import {
-    DropdownMenu,
-    MenuGroup, MenuItem,
     Icon,
+    Button,
     Card,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
-    Button,
 } from "@wordpress/components";
-import { info, moreVertical } from "@wordpress/icons";
+import { trendingUp, megaphone, archive } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
  */
-function actionpanel4() {
+function Actionpanel4() {
     return (
-        <VStack alignment="center" spacing={5}>
-            <Card>
-                <Card isBorderless style={{ padding: "15px", borderBottom: "0.5px solid #DCDCDC" }}>
-                    <HStack>
-                        <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                            Inbox
+        <>
+            <Card className="backgroundimg" style={{ padding: "70px" }}>
+                <VStack>
+                    <Text style={{ fontSize: "30px", fontWeight: "600" }}>
+                        Reach  new customers and increase sales
+                    </Text>
+
+                    <HStack expanded={false} alignment="left">
+                        <Card isBorderless >
+                            <Icon size={50} icon={trendingUp}></Icon>
+                        </Card>
+                        <Text style={{ fontSize: "18px", fontWeight: "500", color: "grey", justifyContent: "left" }}>
+                            Reach customers on other sale channels.
                         </Text>
-                        <DropdownMenu icon={moreVertical}>
-                            {() => (
-                                <>
-                                    <MenuGroup>
-                                        <MenuItem>
-                                            Data
-                                        </MenuItem>
-                                        <MenuItem>
-                                            Data
-                                        </MenuItem>
-                                    </MenuGroup>
-                                </>
-                            )}
-                        </DropdownMenu>
                     </HStack>
-                </Card>
 
-                <VStack style={{ padding: "25px" }} alignment="left" spacing={5}>
-                    <VStack spacing={4}>
-                        <Text style={{ color: "grey", fontWeight: "500" }}>
-                            4 Minutes ago
+                    <HStack expanded={false} alignment="left">
+                        <Card isBorderless >
+                            <Icon size={50} icon={megaphone}></Icon>
+                        </Card>
+                        <Text style={{ fontSize: "18px", fontWeight: "500", color: "grey", justifyContent: "left" }}>
+                            Advertise with marketing campaigns.
                         </Text>
-                        <Text style={{ fontSize: "20px", fontWeight: "600" }}>
-                            Setup a Refund and Retuns Policy page to boost your store's credibility.
-                        </Text>
-                        <Text style={{ color: "grey", fontWeight: "500", fontSize: "15px" }}>
-                            We have created a sample draft Refund and Return Policy page for you. Please have a look and Update it to fic your store.
-                        </Text>
-                        <HStack alignment="left">
-                            <Button style={{ color: "rgb(0 137 210)", border: "2px solid #007FFF", fontWeight: "500" }}>Edit Page</Button>
-                            <Button style={{ color: "grey", fontWeight: "500" }}>Dismiss</Button>
-                        </HStack>
-                    </VStack>
-                </VStack>
+                    </HStack>
 
-                <VStack style={{ padding: "25px" }} alignment="left" spacing={5}>
-                    <VStack spacing={4}>
-                        <Text style={{ color: "grey", fontWeight: "500" }}>
-                            4 Minutes ago
+                    <HStack expanded={false} alignment="left">
+                        <Card isBorderless >
+                            <Icon size={50} icon={archive}></Icon>
+                        </Card>
+                        <Text style={{ fontSize: "18px", fontWeight: "500", color: "grey", textAlign: "left", justifyContent: "left" }}>
+                            Build with Us.
                         </Text>
-                        <Text style={{ fontSize: "20px", fontWeight: "600" }}>
-                            Connect to your Website
-                        </Text>
-                        <Text style={{ color: "grey", fontWeight: "500", fontSize: "15px" }}>
-                            Connect to get important notifications and updates.
-                        </Text>
-                        <HStack alignment="left">
-                            <Button style={{ color: "rgb(0 137 210)", border: "2px solid #007FFF", fontWeight: "500" }}>Connect</Button>
-                            <Button style={{ color: "grey", fontWeight: "500" }}>Dismiss</Button>
-                        </HStack>
-                    </VStack>
+                    </HStack>
+
+                    <HStack expanded={false} alignment="left">
+                        <Button style={{ padding: "20px", backgroundColor: "#007FFF", color: "white" }}>Create a campaigns</Button>
+                        <Button style={{ padding: "20px", color: "#007FFF", border: "2px solid #007FFF" }} >Add channels</Button>
+                    </HStack>
                 </VStack>
             </Card>
-        </VStack>
+            <style>
+                {`
+                    .backgroundimg{
+                    background-size: cover;
+                    background-image: url("https://t4.ftcdn.net/jpg/05/53/32/19/360_F_553321965_tjucJ95pMckQtCSK6oqgJvyvjMkmFhB4.jpg");
+                    background-repeat: no-repeat;
+                    }
+                `}
+            </style>
+        </>
     );
 };
 
-export default actionpanel4;
+Actionpanel4.meta = {
+    title: 'Action Panel 4',
+    path: '/new-patterns/Actionpanel4',
+};
+export default Actionpanel4;
