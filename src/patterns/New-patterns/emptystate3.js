@@ -132,9 +132,11 @@ function Emptystate3() {
     );
 };
 
+// @meta-start
 Emptystate3.meta = {
     title: 'Empty State 3',
     path: '/New-patterns/emptystate3',
 };
+// @meta-end
 
 export default Emptystate3;

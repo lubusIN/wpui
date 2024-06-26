@@ -149,9 +149,11 @@ function Actionpanel5() {
     );
 };
 
+// @meta-start
 Actionpanel5.meta = {
     title: 'Action Panel 5',
     path: '/New-patterns/actionpanel5',
 };
+// @meta-end
 
 export default Actionpanel5;

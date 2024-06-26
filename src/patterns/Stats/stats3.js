@@ -52,9 +52,11 @@ function Stats3() {
     );
 };
 
+// @meta-start
 Stats3.meta = {
     title: 'Stats 3',
     path: '/Stats/stats3',
 };
+// @meta-end
 
 export default Stats3;

@@ -42,9 +42,11 @@ function CardHeading3() {
     );
 };
 
+// @meta-start
 CardHeading3.meta = {
     title: 'CardHeading 3',
     path: '/CardHeading/cardheading3',
 };
+// @meta-end
 
 export default CardHeading3;

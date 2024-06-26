@@ -97,9 +97,11 @@ function SignIn2() {
     );
 };
 
+// @meta-start
 SignIn2.meta = {
     title: 'Sign In 2',
     path: '/SignIn/signIn2',
 };
+// @meta-end
 
 export default SignIn2; 

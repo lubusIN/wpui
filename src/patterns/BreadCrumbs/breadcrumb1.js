@@ -25,9 +25,12 @@ function Breadcrumb1() {
         </HStack>
     );
 };
+
+// @meta-start
 Breadcrumb1.meta = {
     title: 'Breadcrumb 1',
     path: '/BreadCrumbs/breadcrumb1',
 };
+// @meta-end
 
 export default Breadcrumb1;

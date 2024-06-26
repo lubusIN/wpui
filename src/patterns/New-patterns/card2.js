@@ -61,9 +61,11 @@ function Card2() {
     );
 };
 
+// @meta-start
 Card2.meta = {
     title: 'Card 1',
     path: '/New-patterns/card2',
 };
+// @meta-end
 
 export default Card2;

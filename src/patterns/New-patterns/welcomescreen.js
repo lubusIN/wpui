@@ -68,9 +68,11 @@ function Welcomescreen() {
     );
 };
 
+// @meta-start
 Welcomescreen.meta = {
     title: 'Welcomescreen',
     path: '/New-patterns/welcomescreen',
 };
+// @meta-end
 
 export default Welcomescreen;

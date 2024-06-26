@@ -38,9 +38,11 @@ function Panel4() {
     );
 };
 
+// @meta-start
 Panel4.meta = {
     title: 'Panel 4',
     path: '/ActionPanels/panel4'
 };
+// @meta-end
 
 export default Panel4;

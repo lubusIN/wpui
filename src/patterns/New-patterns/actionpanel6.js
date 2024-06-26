@@ -82,9 +82,11 @@ function Actionpanel6() {
     );
 };
 
+// @meta-start
 Actionpanel6.meta = {
     title: 'Action Panel 6',
     path: '/New-patterns/actionpanel6',
 };
+// @meta-end
 
 export default Actionpanel6;
