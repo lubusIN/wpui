@@ -3,14 +3,14 @@ body {
     margin: 0;
 }
 
-.wpui_hero_Section {
+.wpui-hero-Section {
     background-image: url(img/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10vw 0;
 }
 
-.wpui_hero_cont {
+.wpui-hero-cont {
     margin: auto 0 auto auto;
     padding-right: 140px !important;
     width: 50%;
@@ -67,7 +67,7 @@ div.wpui-column {
     color: #3858e9;
 }
 
-.wpui_hero_cta {
+.wpui-hero-cta {
     .components-button {
         padding: 20px !important;
         color: white !important;
@@ -110,7 +110,7 @@ pre {
         padding: 35px 20px
     }
 
-    div.wpui_hero_cont {
+    div.wpui-hero-cont {
         padding-right: 24px !important;
         width: 100%
     }
@@ -122,7 +122,7 @@ pre {
         grid-template-columns: repeat(2, 1fr)
     }
 
-    .wpui_hero_cont {
+    .wpui-hero-cont {
         width: 100%
     }
 }
