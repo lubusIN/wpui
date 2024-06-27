@@ -1,0 +1,16 @@
+.wpui-footer {
+    background-color: #3858e9 !important;
+
+    .components-card__body {
+        padding: 12px 3vw;
+
+        &:first-child {
+            padding: 60px 3vw;
+        }
+
+        .sec-1 {
+            margin: auto;
+            width: 50%;
+        }
+    }
+}

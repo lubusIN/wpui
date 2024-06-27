@@ -21,10 +21,10 @@ function Home() {
     return (
         <>
             <Banner />
-            <VStack className="wpui_lcont" spacing={5}>
+            <VStack className="wpui-lcont" spacing={5}>
                 <Heading>UI Patterns</Heading>
                 <Grid
-                    className="wpui_column"
+                    className="wpui-column"
                     alignment="bottom"
                     columns={3}
                     columnGap={30}

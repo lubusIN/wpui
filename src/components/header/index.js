@@ -16,7 +16,8 @@ import {
 /**
  * Internal dependencies.
  */
-import {Logo} from '../components';
+import Logo from '../logo';
+import './style.scss'
 
 /**
  * Render Header
@@ -24,10 +25,10 @@ import {Logo} from '../components';
 function Header() {
     return (
 
-        <Card className="wpui_header" isBorderless borderBottom>
+        <Card className="wpui-header" isBorderless borderBottom>
             <HStack >
 
-                <Link to={"/"} className='wpui_site_logo'>
+                <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
 

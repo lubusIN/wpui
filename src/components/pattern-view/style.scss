@@ -1,0 +1,27 @@
+.wpui-view-toggle 
+ {
+    color: #535353;
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.wpui-view-toggle {
+    [role="presentation"] {
+        background-color: #cecece;
+        transform: none !important;
+    }
+
+    button[data-active-item] svg {
+        fill: #5b5b5b;
+    }
+
+    &:focus-within {
+        box-shadow: none !important;
+        border-color: grey !important;
+    }
+}
+
+.wpui-variation-card {
+    border-radius: 4px !important;
+    padding: 45px 35px;
+}

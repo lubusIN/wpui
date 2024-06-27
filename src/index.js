@@ -13,7 +13,7 @@ import '@wordpress/components/build-style/style.css';
 /**
  * Internal dependencies.
  */
-import '@wpui/app.css';
+import '@wpui/app.scss';
 import App from '@wpui/app';
 
 const root = ReactDom.createRoot(document.getElementById('root'))

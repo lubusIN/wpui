@@ -17,12 +17,17 @@ import {
 } from "@wordpress/components";
 
 /**
+ * Internal dependencies.
+ */
+import './style.scss'
+
+/**
  * Render Banner
  */
 function Banner() {
     return (
-        <Card className="wpui_hero_Section" isBorderless>
-            <CardBody className="wpui_hero_cont">
+        <Card className="wpui-hero-Section" isBorderless>
+            <CardBody className="wpui-hero-cont">
                 <VStack spacing={12}>
                     <VStack spacing={5}>
                         <Text size={15} align="left" color="white">From the House of LUBUS</Text>
@@ -33,7 +38,7 @@ function Banner() {
                             WPUI IS A DESIGN PATTERN LIBRARY BUILT UPON WORDPRESS COMPONENTS WHICH GIVES YOU THE BUILDING BLOCKS YOU NEED TO BUILD YOUR REACT-POWERED WORDPRESS PLUGIN OR APP. SPEND LESS TIME ON UI AND MORE TIME BUILDING YOUR IDEA.
                         </Text>
                     </VStack>
-                    <HStack className="wpui_hero_cta" alignment="center" justify="left">
+                    <HStack className="wpui-hero-cta" alignment="center" justify="left">
                         <Button
                             variant="primary"
                             style={{ backgroundColor: '#3858E9' }}
