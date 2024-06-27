@@ -43,7 +43,7 @@ function CopyButton({ content }) {
         >
             {hasCopied && (
                 <Popover
-                    className='copied_pop'
+                    className='copied-pop'
                     position='middle left'
                 >
                     Copied

@@ -26,8 +26,8 @@ import { PatternView } from '../components';
  */
 function Patterns({ title, patterns }) {
     return (
-        <VStack className='wpui_com_page' spacing={8}>
-            <HStack className="wpui_back_button" alignment='left' spacing={0}>
+        <VStack className='wpui-com-page' spacing={8}>
+            <HStack className="wpui-back-button" alignment='left' spacing={0}>
                 <Link to="/" style={{ boxShadow: 'none', textDecoration: 'none' }}>
                     <div>
                         <span className="home" style={{ display: "flex" }}>

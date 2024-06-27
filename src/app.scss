@@ -38,32 +38,32 @@ body {
     }
 }
 
-.wpui_com_page,
-.wpui_lcont {
+.wpui-com-page,
+.wpui-lcont {
     margin: auto;
     max-width: 1350px;
     padding: 40px 20px;
 }
 
-div.wpui_column {
+div.wpui-column {
     border-radius: 10px;
     box-shadow: none !important;
     height: auto;
     padding: 10px;
 }
 
-.copied_pop .components-popover__content {
+.copied-pop .components-popover__content {
     padding: 6px !important
 }
 
-.wpui_back_button span,
-.wpui_back_button button
+.wpui-back-button span,
+.wpui-back-button button
  {
     color: #535353;
     font-size: .875rem;
     font-weight: 500;
 }
-.wpui_back_button .home:hover{
+.wpui-back-button .home:hover{
     color: #3858e9;
 }
 
