@@ -97,7 +97,7 @@ pre {
 }
 
 @media only screen and (max-width:480px) {
-    div.wpui_column {
+    div.wpui-column {
         column-gap: 10px;
         grid-template-columns: repeat(1, 1fr)
     }
@@ -117,7 +117,7 @@ pre {
 }
 
 @media only screen and (min-width:481px) and (max-width:820px) {
-    div.wpui_column {
+    div.wpui-column {
         column-gap: 10px;
         grid-template-columns: repeat(2, 1fr)
     }
