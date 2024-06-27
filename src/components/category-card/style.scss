@@ -1,0 +1,25 @@
+div.wpui-preview{
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 10px;
+ 
+    &:hover {
+         border-color: #e7eefa00;
+         background-color:#e7eefa49;
+         opacity: 1;
+         white-space: nowrap;
+     }
+ }
+
+ div.wpui-card-preview {
+    background: #b8cfff94;
+    border: 10px;
+    border-radius: 4px;
+    height: 180px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+
+    Svg {
+        height: 100%;
+    }
+}

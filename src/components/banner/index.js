@@ -17,6 +17,11 @@ import {
 } from "@wordpress/components";
 
 /**
+ * Internal dependencies.
+ */
+import './style.scss'
+
+/**
  * Render Banner
  */
 function Banner() {

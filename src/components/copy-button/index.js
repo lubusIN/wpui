@@ -17,6 +17,11 @@ import {
 } from "@wordpress/components";
 
 /**
+ * Internal dependencies.
+ */
+import './style.scss'
+
+/**
  * Render Copy Button
  */
 function CopyButton({ content }) {
@@ -31,7 +36,7 @@ function CopyButton({ content }) {
 
     return (
         <Button
-            className='wpui_copy'
+            className='wpui-copy'
             icon={hasCopied ? check : copy}
             onClick={handleCopyClick}
             ref={useCopyToClipboard(content)}

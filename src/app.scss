@@ -3,19 +3,6 @@ body {
     margin: 0;
 }
 
-.wpui_header {
-    padding: 12px 3vw;
-
-    a {
-        text-decoration: none;
-        margin-left: 12px;
-    }
-}
-
-.wpui_site_logo {
-    margin-top: 2.3px;
-}
-
 .wpui_hero_Section {
     background-image: url(img/banner.png);
     background-repeat: no-repeat;
@@ -51,54 +38,11 @@ body {
     }
 }
 
-.wpui_footer {
-    background-color: #3858e9 !important;
-
-    .components-card__body {
-        padding: 12px 3vw;
-
-        &:first-child {
-            padding: 60px 3vw;
-        }
-
-        .sec_1 {
-            margin: auto;
-            width: 50%;
-        }
-    }
-}
-
 .wpui_com_page,
 .wpui_lcont {
     margin: auto;
     max-width: 1350px;
     padding: 40px 20px;
-}
-
-div.wpui_card_preview {
-    background: #b8cfff94;
-    border: 10px;
-    border-radius: 4px;
-    height: 180px;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-
-    Svg {
-        height: 100%;
-    }
-}
-
-div.wpui_preview{
-   border: 10px solid rgb(255, 255, 255);
-   border-radius: 10px;
-
-   &:hover {
-        border-color: #e7eefa00;
-        background-color:#e7eefa49;
-        opacity: 1;
-        white-space: nowrap;
-    }
 }
 
 div.wpui_column {
@@ -108,22 +52,10 @@ div.wpui_column {
     padding: 10px;
 }
 
-.wpui_copy {
-    box-shadow: none !important;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-
-    svg {
-        fill: white !important;
-    }
-}
-
 .copied_pop .components-popover__content {
     padding: 6px !important
 }
 
-.wpui_view_toggle 
 .wpui_back_button span,
 .wpui_back_button button
  {
@@ -133,27 +65,6 @@ div.wpui_column {
 }
 .wpui_back_button .home:hover{
     color: #3858e9;
-}
-
-.wpui_variation_card {
-    border-radius: 4px !important;
-    padding: 45px 35px;
-}
-
-.wpui_view_toggle {
-    [role="presentation"] {
-        background-color: #cecece;
-        transform: none !important;
-    }
-
-    button[data-active-item] svg {
-        fill: #5b5b5b;
-    }
-
-    &:focus-within {
-        box-shadow: none !important;
-        border-color: grey !important;
-    }
 }
 
 .wpui_hero_cta {
@@ -191,11 +102,11 @@ pre {
         grid-template-columns: repeat(1, 1fr)
     }
 
-    .wpui_footer .components-card__body .sec_1 {
+    .wpui-footer .components-card__body .sec-1 {
         width: 100% !important
     }
 
-    .wpui_variation_card {
+    .wpui-variation-card {
         padding: 35px 20px
     }
 
