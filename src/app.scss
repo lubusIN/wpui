@@ -3,19 +3,6 @@ body {
     margin: 0;
 }
 
-.wpui-hero-Section {
-        background-color: transparent !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10vw 0;
-}
-
-.wpui-hero-cont {
-    margin: auto 0 auto auto;
-    padding-right: 140px !important;
-    width: 50%;
-}
-
 .resize_cont {
     .components-resizable-box__handle-right {
         cursor: ew-resize !important;
@@ -57,30 +44,14 @@ div.wpui-column {
 }
 
 .wpui-back-button span,
-.wpui-back-button button
- {
+.wpui-back-button button {
     color: #535353;
     font-size: .875rem;
     font-weight: 500;
 }
-.wpui-back-button .home:hover{
+
+.wpui-back-button .home:hover {
     color: #3858e9;
-}
-
-.wpui-hero-cta {
-    .components-button {
-        padding: 20px !important;
-        color: white !important;
-
-        &:nth-child(1) {
-            border: 1px solid transparent;
-        }
-
-        &:nth-child(2) {
-            box-shadow: none !important;
-            border: 1px solid white;
-        }
-    }
 }
 
 /* Docs */
@@ -93,7 +64,7 @@ pre {
     margin-left: 150px;
     margin-right: 150px;
     padding: 10px;
-    
+
 }
 
 @media only screen and (max-width:480px) {
@@ -109,20 +80,11 @@ pre {
     .wpui-variation-card {
         padding: 35px 20px
     }
-
-    div.wpui-hero-cont {
-        padding-right: 24px !important;
-        width: 100%
-    }
 }
 
 @media only screen and (min-width:481px) and (max-width:820px) {
     div.wpui-column {
         column-gap: 10px;
         grid-template-columns: repeat(2, 1fr)
-    }
-
-    .wpui-hero-cont {
-        width: 100%
     }
 }

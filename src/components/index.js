@@ -11,3 +11,4 @@ export { default as ScrollToTop } from './scroll-to-top';
 export { default as CategoryCard } from './category-card';
 export { default as PatternView } from './pattern-view';
 export { default as PatternCode } from './pattern-code';
+export { default as BannerBackground } from './bannerbackground';
