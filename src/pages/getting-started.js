@@ -11,7 +11,7 @@ import gettingStarted from "@wpui/docs/getting-started.md"
 
 function GettingStarted() {
   return (
-    <div className="main">
+    <div className="getting-started">
       <Markdown remarkPlugins={[remarkGfm]}>{gettingStarted}</Markdown>
     </div>
   );
