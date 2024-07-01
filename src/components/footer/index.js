@@ -28,10 +28,10 @@ function Footer() {
                 <VStack className="sec-1" alignment="center" spacing={8}>
                     <Heading color='white'>WPUI Components</Heading>
                     <Text size={20} align="center" weight={400} lineHeight={1.5} color='white'>
-                        WPUI is a #BuildInPublic project from the house of LUBUS. We love getting feedback from you! It really helps us know how we’re doing, what you’re interested in, and what you’d like to see next. So please, don’t hesitate to share your thoughts with us! We’re all.
+                    WPUI is a #BuildInPublic project from the house of LUBUS. We love getting feedback from you! It really helps us know how we’re doing, what you’re interested in, and what you’d like to see next. So please, don’t hesitate to share your thoughts with us! We’re all ears...
                     </Text>
                     <Button variant='primary' href='https://github.com/lubusIN/wpui/discussions' style={{ border: '1px solid white' }}>
-                        Join Discussion
+                        Join discussion
                     </Button>
                 </VStack>
             </CardBody>
