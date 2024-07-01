@@ -22,7 +22,7 @@ function Home() {
         <>
             <Banner />
             <VStack className="wpui-lcont" spacing={5}>
-                <Heading>UI Patterns</Heading>
+                <Heading align="center">UI Patterns</Heading>
                 <Grid
                     className="wpui-column"
                     alignment="bottom"
