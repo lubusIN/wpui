@@ -89,8 +89,10 @@ div.wpui-column {
 
 /* Docs */
 pre {
-    background-color: rgb(181, 181, 181);
+    background-color: #f0f0f0;
     padding: 20px;
+    border: 0.5px solid #cacaca;
+    border-radius: 5px;
 }
 
 .main {
