@@ -4,82 +4,74 @@
 import {
     Button,
     Card,
+    Icon,
+    __experimentalHeading as Heading,
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
+import { atSymbol } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
  */
 function Actionpanel3() {
     return (
-        <Card>
-            <VStack>
-                <Card isBorderless style={{ padding: "21px", borderBottom: "0.5px solid #DCDCDC" }}>
-                    <Text style={{ fontSize: "20px", fontWeight: "600" }}>
-                        Channels
-                    </Text>
-                </Card>
-
-                <HStack>
-                    <HStack style={{ padding: "20px" }} alignment="left" spacing={5} expanded={false}>
-                        <img style={{ height: "40px", width: "40px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGSrJfSchrm52z1ynMNJM8xMMuxtfWgPHE5w&s"></img>
-                        <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                                Google Listing and Ads
-                            </Text>
-                            <Text style={{ fontSize: "15px" }}>
-                                Native integration with google that allows merchants to easily display their products across Google's network.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <HStack style={{ padding: "20px" }} expanded={false}>
-                        <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
-                    </HStack>
+        <VStack>
+            <Card isBorderless style={{ padding:"10px",borderBottom: "0.5px solid #DCDCDC" }}>
+                <Heading>
+                    Channels
+                </Heading>
+            </Card>
+            <HStack style={{ padding: "20px" }}>
+                <HStack  alignment="left" spacing={5}>
+                    <Icon size={40} icon={atSymbol}></Icon>
+                    <VStack spacing={3}>
+                        <Heading>
+                            Google Listing and Ads
+                        </Heading>
+                        <Text>
+                            Native integration with google that allows merchants to easily display their products across Google's network.
+                        </Text>
+                    </VStack>
                 </HStack>
-
-                <HStack>
-                    <HStack style={{ padding: "20px" }} alignment="left" expanded={false}>
-                        <img style={{ height: "40px", width: "40px" }} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJHH6aoXJfdAScGlfLHNln2tjqUwkCDbxt8Q&s"></img>
-                        <VStack style={{ padding: "10px" }}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                                Pinterest for Woocommerce
-                            </Text>
-                            <Text style={{ fontSize: "15px" }}>
-                                Grow your business on Pinterest! Use this official plugin to allow shoppers to Pin products while browsing your store,track conversion,<br />and advertise on Pinterest.
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <HStack style={{ padding: "20px" }} expanded={false}>
-                        <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
-                    </HStack>
+                <Button variant="primary">Finish Setup</Button>
+            </HStack>
+            <HStack style={{ padding: "20px" }}>
+                <HStack alignment="left" spacing={5}>
+                    <Icon size={40} icon={atSymbol}></Icon>
+                    <VStack spacing={3}>
+                        <Heading>
+                        Pinterest for Woocommerce
+                        </Heading>
+                        <Text>
+                        Grow your business on Pinterest! Use this official plugin to allow shoppers to Pin products while browsing your store,track conversion,and advertise on Pinterest.
+                        </Text>
+                    </VStack>
                 </HStack>
-
-                <HStack>
-                    <HStack style={{ padding: "20px" }} alignment="left" expanded={false}>
-                        <img style={{ height: "40px", width: "40px" }} src="https://www.mailpoet.com/wp-content/uploads/2020/05/mailpoet-symbol.png"></img>
-                        <VStack style={{ padding: "10px" }}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                                MailPoet
-                            </Text>
-                            <Text style={{ fontSize: "15px" }}>
-                                Create and send newsletter, post notofications and Welcome emails from your Wordpress
-                            </Text>
-                        </VStack>
-                    </HStack>
-                    <HStack style={{ padding: "20px" }} expanded={false}>
-                        <Button style={{ backgroundColor: "#0093ff", color: "white" }} >Finish Setup</Button>
-                    </HStack>
+                <Button variant="primary">Finish Setup</Button>
+            </HStack>
+            <HStack style={{ padding: "20px" }}>
+                <HStack alignment="left" spacing={5}>
+                    <Icon size={40} icon={atSymbol}></Icon>
+                    <VStack spacing={3}>
+                        <Heading>
+                        MailPoet
+                        </Heading>
+                        <Text>
+                        Create and send newsletter, post notofications and Welcome emails from your Wordpress
+                        </Text>
+                    </VStack>
                 </HStack>
-            </VStack>
-        </Card>
+                <Button variant="primary">Finish Setup</Button>
+            </HStack>
+        </VStack>
     );
 };
 
 Actionpanel3.meta = {
-    title: 'Action Panel 3',
-    path: '/New-patterns/actionpanel3',
+    title: 'Actionpanel3',
+    path: '/new-patterns/actionpanel3',
 };
 
 export default Actionpanel3;
