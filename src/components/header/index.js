@@ -27,7 +27,6 @@ function Header() {
 
         <Card className="wpui-header" isBorderless borderBottom>
             <HStack >
-
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
@@ -39,7 +38,6 @@ function Header() {
                     iconSize={30}
                     href="https://github.com/lubusIN/wpui"
                 />
-
             </HStack>
         </Card>
 
