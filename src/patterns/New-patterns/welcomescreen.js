@@ -32,7 +32,7 @@ function Welcomescreen() {
                     <HStack>
                         <Icon size={50} icon={edit}></Icon>
                         <VStack spacing={3  }>
-                            <Text size={17} weight={600}>Author rich content  with block and patterns</Text>
+                            <Text size={14} weight={600}>Author rich content  with block and patterns</Text>
                             <Text >Block patterns are pre-configured block layout. use them to get inspired or create new pages in a flash.</Text>
                             <ExternalLink href="">Add a new page</ExternalLink>
                         </VStack>
@@ -43,7 +43,7 @@ function Welcomescreen() {
                     <HStack>
                         <Icon size={50} icon={layout}></Icon>
                         <VStack spacing={3  }>
-                            <Text size={17} weight={600}>Customize your site with block themes</Text>
+                            <Text size={14} weight={600}>Customize your site with block themes</Text>
                             <Text >Design everything on your site - from the header down to the footer, all using blocks and patterns.</Text>
                             <ExternalLink href="">Open site editor.</ExternalLink>
                         </VStack>
@@ -54,7 +54,7 @@ function Welcomescreen() {
                     <HStack>
                         <Icon size={50} icon={styles}></Icon>
                         <VStack spacing={3  }>
-                            <Text size={17} weight={600}>Switch up your site's look and feel with style.</Text>
+                            <Text size={14} weight={600}>Switch up your site's look and feel with style.</Text>
                             <Text >Tweak your site, or give it a whole new look! Get creative-how about a new color palette or font?</Text>
                             <ExternalLink href="">Edit Styles.</ExternalLink>
                         </VStack>
