@@ -2,14 +2,11 @@
  * WordPress dependencies.
  */
 import {
-    Button,
     Card,
-    CardBody,
+    ExternalLink,
     __experimentalText as Text,
-    __experimentalHeading as Heading,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
-    ExternalLink,
 } from "@wordpress/components";
 
 /**
@@ -21,12 +18,12 @@ function Card2() {
             <Card>
                 <img width={420} src="https://www.webfx.com/wp-content/uploads/2022/08/github-logo.png"></img>
                 <Card>
-                    <VStack style={{padding:"20px"}}>
-                        <Text style={{ fontSize: "20px", fontWeight: "700" }}>Astra Pro</Text>
-                        <Text style={{fontWeight:"400"}}>By  <ExternalLink style={{ fontWeight: "500", color: "blue" }}>Brainstrom Force US LLC</ExternalLink></Text>
+                    <VStack style={{ padding: "20px" }}>
+                        <Text size={15} weight={600}>Astra Pro</Text>
+                        <Text size={15}>By  <ExternalLink href="">Brainstrom Force US LLC</ExternalLink></Text>
                         <HStack alignment="left">
-                            <Text style={{ fontWeight: "500" }}>$47 </Text>
-                            <Text style={{fontWeight:"400"}}>Anually</Text>
+                            <Text weight={500}>$47 </Text>
+                            <Text>Anually</Text>
                         </HStack>
                     </VStack>
                 </Card>
@@ -34,12 +31,12 @@ function Card2() {
             <Card>
                 <img width={420} src="https://www.webfx.com/wp-content/uploads/2022/08/github-logo.png"></img>
                 <Card>
-                    <VStack style={{padding:"20px"}}>
-                        <Text style={{ fontSize: "20px", fontWeight: "700" }}>Swag</Text>
-                        <Text style={{fontWeight:"400"}}>By  <ExternalLink style={{ fontWeight: "500", color: "blue" }}>Viva Themes</ExternalLink></Text>
+                    <VStack style={{ padding: "20px" }}>
+                        <Text size={15} weight={600}>Swag</Text>
+                        <Text size={15}>By  <ExternalLink href="">Viva Themes</ExternalLink></Text>
                         <HStack alignment="left">
-                            <Text style={{ fontWeight: "500" }}>$47 </Text>
-                            <Text style={{fontWeight:"400"}}>Anually</Text>
+                            <Text weight={500}>$47 </Text>
+                            <Text>Anually</Text>
                         </HStack>
                     </VStack>
                 </Card>
@@ -47,12 +44,12 @@ function Card2() {
             <Card>
                 <img width={420} src="https://www.webfx.com/wp-content/uploads/2022/08/github-logo.png"></img>
                 <Card>
-                    <VStack style={{padding:"20px"}}>
-                        <Text style={{ fontSize: "20px", fontWeight: "700" }}>Eben</Text>
-                        <Text style={{fontWeight:"400"}}>By  <ExternalLink style={{ fontWeight: "500", color: "blue" }}>Theme Harbor</ExternalLink></Text>
+                    <VStack style={{ padding: "20px" }}>
+                        <Text size={15} weight={600}>Eben</Text>
+                        <Text size={15}>By  <ExternalLink href="">Theme Harbor</ExternalLink></Text>
                         <HStack alignment="left">
-                            <Text style={{ fontWeight: "500" }}>$47 </Text>
-                            <Text style={{fontWeight:"400"}}>Anually</Text>
+                            <Text weight={500}>$47 </Text>
+                            <Text>Anually</Text>
                         </HStack>
                     </VStack>
                 </Card>
@@ -62,7 +59,7 @@ function Card2() {
 };
 
 Card2.meta = {
-    title: 'Card 1',
+    title: 'Card 2',
     path: '/New-patterns/card2',
 };
 

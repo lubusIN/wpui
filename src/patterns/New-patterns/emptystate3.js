@@ -96,7 +96,7 @@ function Emptystate3() {
                 </HStack>
 
                 <Card isBorderless style={{ padding: "20px", borderTop: "0.5px solid #DCDCDC" }}>
-                    <ExternalLink href="" style={{ fontSize: "20px", fontWeight: "600", color: "#007FFF" }}>Browse all extension</ExternalLink>
+                    <ExternalLink href="">Browse all extension</ExternalLink>
                 </Card>
             </Card>
         </VStack>
