@@ -116,6 +116,10 @@ pre {
         padding-right: 24px !important;
         width: 100%
     }
+    .main{
+        width: 95%;
+        margin: 0px;
+    }
 }
 
 @media only screen and (min-width:481px) and (max-width:820px) {
@@ -126,5 +130,9 @@ pre {
 
     .wpui-hero-cont {
         width: 100%
+    }
+    .main{
+        width: 95%;
+        margin: 0px;
     }
 }
