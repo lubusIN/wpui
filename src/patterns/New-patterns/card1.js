@@ -6,7 +6,9 @@ import {
     Icon,
     Card,
     __experimentalText as Text,
+    __experimentalHeading as Heading,
     __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
 } from "@wordpress/components";
 import { currencyDollar, store } from "@wordpress/icons";
 
@@ -16,35 +18,30 @@ import { currencyDollar, store } from "@wordpress/icons";
 function Card1() {
     return (
         <HStack>
-            <Card style={{ padding: "12px" ,width:"50%" }}>
+            <Card style={{ padding: "12px", width: "50%" }}>
                 <HStack alignment="left">
-                    <Card isBorderless>
-                        <Icon size={60} icon={store}></Icon>
-                    </Card>
-                    <Card isBorderless >
-                        <Text style={{ fontWeight: "bold", fontSize: "20px" }}>Open/Close Store Hours & Maintenance mode</Text><br />
-                        <Text style={{ fontSize: "15px" }}>By  <ExternalLink style={{ fontWeight: "600", textDecoration: "none", color: "#4094e8" }} href="">FmeAddons</ExternalLink></Text>
-                    </Card>
-                </HStack><br/>
-                <Text style={{ fontWeight: "500", fontSize: "15px" }}>Set a Daily schedule to allow customers to shop during specific hours with open and close store functionality. Display holiday, coming soon & Maintenance mode banners.</Text><br /><br />
+                    <Icon size={60} icon={store}></Icon>
+                        <VStack spacing={1}>
+                            <Heading>Open/Close Store Hours & Maintenance</Heading>
+                            <Text size={15}>By  <ExternalLink href="">FmeAddons</ExternalLink></Text>
+                        </VStack>
+                </HStack><br />
+                <Text size={15} weight={500}>Set a Daily schedule to allow customers to shop during specific hours with open and close store functionality. Display holiday, coming soon & Maintenance mode banners.</Text><br /><br />
                 <HStack>
-                    <Text style={{ fontWeight: "bold" }}>$49 <Text>anually</Text> </Text>
+                    <Text weight={700}>$49 <Text>anually</Text> </Text>
                 </HStack>
             </Card>
-
-            <Card style={{ padding: "12px", width:"50%" }}>
+            <Card style={{ padding: "12px", width: "50%" }}>
                 <HStack alignment="left">
-                    <Card isBorderless>
-                        <Icon size={60} icon={currencyDollar}></Icon>
-                    </Card>
-                    <Card isBorderless >
-                        <Text style={{ fontWeight: "bold", fontSize: "20px" }}>Price Per Unit Pro</Text><br />
-                        <Text style={{ fontSize: "15px" }}>By  <ExternalLink style={{ fontWeight: "600", textDecoration: "none", color: "#4094e8" }} href="">MechComp</ExternalLink></Text>
-                    </Card>
-                </HStack><br/>
-                <Text style={{ fontWeight: "500", fontSize: "15px" }}>The Price Per Unit PRO extension automatically calculates the cost of one unit of your product and then display the calculated price.</Text><br /><br />
+                    <Icon size={60} icon={currencyDollar}></Icon>
+                        <VStack spacing={1}>
+                            <Heading>Price Per Unit Pro</Heading>
+                            <Text size={15}>By  <ExternalLink href="">MechComp</ExternalLink></Text>
+                        </VStack>
+                </HStack><br />
+                <Text size={15} weight={500}>The Price Per Unit PRO extension automatically calculates the cost of one unit of your product and then display the calculated price.</Text><br /><br />
                 <HStack>
-                    <Text style={{ fontWeight: "bold" }}>$29 <Text>anually</Text> </Text>
+                    <Text weight={700}>$29 <Text>anually</Text> </Text>
                 </HStack>
             </Card>
         </HStack>
