@@ -8,7 +8,7 @@ import {
     __experimentalText as Text,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
-    ExternalLink,
+    __experimentalHeading as Heading,
 } from "@wordpress/components";
 import { info } from "@wordpress/icons";
 
@@ -18,82 +18,54 @@ import { info } from "@wordpress/icons";
 function Actionpanel7() {
     return (
         <>
-            <VStack spacing={5}>
-                <HStack>
-                <VStack spacing={5} style={{ padding: "20px" }}>
+            <VStack>
+                <VStack spacing={4} style={{ padding: "20px" }}>
                     <VStack>
-                        <Text style={{ fontWeight: "600", fontSize: "25px" }}>Start customizing your Store</Text>
-                        <Text style={{ fontSize: "20px", fontWeight: "500", color: "grey" }}>Quickly Create a beautiful looking store using our built-in-store designer, or select a pre-build theme and customize it to fit your brand.</Text>
+                        <Heading>Start customizing your Store</Heading>
+                        <Text variant="muted" weight={600} size={18}>Quickly Create a beautiful looking store using our built-in-store designer, or select a pre-build theme and customize it to fit your brand.</Text>
                     </VStack>
                     <HStack>
-                        <Button style={{ padding: "25px", backgroundColor: "rgb(0 120 223)", color: "White", fontWeight: "550" }}>
-                            Start customizing
-                        </Button>
+                        <Button variant="primary">Start customizing</Button>
                     </HStack>
                 </VStack>
-                <Card isBorderless expanded={false}>
-                <Icon size={200} icon={info}></Icon>
-                </Card>
-                </HStack>
-
                 <VStack>
-                    <Card className="a">
+                    <Card className="hover">
                         <HStack style={{ padding: "15px" }} alignment="left" spacing={5} expanded={false}>
                             <Icon size={50} icon={info}></Icon>
                             <VStack spacing={3}>
-                                
-                                    <Text style={{ fontSize: "20px", fontWeight: "700",color: "rgb(0 120 223)" }}>
-                                        Customizing Your Store
-                                    </Text>
-                                
+                                <Text weight={700} size={20} color="blue">Customizing Your Store</Text>
                             </VStack>
                         </HStack>
                     </Card>
-                    <Card className="a">
+                    <Card className="hover">
                         <HStack style={{ padding: "15px" }} alignment="left" spacing={5} expanded={false}>
                             <Icon size={50} icon={info}></Icon>
                             <VStack spacing={3}>
-                                
-                                    <Text style={{ fontSize: "20px", fontWeight: "700",color: "rgb(0 120 223)" }}>
-                                        Add Your Product
-                                    </Text>
-                                
+                                <Text weight={700} size={20} color="blue">Add Your Product</Text>
                             </VStack>
                         </HStack>
                     </Card>
-                    <Card className="a">
+                    <Card className="hover">
                         <HStack style={{ padding: "15px" }} alignment="left" spacing={5} expanded={false}>
                             <Icon size={50} icon={info}></Icon>
                             <VStack spacing={3}>
-                                
-                                    <Text style={{ fontSize: "20px", fontWeight: "700",color: "rgb(0 120 223)" }}>
-                                        Get Paid
-                                    </Text>
-                                
+                                <Text weight={700} size={20} color="blue">Get Paid</Text>
                             </VStack>
                         </HStack>
                     </Card>
-                    <Card className="a">
+                    <Card className="hover">
                         <HStack style={{ padding: "15px" }} alignment="left" spacing={5} expanded={false}>
                             <Icon size={50} icon={info}></Icon>
                             <VStack spacing={3}>
-                                
-                                    <Text style={{ fontSize: "20px", fontWeight: "700",color: "rgb(0 120 223)" }}>
-                                        Collect Sales Tax
-                                    </Text>
-                                
+                                <Text weight={700} size={20} color="blue">Collect Sales Tax</Text>
                             </VStack>
                         </HStack>
                     </Card>
-                    <Card className="a">
+                    <Card className="hover">
                         <HStack style={{ padding: "15px" }} alignment="left" spacing={5} expanded={false}>
                             <Icon size={50} icon={info}></Icon>
                             <VStack spacing={3}>
-                                
-                                    <Text style={{ fontSize: "20px", fontWeight: "700",color: "rgb(0 120 223)" }}>
-                                        Grow Your Business
-                                    </Text>
-                                
+                                <Text weight={700} size={20} color="blue">Grow Your Business</Text>
                             </VStack>
                         </HStack>
                     </Card>
@@ -102,7 +74,7 @@ function Actionpanel7() {
             </VStack>
             <style>
                 {`
-                .a:hover{background-color:#ADD8E6;}
+                .hover:hover{background-color:#ADD8E6;}
                 `}
             </style>
         </>
