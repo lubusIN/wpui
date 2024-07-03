@@ -24,7 +24,8 @@ import {
 /**
  * Internal dependencies.
  */
-import { PatternCode } from '.';
+import { PatternCode } from '../index';
+import './style.scss'
 
 /**
  * Render Pattern View
@@ -38,7 +39,7 @@ function PatternView({ title, path, component: Pattern }) {
                 <Heading level={4} weight={500}>{title}</Heading>
                 <HStack expanded={false} justify='right' alignment='center'>
                     <ToggleGroupControl
-                        className="wpui_view_toggle"
+                        className="wpui-view-toggle"
                         hideLabelFromVision
                         __nextHasNoMarginBottom
                         isBlock
@@ -53,7 +54,7 @@ function PatternView({ title, path, component: Pattern }) {
 
             {
                 view === 'preview' && (
-                    <Card className="wpui_variation_card">
+                    <Card className="wpui-variation-card">
                         <Pattern />
                     </Card>
                 )

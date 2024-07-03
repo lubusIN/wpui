@@ -16,7 +16,7 @@ import {
 /**
  * Internal dependencies.
  */
-import { ContentLoader, CopyButton } from '.';
+import { ContentLoader, CopyButton } from '../index';
 
 /**
  * Render Pattern Code

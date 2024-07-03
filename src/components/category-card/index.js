@@ -14,13 +14,18 @@ import {
 } from "@wordpress/components";
 
 /**
+ * Internal dependencies.
+ */
+import './style.scss'
+
+/**
  * Render Category Card 
  */
 function CategoryCard({ thumbnail: Thumbnail, title, path, patterns }) {
     return (
-        <VStack className="wpui_preview" style={{ width: '100%' }}>
+        <VStack className="wpui-preview" style={{ width: '100%' }}>
             <Link to={path}>
-                <Card className="wpui_card_preview" size="large" isBorderless >
+                <Card className="wpui-card-preview" size="large" isBorderless >
                     <Thumbnail />
                 </Card>
             </Link>
