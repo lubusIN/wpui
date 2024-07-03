@@ -8,6 +8,7 @@ import {
     Card,
     __experimentalText as Text,
     __experimentalVStack as VStack,
+    __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
 import { info, moreVertical } from "@wordpress/icons";
@@ -18,132 +19,93 @@ import { info, moreVertical } from "@wordpress/icons";
 function Actionpanel5() {
     return (
         <VStack alignment="center" spacing={5}>
-
             <Card>
                 <Card isBorderless style={{ padding: "15px", borderBottom: "0.5px solid #DCDCDC" }}>
                     <HStack>
-                        <Text style={{ fontSize: "20px", fontWeight: "700" }}>
-                            Things to do next
-                        </Text>
+                        <Heading>Things to do next</Heading>
                     <DropdownMenu icon={moreVertical}>
                         {() => (
                             <>
-                                <MenuGroup>
-                                    <MenuItem>
-                                        Data
-                                    </MenuItem>
-                                    <MenuItem>
-                                        Data
-                                    </MenuItem>
+                                <MenuGroup><MenuItem>View</MenuItem>
+                                    <MenuItem>Dismiss</MenuItem>
                                 </MenuGroup>
                             </>
                         )}
                     </DropdownMenu>
                     </HStack>
                 </Card>
-
-
                 <HStack>
-                    <HStack style={{ padding: "15px" }} alignment="left" spacing={5}>
+                    <HStack style={{ padding: "15px" }} alignment="left" spacing={3}>
                         <Icon size={50} icon={info}></Icon>
                         <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700", color: "rgb(0 137 210)" }}>
+                            <Text weight={700} size={20} color="blue">
                                 Manage Your website.com Marketplace Subscription
+                            </Text>
+                            <Text variant="muted" weight={700} size={15}>
+                                Make sure cart and checkout flows are configured correctly for your Shoppers.
                             </Text>
                         </VStack>
                     </HStack>
-                    <DropdownMenu icon={moreVertical}>
-                        {() => (
-                            <>
-                                <MenuGroup>
-                                    <MenuItem>
-                                        Data
-                                    </MenuItem>
-                                    <MenuItem>
-                                        Data
-                                    </MenuItem>
-                                </MenuGroup>
-                            </>
-                        )}
-                    </DropdownMenu>
                 </HStack>
-
                 <HStack>
-                    <HStack style={{ padding: "15px" }} alignment="left" spacing={5}>
+                    <HStack style={{ padding: "15px" }} alignment="left" spacing={3}>
                         <Icon size={50} icon={info}></Icon>
                         <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700", color: "rgb(0 137 210)" }}>
+                            <Text weight={700} size={20} color="blue">
                                 Get the free Mobile App
                             </Text>
                         </VStack>
                     </HStack>
                 </HStack>
                 <HStack>
-                    <HStack style={{ padding: "15px" }} alignment="left" spacing={5}>
+                    <HStack style={{ padding: "15px" }} alignment="left" spacing={3}>
                         <Icon size={50} icon={info}></Icon>
                         <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700", color: "rgb(0 137 210)" }}>
+                            <Text weight={700} size={20} color="blue">
                                 Review Shipping Options
                             </Text>
                         </VStack>
                     </HStack>
                 </HStack>
                 <HStack>
-                    <HStack style={{ padding: "15px" }} alignment="left" spacing={5}>
+                    <HStack style={{ padding: "15px" }} alignment="left" spacing={3}>
                         <Icon size={50} icon={info}></Icon>
                         <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700", color: "rgb(0 137 210)" }}>
+                            <Text weight={700} size={20} color="blue">
                                 Review your checkout Experience
                             </Text>
-                            <Text style={{ fontSize: "15px", fontWeight: "600", color: "grey" }}>
+                            <Text variant="muted" weight={700} size={15}>
                                 Make sure cart and checkout flows are configured correctly for your Shoppers.
                             </Text>
                         </VStack>
                     </HStack>
                 </HStack>
-
                 <HStack>
-                    <HStack style={{ padding: "15px" }} alignment="left" spacing={5}>
+                    <HStack style={{ padding: "15px" }} alignment="left" spacing={3}>
                         <Icon size={50} icon={info}></Icon>
                         <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700", color: "rgb(0 137 210)" }}>
+                            <Text weight={700} size={20} color="blue">
                                 Setup Google listing & Ads
                             </Text>
-                            <Text style={{ fontSize: "15px", fontWeight: "600", color: "grey" }}>
+                            <Text variant="muted" weight={700} size={15}>
                                 20 Minutes.
                             </Text>
                         </VStack>
                     </HStack>
-                    <DropdownMenu icon={moreVertical}>
-                        {() => (
-                            <>
-                                <MenuGroup>
-                                    <MenuItem>
-                                        Data
-                                    </MenuItem>
-                                    <MenuItem>
-                                        Data
-                                    </MenuItem>
-                                </MenuGroup>
-                            </>
-                        )}
-                    </DropdownMenu>
                 </HStack>
-
                 <HStack>
-                    <HStack style={{ padding: "15px" }} alignment="left" spacing={5}>
+                    <HStack style={{ padding: "15px" }} alignment="left" spacing={3}>
                         <Icon size={50} icon={info}></Icon>
                         <VStack spacing={3}>
-                            <Text style={{ fontSize: "20px", fontWeight: "700", color: "rgb(0 137 210)" }}>
+                            <Text weight={700} size={20} color="blue">
                                 Get your  in front of engaged shoopers with our website
                             </Text>
-                            <Text style={{ fontSize: "15px", fontWeight: "600", color: "grey" }}>
+                            <Text variant="muted" weight={700} size={15}>
                                 20 Minutes.
                             </Text>
                         </VStack>
                     </HStack>
                 </HStack>
-
             </Card>
         </VStack>
     );
