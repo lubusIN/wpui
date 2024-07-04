@@ -57,13 +57,13 @@ div.wpui-column {
 }
 
 .wpui-back-button span,
-.wpui-back-button button
- {
+.wpui-back-button button {
     color: #535353;
     font-size: .875rem;
     font-weight: 500;
 }
-.wpui-back-button .home:hover{
+
+.wpui-back-button .home:hover {
     color: #3858e9;
 }
 
@@ -95,7 +95,6 @@ pre {
     margin-left: 150px;
     margin-right: 150px;
     padding: 10px;
-    
 }
 
 @media only screen and (max-width:480px) {
@@ -116,12 +115,10 @@ pre {
         padding-right: 24px !important;
         width: 100%
     }
-    .main{
-        width: 100%;
-        margin: 0;
-    }
-    pre{
-        margin: 0;
+
+    .main {
+        width: 90%;
+        margin: 0%;
     }
 }
 
@@ -133,13 +130,5 @@ pre {
 
     .wpui-hero-cont {
         width: 100%
-    }
-    .main{
-        width: 95%;
-        margin: 0;
-    }
-    pre{
-        padding:40px;
-        margin: 0;
     }
 }
