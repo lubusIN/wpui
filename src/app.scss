@@ -39,6 +39,10 @@ div.wpui-column {
     padding: 10px;
 }
 
+.wpui-heading{
+    margin-left: 20px !important;
+}
+
 .copied-pop .components-popover__content {
     padding: 6px !important
 }
@@ -50,21 +54,36 @@ div.wpui-column {
     font-weight: 500;
 }
 
+
+.wpui-back-button .home:hover {
+    color: #3858e9;
+}
+
+.wpui-hero-cta {
+    .components-button {
+        padding: 20px !important;
+        color: white !important;
+
+        &:nth-child(1) {
+            border: 1px solid transparent;
+        }
+
 .wpui-back-button .home:hover {
     color: #3858e9;
 }
 
 /* Docs */
 pre {
-    background-color: rgb(181, 181, 181);
+    background-color: #f0f0f0;
     padding: 20px;
+    border: 0.5px solid #cacaca;
+    border-radius: 5px;
 }
 
 .main {
     margin-left: 150px;
     margin-right: 150px;
     padding: 10px;
-
 }
 
 @media only screen and (max-width:480px) {
@@ -80,11 +99,32 @@ pre {
     .wpui-variation-card {
         padding: 35px 20px
     }
+
+    div.wpui-hero-cont {
+        padding-right: 24px !important;
+        width: 100%
+    }
+
+    .main {
+        width: 95%;
+        margin: 0%;
+    }
+    pre{
+        overflow: scroll;
+    }
 }
 
 @media only screen and (min-width:481px) and (max-width:820px) {
     div.wpui-column {
         column-gap: 10px;
         grid-template-columns: repeat(2, 1fr)
+    }
+  
+    .wpui-hero-cont {
+        width: 100%
+    }
+    .main {
+        width: 100%;
+        margin: 0%;
     }
 }
