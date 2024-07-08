@@ -54,7 +54,6 @@ div.wpui-column {
     font-weight: 500;
 }
 
-
 .wpui-back-button .home:hover {
     color: #3858e9;
 }
@@ -68,8 +67,11 @@ div.wpui-column {
             border: 1px solid transparent;
         }
 
-.wpui-back-button .home:hover {
-    color: #3858e9;
+        &:nth-child(2) {
+            box-shadow: none !important;
+            border: 1px solid white;
+        }
+    }
 }
 
 /* Docs */
@@ -119,7 +121,7 @@ pre {
         column-gap: 10px;
         grid-template-columns: repeat(2, 1fr)
     }
-  
+
     .wpui-hero-cont {
         width: 100%
     }
