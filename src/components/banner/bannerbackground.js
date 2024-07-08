@@ -9,7 +9,7 @@ import React from 'react'
 
 function BannerBackground() {
     return (
-        <svg className='svg'
+        <svg className='bannersvg'
         preserveAspectRatio='none'
             width={577}
             height={800}
