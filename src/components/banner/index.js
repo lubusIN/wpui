@@ -29,7 +29,7 @@ import { BannerBackground } from "../index";
 function Banner() {
     return (
         <>
-            <ZStack>
+            <ZStack className="zstack">
                 <Card>
                     <BannerBackground />
                 </Card>
