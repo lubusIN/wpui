@@ -55,6 +55,8 @@ function PatternView({ title, path, component: Pattern }) {
                     view === 'preview' && (
 
                         <ResizableBox
+                        maxWidth={1350}
+                        minWidth={360}
                             enable={{ right: true }}
                         >
                             <Card className="wpui-variation-card">
