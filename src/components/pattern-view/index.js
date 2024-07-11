@@ -19,6 +19,7 @@ import {
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
+    Disabled,
 } from "@wordpress/components";
 
 /**
@@ -26,10 +27,12 @@ import {
  */
 import { PatternCode } from '../index';
 import './style.scss'
+import { useViewportMatch } from '@wordpress/compose';
 
 /**
  * Render Pattern View
 */
+
 function PatternView({ title, path, component: Pattern }) {
     const [view, setView] = useState('preview');
     return (
@@ -53,11 +56,10 @@ function PatternView({ title, path, component: Pattern }) {
                 </HStack>
                 {
                     view === 'preview' && (
-
                         <ResizableBox
-                        maxWidth={1350}
-                        minWidth={360}
-                            enable={{ right: true }}
+                            maxWidth={1350}
+                            minWidth={360}
+                            enable={{ right: useViewportMatch('mobile') ? true : false }}
                         >
                             <Card className="wpui-variation-card">
                                 <Pattern />
