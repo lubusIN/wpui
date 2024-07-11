@@ -21,9 +21,9 @@ function CardHeading4() {
             <CardHeader style={{ paddingTop: '25px', paddingBottom: '25px' }}>
                 <HStack direction={['column', 'row']}>
                     <HStack justify="left">
-                        <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%' }} />
+                        <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                         <VStack spacing={1}>
-                            <Heading level={4}>John Doe</Heading>
+                            <Heading level={4}>Lalit Rana</Heading>
                             <Text size={14} color="#6b7280">@johnDoe</Text>
                         </VStack>
                     </HStack>
@@ -54,7 +54,7 @@ function CardHeading4() {
 
 // @meta-start
 CardHeading4.meta = {
-    title: 'CardHeading 4',
+    title: 'Card Heading 4',
     path: '/CardHeading/cardheading4',
 };
 // @meta-end

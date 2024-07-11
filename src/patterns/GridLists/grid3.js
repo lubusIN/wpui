@@ -22,9 +22,9 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                             <VStack>
-                                <Heading level={4} weight={500}>John Doe</Heading>
+                                <Heading level={4} weight={500}>Rahul Sharma</Heading>
                                 <Text size={16} variant="muted">Administrator</Text>
                             </VStack>
                         </HStack>
@@ -33,9 +33,9 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Jane Smith</Heading>
+                                <Heading level={4} weight={500}>Lalit Rana</Heading>
                                 <Text size={16} variant="muted">Editor</Text>
                             </VStack>
                         </HStack>
@@ -44,9 +44,9 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar5.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Emily Davis</Heading>
+                                <Heading level={4} weight={500}>Anna Morgan</Heading>
                                 <Text size={16} variant="muted">Author</Text>
                             </VStack>
                         </HStack>
@@ -55,9 +55,9 @@ function Grid3() {
                 <Card style={{ borderRadius: '4px' }}>
                     <CardBody>
                         <HStack spacing={3} alignment="left">
-                            <Surface as={'img'} src="https://placehold.co/60" style={{ borderRadius: '100%' }} />
+                            <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar6.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                             <VStack>
-                                <Heading level={4} weight={500}>Kevin Lee</Heading>
+                                <Heading level={4} weight={500}>Neha Jain</Heading>
                                 <Text size={16} variant="muted">Contributor</Text>
                             </VStack>
                         </HStack>
