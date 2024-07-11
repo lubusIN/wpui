@@ -25,3 +25,11 @@
     border-radius: 4px !important;
     padding: 45px 35px;
 }
+
+.components-resizable-box__handle:after{
+    width: 8px;
+    height: 30px;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%)
+}
