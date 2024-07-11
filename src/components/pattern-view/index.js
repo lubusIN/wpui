@@ -35,6 +35,26 @@ import { useViewportMatch } from '@wordpress/compose';
 
 function PatternView({ title, path, component: Pattern }) {
     const [view, setView] = useState('preview');
+    const isMobile = useViewportMatch('mobile');
+
+    const desktop = (
+        <ResizableBox
+            maxWidth={1350}
+            minWidth={360}
+            enable={{ right: true }}
+        >
+            <Card className="wpui-variation-card">
+                <Pattern />
+            </Card>
+        </ResizableBox>
+    );
+
+    const mobile = (
+        <Card className="wpui-variation-card">
+            <Pattern />
+        </Card>
+    );
+
     return (
         <>
             <VStack spacing={4}>
@@ -55,17 +75,7 @@ function PatternView({ title, path, component: Pattern }) {
                     </HStack>
                 </HStack>
                 {
-                    view === 'preview' && (
-                        <ResizableBox
-                            maxWidth={1350}
-                            minWidth={360}
-                            enable={{ right: useViewportMatch('mobile') ? true : false }}
-                        >
-                            <Card className="wpui-variation-card">
-                                <Pattern />
-                            </Card>
-                        </ResizableBox>
-                    )
+                    view === 'preview' && (isMobile ? desktop : mobile)
                 }
                 {view === 'code' && <PatternCode path={path} />}
             </VStack>
