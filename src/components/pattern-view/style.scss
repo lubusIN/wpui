@@ -1,11 +1,8 @@
-.wpui-view-toggle 
- {
+.wpui-view-toggle {
     color: #535353;
     font-size: .875rem;
     font-weight: 500;
-}
 
-.wpui-view-toggle {
     [role="presentation"] {
         background-color: #cecece;
         transform: none !important;
@@ -24,6 +21,8 @@
 .wpui-variation-card {
     border-radius: 4px !important;
     padding: 45px 35px;
+    container-type: inline-size;
+    container-name: wpui-resizer;
 }
 
 .components-resizable-box__handle:after{
