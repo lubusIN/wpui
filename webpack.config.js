@@ -1,6 +1,13 @@
 const { resolve } = require('path');
-const defaultConfig = require("@wordpress/scripts/config/webpack.config"); module.exports = {
+const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' );
+const defaultConfig = require("@wordpress/scripts/config/webpack.config");
+
+module.exports = {
   ...defaultConfig,
+  entry: {
+    ...getWebpackEntryPoints(),
+    viewer: resolve(__dirname, 'src/viewer/index.js'),
+  },
   module: {
     ...defaultConfig.module,
     rules: [
