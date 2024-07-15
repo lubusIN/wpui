@@ -4,71 +4,59 @@
 import {
     Card,
     Icon,
-    __experimentalText as Text,
     CardBody,
-    TabPanel,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
-    CardHeader,
     CardFooter,
     ExternalLink,
     __experimentalHeading as Heading,
+    __experimentalText as Text,
+    MenuGroup, MenuItem
 } from "@wordpress/components";
+import { navigation, styles, drawerLeft, page, addTemplate } from "@wordpress/icons";
 
 /**
  * Render Subscription Shell
  */
 function Shell4() {
     return (
-            <Card style={{ backgroundColor: "black", color: "white" }}>
-                <CardBody>
-                    <VStack>
+        <>
+        <Card>
+            <CardBody style={{ backgroundColor: "black", padding: "30px" }}>
+                <HStack>
+                    <VStack spacing={3}>
                         <Heading color="white">Design</Heading>
                         <Text color="white">Customize the appearance of your website using the block  editor.</Text>
-                        <TabPanel
-                            orientation="vertical"
-                            className="my-tab-panel"
-                            tabs={[
-                                {
-                                    name: 'tab1',
-                                    title: 'Navigation',
-                                    className: 'tab-one',
-                                },
-                                {
-                                    name: 'tab2',
-                                    title: 'Styles',
-                                    className: 'tab-two',
-                                },
-                                {
-                                    name: 'tab3',
-                                    title: 'Pages',
-                                    className: 'tab-two',
-                                },
-                                {
-                                    name: 'tab4',
-                                    title: 'Templates',
-                                    className: 'tab-two',
-                                },
-                                {
-                                    name: 'tab5',
-                                    title: 'Patterns',
-                                    className: 'tab-two',
-                                },
-                            ]}
-                        >
-                            {(tab) => <HStack style={{ width: "auto", padding: "100px", backgroundColor: "white" }}></HStack>}
-                        </TabPanel>
+                        <VStack expanded={false}>
+                            <MenuGroup>
+                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={navigation}></Icon>Navigations</MenuItem>
+                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={styles}></Icon>Styles</MenuItem>
+                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={page}></Icon>Pages</MenuItem>
+                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={drawerLeft}></Icon>Templates</MenuItem>
+                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={addTemplate}></Icon>Patterns</MenuItem>
+                            </MenuGroup>
+                        </VStack>
                     </VStack>
-                </CardBody>
-            </Card>
+                    <Card style={{ padding: "300px", borderRadius: "10px" }}>
+                    </Card>
+                </HStack>
+            </CardBody>
+            <CardFooter isShady justify="center">
+                <HStack expanded={false} spacing={15} alignment="center">
+                    <ExternalLink style={{ textDecoration: "none" }}>About us</ExternalLink>
+                    <ExternalLink>Help</ExternalLink>
+                    <ExternalLink>Contact us</ExternalLink>
+                </HStack>
+            </CardFooter>
+        </Card>
+        </>
     );
 };
 
 // @meta-start
 Shell4.meta = {
-    title: 'Shell 4',
+    title: 'Shell 2',
     path: '/NewPatterns/shell4',
 };
 // @meta-end
-
 export default Shell4;

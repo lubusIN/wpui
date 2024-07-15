@@ -33,7 +33,9 @@ function Shell3() {
                     <HStack expanded={false} spacing={1}><Icon size={30} icon={store}></Icon> <Text weight={500}>Knowledge Base</Text></HStack>
                     </HStack>
             </CardHeader>
-            <CardBody style={{padding:"0px"}}>
+            <CardBody alignment="center" style={{padding:"0px"}}>
+
+
                 <TabPanel
                     className="my-tab-panel"
                     tabs={[
@@ -53,9 +55,10 @@ function Shell3() {
                             className: 'tab-two',
                         },
                     ]}
-                >
+                    >
                     {(tab) => <div style={{ padding: "200px", backgroundColor:"#e3e3e3" }}>{/*Enter Your Content Here*/}</div>}
                 </TabPanel>
+
             </CardBody>
             <CardFooter justify="center">
                 <HStack expanded={false} spacing={15} alignment="center">

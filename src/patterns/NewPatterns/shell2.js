@@ -25,19 +25,23 @@ function Shell2() {
             <CardHeader style={{ backgroundColor: "rgb(51 70 94)" }}>
                 <HStack expanded={false}>
                     <img height={20} width={70} src="https://raw.githubusercontent.com/lubusIN/wpui/add/new-patterns/src/img/demo-logo/Logo%20-%20%235.png"></img>
-                    <Button style={{ color: "white" }}><Icon size={20} icon={blockTable}></Icon>Feild Groups</Button>
-                    <Button style={{ color: "white" }}><Icon size={20} icon={postList}></Icon>Post Types</Button>
-                    <Button style={{ color: "white" }}><Icon size={20} icon={tag}></Icon>Taxonomies</Button>
-                    <Button style={{ color: "white" }}><Icon size={20} icon={category}></Icon>More <DropdownMenu icon={chevronDown}>
-                        {() => (
-                            <>
-                                <MenuGroup><MenuItem>View</MenuItem>
-                                    <MenuItem>Dismiss</MenuItem>
-                                </MenuGroup>
-                            </>
-                        )}
-                    </DropdownMenu></Button>
-
+                    <MenuGroup>
+                        <HStack expanded={false}>
+                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={blockTable}></Icon>Feild Groups</MenuItem>
+                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={postList}></Icon>Post Types</MenuItem>
+                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={tag}></Icon>Taxonomies</MenuItem>
+                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={category}></Icon>More
+                            <DropdownMenu icon={chevronDown}>
+                                {() => (
+                                    <>
+                                        <MenuGroup><MenuItem>View</MenuItem>
+                                            <MenuItem>Dismiss</MenuItem>
+                                        </MenuGroup>
+                                    </>
+                                )}
+                            </DropdownMenu></MenuItem>
+                                </HStack>
+                    </MenuGroup>
                 </HStack>
             </CardHeader>
             <CardBody style={{ padding: "150px" }}>
