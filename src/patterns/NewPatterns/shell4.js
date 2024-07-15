@@ -20,7 +20,6 @@ import {
  */
 function Shell4() {
     return (
-        <>
             <Card style={{ backgroundColor: "black", color: "white" }}>
                 <CardBody>
                     <VStack>
@@ -62,15 +61,6 @@ function Shell4() {
                     </VStack>
                 </CardBody>
             </Card>
-            <style>
-                {`
-                    
-                    .components-button{
-                    color:white;
-                    }
-                `}
-            </style>
-        </>
     );
 };
 
