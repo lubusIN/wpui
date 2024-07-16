@@ -18,10 +18,10 @@ function Heading3() {
     return (
         <Grid columns={[1, 2]} rowGap={35}>
             <HStack alignment="center" justify="left" spacing={5}>
-                <Surface as={'img'} src="https://placehold.co/80" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
+                <Surface as={'img'} src='https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png' style={{ borderRadius: '100%', maxWidth:"50px" }} />
                 <VStack expanded={false}>
-                    <Heading level={2}>Sarah Weaver</Heading>
-                    <Text size={14} color="grey"><Text weight={500}>"WordPress Developer:</Text> Contributing to WordPress community since 2015."</Text>
+                    <Heading>Rahul Sharma</Heading>
+                    <Text size={14} variant="muted"><Text weight={500}>"WordPress Developer:</Text> Contributing to WordPress community since 2015."</Text>
                 </VStack>
             </HStack>
             <HStack spacing={3} justify="right">

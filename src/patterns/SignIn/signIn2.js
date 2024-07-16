@@ -82,7 +82,7 @@ function SignIn2() {
                         </Grid>
                     </VStack>
                 </HStack>
-                <Surface as={'img'} src="https://placehold.co/80" style={{ height: '100%', width: '100%' }} />
+                <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/signin.png" style={{ height: '100%', width: '100%' }} />
             </HStack>
             <style>
                 {`

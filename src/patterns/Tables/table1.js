@@ -21,34 +21,39 @@ function Table1() {
 
     const data = [
         {
-            name: 'Harry D. Mead',
-            email: 'harry@gmail.com',
+            name: 'Rahul Sharma',
+            email: 'rahulsharma@gmail.com',
             role: 'Administrator',
-            status: 'Active'
+            status: 'Active',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png'
         },
         {
-            name: 'Justina M. Plummer',
-            email: 'justina@gmail.com',
+            name: 'Lalit Rana',
+            email: 'lalitrana@gmail.com',
             role: 'Editor',
-            status: 'Active'
+            status: 'Active',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png'
         },
         {
-            name: 'John J. Davis',
-            email: 'john@gmail.com',
+            name: 'Anna Morgan',
+            email: 'annamorgan@gmail.com',
             role: 'Contributor',
-            status: 'Inactive'
+            status: 'Inactive',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar5.png'
         },
         {
-            name: 'Herman M. Monson',
-            email: 'herman@gmail.com',
+            name: 'Neha Jain',
+            email: 'nehajain@gmail.com',
             role: 'Author',
-            status: 'Active'
+            status: 'Active',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar6.png'
         },
         {
-            name: 'Joseph E. Schlater',
-            email: 'joseph@gmail.com',
+            name: 'Savio Rodriguez',
+            email: 'saviorodriguez@gmail.com',
             role: 'Subscriber',
-            status: 'Inactive'
+            status: 'Inactive',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar7.png'
         }
     ];
 
@@ -85,7 +90,7 @@ function Table1() {
                             <TreeGridCell>
                                 {(props) => (
                                     <HStack alignment="left">
-                                        <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%', minWidth: 'fit-content' }} />
+                                        <Surface as={'img'} src={item.avatar} style={{ borderRadius: '100%', maxWidth: '45px' }} />
                                         <Heading level={5} style={{ whiteSpace: 'nowrap' }}>
                                             {item.name}
                                         </Heading>
