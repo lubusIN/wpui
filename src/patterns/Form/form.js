@@ -42,7 +42,7 @@ function Form() {
             <VStack>
                 <Heading level={4}>Photo</Heading>
                 <HStack alignment="left">
-                    <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%' }} />
+                    <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                     <FormFileUpload
                         variant="primary"
                         isPressed

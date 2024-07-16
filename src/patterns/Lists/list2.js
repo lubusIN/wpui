@@ -7,6 +7,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
 
 /**
@@ -16,24 +17,28 @@ function List2() {
 
     const users = [
         {
-            name: 'David K. Williams',
+            name: 'Rahul Sharma',
             role: 'Administrator',
-            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.',
+            avatar: 'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png'
         },
         {
-            name: 'Jeramy D. Johnson',
+            name: 'Lalit Rana',
             role: 'Contributor',
-            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.',
+            avatar: 'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png'
         },
         {
-            name: 'Diane C. Cotter',
+            name: 'Anna Morgan',
             role: 'Author',
-            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.',
+            avatar: 'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar5.png'
         },
         {
-            name: 'Cody I. Curran',
+            name: 'Neha Jain',
             role: 'Editor',
-            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.'
+            about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut urna vel velit finibus tempor sit amet vitae ipsum. Morbi euismod malesuada sem id consequat.',
+            avatar: 'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar6.png'
         }
     ];
 
@@ -53,10 +58,7 @@ function List2() {
                         <>
                             <HStack key={index} spacing={20}>
                                 <HStack spacing={3} alignment="start">
-                                    <img
-                                        src="https://placehold.co/50"
-                                        style={{ borderRadius: '100%', minWidth: 'auto' }}
-                                    />
+                                    <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px" }} />
                                     <VStack spacing={3} style={{ width: '30rem' }}>
                                         <HStack>
                                             <Heading
