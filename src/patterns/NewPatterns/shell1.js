@@ -2,17 +2,18 @@
  * WordPress dependencies.
  */
 import {
+    Icon,
     Card,
+    CardHeader,
     CardBody,
     TabPanel,
+    ExternalLink,
+    __experimentalText as Text,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
-    __experimentalText as Text,
-    CardHeader,
-    CardFooter,
-    ExternalLink,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
+import { check } from "@wordpress/icons";
 
 /**
  * Render Subscription Shell
@@ -20,17 +21,20 @@ import {
 function Shell1() {
     return (
         <Card>
-            <CardHeader style={{backgroundColor:"rgb(247 210 171)"}}>
+            <CardHeader style={{ backgroundColor: "rgb(208 230 255)" }}>
                 <HStack expanded={false} spacing={3}>
-                    <img height={20} width={65} src="https://raw.githubusercontent.com/lubusIN/wpui/add/new-patterns/src/img/demo-logo/Logo%20-%20%231.png"></img>
-                    <Heading size={20}>WP Offload Media</Heading>
+                    <img src="https://raw.githubusercontent.com/lubusIN/wpui/19be18fb1ed5a50a79bd08ac4ee28691abf88b52/favicon.svg"></img>
+                    <Heading size={20}>WPUI</Heading>
                 </HStack>
                 <VStack alignment="right">
-                    <ExternalLink>License Aggrement</ExternalLink>
-                    <Text>Wpui@gmail.com</Text>
+                    <HStack expanded={false} spacing={1}>
+                        <Icon size={30} icon={check}></Icon>
+                        <ExternalLink href="">PRO License</ExternalLink>
+                    </HStack>
+                    <Text>support@wpui.com</Text>
                 </VStack>
             </CardHeader>
-            <CardBody style={{padding:"0px"}}>
+            <CardBody style={{ padding: "0px" }}>
                 <TabPanel
                     className="my-tab-panel"
                     tabs={[
@@ -61,16 +65,9 @@ function Shell1() {
                         },
                     ]}
                 >
-                    {(tab) => <div style={{ padding: "200px", backgroundColor:"#e3e3e3" }}>{/*Enter Your Content Here*/}</div>}
+                    {(tab) => <div style={{ padding: "200px", backgroundColor: "#e3e3e3", border: "1px solid #d2d0d0" }}></div>}
                 </TabPanel>
             </CardBody>
-            <CardFooter justify="center">
-                <HStack expanded={false} spacing={15} alignment="center">
-                    <ExternalLink style={{textDecoration:"none"}}>About us</ExternalLink>
-                    <ExternalLink>Help</ExternalLink>
-                    <ExternalLink>Contact us</ExternalLink>
-                </HStack>
-            </CardFooter>
         </Card>
     );
 };

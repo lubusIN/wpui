@@ -4,17 +4,13 @@
 import {
     Button,
     Card,
-    Icon,
-    CardBody,
-    DropdownMenu,
-    MenuGroup,
-    MenuItem,
-    __experimentalHStack as HStack,
     CardHeader,
+    CardBody,
     CardFooter,
     ExternalLink,
+    __experimentalHStack as HStack,
 } from "@wordpress/components";
-import { blockTable, postList, tag, chevronDown, category, color, textColor } from "@wordpress/icons";
+import { blockTable, postList, tag, category } from "@wordpress/icons";
 
 /**
  * Render Subscription Shell
@@ -23,25 +19,14 @@ function Shell2() {
     return (
         <Card>
             <CardHeader style={{ backgroundColor: "rgb(51 70 94)" }}>
-                <HStack expanded={false}>
-                    <img height={20} width={70} src="https://raw.githubusercontent.com/lubusIN/wpui/add/new-patterns/src/img/demo-logo/Logo%20-%20%235.png"></img>
-                    <MenuGroup>
-                        <HStack expanded={false}>
-                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={blockTable}></Icon>Feild Groups</MenuItem>
-                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={postList}></Icon>Post Types</MenuItem>
-                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={tag}></Icon>Taxonomies</MenuItem>
-                        <MenuItem style={{ color: "white" }}><Icon size={20} icon={category}></Icon>More
-                            <DropdownMenu icon={chevronDown}>
-                                {() => (
-                                    <>
-                                        <MenuGroup><MenuItem>View</MenuItem>
-                                            <MenuItem>Dismiss</MenuItem>
-                                        </MenuGroup>
-                                    </>
-                                )}
-                            </DropdownMenu></MenuItem>
-                                </HStack>
-                    </MenuGroup>
+                <HStack expanded={false} spacing={3}>
+                    <img height={30} width={30} src="https://raw.githubusercontent.com/lubusIN/wpui/19be18fb1ed5a50a79bd08ac4ee28691abf88b52/favicon.svg"></img>
+                    <HStack>
+                        <Button icon={blockTable} style={{ color: "white" }}> Feild Groups</Button>
+                        <Button icon={postList} style={{ color: "white",}}> Post Types</Button>
+                        <Button icon={tag} style={{ color: "white" }}> Taxonomies</Button>
+                        <Button icon={category} style={{ color: "white" }}> More</Button>
+                    </HStack>
                 </HStack>
             </CardHeader>
             <CardBody style={{ padding: "150px" }}>

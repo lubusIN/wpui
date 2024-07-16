@@ -1,6 +1,35 @@
 /**
  * WordPress dependencies.
  */
+import React, { useState } from 'react';
+
+// TabPanel component
+const TabPanel = ({ tabs, children }) => {
+    const [activeTab, setActiveTab] = useState(tabs[0].name);
+
+    const handleTabChange = (tabName) => {
+        setActiveTab(tabName);
+    };
+    return (
+        <div className="tab-panel-container">
+            <div className="tab-titles">
+                {tabs.map((tab) => (
+                    <Button
+                        key={tab.name}
+                        className={tab.className}
+                        onClick={() => handleTabChange(tab.name)}
+                    >
+                        {tab.title}
+                    </Button>
+                ))}
+            </div>
+            <div className="tab-content">
+                {children({ activeTab })}
+            </div>
+        </div>
+    );
+
+}
 import {
     Button,
     Card,
@@ -11,12 +40,13 @@ import {
     MenuItem,
     __experimentalHStack as HStack,
     CardHeader,
-    CardFooter,
-    ExternalLink,
-    TabPanel
 } from "@wordpress/components";
-import { chevronLeft, alignJustify, desktop, moreVertical, drawerRight, color, create, wordpress, chevronRight } from "@wordpress/icons";
 
+import { alignJustify, desktop, moreVertical, drawerRight, wordpress, border } from "@wordpress/icons";
+const data = {
+    tab1: 'Tab 1 Component',
+    tab2: 'Tab 2 Component',
+};
 /**
  * Render Subscription Shell
  */
@@ -26,9 +56,6 @@ function Shell5() {
             <CardHeader>
                 <HStack expanded={false}>
                     <Icon size={30} icon={wordpress}></Icon>
-                    <Button><Icon size={30} icon={create}></Icon></Button>
-                    <Button><Icon size={30} icon={chevronLeft}></Icon></Button>
-                    <Button><Icon size={30} icon={chevronRight}></Icon></Button>
                     <DropdownMenu icon={alignJustify}>
                         {() => (
                             <>
@@ -40,7 +67,6 @@ function Shell5() {
                     </DropdownMenu>
                 </HStack>
                 <HStack alignment="right">
-                    <Button variant="secoondary">Save Draft</Button>
                     <Button><Icon icon={desktop}></Icon></Button>
                     <Button variant="primary">Publish</Button>
                     <Button><Icon icon={drawerRight}></Icon></Button>
@@ -54,27 +80,33 @@ function Shell5() {
                         )}
                     </DropdownMenu>
                 </HStack>
+
+
             </CardHeader>
             <HStack alignment="right" expanded={false} spacing={5}>
-            <CardBody style={{padding:"0px"}}>
-            <TabPanel
-                    className="my-tab-panel"
-                    tabs={[
-                        {
-                            name: 'tab1',
-                            title: 'Post',
-                            className: 'tab-one',
-                        },
-                        {
-                            name: 'tab2',
-                            title: 'Block',
-                            className: 'tab-two',
-                        },
-                    ]}
-                >
-                    {(tab) => <div style={{ backgroundColor:"rgb(245 245 245)", padding:"100px" }}></div>}
-                </TabPanel>
-            </CardBody>
+                <CardBody style={{ padding: "0px", borderLeft: "1px solid #dfdfdf", borderBottom: "1px solid #dfdfdf" }}>
+                    <TabPanel
+                        className="my-tab-panel"
+                        tabs={[
+                            {
+                                name: 'tab1',
+                                title: 'Tab 1',
+                                className: 'tab-one',
+                            },
+                            {
+                                name: 'tab2',
+                                title: 'Tab 2',
+                                className: 'tab-two',
+                            },
+                        ]}
+                    >
+                        {({ activeTab }) => (
+                            <div style={{ backgroundColor: 'rgb(245, 245, 245)', padding: '50px' }}>
+                                <p>{data[activeTab]}</p>
+                            </div>
+                        )}
+                    </TabPanel>
+                </CardBody>
             </HStack>
         </Card>
     );

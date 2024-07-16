@@ -2,16 +2,17 @@
  * WordPress dependencies.
  */
 import {
-    Card,
     Icon,
+    Card,
     CardBody,
-    __experimentalHStack as HStack,
-    __experimentalVStack as VStack,
     CardFooter,
     ExternalLink,
-    __experimentalHeading as Heading,
+    MenuGroup, MenuItem,
     __experimentalText as Text,
-    MenuGroup, MenuItem
+    __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
+    __experimentalHeading as Heading,
+    Button,
 } from "@wordpress/components";
 import { navigation, styles, drawerLeft, page, addTemplate } from "@wordpress/icons";
 
@@ -21,41 +22,34 @@ import { navigation, styles, drawerLeft, page, addTemplate } from "@wordpress/ic
 function Shell4() {
     return (
         <>
-        <Card>
-            <CardBody style={{ backgroundColor: "black", padding: "30px" }}>
-                <HStack>
-                    <VStack spacing={3}>
-                        <Heading color="white">Design</Heading>
-                        <Text color="white">Customize the appearance of your website using the block  editor.</Text>
-                        <VStack expanded={false}>
-                            <MenuGroup>
-                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={navigation}></Icon>Navigations</MenuItem>
-                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={styles}></Icon>Styles</MenuItem>
-                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={page}></Icon>Pages</MenuItem>
-                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={drawerLeft}></Icon>Templates</MenuItem>
-                            <MenuItem style={{ color: "white" }}><Icon size={20} icon={addTemplate}></Icon>Patterns</MenuItem>
-                            </MenuGroup>
+            <Card>
+                <CardBody style={{ backgroundColor: "black",padding:"10px"}}>
+                    <HStack>
+                    <Card style={{ backgroundColor: "black", padding: "10px",paddingBottom:"200px" }}>
+                        <VStack spacing={4}>
+                            <Heading color="white">Design</Heading>
+                            <Text color="white">Customize the appearance of your website using the block  editor.</Text>
+                            <VStack expanded={false} spacing={2}>
+                                    <Button style={{ color: "white" }}><Icon size={20} icon={navigation}></Icon>Navigations</Button>
+                                    <Button style={{ color: "white" }}><Icon size={20} icon={styles}></Icon>Styles</Button>
+                                    <Button style={{ color: "white" }}><Icon size={20} icon={page}></Icon>Pages</Button>
+                                    <Button style={{ color: "white" }}><Icon size={20} icon={drawerLeft}></Icon>Templates</Button>
+                                    <Button style={{ color: "white" }}><Icon size={20} icon={addTemplate}></Icon>Patterns</Button>
+                            </VStack>
                         </VStack>
-                    </VStack>
-                    <Card style={{ padding: "300px", borderRadius: "10px" }}>
                     </Card>
-                </HStack>
-            </CardBody>
-            <CardFooter isShady justify="center">
-                <HStack expanded={false} spacing={15} alignment="center">
-                    <ExternalLink style={{ textDecoration: "none" }}>About us</ExternalLink>
-                    <ExternalLink>Help</ExternalLink>
-                    <ExternalLink>Contact us</ExternalLink>
-                </HStack>
-            </CardFooter>
-        </Card>
+                        <Card size="large" style={{ borderRadius: "10px", height:"500px", width:"100%" }}>
+                        </Card>
+                    </HStack>
+                </CardBody>
+            </Card>
         </>
     );
 };
 
 // @meta-start
 Shell4.meta = {
-    title: 'Shell 2',
+    title: 'Shell 4',
     path: '/NewPatterns/shell4',
 };
 // @meta-end
