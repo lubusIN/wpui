@@ -46,12 +46,12 @@ function CardHeading2() {
     return (
         <Card size="medium" style={{ borderRadius: '4px' }}>
             <CardBody>
-                <VStack spacing={6}>
+                <VStack spacing={3}>
                     <HStack>
-                        <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%' }} />
+                        <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                         <HStack>
                             <VStack spacing={1}>
-                                <Heading level={4}>John Doe</Heading>
+                                <Heading level={4}>Rahul Sharma</Heading>
                                 <Text size={14} color="#6b7280">Front End Developer</Text>
                             </VStack>
                             <DropdownMenu
@@ -72,7 +72,7 @@ function CardHeading2() {
 
 // @meta-start
 CardHeading2.meta = {
-    title: 'CardHeading 2',
+    title: 'Card Heading 2',
     path: '/CardHeading/cardheading2',
 };
 // @meta-end

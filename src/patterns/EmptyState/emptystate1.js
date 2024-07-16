@@ -33,7 +33,7 @@ function EmptyState1() {
 
 // @meta-start
 EmptyState1.meta = {
-    title: 'EmptyState 1',
+    title: 'Empty State 1',
     path: '/EmptyState/emptystate1',
 };
 // @meta-end

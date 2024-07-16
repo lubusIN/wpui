@@ -47,24 +47,27 @@ function Grid1() {
     const users = [
         {
             invoice: '001',
-            name: 'John Doe',
+            name: 'Rahul Sharma',
             amount: '$2,000.00',
             date: 'November 14,2022',
-            status: 'Overdue'
+            status: 'Overdue',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png'
         },
         {
             invoice: '002',
-            name: 'Jane Smith',
+            name: 'Lalit Rana',
             amount: '$14,000.00',
             date: 'March 20,2023',
-            status: 'Paid'
+            status: 'Paid',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png'
         },
         {
             invoice: '003',
-            name: 'Kevin Lee',
+            name: 'Anna Morgan',
             amount: '$7,000.00',
             date: 'April 18,2023',
-            status: 'Paid'
+            status: 'Paid',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar5.png'
         }
     ];
 
@@ -75,7 +78,7 @@ function Grid1() {
                     <CardBody isShady>
                         <HStack>
                             <HStack alignment="left">
-                                <Surface as={'img'} src="https://placehold.co/50" style={{ borderRadius: '100%' }} />
+                                <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%',maxWidth:"45px" }} />
                                 <VStack spacing={2}>
                                     <Heading
                                         level={4}
