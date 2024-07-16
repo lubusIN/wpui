@@ -24,7 +24,7 @@ function CardHeading4() {
                         <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png" style={{ borderRadius: '100%', maxWidth:"45px" }} />
                         <VStack spacing={1}>
                             <Heading level={4}>Lalit Rana</Heading>
-                            <Text size={14} color="#6b7280">@johnDoe</Text>
+                            <Text size={14} color="#6b7280">@lalitrana</Text>
                         </VStack>
                     </HStack>
                     <HStack alignment="right" expanded={false} style={{ minWidth: 'auto' }}>
