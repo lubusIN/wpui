@@ -7,6 +7,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
 
 /**
@@ -16,28 +17,32 @@ function List4() {
 
     const users = [
         {
-            name: 'David K. Williams',
-            email: 'david@gmail.com',
+            name: 'Rahul Sharma',
+            email: 'rahulsharma@gmail.com',
             role: 'Administrator',
-            status: 'last seen 3h ago'
+            status: 'last seen 3h ago',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png'
         },
         {
-            name: 'Jeramy D. Johnson',
-            email: 'jeramy@gmail.com',
+            name: 'Lalit Rana',
+            email: 'lalitrana@gmail.com',
             role: 'Contributor',
-            status: 'last seen 2d ago'
+            status: 'last seen 2d ago',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png'
         },
         {
-            name: 'Diane C. Cotter',
-            email: 'diane@gmail.com',
+            name: 'Anna Morgan',
+            email: 'annamorgan@gmail.com',
             role: 'Author',
-            status: 'Online'
+            status: 'Online',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar5.png'
         },
         {
-            name: 'Cody I. Curran',
-            email: 'cody@gmail.com',
+            name: 'Neha Jain',
+            email: 'nehajain@gmail.com',
             role: 'Editor',
-            status: 'last seen 1m ago'
+            status: 'last seen 1m ago',
+            avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar6.png'
         }
     ];
 
@@ -56,10 +61,7 @@ function List4() {
                         <>
                             <HStack key={index} spacing={10}>
                                 <HStack spacing={3} alignment="left" expanded={false}>
-                                    <img
-                                        src="https://placehold.co/50"
-                                        style={{ borderRadius: '100%', minWidth: 'auto' }}
-                                    />
+                                    <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px" }} />
                                     <VStack spacing={2} style={{ width: '40rem' }}>
                                         <Heading
                                             size={14}

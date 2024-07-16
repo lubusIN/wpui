@@ -23,7 +23,7 @@ function CardHeading1() {
 
 // @meta-start
 CardHeading1.meta = {
-    title: 'CardHeading 1',
+    title: 'Card Heading 1',
     path: '/CardHeading/cardheading1',
 };
 // @meta-end
