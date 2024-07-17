@@ -42,10 +42,10 @@ function Shell6() {
                     </DropdownMenu>
                 </HStack>
             </CardHeader>
-            <CardBody style={{padding:"0px"}}>
+            <CardBody style={{ padding: "0px" }}>
                 <Card>
                     <HStack expanded={false}>
-                        <CardBody style={{ backgroundColor: "black", width: "30%", padding: "20px" }}>
+                        <CardBody style={{ backgroundColor: "black", width: "15%", padding: "20px" }}>
                             <VStack spacing={4}>
                                 <Heading color="white">Steps</Heading>
                                 <VStack expanded={false} spacing={2}>
@@ -68,8 +68,9 @@ function Shell6() {
                                 </VStack>
                             </VStack>
                         </CardBody>
-                        <CardBody style={{ backgroundColor: "#eeeeee", width: "100%", padding: "391px" }}>
-                        </CardBody>
+                        <Card size="large" style={{ backgroundColor: "#eeeeee" }}>
+                            {/*Enter Your Content Here*/}
+                        </Card>
                     </HStack>
                 </Card>
             </CardBody>
