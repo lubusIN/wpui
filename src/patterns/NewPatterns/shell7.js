@@ -45,7 +45,7 @@ function Shell7() {
                                     <Button variant="primary">Add Products</Button>
                                 </HStack>
                             </HStack>
-                            <VStack spacing={2}>
+                            <VStack spacing={2} style={{margin:"10px"}}>
                                 <Card style={{ padding: "100px", borderRadius: "10px" }}></Card>
                                 <Card style={{ padding: "100px", borderRadius: "10px" }}></Card>
                             </VStack>

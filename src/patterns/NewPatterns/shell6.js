@@ -45,7 +45,7 @@ function Shell6() {
             <CardBody style={{ padding: "0px" }}>
                 <Card>
                     <HStack expanded={false}>
-                        <CardBody style={{ backgroundColor: "black", width: "15%", padding: "20px" }}>
+                        <CardBody style={{ backgroundColor: "black", width: "25%", padding: "20px" }}>
                             <VStack spacing={4}>
                                 <Heading color="white">Steps</Heading>
                                 <VStack expanded={false} spacing={2}>
