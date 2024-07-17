@@ -23,7 +23,7 @@ import './style.scss'
  */
 function CategoryCard({ thumbnail: Thumbnail, title, path, patterns }) {
     return (
-        <VStack className="wpui-preview" style={{ width: '100%'}}>
+        <VStack className="wpui-preview">
             <Link className="wpui-card-link" to={path}>
                 <Card className="wpui-card-preview" size="large" isBorderless >
                     <Thumbnail />
