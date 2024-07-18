@@ -42,7 +42,7 @@ function Panel4() {
 Panel4.meta = {
     title: 'Panel 4',
     name:'Panel4',
-    category:'Actionpanels',
+    category:'ActionPanels',
     path: '/ActionPanels/panel4'
 };
 // @meta-end

@@ -73,8 +73,8 @@ function CardHeading2() {
 // @meta-start
 CardHeading2.meta = {
     title: 'Card Heading 2',
-    name:'Cardheading2',
-    category:'CardHeadings',
+    name:'CardHeading2',
+    category:'CardHeading',
     path: '/CardHeading/cardheading2',
 };
 // @meta-end

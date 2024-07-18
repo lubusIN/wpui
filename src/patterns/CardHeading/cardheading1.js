@@ -24,8 +24,8 @@ function CardHeading1() {
 // @meta-start
 CardHeading1.meta = {
     title: 'Card Heading 1',
-    name:'Cardheading1',
-    category:'CardHeadings',
+    name:'CardHeading1',
+    category:'CardHeading',
     path: '/CardHeading/cardheading1',
 };
 // @meta-end

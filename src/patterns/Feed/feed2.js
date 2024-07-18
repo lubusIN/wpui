@@ -182,6 +182,8 @@ function Feed2() {
 // @meta-start
 Feed2.meta = {
     title: 'Feed 2',
+    name:'Feed2',
+    category:'Feed',
     path: '/Feed/feed2',
 };
 // @meta-end

@@ -103,7 +103,7 @@ function Navigation2() {
 // @meta-start
 Navigation2.meta = {
     title: 'Navigate 2',
-    name:'navigate2',
+    name:'Navigation2',
     category:'Navigations',
     path: '/Navigations/navigate2',
 };

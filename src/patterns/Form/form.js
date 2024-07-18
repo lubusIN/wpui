@@ -70,7 +70,7 @@ function Form() {
 Form.meta = {
     title: 'Form',
     name:'Form',
-    category:'Forms',
+    category:'Form',
     path: '/Form/form',
 };
 // @meta-end

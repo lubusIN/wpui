@@ -75,7 +75,7 @@ function Navigation1() {
 // @meta-start
 Navigation1.meta = {
     title: 'Navigate 1',
-    name:'navigate1',
+    name:'Navigation1',
     category:'Navigations',
     path: '/Navigations/navigate1',
 };
