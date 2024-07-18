@@ -156,7 +156,7 @@ function Feed1() {
 Feed1.meta = {
     title: 'Feed 1',
     name:'Feed1',
-    category:'Feed',
+    category:'Feeds',
     path: '/Feed/feed1',
 };
 // @meta-end
