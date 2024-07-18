@@ -13,4 +13,4 @@ export * as Stats  from './Stats';
 export * as GridLists  from './GridLists';
 export * as Lists  from './Lists';
 export * as Tables  from './Tables';
-export * as Navigations  from './Navigations';;
+export * as Navigations  from './Navigations';
