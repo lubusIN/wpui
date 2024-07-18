@@ -1,12 +1,13 @@
 /**
  * External dependencies.
  */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 /**
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
+import { useViewportMatch } from '@wordpress/compose';
 import {
     code,
     seen
@@ -19,7 +20,6 @@ import {
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
-    Disabled,
 } from "@wordpress/components";
 
 /**
@@ -27,26 +27,46 @@ import {
  */
 import { PatternCode } from '../index';
 import './style.scss'
-import { useViewportMatch } from '@wordpress/compose';
 
 /**
  * Render Pattern View
 */
-
-function PatternView({ title, path, component: Pattern }) {
+function PatternView({ title, name, category, path, component: Pattern }) {
     const [view, setView] = useState('preview');
     const isMobile = useViewportMatch('mobile');
+    const iframeRef = useRef(null);
+    const [height, setHeight] = useState(100);
+
+    const updateHeight = () => setHeight(iframeRef.current.contentWindow.document.body.scrollHeight);
+    let resizePing
 
     const desktop = (
         <ResizableBox
             maxWidth={1350}
             minWidth={360}
             enable={{ right: true }}
+            onResizeStop={() => {
+                updateHeight();
+                clearInterval(resizePing)
+            }}
+            onResizeStart={() => resizePing = setInterval(() => {
+                updateHeight();
+            }, 10)}
         >
             <Card className="wpui-variation-card">
-                <Pattern />
+                <iframe
+                    ref={iframeRef}
+                    height={height + 'px'}
+                    src={`/?mode=embed&category=${category}&pattern=${name}`}
+                    style={{
+                        border: 'none',
+                        width: '100%',
+                        padding: '0 1px'
+                    }}
+                    onLoad={() => updateHeight()}
+                />
             </Card>
-        </ResizableBox>
+        </ResizableBox >
     );
 
     const mobile = (
