@@ -111,6 +111,8 @@ function Navigation3() {
 // @meta-start
 Navigation3.meta = {
     title: 'Navigate 3',
+    name:'navigate3',
+    category:'Navigations',
     path: '/Navigations/navigate3',
 };
 // @meta-end

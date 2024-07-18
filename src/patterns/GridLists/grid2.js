@@ -30,6 +30,8 @@ function Grid2() {
 // @meta-start
 Grid2.meta = {
     title: 'Grid 2',
+    name:'Grid2',
+    category:'GridLists',
     path: '/GridLists/grid2',
 };
 // @meta-end

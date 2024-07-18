@@ -166,6 +166,8 @@ function Grid4() {
 // @meta-start
 Grid4.meta = {
     title: 'Grid 4',
+    name:'Grid4',
+    category:'GridLists',
     path: '/GridLists/grid4',
 };
 // @meta-end

@@ -136,6 +136,8 @@ function Grid1() {
 // @meta-start
 Grid1.meta = {
     title: 'Grid 1',
+    name:'Grid1',
+    category:'GridLists',
     path: '/GridLists/grid1',
 };
 // @meta-end
