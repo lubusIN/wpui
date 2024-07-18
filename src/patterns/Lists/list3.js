@@ -8,6 +8,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
 
 /**
@@ -16,10 +17,10 @@ import {
 function List3() {
 
     const users = [
-        { name: 'David K. Williams', email: 'david@gmail.com' },
-        { name: 'Jeramy D. Johnson', email: 'jeramy@gmail.com' },
-        { name: 'Diane C. Cotter', email: 'diane@gmail.com' },
-        { name: 'Cody I. Curran', email: 'cody@gmail.com' },
+        { name: 'Rahul Sharma', email: 'rahulsharma@gmail.com', avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar3.png' },
+        { name: 'Lalit Rana', email: 'lalitrana@gmail.com', avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar4.png' },
+        { name: 'Anna Morgan', email: 'annamorgan@gmail.com', avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar5.png' },
+        { name: 'Neha Jain', email: 'nehajain@gmail.com', avatar:'https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar6.png' },
     ];
 
     const truncate = {
@@ -37,10 +38,7 @@ function List3() {
                         <>
                             <HStack key={index} spacing={10}>
                                 <HStack spacing={3} alignment="left" expanded={false}>
-                                    <img
-                                        src="https://placehold.co/50"
-                                        style={{ borderRadius: '100%', minWidth: 'auto' }}
-                                    />
+                                <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px" }} />
                                     <VStack spacing={2} style={{ width: '15rem' }}>
                                         <Heading
                                             size={14}
