@@ -65,6 +65,15 @@ div.wpui-column {
     }
 }
 
+iframe{
+    overflow:hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
 /* Docs */
 pre {
     background-color: #f0f0f0;
