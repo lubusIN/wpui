@@ -37,8 +37,15 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     const iframeRef = useRef(null);
     const [height, setHeight] = useState(100);
 
-    const updateHeight = () => setHeight(iframeRef.current.contentWindow.document.body.scrollHeight);
-    let resizePing
+    let resizePing;
+    const updateHeight = () => {
+        if (iframeRef.current) {
+            setHeight(iframeRef.current.contentWindow.document.body.scrollHeight)
+        } else {
+            clearInterval(resizePing)
+        }
+    };
+
 
     const desktop = (
         <ResizableBox
