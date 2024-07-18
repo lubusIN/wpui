@@ -10,6 +10,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
+import { category } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
@@ -37,6 +38,8 @@ function Panel1() {
 // @meta-start
 Panel1.meta = {
     title: 'Panel 1',
+    name:'Panel1',
+    category:'Actionpanels',
     path: '/ActionPanels/panel1',
 };
 // @meta-end

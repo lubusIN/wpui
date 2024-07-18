@@ -177,6 +177,8 @@ function Table2() {
 // @meta-start
 Table2.meta = {
     title: 'Table 2',
+    name:'Table2',
+    category:'Tables',
     path: '/Tables/table2',
 };
 // @meta-end

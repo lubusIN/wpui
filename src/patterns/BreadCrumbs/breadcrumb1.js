@@ -29,6 +29,8 @@ function Breadcrumb1() {
 // @meta-start
 Breadcrumb1.meta = {
     title: 'Breadcrumb 1',
+    name:'Breadcrumb1',
+    category:'Breadcrumbs',
     path: '/BreadCrumbs/breadcrumb1',
 };
 // @meta-end

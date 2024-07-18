@@ -101,6 +101,8 @@ function List4() {
 // @meta-start
 List4.meta = {
     title: 'List 4',
+    name:'List4',
+    category:'Lists',
     path: '/Lists/list4',
 };
 // @meta-end

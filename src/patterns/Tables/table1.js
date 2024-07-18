@@ -151,6 +151,8 @@ function Table1() {
 // @meta-start
 Table1.meta = {
     title: 'Table 1',
+    name:'Table1',
+    category:'Tables',
     path: '/Tables/table1',
 };
 // @meta-end

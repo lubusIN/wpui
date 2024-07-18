@@ -100,6 +100,8 @@ function SignIn2() {
 // @meta-start
 SignIn2.meta = {
     title: 'Sign In 2',
+    name:'SignIn2',
+    category:'SignIn',
     path: '/SignIn/signIn2',
 };
 // @meta-end

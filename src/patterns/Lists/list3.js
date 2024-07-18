@@ -77,6 +77,8 @@ function List3() {
 // @meta-start
 List3.meta = {
     title: 'List 3',
+    name:'List3',
+    category:'Lists',
     path: '/Lists/list3',
 };
 // @meta-end
