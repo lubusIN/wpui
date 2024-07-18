@@ -55,13 +55,14 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         >
             <Card className="wpui-variation-card">
                 <iframe
+                    seamless="seamless"
                     ref={iframeRef}
-                    height={height + 'px'}
+                    height={height + 2 + 'px'} // + 2 to fix pixels cutting off
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
                     style={{
                         border: 'none',
+                        boxSizing: 'border-box',
                         width: '100%',
-                        padding: '0 1px'
                     }}
                     onLoad={() => updateHeight()}
                 />
