@@ -61,7 +61,7 @@ function List4() {
                         <>
                             <HStack key={index} spacing={10}>
                                 <HStack spacing={3} alignment="left" expanded={false}>
-                                    <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px" }} />
+                                    <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px", minWidth:"45px" }} />
                                     <VStack spacing={2} style={{ width: '40rem' }}>
                                         <Heading
                                             size={14}
