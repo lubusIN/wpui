@@ -7,6 +7,12 @@
     <link rel="icon" type="svg" href="/favicon.svg">
     <title>WPUI: UI patterns with WordPress components</title>
 
+    <!-- Preload critical stylesheets -->
+    <link rel="preload" href="https://rsms.me/inter/inter.css" as="style">
+    <link rel="preload" href="./build/index.css" as="style">
+    <link rel="preload" href="./build/style-index.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@icon/dashicons@0.9.0-alpha.4/dashicons.min.css" as="style">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -14,14 +20,15 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
     <link rel="mask-icon" href="/favicon.svg" color="#5bbad5">
 
-    <link as="style" crossorigin rel="stylesheet preload" href="https://rsms.me/inter/inter.css">
-    <link as="style" crossorigin rel="stylesheet preload" href="./build/index.css">
-    <link as="style" crossorigin rel="stylesheet preload" href="./build/style-index.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="./build/index.css">
+    <link rel="stylesheet" href="./build/style-index.css">
     <link href="https://cdn.jsdelivr.net/npm/@icon/dashicons@0.9.0-alpha.4/dashicons.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="root"></div>
+    <link rel="preload" href="./build/index.js" as="script">
     <script src="./build/index.js"></script>
 
     <script>
