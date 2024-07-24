@@ -2,6 +2,8 @@
  * External dependencies.
  */
 import { Link } from "react-router-dom";
+import React from "react";
+import { useState } from "react";
 
 /**
  * WordPress dependencies.
@@ -21,10 +23,30 @@ import {
  */
 import './style.scss'
 
+const handleClick = () => {
+    console.log("hnjuhik");
+    alert("hello")
+}
+const handleClick2 = (name) => {
+    console.log("Hello " + name);
+}
+
+
+
+
+
+
+
 /**
  * Render Banner
- */
+*/
 function Banner() {
+    const [name, setName] = useState('wpui');
+    const [age, setage] = useState(10);
+    const handleClickU = () => {
+        setName('change');
+        setage(20);
+    }
     return (
         <Card className="wpui-hero-Section" isBorderless>
             <CardBody className="wpui-hero-cont">
@@ -35,7 +57,7 @@ function Banner() {
                             Build Your React Powered WordPress Plugin Or App With Speed.
                         </Heading>
                         <Text size={16} align="left" color="white" lineHeight={1.5}>
-                        WPUI is a design pattern library built upon WordPress components which gives you the building blocks you need to build your react-powered WordPress plugin or app. Spend less time on UI and more time building your idea.
+                            WPUI is a design pattern library built upon WordPress components which gives you the building blocks you need to build your react-powered WordPress plugin or app. Spend less time on UI and more time building your idea.
                         </Text>
                     </VStack>
                     <HStack className="wpui-hero-cta" alignment="center" justify="left">
@@ -48,13 +70,34 @@ function Banner() {
                             Join discussion
                         </Button>
                         <Link to="getting-started">
-                        <Button
-                            style={{ border: '1.5px solid #ffffff'}}
+                            <Button
+                                style={{ border: '1.5px solid #ffffff' }}
+                                iconSize={20}
+                            >
+                                Getting started
+                            </Button>
+                        </Link>
+                        <Button onClick={handleClick}
+                            style={{ border: '1.5px solid #ffffff' }}
                             iconSize={20}
                         >
-                            Getting started
+                            PS
                         </Button>
-                        </Link>
+                        <Button onClick={() => {
+                            handleClick2("Lubus")
+                        }}
+                            style={{ border: '1.5px solid #ffffff' }}
+                            iconSize={20}
+                        >
+                            PS2
+                        </Button>
+                        <Button onClick={handleClickU}
+                            style={{ border: '1.5px solid #ffffff' }}
+                            iconSize={20}
+                        >
+                            usestate
+                        </Button>
+                        <h1 style={{background:"white"}}>{name} and {age}</h1>
                     </HStack>
                 </VStack>
             </CardBody>
