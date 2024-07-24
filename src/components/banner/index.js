@@ -1,7 +1,7 @@
 /**
  * External dependencies.
  */
-import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * WordPress dependencies.
@@ -20,9 +20,10 @@ import {
  * Internal dependencies.
  */
 import './style.scss'
+
 /**
  * Render Banner
-*/
+ */
 function Banner() {
     return (
         <Card className="wpui-hero-Section" isBorderless>
@@ -34,7 +35,7 @@ function Banner() {
                             Build Your React Powered WordPress Plugin Or App With Speed.
                         </Heading>
                         <Text size={16} align="left" color="white" lineHeight={1.5}>
-                            WPUI is a design pattern library built upon WordPress components which gives you the building blocks you need to build your react-powered WordPress plugin or app. Spend less time on UI and more time building your idea.
+                        WPUI is a design pattern library built upon WordPress components which gives you the building blocks you need to build your react-powered WordPress plugin or app. Spend less time on UI and more time building your idea.
                         </Text>
                     </VStack>
                     <HStack className="wpui-hero-cta" alignment="center" justify="left">
@@ -47,12 +48,12 @@ function Banner() {
                             Join discussion
                         </Button>
                         <Link to="getting-started">
-                            <Button
-                                style={{ border: '1.5px solid #ffffff' }}
-                                iconSize={20}
-                            >
-                                Getting started
-                            </Button>
+                        <Button
+                            style={{ border: '1.5px solid #ffffff'}}
+                            iconSize={20}
+                        >
+                            Getting started
+                        </Button>
                         </Link>
                     </HStack>
                 </VStack>
