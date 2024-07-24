@@ -1,9 +1,7 @@
 /**
  * External dependencies.
  */
-import { Link } from "react-router-dom";
 import React from "react";
-import { useState } from "react";
 
 /**
  * WordPress dependencies.
@@ -22,31 +20,10 @@ import {
  * Internal dependencies.
  */
 import './style.scss'
-
-const handleClick = () => {
-    console.log("hnjuhik");
-    alert("hello")
-}
-const handleClick2 = (name) => {
-    console.log("Hello " + name);
-}
-
-
-
-
-
-
-
 /**
  * Render Banner
 */
 function Banner() {
-    const [name, setName] = useState('wpui');
-    const [age, setage] = useState(10);
-    const handleClickU = () => {
-        setName('change');
-        setage(20);
-    }
     return (
         <Card className="wpui-hero-Section" isBorderless>
             <CardBody className="wpui-hero-cont">
@@ -77,27 +54,6 @@ function Banner() {
                                 Getting started
                             </Button>
                         </Link>
-                        <Button onClick={handleClick}
-                            style={{ border: '1.5px solid #ffffff' }}
-                            iconSize={20}
-                        >
-                            PS
-                        </Button>
-                        <Button onClick={() => {
-                            handleClick2("Lubus")
-                        }}
-                            style={{ border: '1.5px solid #ffffff' }}
-                            iconSize={20}
-                        >
-                            PS2
-                        </Button>
-                        <Button onClick={handleClickU}
-                            style={{ border: '1.5px solid #ffffff' }}
-                            iconSize={20}
-                        >
-                            usestate
-                        </Button>
-                        <h1 style={{background:"white"}}>{name} and {age}</h1>
                     </HStack>
                 </VStack>
             </CardBody>
