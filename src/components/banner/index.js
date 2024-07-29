@@ -30,7 +30,7 @@ function Banner() {
             <CardBody className="wpui-hero-cont">
                 <VStack spacing={12}>
                     <VStack spacing={5}>
-                        <Text size={15} align="left" color="white">From the house of LUBUS</Text>
+                        <Text className='wpui-lubus' size={15} align="left" color="white">From the house of LUBUS</Text>
                         <Heading size={40} align="left" color="white" lineHeight={1.3} weight={500}>
                             Build Your React Powered WordPress Plugin Or App With Speed.
                         </Heading>

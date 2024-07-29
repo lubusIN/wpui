@@ -1,5 +1,6 @@
 .wpui-header {
     padding: 12px 3vw;
+    background-color:#1f1f1f !important;
 
     a {
         text-decoration: none;
@@ -9,4 +10,7 @@
 
 .wpui-site-logo {
     margin-top: 2.3px;
+    margin-left: 30px !important;
+    display: flex;
+    gap: 5px;
 }

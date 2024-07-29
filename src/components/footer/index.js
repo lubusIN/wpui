@@ -17,6 +17,7 @@ import {
  * Internal dependencies.
  */
 import './style.scss'
+import { Flag,Logo } from '../../components'
 
 const date = new Date();
 let Year = date.getFullYear();
@@ -30,7 +31,7 @@ function Footer() {
             <CardBody>
                 <VStack className="sec-1" alignment="center" spacing={4}>
                     <HStack expanded={false}>
-                        <img width='25px' src='https://raw.githubusercontent.com/lubusIN/wpui/19be18fb1ed5a50a79bd08ac4ee28691abf88b52/favicon.svg'></img>
+                        <Logo />
                         <Heading color='white'>WPUI</Heading>
                     </HStack>
                     <Text size={20} align="center" weight={400} lineHeight={1.5} color='white'>
@@ -44,10 +45,10 @@ function Footer() {
             <CardDivider style={{ backgroundColor: '#ffffff4f' }} />
             <CardBody>
                 <HStack>
-                    <Text color='white'>&copy; {Year} WPUI. All Right Reserved</Text>
+                    <Text color='white'>&copy; {Year} WPUI. All Rights Reserved.</Text>
                     <HStack expanded={false}>
                         <Text color='white'>Made in India</Text>
-                        <img width='20px' src='https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Flag_of_India.svg.png'></img>
+                        <Flag />
                     </HStack>
                 </HStack>
             </CardBody>
