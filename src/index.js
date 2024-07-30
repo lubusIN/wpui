@@ -27,7 +27,9 @@ const root = ReactDom.createRoot(document.getElementById('root'))
 if (mode) {
     const Pattern = Patterns[category][pattern];
     root.render(
-        <Pattern />
+        <div class="wpui-pattern-embed">
+            <Pattern />
+        </div>
     )
 } else {
     root.render(
