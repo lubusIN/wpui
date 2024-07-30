@@ -40,8 +40,6 @@ function Header() {
                 }
             };
             window.addEventListener('scroll', handleScroll);
-
-            // Cleanup function
             return () => window.removeEventListener('scroll', handleScroll);
         }
     }, [location.pathname]);
