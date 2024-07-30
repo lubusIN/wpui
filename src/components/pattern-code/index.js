@@ -21,7 +21,7 @@ import { ContentLoader, CopyButton } from '../index';
 /**
  * Render Pattern Code
  */
-function PatternCode({ path }) {
+function PatternCode({ path, style }) {
     const [isLoading, setIsLoading] = useState(false);
     const [patternCode, setPatternCode] = useState('');
 
@@ -32,12 +32,10 @@ function PatternCode({ path }) {
 
     const fetchCode = async (path) => {
         try {
-            const response = await fetch(`/src/patterns${path}.js`);
-            if (!response.ok) {
-                throw new Error('Failed to fetch file');
-            }
+            const content = await import(/* webpackPrefetch: true */
+                `!!raw-loader!/src/patterns${path}.js`)
+              .then((pattern) => pattern.default);
 
-            const content = await response.text();
             const codeText = content.replace(/^\s*\/\/ @meta-start[\s\S]*?\/\/ @meta-end\s*$/gm, '');
             setPatternCode(codeText);
         } catch (error) {
@@ -48,7 +46,7 @@ function PatternCode({ path }) {
     };
 
     return (
-        <VStack style={{ position: 'relative' }}>
+        <VStack style={{ position: 'relative', ...style }}>
             {isLoading && <div ><ContentLoader /></div>}
 
             {!isLoading &&

@@ -16,28 +16,6 @@ body {
     width: 50%;
 }
 
-.resize_cont {
-    .components-resizable-box__handle-right {
-        cursor: ew-resize !important;
-
-        &:after {
-            background: #94a3b8;
-            border: 0;
-            border-radius: 4px;
-            box-shadow: none;
-            height: 35px;
-            right: calc(50% - 14px);
-            top: 50%;
-            transform: translateY(-50%);
-            width: 6px;
-        }
-
-        &:before {
-            display: none !important;
-        }
-    }
-}
-
 .wpui-com-page,
 .wpui-lcont {
     margin: auto;
@@ -143,3 +121,4 @@ pre {
         margin: 0%;
     }
 }
+

@@ -71,6 +71,8 @@ function Grid3() {
 // @meta-start
 Grid3.meta = {
     title: 'Grid 3',
+    name:'Grid3',
+    category:'GridLists',
     path: '/GridLists/grid3',
 };
 // @meta-end
