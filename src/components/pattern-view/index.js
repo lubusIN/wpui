@@ -104,7 +104,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     </HStack>
                 </HStack>
                 {isMobile ? desktop : mobile}
-                {view === 'code' && <PatternCode path={path} />}
+                <PatternCode path={path} style={view === 'preview' ? { display: 'none' } : {}}/>
             </VStack>
         </>
     );
