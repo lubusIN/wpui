@@ -55,6 +55,8 @@ function Stats3() {
 // @meta-start
 Stats3.meta = {
     title: 'Stats 3',
+    name:'Stats3',
+    category:'Stats',
     path: '/Stats/stats3',
 };
 // @meta-end

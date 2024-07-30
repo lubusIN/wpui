@@ -103,6 +103,8 @@ function List2() {
 // @meta-start
 List2.meta = {
     title: 'List 2',
+    name:'List2',
+    category:'Lists',
     path: '/Lists/list2',
 };
 // @meta-end

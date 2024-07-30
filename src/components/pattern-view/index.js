@@ -1,12 +1,13 @@
 /**
  * External dependencies.
  */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 /**
  * WordPress dependencies.
  */
 import { __ } from '@wordpress/i18n';
+import { useViewportMatch } from '@wordpress/compose';
 import {
     code,
     seen
@@ -19,7 +20,6 @@ import {
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
-    Disabled,
 } from "@wordpress/components";
 
 /**
@@ -27,30 +27,59 @@ import {
  */
 import { PatternCode } from '../index';
 import './style.scss'
-import { useViewportMatch } from '@wordpress/compose';
 
 /**
  * Render Pattern View
 */
-
-function PatternView({ title, path, component: Pattern }) {
+function PatternView({ title, name, category, path, component: Pattern }) {
     const [view, setView] = useState('preview');
     const isMobile = useViewportMatch('mobile');
+    const iframeRef = useRef(null);
+    const [height, setHeight] = useState(100);
+
+    let resizePing;
+    const updateHeight = () => {
+        if (iframeRef.current) {
+            setHeight(iframeRef.current.contentWindow.document.body.scrollHeight)
+        } else {
+            clearInterval(resizePing)
+        }
+    };
 
     const desktop = (
         <ResizableBox
+            style={view === 'code' ? { display: 'none' } : {}}
             maxWidth={1350}
             minWidth={360}
             enable={{ right: true }}
+            onResizeStop={() => {
+                updateHeight();
+                clearInterval(resizePing)
+            }}
+            onResizeStart={() => resizePing = setInterval(() => {
+                updateHeight();
+            }, 10)}
         >
             <Card className="wpui-variation-card">
-                <Pattern />
+                <iframe
+                    loading='lazy'
+                    seamless={true}
+                    ref={iframeRef}
+                    height={height + 3 + 'px'} // + 3 to fix pixels cutting off
+                    src={`/?mode=embed&category=${category}&pattern=${name}`}
+                    style={{
+                        border: 'none',
+                        boxSizing: 'border-box',
+                        width: '100%',
+                    }}
+                    onLoad={() => updateHeight()}
+                />
             </Card>
-        </ResizableBox>
+        </ResizableBox >
     );
 
     const mobile = (
-        <Card className="wpui-variation-card">
+        <Card className="wpui-variation-card" style={view === 'code' ? { display: 'none' } : {}}>
             <Pattern />
         </Card>
     );
@@ -74,10 +103,8 @@ function PatternView({ title, path, component: Pattern }) {
                         </ToggleGroupControl>
                     </HStack>
                 </HStack>
-                {
-                    view === 'preview' && (isMobile ? desktop : mobile)
-                }
-                {view === 'code' && <PatternCode path={path} />}
+                {isMobile ? desktop : mobile}
+                <PatternCode path={path} style={view === 'preview' ? { display: 'none' } : {}}/>
             </VStack>
         </>
     );
