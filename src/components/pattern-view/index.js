@@ -46,9 +46,9 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         }
     };
 
-
     const desktop = (
         <ResizableBox
+            style={view === 'code' ? { display: 'none' } : {}}
             maxWidth={1350}
             minWidth={360}
             enable={{ right: true }}
@@ -79,7 +79,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     );
 
     const mobile = (
-        <Card className="wpui-variation-card">
+        <Card className="wpui-variation-card" style={view === 'code' ? { display: 'none' } : {}}>
             <Pattern />
         </Card>
     );
@@ -103,9 +103,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                         </ToggleGroupControl>
                     </HStack>
                 </HStack>
-                {
-                    view === 'preview' && (isMobile ? desktop : mobile)
-                }
+                {isMobile ? desktop : mobile}
                 {view === 'code' && <PatternCode path={path} />}
             </VStack>
         </>
