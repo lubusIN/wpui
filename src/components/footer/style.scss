@@ -30,9 +30,13 @@
 
 @media only screen and (max-width:360px) {
 .wpui-footer-bottoml{
-    margin-left: -15px !important;
+    margin-left: 0px !important;
 }
 .wpui-footer-bottomr{
-    margin-right: -15px !important;
+    margin-right: 0px !important;
+}
+.wpui-footer-bottom{
+    display: flex;
+    flex-direction: column !important;
 }
 }

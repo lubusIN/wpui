@@ -1,6 +1,7 @@
 /**
  * External dependencies.
  */
+
 import { Link } from "react-router-dom";
 
 /**
@@ -19,7 +20,7 @@ import {
 /**
  * Internal dependencies.
  */
-import './style.scss'
+import './style.scss';
 
 /**
  * Render Banner
@@ -38,7 +39,7 @@ function Banner() {
                             WPUI is a design pattern library built upon WordPress components which gives you the building blocks you need to build your react-powered WordPress plugin or app. Spend less time on UI and more time building your idea.
                         </Text>
                     </VStack>
-                    <HStack className="wpui-hero-cta" alignment="center" justify="left">
+                    <HStack className='wpui-hero-cta' alignment="center" justify="left">
                         <Link to="getting-started">
                             <Button
                                 variant="primary"
@@ -58,6 +59,6 @@ function Banner() {
             </CardBody>
         </Card>
     );
-};
+}
 
 export default Banner;

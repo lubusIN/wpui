@@ -1,14 +1,4 @@
-/**
- * External dependencies.
- */
-import React from 'react'
-
-/**
- *  Render Logo
- */
-function Logo() {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width='100px' height='30px' id="Layer_2" data-name="Layer 2" viewBox="0 0 357.68 95.12">
+<svg xmlns="http://www.w3.org/2000/svg" width='100px' height='30px' id="Layer_2" data-name="Layer 2" viewBox="0 0 357.68 95.12">
             <g id="Layer_1-2" data-name="Layer 1">
                 <g>
                     <rect className="cls-2" fill="#3858e9" width="93.73" height="93.73" rx="19.38" ry="19.38" />
@@ -22,7 +12,3 @@ function Logo() {
                 </g>
             </g>
         </svg>
-    )
-}
-
-export default Logo

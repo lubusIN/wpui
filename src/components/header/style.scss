@@ -1,10 +1,14 @@
 .wpui-header {
     padding: 12px 3vw;
     background-color:#1f1f1f !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 10;
 
     a {
         text-decoration: none;
         margin-left: 12px;
+        color: antiquewhite;
     }
 }
 
@@ -14,3 +18,14 @@
     display: flex;
     gap: 5px;
 }
+
+.none{
+    display: none;
+}
+
+@media only screen and (max-width:480px) {
+    .wpui-site-logo{
+        margin-left: -5px !important;
+    }
+}
+
