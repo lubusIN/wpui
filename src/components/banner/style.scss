@@ -1,8 +1,18 @@
 .wpui-lubus{
     background-color: rgba(78, 78, 78, 0.38);
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 10px;
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
     max-width: fit-content;
+}
+
+.wpui-hero-card{
+    width: 90%;
+}
+
+@media only screen and (max-width:360px) {
+    .wpui-hero-card{
+        width: 100%;
+    }
 }

@@ -18,3 +18,21 @@
 .btn{
     color: aliceblue;
 }
+
+.wpui-footer-bottoml{
+    margin-left: 100px !important;
+    
+}
+.wpui-footer-bottomr{
+    margin-right: 100px !important;
+
+}
+
+@media only screen and (max-width:360px) {
+.wpui-footer-bottoml{
+    margin-left: -15px !important;
+}
+.wpui-footer-bottomr{
+    margin-right: -15px !important;
+}
+}

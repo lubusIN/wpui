@@ -17,7 +17,7 @@ import {
  * Internal dependencies.
  */
 import './style.scss'
-import { Flag,Logo } from '../../components'
+import { Flag, Logo } from '../../components'
 
 const date = new Date();
 let Year = date.getFullYear();
@@ -43,10 +43,10 @@ function Footer() {
                 </VStack>
             </CardBody>
             <CardDivider style={{ backgroundColor: '#ffffff4f' }} />
-            <CardBody>
-                <HStack>
-                    <Text color='white'>&copy; {Year} WPUI. All Rights Reserved.</Text>
-                    <HStack expanded={false}>
+            <CardBody style={{ padding: '20px' }}>
+                <HStack >
+                    <Text className='wpui-footer-bottoml' color='white'>&copy; {Year} WPUI. All Rights Reserved.</Text>
+                    <HStack expanded={false} spacing={1}  className='wpui-footer-bottomr'>
                         <Text color='white'>Made in India</Text>
                         <Flag />
                     </HStack>
