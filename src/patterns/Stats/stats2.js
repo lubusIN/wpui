@@ -106,6 +106,8 @@ function Stats2() {
 // @meta-start
 Stats2.meta = {
     title: 'Stats 2',
+    name:'Stats2',
+    category:'Stats',
     path: '/Stats/stats2',
 };
 // @meta-end

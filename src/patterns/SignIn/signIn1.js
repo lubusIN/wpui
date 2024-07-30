@@ -55,6 +55,8 @@ function SignIn1() {
 // @meta-start
 SignIn1.meta = {
     title: 'Sign In 1',
+    name:'SignIn1',
+    category:'SignIn',
     path: '/SignIn/signIn1',
 };
 // @meta-end

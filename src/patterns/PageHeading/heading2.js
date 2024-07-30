@@ -40,6 +40,8 @@ function Heading2() {
 // @meta-start
 Heading2.meta = {
     title: 'Heading 2',
+    name:'Heading2',
+    category:'PageHeading',
     path: '/PageHeading/heading2',
 };
 // @meta-end
