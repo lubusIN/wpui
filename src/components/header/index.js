@@ -29,6 +29,7 @@ function Header() {
 
     const location = useLocation();
     const [newClass, setNewClass] = useState('none');
+    const [header, setheader] = useState('wpui-header')
 
     useEffect(() => {
         if (location.pathname === '/') {
@@ -42,15 +43,18 @@ function Header() {
             window.addEventListener('scroll', handleScroll);
             return () => window.removeEventListener('scroll', handleScroll);
         }
+        if (location.pathname != '/') {
+            setheader('not-sticky')
+        }
     }, [location.pathname]);
 
     return (
-        <Card className="wpui-header" isBorderless borderBottom>
+        <Card className={header} isBorderless borderBottom>
             <HStack>
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
-                <HStack expanded={false}>
+                <HStack justify="center" className='wpui-header-button'>
                     <Link className={newClass} to="getting-started">
                         <Button
                             variant="primary"

@@ -11,6 +11,19 @@
         color: antiquewhite;
     }
 }
+.not-sticky {
+    padding: 12px 3vw;
+    background-color:#1f1f1f !important;
+    a {
+        text-decoration: none;
+        margin-left: 12px;
+        color: antiquewhite;
+    }
+}
+
+.wpui-header-button{
+    margin-right: 166px;
+}
 
 .wpui-site-logo {
     margin-top: 2.3px;
@@ -26,6 +39,9 @@
 @media only screen and (max-width:480px) {
     .wpui-site-logo{
         margin-left: -5px !important;
+    }
+    .wpui-header-button{
+        margin-right: -5px;
     }
 }
 
