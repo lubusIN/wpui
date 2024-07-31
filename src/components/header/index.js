@@ -32,7 +32,7 @@ function Header() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (location.pathname === '/' && window.scrollY > 550) {
+            if (location.pathname === '/' && window.scrollY > 583) {
                 setNewClass('');
             } else {
                 setNewClass('none');
