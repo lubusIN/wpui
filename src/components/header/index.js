@@ -42,11 +42,10 @@ function Header() {
             };
             window.addEventListener('scroll', handleScroll);
             return () => window.removeEventListener('scroll', handleScroll);
-        }
-        if (location.pathname != '/') {
+        } else {
             setheader('not-sticky')
         }
-    }, [location.pathname]);
+    }, [location]);
 
     return (
         <Card className={header} isBorderless borderBottom>
