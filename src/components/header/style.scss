@@ -7,7 +7,6 @@
 
     a {
         text-decoration: none;
-        margin-left: 12px;
         color: antiquewhite;
     }
 }
@@ -22,12 +21,12 @@
 }
 
 .wpui-header-button{
-    margin-right: 166px;
+    margin-right: 4.5%;
 }
 
 .wpui-site-logo {
     margin-top: 2.3px;
-    margin-left: 30px !important;
+    margin-left: 4% !important;
     display: flex;
     gap: 5px;
 }
@@ -41,7 +40,8 @@
         margin-left: -5px !important;
     }
     .wpui-header-button{
-        margin-right: -5px;
+        margin-right: 0px;
+        gap: 30px !important;
     }
 }
 

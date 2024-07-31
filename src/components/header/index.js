@@ -54,7 +54,7 @@ function Header() {
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
-                <HStack justify="center" className='wpui-header-button'>
+                <HStack expanded={false} className='wpui-header-button'>
                     <Link className={newClass} to="getting-started">
                         <Button
                             variant="primary"
