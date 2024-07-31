@@ -20,32 +20,42 @@ import {
  * Internal dependencies.
  */
 import Logo from '../logo';
-import './style.scss'
+import './style.scss';
 
 /**
  * Render Header
  */
 function Header() {
-
     const location = useLocation();
     const [newClass, setNewClass] = useState('none');
-    const [header, setheader] = useState('wpui-header')
+    const [header, setHeader] = useState('wpui-header');
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (location.pathname === '/' && window.scrollY > 550) {
+                setNewClass('');
+            } else {
+                setNewClass('none');
+            }
+        };
+
+        if (location.pathname === '/') {
+            window.addEventListener('scroll', handleScroll);
+            handleScroll();
+
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [location.pathname]);
 
     useEffect(() => {
         if (location.pathname === '/') {
-            const handleScroll = () => {
-                if (window.scrollY > 550) {
-                    setNewClass('');
-                } else {
-                    setNewClass('none');
-                }
-            };
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
+            setHeader('wpui-header');
         } else {
-            setheader('not-sticky')
+            setHeader('not-sticky');
         }
-    }, [location]);
+    }, [location.pathname]);
 
     return (
         <Card className={header} isBorderless borderBottom>
