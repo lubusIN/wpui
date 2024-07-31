@@ -20,7 +20,7 @@ import './style.scss'
 import { Flag, Logo } from '../../components'
 
 const date = new Date();
-let Year = date.getFullYear();
+const Year = date.getFullYear();
 
 /**
  * Render Footer
@@ -29,7 +29,7 @@ function Footer() {
     return (
         <Card className="wpui-footer" size="large" isBorderless>
             <CardBody>
-                <VStack className="sec-1" alignment="center" spacing={4}>
+                <VStack className="footer-content" alignment="center" spacing={4}>
                     <HStack expanded={false}>
                         <Logo />
                     </HStack>
@@ -44,8 +44,8 @@ function Footer() {
             <CardDivider style={{ backgroundColor: '#ffffff4f' }} />
             <CardBody style={{ padding: '20px' }}>
                 <HStack className='wpui-footer-bottom'>
-                    <Text className='wpui-footer-bottoml' color='white'>&copy; {Year} WPUI. All Rights Reserved.</Text>
-                    <HStack expanded={false} spacing={1}  className='wpui-footer-bottomr'>
+                    <Text className='wpui-footer-bottom-left' color='white'>&copy; {Year} WPUI. All Rights Reserved.</Text>
+                    <HStack expanded={false} spacing={1}  className='wpui-footer-bottom-right'>
                         <Text color='white'>Made in India</Text>
                         <Flag />
                     </HStack>

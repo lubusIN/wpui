@@ -1,9 +1,8 @@
 /**
  * External dependencies.
  */
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
 
 /**
  * WordPress dependencies.
