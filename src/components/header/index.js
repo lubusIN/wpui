@@ -25,20 +25,23 @@ import './style.scss';
  * Render Header
  */
 function Header() {
-    const {pathname} = useLocation();
-    const [newClass, setNewClass] = useState('');
+    const { pathname } = useLocation();
+    const [showButtons, setShowButton] = useState('none');
     const headerClass = pathname === '/' ? 'wpui-header' : 'not-sticky';
 
     useEffect(() => {
-        const isHome = pathname === '/';
-        isHome ? setNewClass('none') : setNewClass('');
-        const handleScroll = () => { console.log(pathname);
-            const showButtons = pathname == '/' && window.scrollY > 583;
-            showButtons ? setNewClass('') : (console.log('test'),setNewClass('none'));
-        };
+        const observer = new IntersectionObserver(entries => {
+            const showButtons = entries[0].isIntersecting;
+            setShowButton(showButtons ? 'none' : '');
+        })
 
-
-        pathname == '/' ? window.addEventListener('scroll', handleScroll) : window.removeEventListener('scroll', handleScroll);
+        if (pathname === '/') {
+            setShowButton('none');
+            observer.observe(document.querySelector('.wpui-hero-card'));
+        }
+        else {
+            setShowButton('');
+        }
     }, [pathname]);
 
     return (
@@ -47,7 +50,7 @@ function Header() {
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
-                <HStack expanded={false} style={{  }} className={`wpui-header-button ${newClass}`}>
+                <HStack expanded={false} style={{  }} className={`wpui-header-button ${showButtons}`}>
                     <Link  to="getting-started">
                         <Button
                             variant="primary"
