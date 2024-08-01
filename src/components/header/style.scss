@@ -31,7 +31,7 @@
 }
 
 .none{
-    display: none;
+    display: none !important;
 }
 
 @media only screen and (max-width:480px) {

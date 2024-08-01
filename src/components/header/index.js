@@ -25,45 +25,30 @@ import './style.scss';
  * Render Header
  */
 function Header() {
-    const location = useLocation();
-    const [newClass, setNewClass] = useState('none');
-    const [header, setHeader] = useState('wpui-header');
+    const {pathname} = useLocation();
+    const [newClass, setNewClass] = useState('');
+    const headerClass = pathname === '/' ? 'wpui-header' : 'not-sticky';
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (location.pathname === '/' && window.scrollY > 583) {
-                setNewClass('');
-            } else {
-                setNewClass('none');
-            }
+        const isHome = pathname === '/';
+        isHome ? setNewClass('none') : setNewClass('');
+        const handleScroll = () => { console.log(pathname);
+            const showButtons = pathname == '/' && window.scrollY > 583;
+            showButtons ? setNewClass('') : (console.log('test'),setNewClass('none'));
         };
 
-        if (location.pathname === '/') {
-            window.addEventListener('scroll', handleScroll);
-            handleScroll();
 
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
-    }, [location.pathname]);
-
-    useEffect(() => {
-        if (location.pathname === '/') {
-            setHeader('wpui-header');
-        } else {
-            setHeader('not-sticky');
-        }
-    }, [location.pathname]);
+        pathname == '/' ? window.addEventListener('scroll', handleScroll) : window.removeEventListener('scroll', handleScroll);
+    }, [pathname]);
 
     return (
-        <Card className={header} isBorderless borderBottom>
+        <Card className={headerClass} isBorderless borderBottom>
             <HStack>
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
-                <HStack expanded={false} className='wpui-header-button'>
-                    <Link className={newClass} to="getting-started">
+                <HStack expanded={false} style={{  }} className={`wpui-header-button ${newClass}`}>
+                    <Link  to="getting-started">
                         <Button
                             variant="primary"
                             style={{ backgroundColor: '#3858E9' }}
@@ -72,7 +57,7 @@ function Header() {
                         </Button>
                     </Link>
                     <Button
-                        className={newClass}
+                        
                         style={{ border: '1.5px solid #ffffff' }}
                         href='https://github.com/lubusIN/wpui/discussions'
                         color="white"
