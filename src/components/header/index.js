@@ -11,7 +11,6 @@ import { __ } from '@wordpress/i18n';
 import {
     Card,
     Button,
-    __experimentalHeading as Heading,
     __experimentalHStack as HStack,
 } from "@wordpress/components";
 
@@ -50,7 +49,7 @@ function Header() {
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
-                <HStack expanded={false} style={{  }} className={`wpui-header-button ${showButtons}`}>
+                <HStack expanded={false} className={`wpui-header-button ${showButtons}`}>
                     <Link  to="getting-started">
                         <Button
                             variant="primary"
@@ -61,9 +60,8 @@ function Header() {
                     </Link>
                     <Button
                         
-                        style={{ border: '1.5px solid #ffffff' }}
+                        style={{ border: '1.5px solid #ffffff', color:'white'}}
                         href='https://github.com/lubusIN/wpui/discussions'
-                        color="white"
                     >
                         Join discussion
                     </Button>

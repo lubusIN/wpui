@@ -4,19 +4,11 @@
     position: sticky !important;
     top: 0;
     z-index: 10;
-
-    a {
-        text-decoration: none;
-        color: antiquewhite;
-    }
 }
+
 .not-sticky {
     padding: 12px 3vw;
     background-color:#1f1f1f !important;
-    a {
-        text-decoration: none;
-        color: antiquewhite;
-    }
 }
 
 .wpui-header-button{
