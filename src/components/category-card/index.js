@@ -25,24 +25,26 @@ function CategoryCard({ thumbnail: Thumbnail, title, path, patterns }) {
     return (
         <VStack className="wpui-preview">
             <Link className="wpui-card-link" to={path}>
-                <Card className="wpui-card-preview" size="large" isBorderless >
-                    <Thumbnail />
-                </Card>
-                <VStack spacing={0}>
-                    <Heading
-                        adjustLineHeightForInnerControls="small"
-                        align="left"
-                        level={4}
-                        weight={500}
-                    >
-                        {title}
-                    </Heading>
-                    <Text align="left" size={13} weight={400} color="grey">
-                        {`${Object.keys(patterns).length} components`}
-                    </Text>
+                <VStack>
+                    <Card className="wpui-card-preview" size="large" isBorderless >
+                        <Thumbnail />
+                    </Card>
+                    <VStack spacing={0}>
+                        <Heading
+                            adjustLineHeightForInnerControls="small"
+                            align="left"
+                            level={3}
+                            weight={500}
+                        >
+                            {title}
+                        </Heading>
+                        <Text align="left" size={13} weight={400} color="grey">
+                            {`${Object.keys(patterns).length} components`}
+                        </Text>
+                    </VStack>
                 </VStack>
             </Link>
-        </VStack>
+        </VStack >
     );
 }
 
