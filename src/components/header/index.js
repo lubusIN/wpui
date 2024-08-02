@@ -50,15 +50,11 @@ function Header() {
                 </Link>
                 <HStack expanded={false} className={`wpui-header-button ${showButtons}`}>
                     <Link  to="getting-started">
-                        <Button
-                            variant="primary"
-                            style={{ backgroundColor: '#3858E9' }}
-                        >
+                        <Button variant="primary">
                             Getting started
                         </Button>
                     </Link>
                     <Button
-                        
                         style={{ border: '1.5px solid #ffffff', color:'white'}}
                         href='https://github.com/lubusIN/wpui/discussions'
                     >
