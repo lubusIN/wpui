@@ -1,7 +1,6 @@
 /**
  * External dependencies.
  */
-
 import { Link } from "react-router-dom";
 
 /**

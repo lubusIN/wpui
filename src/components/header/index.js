@@ -1,9 +1,8 @@
 /**
  * External dependencies.
  */
-import { Link, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-
+import { Link, useLocation } from "react-router-dom";
 /**
  * WordPress dependencies.
  */
@@ -17,8 +16,8 @@ import {
 /**
  * Internal dependencies.
  */
-import Logo from '../logo';
 import './style.scss';
+import Logo from '../logo';
 
 /**
  * Render Header
