@@ -14,3 +14,4 @@ export * as GridLists  from './GridLists';
 export * as Lists  from './Lists';
 export * as Tables  from './Tables';
 export * as Navigations  from './Navigations';
+export * as NewPatterns  from './new-patterns';
