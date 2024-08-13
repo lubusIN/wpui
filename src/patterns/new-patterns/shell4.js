@@ -10,7 +10,7 @@ import {
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { trendingUp, } from "@wordpress/icons";
+import { trendingUp } from "@wordpress/icons";
 
 /**
  * Render Subscription Shell
@@ -25,37 +25,19 @@ function Shell4() {
                 </HStack>
             </CardHeader>
             <CardBody style={{ display: 'flex', justifyContent: 'center' }}>
-                <TabPanel
-                    className="my-tab-panel"
-                    tabs={[
-                        {
-                            name: 'tab1',
-                            title: 'Settings',
-                        },
-                        {
-                            name: 'tab2',
-                            title: 'Addons',
-                        },
-                        {
-                            name: 'tab3',
-                            title: 'License',
-                        },
-                        {
-                            name: 'tab4',
-                            title: 'Support',
-                        },
-                    ]}
-                >
-                    {(tab) => <div></div>}
-                </TabPanel>
+                <HStack expanded={false} spacing={50} style={{border:'1px solid black'}}>
+                    <Button>Settings</Button>
+                    <Button>Addons</Button>
+                    <Button>License</Button>
+                    <Button>Support</Button>
+                </HStack>
             </CardBody>
-            <CardBody style={{ padding: '100px' }}>
-                {/* Display Your Content Here */}
+             <CardBody style={{ padding: "100px" }}>
+                {/*Display Your Content Here*/}
             </CardBody>
         </Card>
     );
 }
-
 
 // @meta-start
 Shell4.meta = {

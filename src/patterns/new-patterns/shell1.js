@@ -24,7 +24,6 @@ function Shell1() {
                 <HStack>
                     <Heading size={20}>WPUI</Heading>
                     <TabPanel
-                        className="my-tab-panel"
                         tabs={[
                             {
                                 name: 'tab1',

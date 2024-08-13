@@ -17,15 +17,15 @@ import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons"
 function Shell2() {
     return (
         <Card>
-            <CardHeader>
+            <CardHeader >
                 <HStack>
                     <Heading size={20}>WPUI</Heading>
-                    <HStack expanded={false} spacing={5}>
-                    <Button icon={home}>Dashboard</Button>
-                    <Button icon={cog}>Settings</Button>
-                    <Button icon={plugins}>Addons</Button>
-                    <Button icon={key}>License</Button>
-                    <Button icon={external}>Support</Button>
+                    <HStack expanded={false} spacing={5} className='btn'>
+                        <Button icon={home}>Dashboard</Button>
+                        <Button icon={cog}>Settings</Button>
+                        <Button icon={plugins}>Addons</Button>
+                        <Button icon={key}>License</Button>
+                        <Button icon={external}>Support</Button>
                     </HStack>
                     <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
                 </HStack>
@@ -36,6 +36,7 @@ function Shell2() {
         </Card>
     );
 }
+
 
 
 // @meta-start
