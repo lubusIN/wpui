@@ -86,7 +86,7 @@ Shell6.meta = {
     title: 'Shell 6',
     name: 'Shell6',
     category: 'NewPatterns',
-    path: '/new-patterns/s  hell6'
+    path: '/new-patterns/shell6'
 };
 // @meta-end
 
