@@ -32,7 +32,7 @@ function Buttons() {
 }
 
 /**
- * Render Subscription Shell
+ * Render Shell 2
  */
 function Shell2() {
     const isMobile = !useViewportMatch('mobile');

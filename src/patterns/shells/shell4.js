@@ -1,43 +1,90 @@
 /**
+ * Internal dependencies.
+ */
+import React, { useState } from 'react';
+
+/**
  * WordPress dependencies.
  */
 import {
     Card,
+    __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
+    __experimentalHeading as Heading,
+    Button,
     CardHeader,
     CardBody,
-    TabPanel,
-    Button,
-    __experimentalHStack as HStack,
-    __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { trendingUp } from "@wordpress/icons";
+import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons";
 
 /**
- * Render Subscription Shell
+ * Render Shell 4
  */
 function Shell4() {
+    const [component, setComponent] = useState('Dashboard'); // replace string with your component do it with all buttons too this will update component on click
+    const handleButtonClick = (component) => {
+        setComponent(component);
+    };
     return (
-        <Card>
-            <CardHeader>
+        <>
+            <Card style={{ backgroundColor: "black", padding: "5px" }}>
                 <HStack>
-                    <Heading size={20}>WPUI</Heading>
-                    <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
+                    <CardBody style={{paddingBottom:'200px', width:"30%" }}>
+                        <VStack spacing={4}>
+                            <Heading style={{color:'white',marginLeft:'10px'}}>WPUI</Heading>
+                            <VStack expanded={false} spacing={2}>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={home}
+                                    onClick={() => handleButtonClick('Dashboard')}
+                                >
+                                    Dashboard
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={cog}
+                                    onClick={() => handleButtonClick('Settings')}
+                                >
+                                    Settings
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={plugins}
+                                    onClick={() => handleButtonClick('Addons')}
+                                >
+                                    Addons
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={key}
+                                    onClick={() => handleButtonClick('License')}
+                                >
+                                    License
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={external}
+                                    onClick={() => handleButtonClick('Support')}
+                                >
+                                    Support
+                                </Button>
+                            </VStack>
+                        </VStack>
+                    </CardBody>
+                    <CardBody size="large" style={{ height: "500px", width: "100%", backgroundColor:'white' }}>
+                        <HStack className='card'>
+                            <Heading>{component}</Heading>
+                            {/* Display your Component Here */}
+                            <HStack expanded={false}>
+                                <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
+                            </HStack>
+                        </HStack>
+                    </CardBody>
                 </HStack>
-            </CardHeader>
-            <CardBody style={{ display: 'flex', justifyContent: 'center' }}>
-                <HStack expanded={false} spacing={50} style={{border:'1px solid black'}}>
-                    <Button>Settings</Button>
-                    <Button>Addons</Button>
-                    <Button>License</Button>
-                    <Button>Support</Button>
-                </HStack>
-            </CardBody>
-             <CardBody style={{ padding: "100px" }}>
-                {/*Display Your Content Here*/}
-            </CardBody>
-        </Card>
+            </Card>
+        </>
     );
-}
+};
 
 // @meta-start
 Shell4.meta = {

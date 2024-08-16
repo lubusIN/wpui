@@ -15,7 +15,7 @@ import {
 import { home, cog, plugins, key, external,trendingUp } from "@wordpress/icons";
 
 /**
- * Render Subscription Shell
+ * Render Shell 1
  */
 function Shell1() {
     return (
