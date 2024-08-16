@@ -10,7 +10,7 @@ import * as patterns from '../patterns';
 
 
 /**
- * Render ActionPanels
+ * Render Shells
  */
 
 function Shells() {
