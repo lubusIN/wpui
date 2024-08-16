@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+/**
+ * WordPress dependencies.
+ */
 import {
     Card,
     CardHeader,
@@ -8,12 +10,17 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { home, cog, plugins, key, external, trendingUp, menu,close } from "@wordpress/icons";
+import { home, cog, plugins, key, external, trendingUp, menu, close } from "@wordpress/icons";
 import { useViewportMatch } from '@wordpress/compose';
 
-function Files() {
+/**
+ * Internal dependencies.
+ */
+import React, { useState } from 'react';
+
+function Buttons() {
     return (
-        <VStack style={{padding:'12px'}} expanded={false} spacing={5} className='btn'>
+        <VStack style={{ padding: '12px' }} expanded={false} spacing={5}>
             <Button icon={home}>Dashboard</Button>
             <Button icon={cog}>Settings</Button>
             <Button icon={plugins}>Addons</Button>
@@ -29,56 +36,47 @@ function Files() {
  */
 function Shell2() {
     const isMobile = !useViewportMatch('mobile');
-    const [showFiles, setShowFiles] = useState(false);
-    const [display , setDisplay]= useState('flex');
+    const [showButtons, setShowButtons] = useState(false);
+    const [display, setDisplay] = useState('flex');
     const [icon, setIcon] = useState(menu);
-
     const handleButtonClick = () => {
-        if (icon === menu) {
-            setIcon(close);
-            setShowFiles(true);
-            setDisplay('none')
-        } else {
-            setIcon(menu);
-            setShowFiles(false);
-            setDisplay('flex')
-        }
+        const isMenu = icon === menu;
+        setIcon(isMenu ? close : menu);
+        setShowButtons(isMenu);
+        setDisplay(isMenu ? 'none' : 'flex');
     };
-
-    const desktop = (
-        <>
-            <CardHeader>
-                <HStack>
-                    <Heading size={20}>WPUI</Heading>
-                    <HStack expanded={false} spacing={5} className='btn'>
-                        <Button icon={home}>Dashboard</Button>
-                        <Button icon={cog}>Settings</Button>
-                        <Button icon={plugins}>Addons</Button>
-                        <Button icon={key}>License</Button>
-                        <Button icon={external}>Support</Button>
-                    </HStack>
-                    <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
-                </HStack>
-            </CardHeader>
-        </>
-    );
-
-    const mobile = (
-        <>
-            <CardHeader>
-                <HStack>
-                    <Heading size={20}>WPUI</Heading>
-                    <Button icon={icon} onClick={handleButtonClick}></Button>
-                </HStack>
-            </CardHeader>
-            {showFiles && <Files />}
-        </>
-    );
-
     return (
         <Card>
-            {isMobile ? mobile : desktop}
-            <CardBody style={{ padding: "100px", display: 'flex', justifyContent: 'center',display:display}}>
+            {isMobile ? (
+                <>
+                    <CardHeader>
+                        <HStack>
+                            <Heading size={20}>WPUI</Heading>
+                            <Button icon={icon} onClick={handleButtonClick}></Button>
+                        </HStack>
+                    </CardHeader>
+                    {showButtons && <Buttons />}
+                </>
+
+            ) : (
+                <>
+                    <CardHeader>
+                        <HStack>
+                            <Heading size={20}>WPUI</Heading>
+                            <HStack expanded={false} spacing={5}>
+                                <Button icon={home}>Dashboard</Button>
+                                <Button icon={cog}>Settings</Button>
+                                <Button icon={plugins}>Addons</Button>
+                                <Button icon={key}>License</Button>
+                                <Button icon={external}>Support</Button>
+                            </HStack>
+                            <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
+                        </HStack>
+                    </CardHeader>
+                </>
+            )
+            }
+            <CardBody style={{ padding: "100px", display: 'flex', justifyContent: 'center', display: display }}>
                 {/*Display Your Content Here*/}This is Output Panel
             </CardBody>
         </Card>
