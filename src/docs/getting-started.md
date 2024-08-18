@@ -18,6 +18,10 @@ goto plugin directory
 ```
 cd wpui-sample-plugin
 ```
+install packages 
+```
+npm run install
+```
 build assets 
 ```
 npm run build
@@ -49,6 +53,10 @@ git clone git@github.com:lubusIN/wpui-sample-app.git
 goto app directory
 ```
 cd wpui-sample-app
+```
+install packages 
+```
+npm run install
 ```
 build assets 
 ```
