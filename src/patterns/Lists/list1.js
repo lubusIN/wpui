@@ -113,6 +113,8 @@ function List1() {
 // @meta-start
 List1.meta = {
     title: 'List 1',
+    name:'List1',
+    category:'Lists',
     path: '/Lists/list1',
 };
 // @meta-end

@@ -69,6 +69,8 @@ function Form() {
 // @meta-start
 Form.meta = {
     title: 'Form',
+    name:'Form',
+    category:'Forms',
     path: '/Form/form',
 };
 // @meta-end

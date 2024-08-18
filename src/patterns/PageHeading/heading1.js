@@ -27,6 +27,8 @@ function Heading1() {
 // @meta-start
 Heading1.meta = {
     title: 'Heading 1',
+    name:'Heading1',
+    category:'PageHeading',
     path: '/PageHeading/heading1',
 };
 // @meta-end

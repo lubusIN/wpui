@@ -34,6 +34,8 @@ function EmptyState2() {
 // @meta-start
 EmptyState2.meta = {
     title: 'Empty State 2',
+    name:'EmptyState2',
+    category:'EmptyState',
     path: '/EmptyState/emptystate2',
 };
 // @meta-end
