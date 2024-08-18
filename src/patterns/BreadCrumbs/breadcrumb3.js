@@ -40,6 +40,8 @@ function Breadcrumb3() {
 // @meta-start
 Breadcrumb3.meta = {
     title: 'Breadcrumb 3',
+    name:'Breadcrumb3',
+    category:'BreadCrumbs',
     path: '/BreadCrumbs/breadcrumb3',
 };
 // @meta-end

@@ -46,6 +46,8 @@ function Panel2() {
 // @meta-start
 Panel2.meta = {
     title: 'Panel 2',
+    name:'Panel2',
+    category:'ActionPanels',
     path: '/ActionPanels/panel2',
 };
 // @meta-end

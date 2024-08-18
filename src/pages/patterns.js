@@ -43,11 +43,13 @@ function Patterns({ title, patterns }) {
             <VStack spacing={24}>
                 {
                     Object.values(patterns).map((Pattern, index) => {
-                        const { title, path } = Pattern.meta;
+                        const { title, name, category, path } = Pattern.meta;
                         return (
                             <PatternView
                                 key={index}
                                 title={title}
+                                name={name}
+                                category={category}
                                 path={path}
                                 component={Pattern} />
                         )

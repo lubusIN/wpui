@@ -8,34 +8,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 10vw 0;
+    border-radius: 0% !important;
 }
 
 .wpui-hero-cont {
     margin: auto 0 auto auto;
-    padding-right: 140px !important;
+    padding-right: 141px !important;
     width: 50%;
-}
-
-.resize_cont {
-    .components-resizable-box__handle-right {
-        cursor: ew-resize !important;
-
-        &:after {
-            background: #94a3b8;
-            border: 0;
-            border-radius: 4px;
-            box-shadow: none;
-            height: 35px;
-            right: calc(50% - 14px);
-            top: 50%;
-            transform: translateY(-50%);
-            width: 6px;
-        }
-
-        &:before {
-            display: none !important;
-        }
-    }
 }
 
 .wpui-com-page,
@@ -107,7 +86,7 @@ pre {
         grid-template-columns: repeat(1, 1fr)
     }
 
-    .wpui-footer .components-card__body .sec-1 {
+    .wpui-footer .components-card__body .footer-content {
         width: 100% !important
     }
 
@@ -143,3 +122,4 @@ pre {
         margin: 0%;
     }
 }
+
