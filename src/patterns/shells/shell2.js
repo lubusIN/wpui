@@ -79,7 +79,7 @@ function Shell2() {
                             </VStack>
                         </VStack>
                     </CardBody>
-                    <CardBody size="large" style={{padding:'0px', height: "800px", width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
+                    <CardBody size="large" style={{padding:'0px', height: "700px", width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
                         <HStack expanded={false} style={{borderBottom: '0.5px solid grey', padding:'20px'}}>
                             <Heading>Dashboard</Heading>
                                 <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
