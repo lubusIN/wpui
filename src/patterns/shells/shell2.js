@@ -1,86 +1,81 @@
 /**
- * WordPress dependencies.
- */
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    Button,
-    __experimentalHStack as HStack,
-    __experimentalVStack as VStack,
-    __experimentalHeading as Heading,
-} from "@wordpress/components";
-import { home, cog, plugins, key, external, trendingUp, menu, close } from "@wordpress/icons";
-import { useViewportMatch } from '@wordpress/compose';
-
-/**
  * Internal dependencies.
  */
 import React, { useState } from 'react';
 
-// Consolidated button data
-const buttonData = [
-    { icon: home, label: 'Dashboard' },
-    { icon: cog, label: 'Settings' },
-    { icon: plugins, label: 'Addons' },
-    { icon: key, label: 'License' },
-    { icon: external, label: 'Support' },
-    { icon: trendingUp, label: 'Gro Pro', variant: 'primary' }
-];
+/**
+ * WordPress dependencies.
+ */
+import {
+    Card,
+    __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
+    __experimentalHeading as Heading,
+    Button,
+    CardHeader,
+    CardBody,
+} from "@wordpress/components";
+import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons";
 
+/**
+ * Render Shell 2
+ */
 function Shell2() {
-    const isMobile = !useViewportMatch('mobile');
-    const [showButtons, setShowButtons] = useState(false);
-    const [display, setDisplay] = useState('flex');
-    const [icon, setIcon] = useState(menu);
-
-    const handleButtonClick = () => {
-        setIcon(prevIcon => (prevIcon === menu ? close : menu));
-        setShowButtons(prevState => !prevState);
-        setDisplay('none')
-    };
-
     return (
-        <Card>
-            <CardHeader>
-                <HStack>
-                    <Heading size={20}>WPUI</Heading>
-                    {isMobile ? (
-                        <Button icon={icon} onClick={handleButtonClick}></Button>
-                    ) : (
-                        <>
-                            <HStack expanded={false} spacing={5}>
-                                {buttonData.slice(0, -1).map((btn, index) => (
-                                    <Button key={index} icon={btn.icon}>
-                                        {btn.label}
-                                    </Button>
-                                ))}
+        <>
+            <Card style={{ backgroundColor: "black", padding: "5px",borderRadius:'5px'}}>
+                <HStack alignment='baseline'>
+                    <CardBody style={{ width:"30%" }}>
+                        <VStack spacing={8}>
+                            <Heading style={{color:'white',marginLeft:'10px'}}>WPUI</Heading>
+                            <VStack expanded={false} spacing={2}>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={home}
+                                >
+                                    Dashboard
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={cog}
+                                >
+                                    Settings
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={plugins}
+                                >
+                                    Addons
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={key}
+                                >
+                                    License
+                                </Button>
+                                <Button 
+                                    style={{ color: "white" }}
+                                    icon={external}
+                                >
+                                    Support
+                                </Button>
+                            </VStack>
+                        </VStack>
+                    </CardBody>
+                    <CardBody size="large" style={{ height: "700px", width: "100%", backgroundColor:'white',borderRadius:'5px' }}>
+                        <HStack>
+                            <Heading>Dashboard</Heading>
+                            {/* Display your Component Here */}
+                            <HStack expanded={false}>
+                                <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
                             </HStack>
-                            <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
-                        </>
-                    )}
+                        </HStack>
+                    </CardBody>
                 </HStack>
-            </CardHeader>
-            {isMobile && showButtons && (
-                <VStack style={{ padding: '12px' }} expanded={false} spacing={5}>
-                    {buttonData.map((btn, index) => (
-                        <Button
-                            key={index}
-                            icon={btn.icon}
-                            variant={btn.variant}
-                            style={btn.label === 'Gro Pro' ? { display: 'flex', justifyContent: 'center' } : {}}
-                        >
-                            {btn.label}
-                        </Button>
-                    ))}
-                </VStack>
-            )}
-            <CardBody style={{ padding: "100px", display: display, justifyContent: 'center' }}>
-                {/*Display Your Content Here*/}This is Output Panel
-            </CardBody>
-        </Card>
+            </Card>
+        </>
     );
-}
+};
 
 // @meta-start
 Shell2.meta = {
