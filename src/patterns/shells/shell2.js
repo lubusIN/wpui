@@ -18,65 +18,64 @@ import { useViewportMatch } from '@wordpress/compose';
  */
 import React, { useState } from 'react';
 
-function Buttons() {
-    return (
-        <VStack style={{ padding: '12px' }} expanded={false} spacing={5}>
-            <Button icon={home}>Dashboard</Button>
-            <Button icon={cog}>Settings</Button>
-            <Button icon={plugins}>Addons</Button>
-            <Button icon={key}>License</Button>
-            <Button icon={external}>Support</Button>
-            <Button style={{ display: 'flex', justifyContent: 'center' }} variant="primary" icon={trendingUp}>Gro Pro</Button>
-        </VStack>
-    );
-}
+// Consolidated button data
+const buttonData = [
+    { icon: home, label: 'Dashboard' },
+    { icon: cog, label: 'Settings' },
+    { icon: plugins, label: 'Addons' },
+    { icon: key, label: 'License' },
+    { icon: external, label: 'Support' },
+    { icon: trendingUp, label: 'Gro Pro', variant: 'primary' }
+];
 
-/**
- * Render Shell 2
- */
 function Shell2() {
     const isMobile = !useViewportMatch('mobile');
     const [showButtons, setShowButtons] = useState(false);
     const [display, setDisplay] = useState('flex');
     const [icon, setIcon] = useState(menu);
+
     const handleButtonClick = () => {
-        const isMenu = icon === menu;
-        setIcon(isMenu ? close : menu);
-        setShowButtons(isMenu);
-        setDisplay(isMenu ? 'none' : 'flex');
+        setIcon(prevIcon => (prevIcon === menu ? close : menu));
+        setShowButtons(prevState => !prevState);
+        setDisplay('none')
     };
+
     return (
         <Card>
-            {isMobile ? (
-                <>
-                    <CardHeader>
-                        <HStack>
-                            <Heading size={20}>WPUI</Heading>
-                            <Button icon={icon} onClick={handleButtonClick}></Button>
-                        </HStack>
-                    </CardHeader>
-                    {showButtons && <Buttons />}
-                </>
-
-            ) : (
-                <>
-                    <CardHeader>
-                        <HStack>
-                            <Heading size={20}>WPUI</Heading>
+            <CardHeader>
+                <HStack>
+                    <Heading size={20}>WPUI</Heading>
+                    {isMobile ? (
+                        <Button icon={icon} onClick={handleButtonClick}></Button>
+                    ) : (
+                        <>
                             <HStack expanded={false} spacing={5}>
-                                <Button icon={home}>Dashboard</Button>
-                                <Button icon={cog}>Settings</Button>
-                                <Button icon={plugins}>Addons</Button>
-                                <Button icon={key}>License</Button>
-                                <Button icon={external}>Support</Button>
+                                {buttonData.slice(0, -1).map((btn, index) => (
+                                    <Button key={index} icon={btn.icon}>
+                                        {btn.label}
+                                    </Button>
+                                ))}
                             </HStack>
                             <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
-                        </HStack>
-                    </CardHeader>
-                </>
-            )
-            }
-            <CardBody style={{ padding: "100px", display: 'flex', justifyContent: 'center', display: display }}>
+                        </>
+                    )}
+                </HStack>
+            </CardHeader>
+            {isMobile && showButtons && (
+                <VStack style={{ padding: '12px' }} expanded={false} spacing={5}>
+                    {buttonData.map((btn, index) => (
+                        <Button
+                            key={index}
+                            icon={btn.icon}
+                            variant={btn.variant}
+                            style={btn.label === 'Gro Pro' ? { display: 'flex', justifyContent: 'center' } : {}}
+                        >
+                            {btn.label}
+                        </Button>
+                    ))}
+                </VStack>
+            )}
+            <CardBody style={{ padding: "100px", display: display, justifyContent: 'center' }}>
                 {/*Display Your Content Here*/}This is Output Panel
             </CardBody>
         </Card>
