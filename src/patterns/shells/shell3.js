@@ -78,28 +78,16 @@ function Shell3() {
                         </svg>
                         <Heading style={{ marginLeft: '10px' }}>WPUI</Heading>
                     </div>
-                    <DropdownMenu icon={alignJustify}>
-                        {() => (
-                            <>
-                                <MenuGroup>
-                                    <MenuItem>View</MenuItem>
-                                    <MenuItem>Dismiss</MenuItem>
-                                </MenuGroup>
-                            </>
-                        )}
-                    </DropdownMenu>
                 </HStack>
                 <HStack alignment="right">
-                    <Button>
-                        <Icon icon={desktop} />
-                    </Button>
                     <Button variant="primary">Publish</Button>
                     <DropdownMenu icon={moreVertical}>
                         {() => (
                             <>
                                 <MenuGroup>
-                                    <MenuItem>View</MenuItem>
-                                    <MenuItem>Dismiss</MenuItem>
+                                    <MenuItem>About us</MenuItem>
+                                    <MenuItem>Contact us</MenuItem>
+                                    <MenuItem>More Info</MenuItem>
                                 </MenuGroup>
                             </>
                         )}

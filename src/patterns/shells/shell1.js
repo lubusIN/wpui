@@ -17,28 +17,28 @@ import { useViewportMatch } from '@wordpress/compose';
  * Internal dependencies.
  */
 import React, { useState } from 'react';
-const buttonData = [
-    { icon: home, label: 'Dashboard' },
-    { icon: cog, label: 'Settings' },
-    { icon: plugins, label: 'Addons' },
-    { icon: key, label: 'License' },
-    { icon: external, label: 'Support' },
-    { icon: trendingUp, label: 'Gro Pro', variant: 'primary' }
-];
 
 /**
  * Render Shell 1
  */
 function Shell1() {
+    const buttonData = [
+        { icon: home, label: 'Dashboard' },
+        { icon: cog, label: 'Settings' },
+        { icon: plugins, label: 'Addons' },
+        { icon: key, label: 'License' },
+        { icon: external, label: 'Support' },
+        { icon: trendingUp, label: 'Gro Pro', variant: 'primary' }
+    ];
     const isMobile = !useViewportMatch('mobile');
     const [showButtons, setShowButtons] = useState(false);
-    const [display, setDisplay] = useState('flex');
+    const [display, setDisplay] = useState('');
     const [icon, setIcon] = useState(menu);
 
     const handleButtonClick = () => {
         setIcon(prevIcon => (prevIcon === menu ? close : menu));
         setShowButtons(prevState => !prevState);
-        setDisplay(prevDisplay => (prevDisplay === 'none' ? 'flex' : 'none'));
+        setDisplay(prevDisplay => (prevDisplay === 'none' ? '' : 'none'));
     };
 
     return (
@@ -89,9 +89,11 @@ function Shell1() {
                     ))}
                 </VStack>
             )}
-            <CardBody style={{ padding: "100px", display: display, justifyContent: 'center' }}>
+            <CardBody className='panel' style={{ backgroundColor:'#F0F0F1',display:display}}>
+            <Heading style={{padding:'20px',display:display}}>Dashboard</Heading>
+            <Card style={{ backgroundColor:'#F0F0F1',height:'300px',margin:'30px 30px', display: display,borderRadius:'10px' }}>
                 {/* Display Your Content Here */}
-                This is Output Panel
+            </Card>
             </CardBody>
         </Card>
     );
