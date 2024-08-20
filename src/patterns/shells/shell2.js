@@ -12,23 +12,27 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
     Button,
-    CardHeader,
     CardBody,
 } from "@wordpress/components";
-import { home, cog, plugins, key, external, trendingUp, Icon } from "@wordpress/icons";
+import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons";
 
 /**
  * Render Shell 2
  */
 function Shell2() {
+    const [activeButton, setActiveButton] = useState('dashboard');
+    const handleButtonClick = (buttonKey) => {
+        setActiveButton(buttonKey);
+    };
+
     return (
         <>
-            <Card style={{ backgroundColor: "rgb(11 9 17)", padding: "5px", borderRadius: '5px' }}>
+            <Card style={{ backgroundColor: "#0E0F12", padding: "5px", borderRadius: '5px' }}>
                 <HStack alignment='baseline'>
-                    <CardBody style={{ width: "30%",padding:'0px' }}>
+                    <CardBody style={{ width: "30%", padding: '0px' }}>
                         <VStack spacing={8}>
-                            <HStack style={{padding:'20px'}}>
-                                {/*Wpui Logo*/}
+                            <HStack style={{ padding: '20px' }}>
+                                {/* Wpui Logo */}
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
                                     <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 95.12 95.12" style={{ width: '1.5em', height: '1.5em' }}>
                                         <g id="Layer_1-2" data-name="Layer 1">
@@ -44,47 +48,56 @@ function Shell2() {
                                 </div>
                             </HStack>
 
-
-                            <VStack expanded={false} spacing={2}>
+                            <VStack expanded={false} spacing={2} style={{boxShadow:'none'}}>
                                 <Button
-                                    style={{ color: "white" }}
+                                    style={{ color: "white",boxShadow:'none' }}
+                                    variant={activeButton === 'dashboard' ? "primary" : "secondary"}
                                     icon={home}
+                                    onClick={() => handleButtonClick('dashboard')}
                                 >
                                     Dashboard
                                 </Button>
                                 <Button
-                                    style={{ color: "white" }}
+                                    style={{ color: "white",boxShadow:'none' }}
+                                    variant={activeButton === 'settings' ? "primary" : "secondary"}
                                     icon={cog}
+                                    onClick={() => handleButtonClick('settings')}
                                 >
                                     Settings
                                 </Button>
                                 <Button
-                                    style={{ color: "white" }}
+                                    style={{ color: "white",boxShadow:'none' }}
+                                    variant={activeButton === 'addons' ? "primary" : "secondary"}
                                     icon={plugins}
+                                    onClick={() => handleButtonClick('addons')}
                                 >
                                     Addons
                                 </Button>
                                 <Button
-                                    style={{ color: "white" }}
+                                    style={{ color: "white",boxShadow:'none' }}
+                                    variant={activeButton === 'license' ? "primary" : "secondary"}
                                     icon={key}
+                                    onClick={() => handleButtonClick('license')}
                                 >
                                     License
                                 </Button>
                                 <Button
-                                    style={{ color: "white" }}
+                                    style={{ color: "white",boxShadow:'none' }}
+                                    variant={activeButton === 'support' ? "primary" : "secondary"}
                                     icon={external}
+                                    onClick={() => handleButtonClick('support')}
                                 >
                                     Support
                                 </Button>
                             </VStack>
                         </VStack>
                     </CardBody>
-                    <CardBody size="large" style={{padding:'0px', height: "700px", width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
-                        <HStack expanded={false} style={{borderBottom: '0.5px solid grey', padding:'20px'}}>
+                    <CardBody size="large" style={{ padding: '0px', height: "700px", width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
+                        <HStack expanded={false} style={{ borderBottom: '0.5px solid grey', padding: '20px' }}>
                             <Heading>Dashboard</Heading>
-                                <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
+                            <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
                         </HStack>
-                            {/* Display your Component Here */}
+                        {/* Display your Component Here */}
                     </CardBody>
                 </HStack>
             </Card>
