@@ -1,7 +1,6 @@
 /**
  * WordPress dependencies.
  */
-import React, { useState } from 'react';
 import {
     Button,
     Card,
@@ -16,11 +15,10 @@ import {
     TextareaControl,
     SelectControl,
     ToggleControl,
-    DateTimePicker
 } from "@wordpress/components";
-import { alignJustify, desktop, moreVertical, drawerRight, wordpress } from "@wordpress/icons";
+import { alignJustify, desktop, moreVertical, wordpress } from "@wordpress/icons";
 
-// Render TabPanel component
+
 const TabPanel = ({ tab, children }) => {
     return (
         <div>
@@ -28,7 +26,6 @@ const TabPanel = ({ tab, children }) => {
         </div>
     );
 }
-
 const tabData = (
     <div style={{ padding: '30px' }}>
         <TextControl
@@ -54,10 +51,6 @@ const tabData = (
         <ToggleControl
             label="Toggle Control"
             checked={true}
-            onChange={() => { }}
-        />
-        <DateTimePicker
-            currentDate={new Date()}
             onChange={() => { }}
         />
     </div>
@@ -88,9 +81,6 @@ function Shell3() {
                         <Icon icon={desktop} />
                     </Button>
                     <Button variant="primary">Publish</Button>
-                    <Button>
-                        <Icon icon={drawerRight} />
-                    </Button>
                     <DropdownMenu icon={moreVertical}>
                         {() => (
                             <>

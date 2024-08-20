@@ -17,8 +17,6 @@ import { useViewportMatch } from '@wordpress/compose';
  * Internal dependencies.
  */
 import React, { useState } from 'react';
-
-// Consolidated button data
 const buttonData = [
     { icon: home, label: 'Dashboard' },
     { icon: cog, label: 'Settings' },
@@ -28,6 +26,9 @@ const buttonData = [
     { icon: trendingUp, label: 'Gro Pro', variant: 'primary' }
 ];
 
+/**
+ * Render Shell 1
+ */
 function Shell1() {
     const isMobile = !useViewportMatch('mobile');
     const [showButtons, setShowButtons] = useState(false);
@@ -37,7 +38,7 @@ function Shell1() {
     const handleButtonClick = () => {
         setIcon(prevIcon => (prevIcon === menu ? close : menu));
         setShowButtons(prevState => !prevState);
-        setDisplay('none')
+        setDisplay(prevDisplay => (prevDisplay === 'none' ? 'flex' : 'none'));
     };
 
     return (
@@ -76,7 +77,8 @@ function Shell1() {
                 </VStack>
             )}
             <CardBody style={{ padding: "100px", display: display, justifyContent: 'center' }}>
-                {/*Display Your Content Here*/}This is Output Panel
+                {/* Display Your Content Here */}
+                This is Output Panel
             </CardBody>
         </Card>
     );

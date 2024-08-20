@@ -1,9 +1,4 @@
 /**
- * Internal dependencies.
- */
-import React, { useState } from 'react';
-
-/**
  * WordPress dependencies.
  */
 import {
@@ -15,6 +10,11 @@ import {
     CardBody,
 } from "@wordpress/components";
 import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons";
+
+/**
+ * Internal dependencies.
+ */
+import React, { useState } from 'react';
 
 /**
  * Render Shell 2
