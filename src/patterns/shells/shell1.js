@@ -28,7 +28,7 @@ function Shell1() {
         { icon: plugins, label: 'Addons' },
         { icon: key, label: 'License' },
         { icon: external, label: 'Support' },
-        { icon: trendingUp, label: 'Gro Pro', variant: 'primary' }
+        { icon: trendingUp, label: 'Go Pro', variant: 'primary' }
     ];
     const isMobile = !useViewportMatch('mobile');
     const [showButtons, setShowButtons] = useState(false);
@@ -70,7 +70,7 @@ function Shell1() {
                                     </Button>
                                 ))}
                             </HStack>
-                            <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
+                            <Button variant="primary" icon={trendingUp}>Go Pro</Button>
                         </>
                     )}
                 </HStack>
@@ -82,7 +82,7 @@ function Shell1() {
                             key={index}
                             icon={btn.icon}
                             variant={btn.variant}
-                            style={btn.label === 'Gro Pro' ? { display: 'flex', justifyContent: 'center' } : {}}
+                            style={btn.label === 'Go Pro' ? { display: 'flex', justifyContent: 'center' } : {}}
                         >
                             {btn.label}
                         </Button>
