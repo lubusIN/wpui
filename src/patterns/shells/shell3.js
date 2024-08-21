@@ -112,7 +112,7 @@ function Shell3() {
                         ]}
                     >
                         {(tab) => (
-                            <div style={{ padding: '10px', width: '15vw', height: '100vh' }}>
+                            <div style={{ padding: '10px', width: '15vw' }}>
                                 {data[tab.name]}
                             </div>
                         )}
