@@ -9,6 +9,7 @@ import {
     Button,
     CardBody,
 } from "@wordpress/components";
+import { useViewportMatch } from "@wordpress/compose";
 import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons";
 
 /**
@@ -22,6 +23,7 @@ import React, { useState } from 'react';
 function Shell2() {
     const [activeButton, setActiveButton] = useState('dashboard');
     const handleButtonClick = (buttonKey) => setActiveButton(buttonKey);
+    const isMobile = !useViewportMatch('mobile');
     const icon = {
         dashboard: home,
         settings: cog,
@@ -32,10 +34,10 @@ function Shell2() {
 
     return (
         <Card style={{ backgroundColor: "#0E0F12", padding: "5px", borderRadius: '5px' }}>
-            <HStack alignment='baseline'>
-                <CardBody style={{ width: "30%", padding: '0px' }}>
+            <HStack alignment='baseline' style={{ flexDirection: isMobile ? 'column' : 'row' }}>
+                <CardBody style={{ width: isMobile ? '100%' : "30%", padding: '0px' }}>
                     <VStack spacing={8}>
-                        <HStack style={{ padding: '20px' }}>
+                        <HStack style={{ padding: '20px', justifyContent: isMobile ? 'center' : 'flex-start' }}>
                             {/* Wpui Logo */}
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 95.12 95.12" style={{ width: '1.5em', height: '1.5em' }}>
@@ -56,7 +58,7 @@ function Shell2() {
                             {['dashboard', 'settings', 'addons', 'license', 'support'].map(key => (
                                 <Button
                                     key={key}
-                                    style={{ color: "white", boxShadow: 'none' }}
+                                    style={{ color: "white", boxShadow: 'none', width: isMobile ? '100%' : 'auto' }}
                                     variant={activeButton === key ? "primary" : "secondary"}
                                     icon={icon[key]}
                                     onClick={() => handleButtonClick(key)}
@@ -67,8 +69,8 @@ function Shell2() {
                         </VStack>
                     </VStack>
                 </CardBody>
-                <CardBody size="large" style={{ padding: '0px', height: "700px", width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
-                    <HStack expanded={false} style={{ borderBottom: '0.5px solid grey', padding: '20px' }}>
+                <CardBody size="large" style={{ padding: '0px', height: isMobile ? "auto" : "700px", width: isMobile ? '100%' : "70%", backgroundColor: 'white', borderRadius: '5px' }}>
+                    <HStack expanded={false} style={{ borderBottom: '0.5px solid grey', padding: '20px', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'center', justifyContent: 'space-between' }}>
                         <Heading>Dashboard</Heading>
                         <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
                     </HStack>
