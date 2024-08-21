@@ -4,42 +4,65 @@
 import {
     Button,
     Card,
+    Icon,
     CardBody,
     DropdownMenu,
     MenuGroup,
     MenuItem,
-    __experimentalHStack as HStack,
-    __experimentalHeading as Heading,
     CardHeader,
     TextControl,
     TextareaControl,
     SelectControl,
     ToggleControl,
+    CheckboxControl,
+    TabPanel,
+    ColorPicker,
+    __experimentalHStack as HStack,
+    __experimentalHeading as Heading,
+    __experimentalNumberControl as NumberControl
 } from "@wordpress/components";
-import { moreVertical } from "@wordpress/icons";
+import { moreVertical, drawerRight } from "@wordpress/icons";
 
 /**
  * Render Shell 3
  */
 function Shell3() {
-    const TabPanel = ({ children }) => <div>{children}</div>;
-    const tabData = (
-        <div style={{ padding: '30px' }}>
-            <TextControl label="Text Control" value="Sample Text" onChange={() => { }} />
-            <TextareaControl label="Textarea Control" value="Sample Textarea" onChange={() => { }} />
-            <SelectControl
-                label="Select Control"
-                value="Select"
-                options={[
-                    { label: 'Select 1' },
-                    { label: 'Select 2' },
-                    { label: 'Select 3' }
-                ]}
-                onChange={() => { }}
-            />
-            <ToggleControl label="Toggle Control" checked={true} onChange={() => { }} />
-        </div>
-    );
+    const data = {
+        tab1: (
+            <>
+                <TextControl label="Text Control" value="Sample Text" />
+                <TextareaControl label="Textarea Control" value="Sample Textarea" />
+                <SelectControl
+                    label="Select Control"
+                    value="Select"
+                    options={[
+                        { label: 'Select 1' },
+                        { label: 'Select 2' },
+                        { label: 'Select 3' }
+                    ]}
+                    onChange={() => { }}
+                />
+                <ToggleControl label="Toggle Control" checked={true} />
+                <NumberControl
+                    label="Scroll offset"
+                />
+                <NumberControl
+                    label="Animation Speed"
+                />
+            </>
+
+        ),
+        tab2: (
+            <>
+                <CheckboxControl
+                    checked
+                    label="Enable"
+                    onChange={function noRefCheck() { }}
+                />
+                <ColorPicker onChange={function noRefCheck() { }} />
+            </>
+        )
+    };
 
     return (
         <Card>
@@ -57,27 +80,48 @@ function Shell3() {
                 </HStack>
                 <HStack alignment="right">
                     <Button variant="primary">Publish</Button>
+                    <Button><Icon icon={drawerRight} /></Button>
                     <DropdownMenu icon={moreVertical}>
                         {() => (
-                            <MenuGroup>
-                                <MenuItem>About us</MenuItem>
-                                <MenuItem>Contact us</MenuItem>
-                                <MenuItem>More Info</MenuItem>
-                            </MenuGroup>
+                            <>
+                                <MenuGroup>
+                                    <MenuItem>View</MenuItem>
+                                    <MenuItem>Dismiss</MenuItem>
+                                </MenuGroup>
+                            </>
                         )}
                     </DropdownMenu>
                 </HStack>
             </CardHeader>
             <HStack alignment="right" expanded={false} spacing={5}>
                 <CardBody style={{ padding: "0px", borderLeft: "1px solid #dfdfdf", borderBottom: "1px solid #dfdfdf" }}>
-                    <TabPanel>
-                        {tabData}
+                    <TabPanel
+                        className="my-tab-panel"
+                        tabs={[
+                            {
+                                name: 'tab1',
+                                title: 'Tab 1',
+                                className: 'tab-one',
+
+                            },
+                            {
+                                name: 'tab2',
+                                title: 'Tab 2',
+                                className: 'tab-two',
+                            },
+                        ]}
+                    >
+                        {(tab) => (
+                            <div style={{ padding: '10px', width: '15vw', height: '100vh' }}>
+                                {data[tab.name]}
+                            </div>
+                        )}
                     </TabPanel>
                 </CardBody>
             </HStack>
         </Card>
     );
-}
+};
 
 // @meta-start
 Shell3.meta = {
