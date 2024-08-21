@@ -70,6 +70,8 @@ function Actionpanel6() {
 Actionpanel6.meta = {
     title: 'Action Panel 6',
     path: '/New-patterns/actionpanel6',
+    name: 'Actionpanel6',
+    category: 'NewPatterns',
 };
 
 export default Actionpanel6;

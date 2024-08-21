@@ -13,7 +13,7 @@ import {
 import { edit, layout, styles } from "@wordpress/icons";
 
 /**
- * Render Subscription action panel
+ * Render Welcome Screen
  */
 function Welcomescreen() {
     return (
@@ -68,6 +68,8 @@ function Welcomescreen() {
 Welcomescreen.meta = {
     title: 'Welcomescreen',
     path: '/New-patterns/welcomescreen',
+    name: 'Welcomescreen',
+    category: 'NewPatterns',
 };
 
 export default Welcomescreen;
