@@ -10,7 +10,7 @@ import {
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
 } from "@wordpress/components";
-import { home, cog, plugins, key, external, trendingUp, menu, close } from "@wordpress/icons";
+import { home, cog, plugins, key, external, trendingUp, menu, close, Icon } from "@wordpress/icons";
 import { useViewportMatch } from '@wordpress/compose';
 
 /**
@@ -47,7 +47,7 @@ function Shell1() {
                 <HStack>
                     {/* Wpui Logo */}
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 95.12 95.12" style={{ width: '1.5em', height: '1.5em' }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 95.12 95.12" style={{ minWidth:'30px' }}>
                             <g id="Layer_1-2" data-name="Layer 1">
                                 <g>
                                     <rect className="cls-2" fill="#3858e9" width="93.73" height="93.73" rx="19.38" ry="19.38" />
@@ -65,9 +65,15 @@ function Shell1() {
                         <>
                             <HStack expanded={false} spacing={5}>
                                 {buttonData.slice(0, -1).map((btn, index) => (
-                                    <Button key={index} icon={btn.icon}>
+                                    <>
+                                    <HStack>
+                                    <Button key={index} >
+                                    <Icon style={{minWidth:'20px'}}  icon={btn.icon}>
+                                    </Icon>
                                         {btn.label}
                                     </Button>
+                                    </HStack>
+                                    </>
                                 ))}
                             </HStack>
                             <Button variant="primary" icon={trendingUp}>Go Pro</Button>
@@ -79,14 +85,14 @@ function Shell1() {
                 <VStack style={{ padding: '12px' }} expanded={false} spacing={5}>
                     {buttonData.map((btn, index) => (
                         <Button
-                            key={index}
-                            icon={btn.icon}
+                        key={index}
+                        icon={btn.icon}
                             variant={btn.variant}
                             style={btn.label === 'Go Pro' ? { display: 'flex', justifyContent: 'center' } : {}}
-                        >
+                            >
                             {btn.label}
-                        </Button>
-                    ))}
+                            </Button>
+                        ))}
                 </VStack>
             )}
             <CardBody className='panel' style={{ backgroundColor:'#F0F0F1',display:display}}>

@@ -9,21 +9,42 @@ import {
     Button,
     CardBody,
 } from "@wordpress/components";
-import { useViewportMatch } from "@wordpress/compose";
-import { home, cog, plugins, key, external, trendingUp } from "@wordpress/icons";
+import { home, cog, plugins, key, external, trendingUp, close, menu } from "@wordpress/icons";
+import { useViewportMatch } from '@wordpress/compose';
 
 /**
  * Internal dependencies.
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 /**
- * Render Shell 2a
+ * Render Shell 2
  */
 function Shell2() {
-    const [activeButton, setActiveButton] = useState('dashboard');
-    const handleButtonClick = (buttonKey) => setActiveButton(buttonKey);
+    const ButtonList = ({ activeButton, handleButtonClick, icon }) => (
+        <VStack style={{ boxShadow: 'none' }}>
+            {['dashboard', 'settings', 'addons', 'license', 'support'].map(key => (
+                <Button
+                    key={key}
+                    style={{ color: "white", boxShadow: 'none' }}
+                    variant={activeButton === key ? "primary" : "secondary"}
+                    icon={icon[key]}
+                    onClick={() => handleButtonClick(key)}
+                >
+                    {key.charAt(0).toUpperCase() + key.slice(1)}
+                </Button>
+            ))}
+        </VStack>
+    );
+
     const isMobile = !useViewportMatch('mobile');
+    const [width, setWidth] = useState(isMobile ? '100%' : '25%');
+    const [Stack, setStack] = useState(isMobile ? VStack : HStack);
+    const [activeButton, setActiveButton] = useState('dashboard');
+    const [showButtons, setShowButtons] = useState(false);
+    const [newicon, setNewIcon] = useState(menu);
+    const [display, setDisplay] = useState('');
+
     const icon = {
         dashboard: home,
         settings: cog,
@@ -32,14 +53,29 @@ function Shell2() {
         support: external
     };
 
+    const viewbutton = () => {
+        setShowButtons(prevState => !prevState);
+        setNewIcon(prevIcon => (prevIcon === menu ? close : menu));
+        setDisplay(prevDisplay => (prevDisplay === 'none' ? '' : 'none'));
+    };
+
+    useEffect(() => {
+        setStack(isMobile ? VStack : HStack);
+        setWidth(isMobile ? '100%' : '25%');
+    }, [isMobile]);
+
+    const handleButtonClick = (buttonKey) => {
+        setActiveButton(buttonKey);
+    };
+
     return (
-        <Card style={{ backgroundColor: "#0E0F12", padding: "5px", borderRadius: '5px' }}>
-            <HStack alignment='baseline' style={{ flexDirection: isMobile ? 'column' : 'row' }}>
-                <CardBody style={{ width: isMobile ? '100%' : "30%", padding: '0px' }}>
-                    <VStack spacing={8}>
-                        <HStack style={{ padding: '20px', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+        <Card style={{ backgroundColor: "#1c1e24", padding: "5px", borderRadius: '5px' }}>
+            <Stack alignment='baseline' spacing={1}>
+                <CardBody style={{ width: width, padding: '0px' }}>
+                    <VStack spacing={12} style={{ padding: '5px' }}>
+                        <HStack style={{ padding: '10px' }}>
                             {/* Wpui Logo */}
-                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <HStack expanded={false} style={{ marginLeft: '5px' }}>
                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 95.12 95.12" style={{ width: '1.5em', height: '1.5em' }}>
                                     <g id="Layer_1-2" data-name="Layer 1">
                                         <g>
@@ -50,36 +86,32 @@ function Shell2() {
                                         </g>
                                     </g>
                                 </svg>
-                                <Heading style={{ color: 'white', marginLeft: '10px' }}>WPUI</Heading>
-                            </div>
+                                <Heading style={{ color: 'white' }}>WPUI</Heading>
+                            </HStack>
+                            {/* Button to toggle visibility */}
+                            {isMobile && (
+                                <Button icon={newicon} onClick={viewbutton} style={{ marginRight: '10px', color: 'white' }}></Button>
+                            )}
                         </HStack>
 
-                        <VStack expanded={false} spacing={2} style={{ boxShadow: 'none' }}>
-                            {['dashboard', 'settings', 'addons', 'license', 'support'].map(key => (
-                                <Button
-                                    key={key}
-                                    style={{ color: "white", boxShadow: 'none', width: isMobile ? '100%' : 'auto' }}
-                                    variant={activeButton === key ? "primary" : "secondary"}
-                                    icon={icon[key]}
-                                    onClick={() => handleButtonClick(key)}
-                                >
-                                    {key.charAt(0).toUpperCase() + key.slice(1)}
-                                </Button>
-                            ))}
-                        </VStack>
+                        {isMobile ? (
+                            showButtons && <ButtonList activeButton={activeButton} handleButtonClick={handleButtonClick} icon={icon} />
+                        ) : (
+                            <ButtonList activeButton={activeButton} handleButtonClick={handleButtonClick} icon={icon} />
+                        )}
                     </VStack>
                 </CardBody>
-                <CardBody size="large" style={{ padding: '0px', height: isMobile ? "auto" : "700px", width: isMobile ? '100%' : "70%", backgroundColor: 'white', borderRadius: '5px' }}>
-                    <HStack expanded={false} style={{ borderBottom: '0.5px solid grey', padding: '20px', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'center', justifyContent: 'space-between' }}>
+                <CardBody size="large" style={{ padding: '0px', height: "750px", width: "100%", backgroundColor: 'white', borderRadius: '5px', display: display }}>
+                    <HStack expanded={false} style={{ borderBottom: '1px solid #D8D8D8', padding: '15px 50px' }}>
                         <Heading>Dashboard</Heading>
                         <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
                     </HStack>
                     {/* Display your Component Here */}
                 </CardBody>
-            </HStack>
+            </Stack>
         </Card>
     );
-};
+}
 
 // @meta-start
 Shell2.meta = {
