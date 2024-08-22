@@ -38,11 +38,12 @@ function Shell2() {
     );
 
     const isMobile = !useViewportMatch('mobile');
-    const [width, setWidth] = useState(isMobile ? '100%' : '25%');
-    const [Stack, setStack] = useState(isMobile ? VStack : HStack);
+    const [width, setWidth] = useState('25%');
+    const [Stack, setStack] = useState(HStack);
     const [activeButton, setActiveButton] = useState('dashboard');
     const [showButtons, setShowButtons] = useState(false);
     const [newicon, setNewIcon] = useState(menu);
+    const [height, setHeight] = useState('720px');
     const [display, setDisplay] = useState('');
 
     const icon = {
@@ -62,6 +63,7 @@ function Shell2() {
     useEffect(() => {
         setStack(isMobile ? VStack : HStack);
         setWidth(isMobile ? '100%' : '25%');
+        setHeight(isMobile ? '500px' : '720px');
     }, [isMobile]);
 
     const handleButtonClick = (buttonKey) => {
@@ -101,7 +103,7 @@ function Shell2() {
                         )}
                     </VStack>
                 </CardBody>
-                <CardBody size="large" style={{ padding: '0px', height: "750px", width: "100%", backgroundColor: 'white', borderRadius: '5px', display: display }}>
+                <CardBody size="large" style={{ padding: '0px', height: height, width: "100%", backgroundColor: 'white', borderRadius: '5px', display: display }}>
                     <HStack expanded={false} style={{ borderBottom: '1px solid #D8D8D8', padding: '15px 50px' }}>
                         <Heading>Dashboard</Heading>
                         <Button variant="primary" icon={trendingUp}>Gro Pro</Button>
