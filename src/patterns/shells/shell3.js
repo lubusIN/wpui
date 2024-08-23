@@ -4,29 +4,36 @@
 import {
     Button,
     Card,
-    Icon,
-    CardBody,
     DropdownMenu,
     MenuGroup,
     MenuItem,
     CardHeader,
+    CardBody,
     TextControl,
     TextareaControl,
     SelectControl,
     ToggleControl,
     CheckboxControl,
-    TabPanel,
     ColorPicker,
+    TabPanel,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
-    __experimentalNumberControl as NumberControl
+    __experimentalNumberControl as NumberControl,
+    Animate
 } from "@wordpress/components";
 import { moreVertical, drawerRight } from "@wordpress/icons";
+
+/**
+ * Internal dependencies.
+ */
+import React, { useState } from 'react';
 
 /**
  * Render Shell 3
  */
 function Shell3() {
+    const [block, setBlock] = useState(true);
+
     const data = {
         tab1: (
             <>
@@ -36,30 +43,21 @@ function Shell3() {
                     label="Select Control"
                     value="Select"
                     options={[
-                        { label: 'Select 1' },
-                        { label: 'Select 2' },
-                        { label: 'Select 3' }
+                        { label: 'Select 1', value: 'select1' },
+                        { label: 'Select 2', value: 'select2' },
+                        { label: 'Select 3', value: 'select3' }
                     ]}
                     onChange={() => { }}
                 />
                 <ToggleControl label="Toggle Control" checked={true} />
-                <NumberControl
-                    label="Scroll offset"
-                />
-                <NumberControl
-                    label="Animation Speed"
-                />
+                <NumberControl label="Scroll offset" />
+                <NumberControl label="Animation Speed" />
             </>
-
         ),
         tab2: (
             <>
-                <CheckboxControl
-                    checked
-                    label="Enable"
-                    onChange={function noRefCheck() { }}
-                />
-                <ColorPicker onChange={function noRefCheck() { }} />
+                <CheckboxControl checked label="Enable" onChange={() => { }} />
+                <ColorPicker onChange={() => { }} />
             </>
         )
     };
@@ -80,43 +78,43 @@ function Shell3() {
                 </HStack>
                 <HStack alignment="right">
                     <Button variant="primary">Publish</Button>
-                    <Button><Icon icon={drawerRight} /></Button>
+                    <Button icon={drawerRight} onClick={() => setBlock(!block)} />
                     <DropdownMenu icon={moreVertical}>
                         {() => (
-                            <>
-                                <MenuGroup>
-                                    <MenuItem>View</MenuItem>
-                                    <MenuItem>Dismiss</MenuItem>
-                                </MenuGroup>
-                            </>
+                            <MenuGroup>
+                                <MenuItem>View</MenuItem>
+                                <MenuItem>Dismiss</MenuItem>
+                            </MenuGroup>
                         )}
                     </DropdownMenu>
                 </HStack>
             </CardHeader>
             <HStack alignment="right" expanded={false} spacing={5}>
                 <CardBody style={{ padding: "0px", borderLeft: "1px solid #dfdfdf", borderBottom: "1px solid #dfdfdf" }}>
-                    <TabPanel
-                        className="my-tab-panel"
-                        tabs={[
-                            {
-                                name: 'tab1',
-                                title: 'Tab 1',
-                                className: 'tab-one',
-
-                            },
-                            {
-                                name: 'tab2',
-                                title: 'Tab 2',
-                                className: 'tab-two',
-                            },
-                        ]}
-                    >
-                        {(tab) => (
-                            <div style={{ padding: '10px', width: '15vw' }}>
-                                {data[tab.name]}
-                            </div>
-                        )}
-                    </TabPanel>
+                    {block && (
+                        <Animate type="slide-in" options={{ origin: 'left' }}>
+                            {({ className }) => (
+                                <div className={className} style={{ padding: '10px', width: '280px', height: '600px' }}>
+                                    <TabPanel
+                                        className="my-tab-panel"
+                                        tabs={[
+                                            { name: 'tab1', title: 'Tab 1', className: 'tab-one' },
+                                            { name: 'tab2', title: 'Tab 2', className: 'tab-two' },
+                                        ]}
+                                    >
+                                        {({ name }) => {
+                                            const content = data[name];
+                                            return (
+                                                <div style={{ padding: '10px', width: '100%', height: '100%' }}>
+                                                    {content}
+                                                </div>
+                                            );
+                                        }}
+                                    </TabPanel>
+                                </div>
+                            )}
+                        </Animate>
+                    )}
                 </CardBody>
             </HStack>
         </Card>
