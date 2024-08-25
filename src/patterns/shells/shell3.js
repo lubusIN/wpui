@@ -32,7 +32,7 @@ import React, { useState } from 'react';
 function Shell3() {
     const [block, setBlock] = useState(true);
 
-    const data = {
+    const tabsContent = {
         tab1: (
             <>
                 <TextControl label="Text Control" value="Sample Text" />
@@ -62,9 +62,9 @@ function Shell3() {
     return (
         <Card>
             <CardHeader>
-                <HStack expanded={false}>
-                    <HStack expanded={false} style={{ marginLeft: '5px' }}>
-                        <svg width="145" height="38" viewBox="0 0 145 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <HStack>
+                    <HStack style={{ marginLeft: '5px' }}>
+                    <svg width="145" height="38" viewBox="0 0 145 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_dd_622_789)">
                                 <path d="M28.3817 34H9.61834C5.96802 34 3 31.032 3 27.3817V8.61834C3 4.96802 5.96802 2 9.61834 2H28.3817C32.032 2 35 4.96802 35 8.61834V27.3817C35 31.032 32.032 34 28.3817 34Z" fill="#3858E9" />
                                 <path d="M16.0912 20C14.8176 20 13.5783 19.9659 12.3046 20C10.6867 20 9.41308 18.774 9.10327 17.548C9.03442 17.2415 9 16.969 9 16.6625C9 15.2322 9 13.8019 9 12.3715C9 10.4303 10.4458 9 12.4079 9C16.6076 9 20.8417 9 25.0413 9C25.179 9 25.3167 9 25.4544 9C26.4182 9 27.2444 9.27245 27.9673 9.9195C28.6558 10.5666 29 11.3498 29 12.2693C29 13.7337 29 15.2322 29 16.6966C29 18.5356 27.5198 20 25.6609 20C22.5972 20 19.5336 20 16.4699 20C16.3666 20 16.2289 20 16.0912 20ZM16.642 17.7864C19.6713 17.7864 22.7005 17.7864 25.6954 17.7864C26.315 17.7864 26.7625 17.3096 26.7625 16.6966C26.7625 15.2322 26.7625 13.7337 26.7625 12.2693C26.7625 11.6563 26.315 11.1796 25.6954 11.1796C24.8348 11.1796 23.9742 11.1796 23.0792 11.1796C22.5284 11.1796 21.9432 11.1796 21.3924 11.1796C18.3976 11.1796 15.4028 11.1796 12.4079 11.1796C11.7194 11.1796 11.2375 11.6223 11.2375 12.2693C11.2375 13.7337 11.2375 15.2322 11.2375 16.6966C11.2375 17.3096 11.685 17.7864 12.3046 17.7864C13.7504 17.7864 15.1962 17.7864 16.642 17.7864Z" fill="#FEFEFE" />
@@ -97,25 +97,24 @@ function Shell3() {
                             </defs>
                         </svg>
                     </HStack>
-                </HStack>
-                <HStack alignment="right">
-                    <Button variant="primary">Publish</Button>
-                    <Button icon={drawerRight} onClick={() => setBlock(!block)} />
-                    <DropdownMenu icon={moreVertical}>
-                        {() => (
-                            <MenuGroup>
-                                <MenuItem>View</MenuItem>
-                                <MenuItem>Dismiss</MenuItem>
-                            </MenuGroup>
-                        )}
-                    </DropdownMenu>
+                    <HStack alignment="right">
+                        <Button variant="primary">Publish</Button>
+                        <Button icon={drawerRight} onClick={() => setBlock(!block)} />
+                        <DropdownMenu icon={moreVertical}>
+                            {() => (
+                                <MenuGroup>
+                                    <MenuItem>About us</MenuItem>
+                                    <MenuItem>Contact us</MenuItem>
+                                    <MenuItem>More Info</MenuItem>
+                                </MenuGroup>
+                            )}
+                        </DropdownMenu>
+                    </HStack>
                 </HStack>
             </CardHeader>
-            <HStack expanded={false}>
-                <CardBody style={{width:'100%', height:'100vh',padding:'0px',overflow:'hidden'}}>
-                    <iframe src='https://playground.wordpress.net/'  style={{ position:'relative',top:'-100px', width: '100%', height: '100vh', border: 'none' }}></iframe>
-                </CardBody>
-                <CardBody style={{ padding: "0px", borderLeft: "1px solid #dfdfdf", borderBottom: "1px solid #dfdfdf" }}>
+            <HStack>
+                <CardBody style={{ width: '100%', height: '100vh', padding: '0', overflow: 'hidden' }} />
+                <CardBody style={{ padding: '0', borderLeft: '1px solid #dfdfdf', borderBottom: '1px solid #dfdfdf' }}>
                     {block && (
                         <Animate type="slide-in" options={{ origin: 'left' }}>
                             {({ className }) => (
@@ -123,17 +122,14 @@ function Shell3() {
                                     <TabPanel
                                         tabs={[
                                             { name: 'tab1', title: 'Tab 1' },
-                                            { name: 'tab2', title: 'Tab 2'},
+                                            { name: 'tab2', title: 'Tab 2' },
                                         ]}
                                     >
-                                        {({ name }) => {
-                                            const content = data[name];
-                                            return (
-                                                <div style={{ padding: '10px', width: '100%', height: '100%' }}>
-                                                    {content}
-                                                </div>
-                                            );
-                                        }}
+                                        {({ name }) => (
+                                            <div style={{ padding: '10px', width: '100%', height: '100%' }}>
+                                                {tabsContent[name]}
+                                            </div>
+                                        )}
                                     </TabPanel>
                                 </div>
                             )}
