@@ -113,7 +113,9 @@ function Shell3() {
                 </HStack>
             </CardHeader>
             <HStack>
-                <CardBody style={{ width: '100%', height: '100vh', padding: '0', overflow: 'hidden' }} />
+                <CardBody style={{ width: '100%', height: '100%', padding: '0', overflow: 'hidden' }}>
+                    {/*Display Your Content Here*/}
+                </CardBody>
                 <CardBody style={{ padding: '0', borderLeft: '1px solid #dfdfdf', borderBottom: '1px solid #dfdfdf' }}>
                     {block && (
                         <Animate type="slide-in" options={{ origin: 'left' }}>
