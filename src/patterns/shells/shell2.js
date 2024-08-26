@@ -44,7 +44,6 @@ function Shell2() {
     const [showButtons, setShowButtons] = useState(false);
     const [newicon, setNewIcon] = useState(menu);
     const [height, setHeight] = useState('720px');
-    const [display, setDisplay] = useState('');
 
     const icon = {
         dashboard: home,
@@ -57,7 +56,6 @@ function Shell2() {
     const viewbutton = () => {
         setShowButtons(prevState => !prevState);
         setNewIcon(prevIcon => (prevIcon === menu ? close : menu));
-        setDisplay(prevDisplay => (prevDisplay === 'none' ? '' : 'none'));
     };
 
     useEffect(() => {
@@ -121,7 +119,7 @@ function Shell2() {
                         )}
                     </VStack>
                 </CardBody>
-                <CardBody size="large" style={{ padding: '0px', height: height, width: "100%", backgroundColor: 'white', borderRadius: '5px', display: display }}>
+                <CardBody size="large" style={{ padding: '0px', height: height, width: "100%", backgroundColor: 'white', borderRadius: '5px'}}>
                     <HStack expanded={false} style={{ borderBottom: '1px solid #D8D8D8', padding: '15px 50px' }}>
                         <Heading>Dashboard</Heading>
                         <Button variant="primary" icon={trendingUp}>Go Pro</Button>

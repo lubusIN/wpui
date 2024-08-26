@@ -114,7 +114,6 @@ function Shell1() {
                                 </Button>
                             ))}
                         </VStack>
-
                     </>
                 )}
                 <CardBody style={{ backgroundColor: '#F0F0F1', width: '100vw' }}>
