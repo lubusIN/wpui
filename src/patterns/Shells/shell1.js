@@ -62,7 +62,6 @@ function Shell1() {
             </CardHeader>
             <ZStack isReversed>
                 {isMobile && showButtons && (
-                    <>
                         <VStack style={{ padding:'12px',backgroundColor: 'white', width:'94vw' }} expanded={false}>
                             {buttonData.map((btn, index) => (
                                 <Button
@@ -75,7 +74,6 @@ function Shell1() {
                                 </Button>
                             ))}
                         </VStack>
-                    </>
                 )}
                 <CardBody style={{ backgroundColor: '#F0F0F1', width: '100vw' }}>
                     <Heading style={{ padding: '20px', marginLeft: '10px' }}>Dashboard</Heading>
@@ -92,8 +90,8 @@ function Shell1() {
 Shell1.meta = {
     title: 'Shell 1',
     name: 'Shell1',
-    category: 'Shell',
-    path: '/Shell/shell1',
+    category: 'Shells',
+    path: '/Shells/shell1',
 };
 // @meta-end
 

@@ -13,7 +13,7 @@ import * as patterns from '../patterns';
  * Render Shells
  */
 
-function Shell() {
+function Shells() {
   return (
     <svg width="307" height="230" viewBox="0 0 307 230" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="307" height="230" rx="6" fill="#F0F5FF" />
@@ -32,10 +32,10 @@ function Shell() {
   );
 };
 
-Shell.meta = {
-  title: 'Shell',
-  path: '/shell',
-  patterns: patterns.Shell,
+Shells.meta = {
+  title: 'Shells',
+  path: '/shells',
+  patterns: patterns.Shells,
 };
 
-export default Shell;
+export default Shells;
