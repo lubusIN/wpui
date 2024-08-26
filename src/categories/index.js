@@ -7,5 +7,6 @@ export { default as GridList } from './grid-list';
 export { default as Lists } from './lists';
 export { default as Navigations } from './navigations';
 export { default as PageHeading } from './page-heading';
+export { default as Shell } from './shell';
 export { default as Stats } from './stats';
 export { default as Tables } from './tables';
