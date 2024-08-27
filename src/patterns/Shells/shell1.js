@@ -39,7 +39,7 @@ function Shell1() {
             <Card>
                 <CardHeader>
                     <HStack>
-                        <img width='100px' style={{ minWidth: '100px' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
+                        <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                         {isMobile ? (
                             <Button icon={showButtons ? close : menu} onClick={()=> setShowButtons(prev => !prev)}></Button>
                         ) : (
