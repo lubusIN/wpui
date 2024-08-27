@@ -25,9 +25,7 @@ import React, { useState } from 'react';
 function Shell1() {
     const isMobile = !useViewportMatch('mobile');
     const [showButtons, setShowButtons] = useState(false);
-    const handleButtonClick = () => {
-        setShowButtons(prev => !prev);
-    };
+    
     const buttonData = [
         { icon: home, label: 'Dashboard' },
         { icon: cog, label: 'Settings' },
@@ -37,52 +35,59 @@ function Shell1() {
         { icon: trendingUp, label: 'Go Pro', variant: 'primary' }
     ];
     return (
-        <Card>
-            <CardHeader>
-                <HStack>
-                    <HStack expanded={false} style={{ marginLeft: '5px' }}>
-                        <img width='100px' style={{minWidth:'100px'}} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
+        <>
+            <Card>
+                <CardHeader>
+                    <HStack>
+                        <img width='100px' style={{ minWidth: '100px' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
+                        {isMobile ? (
+                            <Button icon={showButtons ? close : menu} onClick={()=> setShowButtons(prev => !prev)}></Button>
+                        ) : (
+                            <>
+                                <HStack expanded={false}>
+                                    {buttonData.slice(0, -1).map((btn, index) => (
+                                        <Button key={index} >
+                                            <Icon style={{ minWidth: '20px' }} icon={btn.icon} />
+                                            {btn.label}
+                                        </Button>
+                                    ))}
+                                </HStack>
+                                <Button variant="primary" icon={trendingUp}>Go Pro</Button>
+                            </>
+                        )}
                     </HStack>
-                    {isMobile ? (
-                        <Button icon={showButtons ? close : menu} onClick={handleButtonClick}></Button>
-                    ) : (
-                        <>
-                            <HStack expanded={false}>
-                                {buttonData.slice(0, -1).map((btn, index) => (
-                                    <Button key={index} >
-                                        <Icon style={{ minWidth: '20px' }} icon={btn.icon} />
-                                        {btn.label}
-                                    </Button>
-                                ))}
-                            </HStack>
-                            <Button variant="primary" icon={trendingUp}>Go Pro</Button>
-                        </>
-                    )}
-                </HStack>
-            </CardHeader>
-            <ZStack isReversed>
-                {isMobile && showButtons && (
-                        <VStack style={{ padding:'12px',backgroundColor: 'white', width:'94vw' }} expanded={false}>
+                </CardHeader>
+                <ZStack isReversed style={{ width: '100%' }}>
+                    {isMobile && showButtons && (
+                        <VStack style={{ padding: '12px', backgroundColor: 'white' }} expanded={false}>
                             {buttonData.map((btn, index) => (
                                 <Button
                                     key={index}
                                     icon={btn.icon}
                                     variant={btn.variant}
-                                    style={btn.label === 'Go Pro' ? { display: 'flex', justifyContent: 'center' } : {}}
+                                    style={btn.label === 'Go Pro' ? {  justifyContent: 'center' } : {}}
                                 >
                                     {btn.label}
                                 </Button>
                             ))}
                         </VStack>
-                )}
-                <CardBody style={{ backgroundColor: '#F0F0F1', width: '100vw' }}>
-                    <Heading style={{ padding: '20px', marginLeft: '10px' }}>Dashboard</Heading>
-                    <Card style={{ backgroundColor: '#F0F0F1', height: '300px', margin: '30px 30px', borderRadius: '10px' }}>
-                        {/* Display Your Content Here */}
-                    </Card>
-                </CardBody>
-            </ZStack>
-        </Card>
+                    )}
+                    <CardBody size="medium" style={{ backgroundColor: '#F0F0F1' }}>
+                        <Heading level={2}>Dashboard</Heading>
+                        <Card style={{ backgroundColor: '#F0F0F1', height: '300px', borderRadius: '10px' }}>
+                            {/* Display Your Content Here */}
+                        </Card>
+                    </CardBody>
+                </ZStack>
+            </Card>
+            <style>
+                {`
+                    .components-z-stack >div{
+                        width: 100%;
+                    }
+                `}
+            </style>
+        </>
     );
 }
 
