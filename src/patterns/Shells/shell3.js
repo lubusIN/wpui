@@ -63,60 +63,60 @@ function Shell3() {
 
     return (
         <Card>
-            <CardHeader>
-                <HStack>
-                    <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
-                    <HStack alignment="right">
-                        <Button variant="primary">Publish</Button>
-                        <Button icon={drawerRight} onClick={() => setBlock(!block)} />
-                        <DropdownMenu icon={moreVertical}>
-                            {() => (
-                                <MenuGroup>
-                                    <MenuItem>About us</MenuItem>
-                                    <MenuItem>Contact us</MenuItem>
-                                    <MenuItem>More Info</MenuItem>
-                                </MenuGroup>
-                            )}
-                        </DropdownMenu>
-                    </HStack>
-                </HStack>
-            </CardHeader>
-            <HStack>
-                <CardBody style={{ height: '380px', padding: '0' }}>
-                    {/* Display Your Content Here */}
-                </CardBody>
-                <CardBody
-                    style={{
-                        borderLeft: '1px solid #dfdfdf',
-                        borderBottom: '1px solid #dfdfdf',
-                        height: '100%',
-                        overflow: 'hidden',
-                        padding: '0px'
-                    }}
-                >
-                    {block && (
-                        <Animate type="slide-in" options={{ origin: 'left' }}>
-                            {({ className }) => (
-                                <div className={className} style={{ height: '100%', width: '100%' }}>
-                                    <TabPanel
-                                        tabs={[
-                                            { name: 'tab1', title: 'Tab 1' },
-                                            { name: 'tab2', title: 'Tab 2' },
-                                        ]}
-                                    >
-                                        {({ name }) => (
-                                            <div style={{ padding: '10px', height: '300px', width: '100%' }}>
-                                                {tabsContent[name]}
-                                            </div>
-                                        )}
-                                    </TabPanel>
-                                </div>
-                            )}
-                        </Animate>
+    <CardHeader>
+        <HStack>
+        <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>   
+            <HStack alignment="right">
+                <Button variant="primary">Publish</Button>
+                <Button icon={drawerRight} onClick={() => setBlock(!block)} />
+                <DropdownMenu icon={moreVertical}>
+                    {() => (
+                        <MenuGroup>
+                            <MenuItem>About us</MenuItem>
+                            <MenuItem>Contact us</MenuItem>
+                            <MenuItem>More Info</MenuItem>
+                        </MenuGroup>
                     )}
-                </CardBody>
+                </DropdownMenu>
             </HStack>
-        </Card>
+        </HStack>
+    </CardHeader>
+    <HStack>
+        <CardBody style={{ height: '380px', padding: '0', overflow: 'hidden' }}>
+            {/* Display Your Content Here */}
+        </CardBody>
+        <CardBody 
+            style={{ 
+                borderLeft: '1px solid #dfdfdf', 
+                height: '100%',
+                width:'300px',
+                overflow: 'hidden',
+                padding:'0px'
+            }}
+        >
+            {block && (
+                <Animate type="slide-in" options={{ origin: 'left' }}>
+                    {({ className }) => (
+                        <div className={className} style={{ height: '100%', width: '100%' }}>
+                            <TabPanel
+                                tabs={[
+                                    { name: 'tab1', title: 'Tab 1' },
+                                    { name: 'tab2', title: 'Tab 2' },
+                                ]}
+                            >
+                                {({ name }) => (
+                                    <div style={{ padding: '10px', height: '320px', width: '100%', overflowY: 'auto' }}>
+                                        {tabsContent[name]}
+                                    </div>
+                                )}
+                            </TabPanel>
+                        </div>
+                    )}
+                </Animate>
+            )}
+        </CardBody>
+    </HStack>
+</Card>
 
     );
 };
