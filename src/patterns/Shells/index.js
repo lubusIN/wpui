@@ -1,0 +1,1 @@
+export { default as Shell2 } from './shell2';
