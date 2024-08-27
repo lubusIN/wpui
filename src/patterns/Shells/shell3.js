@@ -126,7 +126,7 @@ Shell3.meta = {
     title: 'Shell 3',
     name: 'Shell3',
     category: 'Shells',
-    path: '/shells/shell3',
+    path: '/Shells/shell3',
 };
 // @meta-end
 
