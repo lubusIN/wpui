@@ -62,7 +62,7 @@ function Shell2() {
                 <Flex expanded={false} gap={1} align='top' direction={['column', 'row']}>
                     <CardBody style={{ width: isDesktop ? '25%' : '100%', padding: '0px' }}>
                         <VStack spacing={15} style={{ marginTop: '15px' }}>
-                            <HStack style={{ marginLeft: isDesktop ? '20px' : '8px', marginBottom: isDesktop ? '':'10px' }}>
+                            <HStack style={{ marginLeft:'8px', marginBottom: isDesktop ? '':'10px' }}>
                                 <img width='120px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Logo(2).png"></img>
                                 {!isMobile && (
                                     <Button
@@ -85,7 +85,7 @@ function Shell2() {
                             <MenuList activeButton={activeButton} handleButtonClick={handleButtonClick} icon={icon} />
                         }
                         <CardBody size="large" style={{ padding: '0px', height: isDesktop ? '720px' : '500px', width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
-                            <HStack expanded={false} style={{ borderBottom: '1px solid #D8D8D8', padding: '15px 50px' }}>
+                            <HStack expanded={false} style={{ borderBottom: '1px solid #D8D8D8', padding: '15px 30px' }}>
                                 <Heading>Dashboard</Heading>
                                 <Button variant="primary" icon={trendingUp}>Go Pro</Button>
                             </HStack>
