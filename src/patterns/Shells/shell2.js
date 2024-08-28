@@ -64,7 +64,7 @@ function Shell2() {
                         <VStack spacing={15} style={{ marginTop: '15px' }}>
                             <HStack style={{ marginLeft: isDesktop ? '20px' : '8px', marginBottom: isDesktop ? '':'10px' }}>
                                 <img width='120px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Logo(2).png"></img>
-                                {!isDesktop && (
+                                {!isMobile && (
                                     <Button
                                         icon={showButtons ? close : menu}
                                         onClick={() => setShowButtons(prevState => !prevState)}
