@@ -25,7 +25,7 @@ import React, { useState } from 'react';
 function Shell1() {
     const isMobile = !useViewportMatch('mobile');
     const [showButtons, setShowButtons] = useState(false);
-    
+
     const buttonData = [
         { icon: home, label: 'Dashboard' },
         { icon: cog, label: 'Settings' },
@@ -41,7 +41,7 @@ function Shell1() {
                     <HStack>
                         <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                         {isMobile ? (
-                            <Button icon={showButtons ? close : menu} onClick={()=> setShowButtons(prev => !prev)}></Button>
+                            <Button icon={showButtons ? close : menu} onClick={() => setShowButtons(prev => !prev)}></Button>
                         ) : (
                             <>
                                 <HStack expanded={false}>
@@ -65,19 +65,23 @@ function Shell1() {
                                     key={index}
                                     icon={btn.icon}
                                     variant={btn.variant}
-                                    style={btn.label === 'Go Pro' ? {  justifyContent: 'center' } : {}}
+                                    style={btn.label === 'Go Pro' ? { justifyContent: 'center' } : {}}
                                 >
                                     {btn.label}
                                 </Button>
                             ))}
                         </VStack>
                     )}
-                    <CardBody size="medium" style={{ backgroundColor: '#F0F0F1' }}>
-                        <Heading level={2}>Dashboard</Heading>
-                        <Card style={{ backgroundColor: '#F0F0F1', height: '300px', borderRadius: '10px' }}>
-                            {/* Display Your Content Here */}
-                        </Card>
-                    </CardBody>
+                    <Card size="medium" variant="secondary" isBorderless>
+                        <CardHeader isBorderless>
+                            <Heading level={2}>Dashboard</Heading>
+                        </CardHeader>
+                        <CardBody>
+                            <Card variant="secondary" style={{ height: '300px', borderRadius: '10px' }}>
+                                {/* Display Your Content Here */}
+                            </Card>
+                        </CardBody>
+                    </Card>
                 </ZStack>
             </Card>
             <style>
