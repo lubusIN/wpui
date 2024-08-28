@@ -36,7 +36,7 @@ function Shell1() {
     ];
     return (
         <>
-            <HStack expanded={false} style={{padding:'12px 20px'}}>
+            <HStack expanded={false} style={{padding:'12px 30px'}}>
                 <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                 {isMobile ? (
                     <Button icon={showButtons ? close : menu} onClick={() => setShowButtons(prev => !prev)}></Button>
