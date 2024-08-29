@@ -68,7 +68,7 @@ function Shell3() {
                 <HStack>
                     <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                     <HStack alignment="right">
-                        <Button variant="primary">Publish</Button>
+                        <Button style={{ minWidth: 'auto' }} variant="primary">Publish</Button>
                         <Button icon={drawerRight} onClick={() => setBlock(!block)} />
                         <DropdownMenu icon={moreVertical}>
                             {() => (
@@ -85,14 +85,14 @@ function Shell3() {
             <HStack spacing={0}>
                 <>
                     <CardBody style={{
-                        padding: '0', height: '500px', width: '100%'
+                        padding: '0', height: '100%', width: '100%'
                     }}>
                         {/* Display Your Content Here */}
                     </CardBody>
                     <CardBody
                         style={{
                             borderLeft: '1px solid #dfdfdf',
-                            height: '720px',
+                            height: '500px',
                             width: '280px',
                             overflow: 'hidden',
                             padding: '0px'
@@ -109,7 +109,7 @@ function Shell3() {
                                             ]}
                                         >
                                             {({ name }) => (
-                                                <div style={{ padding: '10px', height: '320px', width: 'auto' }}>
+                                                <div style={{ padding: '10px',height:'100%', width: 'auto' }}>
                                                     {tabsContent[name]}
                                                 </div>
                                             )}
