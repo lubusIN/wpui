@@ -26,9 +26,9 @@ function Panel3() {
         <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
                 <CardBody>
-                    <HStack direction={['column', 'row']} alignment={'start'} justify='left' >
+                    <HStack justify='left' >
                         <VStack>
-                            <Heading level={4}>Backup Your Website Automatically</Heading>
+                            <Heading level={4}>Lorem ipsum</Heading>
                             <Text
                                 size={14}
                                 lineHeight={1.6}
@@ -36,7 +36,7 @@ function Panel3() {
                                 style={{ maxWidth: '600px' }}
                                 variant="muted"
                             >
-                                Automate the safeguarding of your valuable content with scheduled automatic backups, ensuring the continuous protection of your website data against unforeseen events.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo totam non cumque deserunt officiis ex maiores nostrum.
                             </Text>
                         </VStack>
                         <ToggleControl
