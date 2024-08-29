@@ -87,16 +87,15 @@ function Shell3() {
                     {isMobile ? (
                         <>
                             <ZStack style={{ width: '100%' }}>
-                                <CardBody style={{
-                                    height: '380px', padding: '0', height: '500px', width: '100%'
-                                }}>
+                                <CardBody style={{ padding: '0', height: '500px', width: '100%'}}>
                                     {/* Display Your Content Here */}
+                                    <iframe height='100%' width="100%" src="https://playground.wordpress.net/"></iframe>
                                 </CardBody>
                                 <CardBody
                                     style={{
                                         height: '720px',
                                         padding: '0px',
-                                        width:'280px',
+                                        width:'100%',
                                         padding:'10px'
                                     }}
                                 >
@@ -125,10 +124,10 @@ function Shell3() {
                         </>
                     ) : (
                         <>
-                            <CardBody style={{
-                                height: '380px', padding: '0', height: '500px', width: '100%'
+                            <CardBody style={{ padding: '0', height: '500px', width: '100%'
                             }}>
                                 {/* Display Your Content Here */}
+                                <iframe height='100%' width="100%" src="https://playground.wordpress.net/"></iframe>
                             </CardBody>
                             <CardBody
                                 style={{
