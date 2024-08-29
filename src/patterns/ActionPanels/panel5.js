@@ -18,52 +18,37 @@ import { trendingUp, megaphone, archive } from "@wordpress/icons";
  */
 function Panel5() {
     return (
-        <>
-            <HStack alignment="center">
-                <Card size="large" style={{ borderRadius: '8px' }}>
-                    <HStack alignment="top">
-                        <CardBody>
-                            <VStack spacing={2}>
-                                <Heading level={1}>
-                                    Reach  new customers and increase sales
-                                </Heading>
-                                <VStack spacing={3}>
-                                    <HStack expanded={false} alignment="left">
-                                        <Icon size={20} icon={trendingUp}></Icon>
-                                        <Text variant="muted">Reach customers on other sale channels.</Text>
-                                    </HStack>
-                                    <HStack expanded={false} alignment="left">
-                                        <Icon size={20} icon={megaphone}></Icon>
-                                        <Text variant="muted">Advertise with marketing campaigns.</Text>
-                                    </HStack>
-                                    <HStack expanded={false} alignment="left">
-                                        <Icon size={20} icon={archive}></Icon>
-                                        <Text variant="muted">Build with Us.</Text>
-                                    </HStack>
-                                    <HStack expanded={false} alignment="left">
-                                        <Button variant="primary">Create a campaigns</Button>
-                                        <Button variant="secondary">Add channels</Button>
-                                    </HStack>
-                                </VStack>
+        <HStack alignment="center">
+            <Card size="large" style={{ borderRadius: '8px' }}>
+                <HStack alignment="top">
+                    <CardBody>
+                        <VStack spacing={2}>
+                            <Heading level={1}>
+                                Reach  new customers and increase sales
+                            </Heading>
+                            <VStack spacing={3}>
+                                <HStack expanded={false} alignment="left">
+                                    <Icon size={20} icon={trendingUp}></Icon>
+                                    <Text variant="muted">Reach customers on other sale channels.</Text>
+                                </HStack>
+                                <HStack expanded={false} alignment="left">
+                                    <Icon size={20} icon={megaphone}></Icon>
+                                    <Text variant="muted">Advertise with marketing campaigns.</Text>
+                                </HStack>
+                                <HStack expanded={false} alignment="left">
+                                    <Icon size={20} icon={archive}></Icon>
+                                    <Text variant="muted">Build with Us.</Text>
+                                </HStack>
+                                <HStack expanded={false} alignment="left">
+                                    <Button variant="primary">Create a campaigns</Button>
+                                    <Button variant="secondary">Add channels</Button>
+                                </HStack>
                             </VStack>
-                        </CardBody>
-                        <CardBody>
-                            <VStack>
-                                <img height='100px' width='250px' src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar2.png"></img>
-                            </VStack>
-                                <img id="small" height='200px' width='250px' src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar1.png"></img>
-                        </CardBody>
-                    </HStack>
-                </Card>
-            </HStack>
-            <style>
-                {`
-                .small{
-                margin-right:20px !important;
-                }
-                `}
-            </style>
-        </>
+                        </VStack>
+                    </CardBody>
+                </HStack>
+            </Card>
+        </HStack>
     );
 };
 
