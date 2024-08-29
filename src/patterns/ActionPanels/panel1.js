@@ -19,15 +19,17 @@ function Panel1() {
         <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
                 <CardBody>
-                    <VStack spacing={6} alignment="baseline">
-                        <VStack spacing={3}>
-                            <Heading level={3}>Update Your Profile</Heading>
-                            <Text size={15} weight={400} variant="muted">
-                                Elevate your online presence by personalizing your user profile with the latest information.
-                            </Text>
+                    <HStack spacing={8}>
+                        <VStack spacing={6} alignment="baseline">
+                            <VStack spacing={3}>
+                                <Heading>Lorem ipsum</Heading>
+                                <Text size={15} weight={400} variant="muted">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
+                                </Text>
+                            </VStack>
                         </VStack>
-                        <Button variant="primary">Update Profile</Button>
-                    </VStack>
+                        <Button variant="primary" style={{minWidth:'auto'}}>Call to action</Button>
+                    </HStack>
                 </CardBody>
             </Card>
         </HStack>
@@ -37,8 +39,8 @@ function Panel1() {
 // @meta-start
 Panel1.meta = {
     title: 'Panel 1',
-    name:'Panel1',
-    category:'ActionPanels',
+    name: 'Panel1',
+    category: 'ActionPanels',
     path: '/ActionPanels/panel1',
 };
 // @meta-end
