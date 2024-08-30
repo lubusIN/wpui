@@ -29,10 +29,10 @@ function Panel2() {
                             </Text>
                         </VStack>
                         <Button style={{ padding: 0 }}>
-                            <Text size={14} weight={600} as={"a"} color='#0064ff' style={{ textDecoration: 'none' }} >
+                            <Text size={14} weight={600} as={"a"} color='#3858E9' style={{ textDecoration: 'none' }} >
                                 Lorem ipsum
                             </Text>
-                            <Icon icon={arrowRight} color="#0064ff"></Icon>
+                            <Icon icon={arrowRight} color="#3858E9"></Icon>
                         </Button>
                     </VStack>
                 </CardBody>
