@@ -20,7 +20,7 @@ import { create, preformatted } from "@wordpress/icons";
 function Panel6() {
     return (
         <HStack alignment="center">
-            <Card size="large" style={{ borderRadius: '8px' }}>
+            <Card style={{ borderRadius: '8px' }}>
                 <CardHeader>
                     <HStack expanded={false} spacing={1}>
                         <Icon icon={preformatted}></Icon>
@@ -30,7 +30,7 @@ function Panel6() {
                 <CardBody>
                     <VStack spacing={5} alignment="baseline">
                         <VStack spacing={2}>
-                            <Text size={15} weight={400} variant="muted">
+                            <Text size={15} weight={400} variant="muted"       style={{ maxWidth: '600px' }}>
                                 Create any form you need by selecting from our pre-made templates or creating your own from scratch.
                             </Text>
                         </VStack>
