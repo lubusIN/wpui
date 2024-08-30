@@ -36,7 +36,7 @@ function Marketing2() {
                                     <HStack key={index}>
                                         {[section, data[index + 1]].map((currentSection, subIndex) => (
                                             <HStack alignment='top' key={subIndex}>
-                                                <Icon style={{ width:'25px', minWidth:'auto'}} icon={currentSection.icon} size={25} />
+                                                <Icon style={{ minWidth: '25px' }} icon={currentSection.icon} size={25} />
                                                 <VStack>
                                                     <Heading>{currentSection.title}</Heading>
                                                     <Text variant='muted' style={{ maxWidth: '400px' }}>
