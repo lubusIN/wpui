@@ -23,7 +23,9 @@ function Marketing1() {
                     <VStack alignment='center' spacing={5}>
                         <img src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                         <Heading>Build 20X faster with WPUI</Heading>
-                        <Text weight={500} align='center' variant='muted' style={{ maxWidth: '600px' }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
+                        <Text weight={500} align='center' variant='muted' style={{ maxWidth: '600px' }}>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </Text>
                         <Button variant="primary">Get Credits</Button>
                     </VStack>
                 </CardBody>
