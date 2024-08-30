@@ -23,7 +23,7 @@ function Panel1() {
                         <VStack spacing={6} alignment="baseline">
                             <VStack spacing={3}>
                                 <Heading>Lorem ipsum</Heading>
-                                <Text size={15} weight={400} variant="muted">
+                                <Text size={15} weight={400} variant="muted" style={{maxWidth:'600px'}}>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus corrupti atque repudiandae nam.
                                 </Text>
                             </VStack>
