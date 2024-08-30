@@ -9,3 +9,4 @@ export { default as Navigations } from './navigations';
 export { default as PageHeading } from './page-heading';
 export { default as Stats } from './stats';
 export { default as Tables } from './tables';
+export { default as Marketing } from './marketing';

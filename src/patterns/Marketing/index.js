@@ -1,0 +1,1 @@
+export { default as Marketing1 } from './marketing1';
