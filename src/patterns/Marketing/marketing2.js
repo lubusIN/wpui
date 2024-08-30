@@ -2,7 +2,6 @@
  * WordPress dependencies.
  */
 import {
-    Button,
     Card,
     Icon,
     CardBody,
@@ -15,69 +14,43 @@ import { category, cog, home } from "@wordpress/icons";
 
 /**
  * Render Subscription marketing
- */
+*/
 function Marketing2() {
+
+    const sections = [
+        { icon: home, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: home, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: category, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: category, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: cog, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: cog, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+    ];
     return (
         <HStack alignment="center">
             <Card size='large' style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack spacing={10}>
-                    <HStack>
-                        <HStack alignment='top'>
-                            <Icon icon={home} size={25}></Icon>
-                            <VStack>
-                                <Heading>Lorem lipsum</Heading>
-                                <Text variant='muted' style={{ maxWidth: '400px' }} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </Text>
-                            </VStack>
-                        </HStack>
-                        <HStack alignment="top">
-                            <Icon icon={home} size={25}></Icon>
-                            <VStack>
-                                <Heading>Lorem lipsum</Heading>
-                                <Text variant='muted' style={{ maxWidth: '400px' }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </Text>
-                            </VStack>
-                        </HStack>
-                    </HStack>
-
-                    <HStack>
-                        <HStack alignment='top'>
-                            <Icon icon={category} size={25}></Icon>
-                            <VStack>
-                                <Heading>Lorem lipsum</Heading>
-                                <Text variant='muted' style={{ maxWidth: '400px' }} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </Text>
-                            </VStack>
-                        </HStack>
-                        <HStack alignment="top">
-                            <Icon icon={category} size={25}></Icon>
-                            <VStack>
-                                <Heading>Lorem lipsum</Heading>
-                                <Text variant='muted' style={{ maxWidth: '400px' }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </Text>
-                            </VStack>
-                        </HStack>
-                    </HStack>
-
-                    <HStack>
-                        <HStack alignment='top'>
-                            <Icon icon={cog} size={25}></Icon>
-                            <VStack>
-                                <Heading>Lorem lipsum</Heading>
-                                <Text variant='muted' style={{ maxWidth: '400px' }} >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </Text>
-                            </VStack>
-                        </HStack>
-                        <HStack alignment="top">
-                            <Icon icon={cog} size={25}></Icon>
-                            <VStack>
-                                <Heading>Lorem lipsum</Heading>
-                                <Text variant='muted' style={{ maxWidth: '400px' }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                </Text>
-                            </VStack>
-                        </HStack>
-                    </HStack>
+                        {sections.map((section, index) => {
+                            if (index % 2 === 0) {
+                                return (
+                                    <HStack key={index}>
+                                        {[section, sections[index + 1]].map((currentSection, subIndex) => (
+                                            currentSection ? (
+                                                <HStack alignment='top' key={subIndex}>
+                                                    <Icon icon={currentSection.icon} size={25} />
+                                                    <VStack>
+                                                        <Heading>{currentSection.title}</Heading>
+                                                        <Text variant='muted' style={{ maxWidth: '400px' }}>
+                                                            {currentSection.text}
+                                                        </Text>
+                                                    </VStack>
+                                                </HStack>
+                                            ) : null
+                                        ))}
+                                    </HStack>
+                                );
+                            }
+                        })}
                     </VStack>
                 </CardBody>
             </Card>
