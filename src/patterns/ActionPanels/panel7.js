@@ -22,7 +22,7 @@ import { key } from "@wordpress/icons";
 function Panel7() {
     return (
         <HStack alignment="center">
-            <Card  style={{ borderRadius: '8px' }}>
+            <Card style={{ borderRadius: '8px' }}>
                 <CardHeader>
                     <HStack expanded={false} spacing={1}>
                         <Icon icon={key}></Icon>
@@ -35,12 +35,8 @@ function Panel7() {
                             Enter your license here
                         </Text>
                         <HStack expanded={false} spacing={2} alignment='left'>
-                            <InputControl
-                            style={{minWidth:'auto'}}
-                                placeholder="Paste your license key here..."
-                            >
-                            </InputControl>
-                            <Button style={{minWidth:'auto'}} size='compact' variant='primary'>Activate</Button>
+                            <InputControl placeholder="Paste your license key here..." />
+                            <Button style={{ minWidth: 'auto' }} size='compact' variant='primary'>Activate</Button>
                         </HStack>
                         <Text size={15} weight={400} variant="muted">
                             If you do not have a license key, you can
