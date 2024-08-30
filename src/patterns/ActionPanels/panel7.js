@@ -30,17 +30,17 @@ function Panel7() {
                     </HStack>
                 </CardHeader>
                 <CardBody>
-
                     <VStack spacing={3}>
                         <Text size={15} weight={600}>
                             Enter your license here
                         </Text>
                         <HStack expanded={false} spacing={2} alignment='left'>
                             <InputControl
+                            style={{minWidth:'auto'}}
                                 placeholder="Paste your license key here..."
                             >
                             </InputControl>
-                            <Button size='compact' variant='primary'>Activate</Button>
+                            <Button style={{minWidth:'auto'}} size='compact' variant='primary'>Activate</Button>
                         </HStack>
                         <Text size={15} weight={400} variant="muted">
                             If you do not have a license key, you can
