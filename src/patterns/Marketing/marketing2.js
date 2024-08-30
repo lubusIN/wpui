@@ -17,7 +17,7 @@ import { category, cog, home } from "@wordpress/icons";
 */
 function Marketing2() {
 
-    const sections = [
+    const data = [
         { icon: home, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
         { icon: home, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
         { icon: category, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
@@ -30,22 +30,20 @@ function Marketing2() {
             <Card size='large' style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack spacing={10}>
-                        {sections.map((section, index) => {
+                        {data.map((section, index) => {
                             if (index % 2 === 0) {
                                 return (
                                     <HStack key={index}>
-                                        {[section, sections[index + 1]].map((currentSection, subIndex) => (
-                                            currentSection ? (
-                                                <HStack alignment='top' key={subIndex}>
-                                                    <Icon icon={currentSection.icon} size={25} />
-                                                    <VStack>
-                                                        <Heading>{currentSection.title}</Heading>
-                                                        <Text variant='muted' style={{ maxWidth: '400px' }}>
-                                                            {currentSection.text}
-                                                        </Text>
-                                                    </VStack>
-                                                </HStack>
-                                            ) : null
+                                        {[section, data[index + 1]].map((currentSection, subIndex) => (
+                                            <HStack alignment='top' key={subIndex}>
+                                                <Icon style={{ width:'25px', minWidth:'auto'}} icon={currentSection.icon} size={25} />
+                                                <VStack>
+                                                    <Heading>{currentSection.title}</Heading>
+                                                    <Text variant='muted' style={{ maxWidth: '400px' }}>
+                                                        {currentSection.text}
+                                                    </Text>
+                                                </VStack>
+                                            </HStack>
                                         ))}
                                     </HStack>
                                 );
