@@ -29,11 +29,9 @@ function Panel6() {
                 </CardHeader>
                 <CardBody>
                     <VStack spacing={5} alignment="baseline">
-                        <VStack spacing={2}>
-                            <Text size={15} weight={400} variant="muted" style={{ maxWidth: '600px' }}>
-                                Create any form you need by selecting from our pre-made templates or creating your own from scratch.
-                            </Text>
-                        </VStack>
+                        <Text size={15} weight={400} variant="muted" style={{ maxWidth: '600px' }}>
+                            Create any form you need by selecting from our pre-made templates or creating your own from scratch.
+                        </Text>
                         <Button icon={create} iconSize={30} variant="primary">Create form</Button>
                     </VStack>
                 </CardBody>
