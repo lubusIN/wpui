@@ -47,7 +47,7 @@ function Panel5() {
                                     </VStack>
                                     <HStack expanded={false} alignment="left">
                                         <Button variant="primary">Create a campaigns</Button>
-                                        <Button variant="secondary">getting started </Button>
+                                        <Button variant="secondary">Getting started </Button>
                                     </HStack>
                                 </VStack>
                                 <img height='200px' src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar1.png"></img>
