@@ -19,7 +19,7 @@ import { key } from "@wordpress/icons";
 /**
  * Render Subscription action panel
  */
-function Panel7() {
+function Panel6() {
     return (
         <HStack alignment="center">
             <Card style={{ borderRadius: '8px' }}>
@@ -34,7 +34,7 @@ function Panel7() {
                         <Text size={15} weight={500}>
                             Enter your license here
                         </Text>
-                        <HStack expanded={false} spacing={2} alignment='left'>
+                        <HStack expanded={false} spacing={2} direction={['column', 'row']} alignment={'start'} justify='left'>
                             <InputControl __unstableInputWidth={200} style={{ height: '36px' }} placeholder="Paste your license key here..." />
                             <Button style={{ maxWidth: 'auto' }} variant='primary'>Activate</Button>
                         </HStack>
@@ -50,11 +50,11 @@ function Panel7() {
 };
 
 // @meta-start
-Panel7.meta = {
-    title: 'Panel 7',
-    name: 'Panel7',
+Panel6.meta = {
+    title: 'Panel 6',
+    name: 'Panel6',
     category: 'ActionPanels',
-    path: '/ActionPanels/panel7'
+    path: '/ActionPanels/panel6'
 };
 // @meta-end
-export default Panel7;
+export default Panel6;
