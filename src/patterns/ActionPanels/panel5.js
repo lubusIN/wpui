@@ -17,7 +17,7 @@ import { create, preformatted } from "@wordpress/icons";
 /**
  * Render Subscription action panel
  */
-function Panel6() {
+function Panel5() {
     return (
         <HStack alignment="center">
             <Card style={{ borderRadius: '8px' }}>
@@ -41,12 +41,12 @@ function Panel6() {
 };
 
 // @meta-start
-Panel6.meta = {
-    title: 'Panel 6',
-    name: 'Panel6',
+Panel5.meta = {
+    title: 'Panel 5',
+    name: 'Panel5',
     category: 'ActionPanels',
-    path: '/ActionPanels/panel6'
+    path: '/ActionPanels/panel5'
 };
 // @meta-end
 
-export default Panel6;
+export default Panel5;
