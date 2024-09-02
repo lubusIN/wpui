@@ -15,11 +15,11 @@ import {
 import {
     Card,
     ResizableBox,
+    __experimentalHStack as HStack,
+    __experimentalVStack as VStack,
     __experimentalHeading as Heading,
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
-    __experimentalHStack as HStack,
-    __experimentalVStack as VStack,
 } from "@wordpress/components";
 
 /**
@@ -32,6 +32,7 @@ import './style.scss'
  * Render Pattern View
 */
 function PatternView({ title, name, category, path, component: Pattern }) {
+    const patternstyle = category === 'Shells' ? { padding: '0px' } : {}
     const [view, setView] = useState('preview');
     const isMobile = useViewportMatch('mobile');
     const iframeRef = useRef(null);
@@ -60,7 +61,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                 updateHeight();
             }, 10)}
         >
-            <Card className="wpui-variation-card">
+            <Card className="wpui-variation-card" style={{ ...patternstyle }}>
                 <iframe
                     loading='lazy'
                     seamless={true}
@@ -104,7 +105,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     </HStack>
                 </HStack>
                 {isMobile ? desktop : mobile}
-                <PatternCode path={path} style={view === 'preview' ? { display: 'none' } : {}}/>
+                <PatternCode path={path} style={view === 'preview' ? { display: 'none' } : {}} />
             </VStack>
         </>
     );
