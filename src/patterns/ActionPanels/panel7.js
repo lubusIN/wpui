@@ -27,23 +27,23 @@ function Panel7() {
                         <HStack alignment="top" spacing={0}>
                             <VStack spacing={2}>
                                 <HStack alignment='topLeft' style={{ maxWidth: '500px' }} >
-                                    <Heading level={1}>
+                                    <Heading level={1} >
                                         Reach  new customers and increase sales
                                     </Heading>
                                 </HStack>
                                 <HStack>
                                     <VStack spacing={8}>
                                         <VStack spacing={3}>
-                                            <HStack expanded={false} alignment="left">
-                                                <Icon size={20} icon={trendingUp}></Icon>
+                                            <HStack expanded={false} alignment="left" spacing={2}>
+                                                <Icon style={{ minWidth: '25px' }} icon={trendingUp}></Icon>
                                                 <Text weight={500} variant="muted">Reach customers on other sale channels.</Text>
                                             </HStack>
                                             <HStack expanded={false} alignment="left">
-                                                <Icon size={20} icon={megaphone}></Icon>
+                                                <Icon style={{ minWidth: '25px' }} icon={megaphone}></Icon>
                                                 <Text weight={500} variant="muted">Advertise with marketing campaigns.</Text>
                                             </HStack>
                                             <HStack expanded={false} alignment="left">
-                                                <Icon size={20} icon={archive}></Icon>
+                                                <Icon style={{ minWidth: '25px' }} icon={archive}></Icon>
                                                 <Text weight={500} variant="muted">Build with Us.</Text>
                                             </HStack>
                                         </VStack>
