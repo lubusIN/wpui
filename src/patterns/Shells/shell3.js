@@ -34,6 +34,7 @@ import React, { useState } from 'react';
 function Shell3() {
     const isMobile = !useViewportMatch('mobile')
     const [block, setBlock] = useState(true);
+    const [Display, setDisplay] = useState(true)
 
     const tabsContent = {
         tab1: (
@@ -69,7 +70,11 @@ function Shell3() {
                     <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                     <HStack alignment="right">
                         <Button style={{ minWidth: 'auto' }} variant="primary">Publish</Button>
-                        <Button icon={drawerRight} onClick={() => setBlock(!block)} />
+                        <Button icon={drawerRight} onClick={() => {
+                            setBlock(!block)
+                            setDisplay(prev => !prev)
+                        }
+                        } />
                         <DropdownMenu icon={moreVertical}>
                             {() => (
                                 <MenuGroup>
@@ -95,7 +100,8 @@ function Shell3() {
                             height: '500px',
                             width: '280px',
                             overflow: 'hidden',
-                            padding: '0px'
+                            padding: '0px',
+                            display: Display ? '' : 'none'
                         }}
                     >
                         {block && (
@@ -109,7 +115,7 @@ function Shell3() {
                                             ]}
                                         >
                                             {({ name }) => (
-                                                <div style={{ padding: '10px',height:'100%', width: 'auto' }}>
+                                                <div style={{ padding: '10px', height: '100%', width: 'auto' }}>
                                                     {tabsContent[name]}
                                                 </div>
                                             )}
