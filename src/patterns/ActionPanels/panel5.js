@@ -55,6 +55,21 @@ function Panel5() {
                         </VStack>
                     </CardBody>
                 </HStack>
+            <Card style={{ borderRadius: '8px' }}>
+                <CardHeader>
+                    <HStack expanded={false} spacing={1}>
+                        <Icon icon={preformatted}></Icon>
+                        <Heading level={3}>Forms</Heading>
+                    </HStack>
+                </CardHeader>
+                <CardBody>
+                    <VStack spacing={5} alignment="baseline">
+                        <Text size={15} weight={400} variant="muted" style={{ maxWidth: '600px' }}>
+                            Create any form you need by selecting from our pre-made templates or creating your own from scratch.
+                        </Text>
+                        <Button icon={create} iconSize={30} variant="primary">Create form</Button>
+                    </VStack>
+                </CardBody>
             </Card>
         </HStack>
     );
@@ -68,5 +83,4 @@ Panel5.meta = {
     path: '/ActionPanels/panel5',
 };
 // @meta-end
-
 export default Panel5;
