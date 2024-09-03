@@ -9,6 +9,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
+    __experimentalGrid as Grid
 } from "@wordpress/components";
 import { category, cog, home } from "@wordpress/icons";
 
@@ -34,17 +35,19 @@ function Marketing2() {
                             if (index % 2 === 0) {
                                 return (
                                     <HStack key={index}>
-                                        {[section, data[index + 1]].map((currentSection, subIndex) => (
-                                            <HStack alignment='top' key={subIndex}>
-                                                <Icon style={{ minWidth: '25px' }} icon={currentSection.icon} size={25} />
-                                                <VStack>
-                                                    <Heading>{currentSection.title}</Heading>
-                                                    <Text variant='muted' style={{ maxWidth: '400px' }}>
-                                                        {currentSection.text}
-                                                    </Text>
-                                                </VStack>
-                                            </HStack>
-                                        ))}
+                                        <Grid columns={[1, 2, 2]}>
+                                            {[section, data[index + 1]].map((currentSection, subIndex) => (
+                                                <HStack alignment='top' key={subIndex}>
+                                                    <Icon style={{ minWidth: '25px' }} icon={currentSection.icon} size={25} />
+                                                    <VStack>
+                                                        <Heading level={4}>{currentSection.title}</Heading>
+                                                        <Text variant='muted' style={{ maxWidth: '450px' }}>
+                                                            {currentSection.text}
+                                                        </Text>
+                                                    </VStack>
+                                                </HStack>
+                                            ))}
+                                        </Grid>
                                     </HStack>
                                 );
                             }

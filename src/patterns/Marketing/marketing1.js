@@ -6,6 +6,7 @@ import {
     Card,
     CardHeader,
     CardBody,
+    __experimentalSurface as Surface,
     __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalVStack as VStack,
@@ -21,12 +22,12 @@ function Marketing1() {
             <Card size='large' style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack alignment='center' spacing={5}>
-                        <img src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
-                        <Heading>Build 20X faster with WPUI</Heading>
+                        <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png" style={{ maxWidth: 'auto' }} />
+                        <Heading align="center">Build 20X faster with WPUI</Heading>
                         <Text weight={500} align='center' variant='muted' style={{ maxWidth: '600px' }}>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </Text>
-                        <Button variant="primary">Get Credits</Button>
+                        <Button variant="primary">Get credits</Button>
                     </VStack>
                 </CardBody>
             </Card>
