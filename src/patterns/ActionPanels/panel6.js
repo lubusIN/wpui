@@ -11,6 +11,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalVStack as VStack,
     __experimentalHStack as HStack,
+    __experimentalGrid as Grid,
     __experimentalInputControl as InputControl,
     ExternalLink
 } from "@wordpress/components";
@@ -35,10 +36,10 @@ function Panel6() {
                             <Text size={15} weight={500}>
                                 Enter your license here
                             </Text>
-                            <HStack expanded={false} spacing={2} direction={['column', 'row']} alignment={'start'} justify='left'>
-                                <InputControl __unstableInputWidth={200} style={{ height: '36px' }} placeholder="Paste your license key here..." />
-                                <Button style={{ maxWidth: 'auto' }} variant='primary'>Activate</Button>
-                            </HStack>
+                            <Grid columns={[1,2,2]}>
+                                <InputControl style={{ height: '36px' }} placeholder="Paste your license key here..." />
+                                <Button style={{width:'75px'}} variant='primary'>Activate</Button>
+                            </Grid>
                             <Text size={15} weight={400} variant="muted">
                                 If you do not have a license key, you can
                                 <ExternalLink href="" style={{ textDecoration: 'none', color: '#3858E9' }}> purchase one here </ExternalLink>
