@@ -31,27 +31,19 @@ function Marketing2() {
             <Card size='large' style={{ borderRadius: '8px' }}>
                 <CardBody>
                     <VStack spacing={10}>
-                        {data.map((section, index) => {
-                            if (index % 2 === 0) {
-                                return (
-                                    <HStack key={index}>
-                                        <Grid columns={[1, 2, 2]}>
-                                            {[section, data[index + 1]].map((currentSection, subIndex) => (
-                                                <HStack alignment='top' key={subIndex}>
-                                                    <Icon style={{ minWidth: '25px' }} icon={currentSection.icon} size={25} />
-                                                    <VStack>
-                                                        <Heading level={4}>{currentSection.title}</Heading>
-                                                        <Text variant='muted' style={{ maxWidth: '450px' }}>
-                                                            {currentSection.text}
-                                                        </Text>
-                                                    </VStack>
-                                                </HStack>
-                                            ))}
-                                        </Grid>
-                                    </HStack>
-                                );
-                            }
-                        })}
+                        <Grid columns={[1, 2, 2]} gap={10}>
+                            {data.map((currentSection, subIndex) => (
+                                <HStack alignment='top' key={subIndex}>
+                                    <Icon style={{ minWidth: '25px' }} icon={currentSection.icon} size={25} />
+                                    <VStack>
+                                        <Heading level={4}>{currentSection.title}</Heading>
+                                        <Text variant='muted' style={{ maxWidth: '450px' }}>
+                                            {currentSection.text}
+                                        </Text>
+                                    </VStack>
+                                </HStack>
+                            ))}
+                        </Grid>
                     </VStack>
                 </CardBody>
             </Card>
