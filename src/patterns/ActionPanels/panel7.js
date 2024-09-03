@@ -13,12 +13,14 @@ import {
     __experimentalSurface as Surface,
     __experimentalGrid as Grid
 } from "@wordpress/components";
+import { useViewportMatch } from "@wordpress/compose";
 import { trendingUp, megaphone, archive } from "@wordpress/icons";
 
 /**
  * Render Subscription action panel
  */
 function Panel7() {
+    const isMobile = !useViewportMatch('mobile')
     return (
         <>
             <HStack alignment="center">
@@ -54,7 +56,7 @@ function Panel7() {
                                     </VStack>
                                 </HStack>
                             </VStack>
-                            <VStack className='wpui_panel_container' >
+                            <VStack className='wpui_panel_container' style={{ display: isMobile ? 'none' : '' }} >
                                 <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar2.png" style={{ height: '100%', width: '200px', marginLeft: '100px' }} />
                                 <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/avtar/avtar1.png" style={{ height: '100%', width: '200px' }} />
                             </VStack>
@@ -62,15 +64,6 @@ function Panel7() {
                     </CardBody>
                 </Card>
             </HStack>
-            <style>
-                {`
-              @media only screen and (max-width: 760px){
-                .wpui_panel_container > img{
-                    display: none;
-                }
-            }
-    `}
-            </style>
         </>
     );
 };
