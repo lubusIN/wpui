@@ -50,7 +50,7 @@ function Panel6() {
             <style>
                 {`
                 .components-input-control__container{
-                width:225px;}
+                width:250px;}
                 `}
             </style>
         </>
