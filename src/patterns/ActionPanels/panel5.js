@@ -16,7 +16,7 @@ import { trendingUp, megaphone, archive } from "@wordpress/icons";
 /**
  * Render Subscription action panel
  */
-function Panel5() {
+function Panel7() {
     return (
         <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '8px' }}>
@@ -76,11 +76,11 @@ function Panel5() {
 };
 
 // @meta-start
-Panel5.meta = {
-    title: 'Panel 5',
-    name: 'Panel5',
+Panel7.meta = {
+    title: 'Panel 7',
+    name: 'Panel7',
     category: 'ActionPanels',
-    path: '/ActionPanels/panel5',
+    path: '/ActionPanels/panel7',
 };
 // @meta-end
-export default Panel5;
+export default Panel7;
