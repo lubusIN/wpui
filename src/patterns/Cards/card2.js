@@ -4,12 +4,13 @@
 import {
     Button,
     Card,
+    CardBody,
     Icon,
     __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
-    CardBody,
+    __experimentalSurface as Surface,
 } from "@wordpress/components";
 import { arrowRight } from "@wordpress/icons";
 
@@ -19,11 +20,15 @@ import { arrowRight } from "@wordpress/icons";
 function Card2() {
     return (
         <HStack alignment="center">
-        <Card size="large" style={{ borderRadius: '4px' }}>
-            <CardBody>
-                <VStack spacing={5}>
-                    <img style={{ borderRadius: '10px' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Image%20wrap.png"></img>
+            <Card size="large" style={{ borderRadius: '4px' }}>
+                <CardBody>
                     <VStack spacing={3}>
+                        <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Image%20wrap.png" style={{ height: '100%', width: '100%', borderRadius: '10px' }} />
+                        <Button  style={{ padding: 0 }}>
+                            <Text weight={500} color='#3858E9'>
+                            Category/Tagline
+                            </Text>
+                        </Button>
                         <Heading level={4} >Build WP Plugin Faster</Heading>
                         <Text variant='muted' style={{ maxWidth: '300px' }} >
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -38,10 +43,9 @@ function Card2() {
                             </Button>
                         </HStack>
                     </VStack>
-                </VStack>
-            </CardBody>
-        </Card >
-    </HStack>
+                </CardBody>
+            </Card>
+        </HStack>
     );
 };
 
