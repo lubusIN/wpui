@@ -11,7 +11,7 @@ import {
     __experimentalHStack as HStack,
     __experimentalGrid as Grid
 } from "@wordpress/components";
-import { category, cog, home } from "@wordpress/icons";
+import { archive, trendingUp } from "@wordpress/icons";
 
 /**
  * Render Subscription marketing
@@ -19,12 +19,12 @@ import { category, cog, home } from "@wordpress/icons";
 function Marketing2() {
 
     const data = [
-        { icon: home, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
-        { icon: home, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
-        { icon: category, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
-        { icon: category, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
-        { icon: cog, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
-        { icon: cog, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: archive, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: archive, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: trendingUp, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: trendingUp, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: archive, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
+        { icon: archive, title: 'Lorem lipsum', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s' },
     ];
     return (
         <HStack alignment="center">
@@ -32,9 +32,21 @@ function Marketing2() {
                 <CardBody>
                     <VStack spacing={10}>
                         <Grid columns={[1, 2, 2]} gap={10}>
-                            {data.map((Section,Index) => (
-                                <HStack alignment='top' key={Index}>
-                                    <Icon style={{ minWidth: '25px' }} icon={Section.icon} size={25} />
+                            {data.map((Section, Index) => (
+                                <HStack key={Index}>
+                                    <CardBody size='xSmall'
+                                        style={{
+                                            minWidth: 'auto',
+                                            borderRadius: '25px',
+                                            backgroundColor: "#C7D1FF",
+                                            marginBottom: '50px'
+                                        }}>
+                                        <Icon
+                                            fill="blue"
+                                            size={25}
+                                            icon={Section.icon}
+                                        />
+                                    </CardBody>
                                     <VStack>
                                         <Heading level={4}>{Section.title}</Heading>
                                         <Text variant='muted' style={{ maxWidth: '450px' }}>
