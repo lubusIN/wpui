@@ -99,9 +99,10 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                             isBlock
                             value={view}
                             onChange={(value) => setView(value)}
+                        
                         >
-                            <ToggleGroupControlOption value="preview" label="Preview" />
-                            <ToggleGroupControlOption value="code" label="Code" />
+                            <ToggleGroupControlOption className='wpui-toogle-button' style={{color:'black',fontWeight:'600'}} value="preview" label="Preview" />
+                            <ToggleGroupControlOption className='wpui-toogle-button' style={{color:'black',fontWeight:'600'}} value="code" label="Code" />
                         </ToggleGroupControl>
                     </HStack>
                 </HStack>

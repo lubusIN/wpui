@@ -3,13 +3,15 @@
     font-size: .875rem;
     font-weight: 500;
     padding: 5px !important;
+    background-color: #f2f9ff !important;
+    border: none !important;
 
     [role="presentation"] {
         background-color: white;
         transform: none !important;
     }
 
-    button[data-active-item] svg {
+    button[data-active-item]  {
         fill: #5b5b5b;
     }
 
@@ -19,18 +21,8 @@
     }
 }
 
-.css-orl39q-pressed-buttonView {
-    color: black !important;
-    box-shadow: 1px 1px 1px #9c9c9c;
-}
-
-.css-ytx8l9-View-toggleGroupControlSize-enclosingBorder-enclosingBorders-toggleGroupControl-block {
-    background: #f2f9ff !important;
-    border: none !important;
-}
-
-.css-qme2wc-ButtonContentView {
-    font-weight: 600;
+.wpui-toogle-button{
+    color: black;
 }
 
 .wpui-variation-card {
