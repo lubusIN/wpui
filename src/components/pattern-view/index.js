@@ -20,6 +20,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
+    __experimentalToggleGroupControlOption as ToggleGroupControlOption,
 } from "@wordpress/components";
 
 /**
@@ -89,7 +90,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         <>
             <VStack spacing={4}>
                 <HStack>
-                    <Heading level={4} weight={500}>{title}</Heading>
+                    <Heading className='head' level={4} weight={500}>{title}</Heading>
                     <HStack expanded={false} justify='right' alignment='center'>
                         <ToggleGroupControl
                             className="wpui-view-toggle"
@@ -99,8 +100,8 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                             value={view}
                             onChange={(value) => setView(value)}
                         >
-                            <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
-                            <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
+                            <ToggleGroupControlOption value="preview" label="Preview" />
+                            <ToggleGroupControlOption value="code" label="Code" />
                         </ToggleGroupControl>
                     </HStack>
                 </HStack>
