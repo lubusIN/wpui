@@ -11,7 +11,7 @@ import {
     __experimentalVStack as VStack,
     CardBody,
 } from "@wordpress/components";
-import { arrowRight, starEmpty } from "@wordpress/icons";
+import { arrowRight, starFilled } from "@wordpress/icons";
 
 /**
  * Render Card.
@@ -21,8 +21,14 @@ function Card1() {
         <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '4px' }}>
                 <CardBody>
-                    <HStack alignment='top'>
-                        <Icon style={{ minWidth: '25px' }} icon={starEmpty} size={25}></Icon>
+                    <HStack alignment='top' spacing={4}>
+                        <CardBody size='xSmall'
+                            style={{
+                                minWidth: 'auto',
+                                backgroundColor: "#F2F6FF",
+                            }}>
+                            <Icon style={{ minWidth: '25px' }} icon={starFilled} size={25} fill="blue"></Icon>
+                        </CardBody>
                         <VStack>
                             <Heading level={4} >Build WP Plugin Faster</Heading>
                             <Text variant='muted' style={{ maxWidth: '225px' }} >

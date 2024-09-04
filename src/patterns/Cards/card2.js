@@ -11,6 +11,7 @@ import {
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
     __experimentalSurface as Surface,
+    CardMedia,
 } from "@wordpress/components";
 import { arrowRight } from "@wordpress/icons";
 
@@ -21,12 +22,19 @@ function Card2() {
     return (
         <HStack alignment="center">
             <Card size="large" style={{ borderRadius: '4px' }}>
+                <CardMedia>
+                    <img src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Image%20wrap.png" />
+                </CardMedia>
                 <CardBody>
                     <VStack spacing={3}>
-                        <Surface as={'img'} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Image%20wrap.png" style={{ height: '100%', width: '100%', borderRadius: '10px' }} />
-                        <Button  style={{ padding: 0 }}>
-                            <Text weight={500} color='#3858E9'>
-                            Category/Tagline
+                        <Button style={{ padding: 0 }}>
+                            <Text weight={500} color='#3858E9'
+                                style={{
+                                    padding: '5px',
+                                    backgroundColor: '#ececec',
+                                    borderRadius: '5px'
+                                }}>
+                                Category/Tagline
                             </Text>
                         </Button>
                         <Heading level={4} >Build WP Plugin Faster</Heading>
