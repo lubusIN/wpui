@@ -32,13 +32,13 @@ function Marketing2() {
                 <CardBody>
                     <VStack spacing={10}>
                         <Grid columns={[1, 2, 2]} gap={10}>
-                            {data.map((currentSection, subIndex) => (
-                                <HStack alignment='top' key={subIndex}>
-                                    <Icon style={{ minWidth: '25px' }} icon={currentSection.icon} size={25} />
+                            {data.map((Section,Index) => (
+                                <HStack alignment='top' key={Index}>
+                                    <Icon style={{ minWidth: '25px' }} icon={Section.icon} size={25} />
                                     <VStack>
-                                        <Heading level={4}>{currentSection.title}</Heading>
+                                        <Heading level={4}>{Section.title}</Heading>
                                         <Text variant='muted' style={{ maxWidth: '450px' }}>
-                                            {currentSection.text}
+                                            {Section.text}
                                         </Text>
                                     </VStack>
                                 </HStack>
