@@ -3,7 +3,7 @@
     font-size: .875rem;
     font-weight: 500;
     padding: 5px !important;
-    background-color: #f2f9ff !important;
+    background-color: #f4faff !important;
     border: none !important;
 
     [role="presentation"] {
@@ -11,7 +11,7 @@
         transform: none !important;
     }
 
-    button[data-active-item]  {
+    button[data-active-item] {
         fill: #5b5b5b;
     }
 
@@ -21,8 +21,9 @@
     }
 }
 
-.wpui-toogle-button{
-    color: black;
+.wpui-toogle-button {
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 .wpui-variation-card {
