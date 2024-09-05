@@ -45,10 +45,11 @@ function PatternView({ title, name, category, path, component: Pattern }) {
 
     const desktop = (
         <ResizableBox
-            style={view === 'code' ? { display: 'none' } : {}}
+            style={view === 'code' ? { display: 'none' } : { marginRight: 'auto', marginLeft: 'auto' }}
             maxWidth={1350}
             minWidth={360}
-            enable={{ right: true }}
+            defaultSize={{width:1350}}
+            enable={{ right: true, left: true }}
             onResizeStop={() => {
                 updateHeight();
                 clearInterval(resizePing);
@@ -121,5 +122,4 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         </>
     );
 }
-
 export default PatternView;
