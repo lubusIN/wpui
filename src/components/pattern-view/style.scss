@@ -2,20 +2,30 @@
     color: #535353;
     font-size: .875rem;
     font-weight: 500;
+    padding: 5px !important;
+    background-color: #f4faff !important;
+    border: none !important;
+    border-radius: 6px !important;
 
     [role="presentation"] {
-        background-color: #cecece;
+        background-color: white;
         transform: none !important;
     }
 
-    button[data-active-item] svg {
+    button[data-active-item] {
+        padding: 10px 15px;
         fill: #5b5b5b;
     }
 
     &:focus-within {
         box-shadow: none !important;
-        border-color: grey !important;
+        border: none;
     }
+}
+
+.wpui-toogle-button {
+    border-radius: 6px !important;
+    font-weight: 600;
 }
 
 .wpui-variation-card {
@@ -25,15 +35,15 @@
     container-name: wpui-resizer;
 }
 
-.components-resizable-box__handle:after{
+.components-resizable-box__handle:after {
     height: 40px;
     border-radius: 10px;
     top: 50%;
     transform: translateY(-50%)
 }
 
-iframe{
-    overflow:hidden;
+iframe {
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
