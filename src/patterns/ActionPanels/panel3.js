@@ -17,7 +17,7 @@ import {
 } from "@wordpress/components";
 
 /**
- * Render Subscription action panel
+ * Render Action panel
  */
 function Panel3() {
     const [value, setValue] = useState(false);

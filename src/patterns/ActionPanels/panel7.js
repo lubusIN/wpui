@@ -17,7 +17,7 @@ import { useViewportMatch } from "@wordpress/compose";
 import { trendingUp, megaphone, archive } from "@wordpress/icons";
 
 /**
- * Render Subscription action panel
+ * Render Action panel
  */
 function Panel7() {
     const isMobile = !useViewportMatch('mobile')

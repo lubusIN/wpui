@@ -18,7 +18,7 @@ import {
 import { key } from "@wordpress/icons";
 
 /**
- * Render Subscription action panel
+ * Render Action panel
  */
 function Panel6() {
     return (
