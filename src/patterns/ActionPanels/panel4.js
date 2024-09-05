@@ -13,7 +13,7 @@ import {
 } from "@wordpress/components";
 
 /**
- * Render Subscription action panel
+ * Render Action panel
  */
 function Panel4() {
     return (

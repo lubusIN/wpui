@@ -15,7 +15,7 @@ import {
 import { create, preformatted } from "@wordpress/icons";
 
 /**
- * Render Subscription action panel
+ * Render Action panel
  */
 function Panel5() {
     return (

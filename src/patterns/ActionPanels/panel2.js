@@ -14,7 +14,7 @@ import {
 import { arrowRight } from '@wordpress/icons';
 
 /**
- * Render Subscription action panel
+ * Render Action panel
  */
 function Panel2() {
     return (
