@@ -52,7 +52,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
             style={view === 'code' ? { display: 'none' } : { marginRight: 'auto', marginLeft: 'auto' }}
             maxWidth={1350}
             minWidth={360}
-            defaultSize={{width:1080}}
+            defaultSize={{width:1350}}
             enable={{ right: true, left: true }}
             onResizeStop={() => {
                 updateHeight();
