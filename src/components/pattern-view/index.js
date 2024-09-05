@@ -9,30 +9,26 @@ import { useState, useRef } from 'react';
 import { __ } from '@wordpress/i18n';
 import { useViewportMatch } from '@wordpress/compose';
 import {
-    code,
-    seen
-} from "@wordpress/icons";
-import {
     Card,
     ResizableBox,
     __experimentalHStack as HStack,
     __experimentalVStack as VStack,
     __experimentalHeading as Heading,
     __experimentalToggleGroupControl as ToggleGroupControl,
-    __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
+    __experimentalToggleGroupControlOption as ToggleGroupControlOption,
 } from "@wordpress/components";
 
 /**
  * Internal dependencies.
  */
 import { PatternCode } from '../index';
-import './style.scss'
+import './style.scss';
 
 /**
  * Render Pattern View
-*/
+ */
 function PatternView({ title, name, category, path, component: Pattern }) {
-    const patternstyle = category === 'Shells' ? { padding: '0px' } : {}
+    const patternstyle = category === 'Shells' ? { padding: '0px' } : {};
     const [view, setView] = useState('preview');
     const isMobile = useViewportMatch('mobile');
     const iframeRef = useRef(null);
@@ -41,9 +37,9 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     let resizePing;
     const updateHeight = () => {
         if (iframeRef.current) {
-            setHeight(iframeRef.current.contentWindow.document.body.scrollHeight)
+            setHeight(iframeRef.current.contentWindow.document.body.scrollHeight);
         } else {
-            clearInterval(resizePing)
+            clearInterval(resizePing);
         }
     };
 
@@ -56,7 +52,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
             enable={{ right: true, left: true }}
             onResizeStop={() => {
                 updateHeight();
-                clearInterval(resizePing)
+                clearInterval(resizePing);
             }}
             onResizeStart={() => resizePing = setInterval(() => {
                 updateHeight();
@@ -77,7 +73,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     onLoad={() => updateHeight()}
                 />
             </Card>
-        </ResizableBox >
+        </ResizableBox>
     );
 
     const mobile = (
@@ -86,11 +82,16 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         </Card>
     );
 
+    const ActiveButton = (value) => ({
+        color: view === value ? 'black' : '',
+        boxShadow: view === value ? 'rgb(207, 207, 207) 0px 0px 3px' : '',
+    });
+
     return (
         <>
             <VStack spacing={4}>
                 <HStack>
-                    <Heading level={4} weight={500}>{title}</Heading>
+                    <Heading className='head' level={4} weight={500}>{title}</Heading>
                     <HStack expanded={false} justify='right' alignment='center'>
                         <ToggleGroupControl
                             className="wpui-view-toggle"
@@ -100,8 +101,18 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                             value={view}
                             onChange={(value) => setView(value)}
                         >
-                            <ToggleGroupControlOptionIcon icon={seen} value="preview" label="Preview" />
-                            <ToggleGroupControlOptionIcon icon={code} value="code" label="Code" />
+                            <ToggleGroupControlOption
+                                className='wpui-toogle-button'
+                                style={ActiveButton('preview')}
+                                value="preview"
+                                label="Preview"
+                            />
+                            <ToggleGroupControlOption
+                                className='wpui-toogle-button'
+                                style={ActiveButton('code')}
+                                value="code"
+                                label="Code"
+                            />
                         </ToggleGroupControl>
                     </HStack>
                 </HStack>
@@ -111,6 +122,4 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         </>
     );
 }
-
-
 export default PatternView;
