@@ -51,8 +51,8 @@ function Stats4() {
                 <Grid columns={[1, 2, 3]} gap={6}>
                     {cardData.map((data, index) => (
                         <VStack spacing={0}>
-                            <Card isBorderless key={index} style={{ padding: '20px' }}>
-                                <HStack alignment="left" spacing={3}>
+                            <Card key={index} style={{ padding: '25px 20px' }}>
+                                <HStack alignment="left" spacing={4}>
                                     <Icon icon={trendingUp} fill="white" size={45}
                                         style={{ backgroundColor: '#6366F1', borderRadius: '6px' }} >
                                     </Icon>
