@@ -104,8 +104,8 @@ function PatternView({ title, name, category, path, component: Pattern }) {
             <VStack spacing={4}>
                 <HStack>
                     <Heading className='head' level={4} weight={500}>{title}</Heading>
-                    <Button onClick={handleClick1}>Button 1 360</Button>
-                    <Button onClick={handleClick2}>Button 2 800</Button>
+                    <Button onClick={handleClick1}>Button 1 360PX</Button>
+                    <Button onClick={handleClick2}>Button 2 800PX</Button>
                     <HStack expanded={false} justify='right' alignment='center'>
                         <ToggleGroupControl
                             className="wpui-view-toggle"
