@@ -16,6 +16,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOption as ToggleGroupControlOption,
+    Button,
 } from "@wordpress/components";
 
 /**
@@ -33,6 +34,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     const isMobile = useViewportMatch('mobile');
     const iframeRef = useRef(null);
     const [height, setHeight] = useState(100);
+    const [width, setWidth] = useState(1350)
 
     let resizePing;
     const updateHeight = () => {
@@ -43,12 +45,22 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         }
     };
 
+    const handleClick1 = () => {
+        setWidth(360)
+        console.log('Button 1 Clicked ' + 360)
+    }
+
+    const handleClick2 = () => {
+        setWidth(800)
+        console.log('Button 1 Clicked ' + 800)
+    }
+
     const desktop = (
         <ResizableBox
             style={view === 'code' ? { display: 'none' } : { marginRight: 'auto', marginLeft: 'auto' }}
             maxWidth={1350}
             minWidth={360}
-            defaultSize={{width:1350}}
+            defaultSize={{ width: width }}
             enable={{ right: true, left: true }}
             onResizeStop={() => {
                 updateHeight();
@@ -58,17 +70,17 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                 updateHeight();
             }, 10)}
         >
-            <Card className="wpui-variation-card" style={{ ...patternstyle }}>
+            <Card className="wpui-variation-card" style={patternstyle}>
                 <iframe
                     loading='lazy'
                     seamless={true}
                     ref={iframeRef}
-                    height={height + 3 + 'px'} // + 3 to fix pixels cutting off
+                    height={height + 3 + 'px'}
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
                     style={{
                         border: 'none',
                         boxSizing: 'border-box',
-                        width: '100%',
+                        width: "100%",
                     }}
                     onLoad={() => updateHeight()}
                 />
@@ -92,6 +104,8 @@ function PatternView({ title, name, category, path, component: Pattern }) {
             <VStack spacing={4}>
                 <HStack>
                     <Heading className='head' level={4} weight={500}>{title}</Heading>
+                    <Button onClick={handleClick1}>Button 1 360</Button>
+                    <Button onClick={handleClick2}>Button 2 800</Button>
                     <HStack expanded={false} justify='right' alignment='center'>
                         <ToggleGroupControl
                             className="wpui-view-toggle"
