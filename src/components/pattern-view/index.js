@@ -37,7 +37,8 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     let resizePing;
     const updateHeight = () => {
         if (iframeRef.current) {
-            setHeight(iframeRef.current.contentWindow.document.body.scrollHeight);
+            const contentHeight = iframeRef.current.contentWindow.document.body.scrollHeight;
+            setHeight(contentHeight + 3); // additional px to prevent scrolling and content getting cut
         } else {
             clearInterval(resizePing);
         }
@@ -63,12 +64,13 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     loading='lazy'
                     seamless={true}
                     ref={iframeRef}
-                    height={height + 5 + 'px'} // + 3 to fix pixels cutting off
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
                     style={{
+                        display: 'block',
                         border: 'none',
                         boxSizing: 'border-box',
                         width: '100%',
+                        height: `${height}px`
                     }}
                     onLoad={() => updateHeight()}
                 />
