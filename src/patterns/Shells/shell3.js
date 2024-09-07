@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import React, { useState, useEffect } from 'react';
+
+/**
  * WordPress dependencies.
  */
 import {
@@ -9,78 +14,73 @@ import {
     MenuItem,
     CardHeader,
     CardBody,
-    TextControl,
-    TextareaControl,
-    SelectControl,
-    ToggleControl,
-    CheckboxControl,
+    PanelBody,
+    PanelRow,
     TabPanel,
     __experimentalHStack as HStack,
-    __experimentalZStack as ZStack,
-    __experimentalNumberControl as NumberControl,
     Animate
 } from "@wordpress/components";
 import { moreVertical, drawerRight } from "@wordpress/icons";
 import { useViewportMatch } from '@wordpress/compose';
 
 /**
- * Internal dependencies.
- */
-import React, { useState } from 'react';
-
-/**
  * Render Shell 3
  */
 function Shell3() {
-    const isMobile = !useViewportMatch('mobile')
-    const [block, setBlock] = useState(true);
-    const [Display, setDisplay] = useState(true)
+    const isMobile = useViewportMatch('mobile')
+    const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
 
     const tabsContent = {
         tab1: (
             <>
-                <TextControl label="Text Control" value="Sample Text" />
-                <TextareaControl label="Textarea Control" value="Sample Textarea" />
-                <SelectControl
-                    label="Select Control"
-                    value="Select"
-                    options={[
-                        { label: 'Select 1', value: 'select1' },
-                        { label: 'Select 2', value: 'select2' },
-                        { label: 'Select 3', value: 'select3' }
-                    ]}
-                    onChange={() => { }}
-                />
-                <ToggleControl label="Toggle Control" checked={true} />
+                <PanelBody title="First section">
+                    <PanelRow>
+                        <div
+                            style={{
+                                background: '#ddd',
+                                height: 100,
+                                width: '100%'
+                            }}
+                        />
+                    </PanelRow>
+                </PanelBody>
+                <PanelBody
+                    title="Second section"
+                >
+                    <PanelRow>
+                        <div
+                            style={{
+                                background: '#ddd',
+                                height: 100,
+                                width: '100%'
+                            }}
+                        />
+                    </PanelRow>
+                </PanelBody>
             </>
         ),
-        tab2: (
-            <>
-                <CheckboxControl checked label="Enable" onChange={() => { }} />
-                <NumberControl label="Scroll offset" />
-                <NumberControl label="Animation Speed" />
-            </>
-        )
+        tab2: ''
     };
 
+    useEffect(() => setSidebarOpen(isMobile), [isMobile]);
+
     return (
-        <Card>
-            <CardHeader>
+        <Card style={{ minHeight: '580px' }}>
+            <CardHeader size='small'>
                 <HStack>
                     <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                     <HStack alignment="right">
-                        <Button style={{ minWidth: 'auto' }} variant="primary">Publish</Button>
-                        <Button icon={drawerRight} onClick={() => {
-                            setBlock(!block)
-                            setDisplay(prev => !prev)
-                        }
-                        } />
+                        <Button style={{ minWidth: 'auto' }} variant="primary">Save</Button>
+                        <Button
+                            icon={drawerRight}
+                            isPressed={sidebarOpen}
+                            onClick={() => setSidebarOpen(!sidebarOpen)} />
                         <DropdownMenu icon={moreVertical}>
                             {() => (
                                 <MenuGroup>
-                                    <MenuItem>About us</MenuItem>
-                                    <MenuItem>Contact us</MenuItem>
-                                    <MenuItem>More Info</MenuItem>
+                                    <MenuItem>Help</MenuItem>
+                                    <MenuItem>About</MenuItem>
+                                    <MenuItem>Settings</MenuItem>
                                 </MenuGroup>
                             )}
                         </DropdownMenu>
@@ -90,46 +90,43 @@ function Shell3() {
             <HStack spacing={0}>
                 <>
                     <CardBody style={{
-                        padding: '0', height: '100%', width: '100%'
+                        padding: '0',
+                        height: '100%',
+                        width: '100%',
+                        display: !isMobile ? 'none' : ''
                     }}>
                         {/* Display Your Content Here */}
                     </CardBody>
-                    <CardBody
-                        style={{
-                            borderLeft: '1px solid #dfdfdf',
-                            height: '500px',
-                            width: '280px',
-                            overflow: 'hidden',
-                            padding: '0px',
-                            display: Display ? '' : 'none'
-                        }}
-                    >
-                        {block && (
-                            <Animate type="slide-in" options={{ origin: 'left' }}>
-                                {({ className }) => (
-                                    <div className={className} style={{ height: '100%', width: 'auto' }}>
-                                        <TabPanel
-                                            tabs={[
-                                                { name: 'tab1', title: 'Tab 1' },
-                                                { name: 'tab2', title: 'Tab 2' },
-                                            ]}
-                                        >
-                                            {({ name }) => (
-                                                <div style={{ padding: '10px', height: '100%', width: 'auto' }}>
-                                                    {tabsContent[name]}
-                                                </div>
-                                            )}
-                                        </TabPanel>
-                                    </div>
-                                )}
-                            </Animate>
-                        )}
-                    </CardBody>
+
+                    {sidebarOpen && (
+                        <Animate type="slide-in" options={{ origin: 'left' }}>
+                            {({ className }) => (
+                                <div className={className} style={{
+                                    borderLeft: !isMobile ? 'none' : '1px solid #dfdfdf',
+                                    minHeight: '500px',
+                                    width: !isMobile ? '100vw' : '320px',
+                                    overflow: 'hidden',
+                                    padding: '0px'
+                                }}>
+                                    <TabPanel
+                                        tabs={[
+                                            { name: 'tab1', title: 'Tab 1' },
+                                            { name: 'tab2', title: 'Tab 2' },
+                                        ]}
+                                    >
+                                        {({ name }) => (
+                                            <div style={{ height: '100%', width: 'auto' }}>
+                                                {tabsContent[name]}
+                                            </div>
+                                        )}
+                                    </TabPanel>
+                                </div>
+                            )}
+                        </Animate>
+                    )}
                 </>
-
             </HStack>
-        </Card>
-
+        </Card >
     );
 };
 
