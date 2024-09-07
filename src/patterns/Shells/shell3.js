@@ -27,7 +27,7 @@ import { useViewportMatch } from '@wordpress/compose';
  * Render Shell 3
  */
 function Shell3() {
-    const isMobile = useViewportMatch('mobile')
+    const isMobile = !useViewportMatch('mobile')
     const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
 
     const tabsContent = {
@@ -62,7 +62,7 @@ function Shell3() {
         tab2: ''
     };
 
-    useEffect(() => setSidebarOpen(isMobile), [isMobile]);
+    useEffect(() => setSidebarOpen(!isMobile), [isMobile]);
 
     return (
         <Card style={{ minHeight: '580px' }}>
@@ -93,7 +93,7 @@ function Shell3() {
                         padding: '0',
                         height: '100%',
                         width: '100%',
-                        display: !isMobile ? 'none' : ''
+                        display: isMobile ? 'none' : ''
                     }}>
                         {/* Display Your Content Here */}
                     </CardBody>
@@ -102,9 +102,9 @@ function Shell3() {
                         <Animate type="slide-in" options={{ origin: 'left' }}>
                             {({ className }) => (
                                 <div className={className} style={{
-                                    borderLeft: !isMobile ? 'none' : '1px solid #dfdfdf',
+                                    borderLeft: isMobile ? 'none' : '1px solid #dfdfdf',
                                     minHeight: '500px',
-                                    width: !isMobile ? '100vw' : '320px',
+                                    width: isMobile ? '100vw' : '320px',
                                     overflow: 'hidden',
                                     padding: '0px'
                                 }}>
