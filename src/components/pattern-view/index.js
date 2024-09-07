@@ -63,7 +63,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     loading='lazy'
                     seamless={true}
                     ref={iframeRef}
-                    height={height + 3 + 'px'} // + 3 to fix pixels cutting off
+                    height={height + 5 + 'px'} // + 3 to fix pixels cutting off
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
                     style={{
                         border: 'none',
