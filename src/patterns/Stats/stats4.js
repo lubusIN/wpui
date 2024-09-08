@@ -53,7 +53,7 @@ function Stats4() {
                             <VStack alignment="left" spacing={3}>
                                 <HStack>
                                     <Icon icon={trendingUp} fill="white" size={45}
-                                        style={{ backgroundColor: '#6366F1', borderRadius: '6px' }} >
+                                        style={{ backgroundColor: '#3858e9', borderRadius: '6px' }} >
                                     </Icon>
                                     <DropdownMenu
                                         icon={moreVertical}
