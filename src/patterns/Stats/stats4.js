@@ -73,7 +73,7 @@ function Stats4() {
                                         <HStack expanded={false} spacing={0}>
                                             <Icon icon={data.icon} fill={data.iconColor} size={20}
                                                 style={{ backgroundColor: data.backgroundColor, marginRight:"4px" }} />
-                                            <Text weight={800} color={data.iconColor}>{data.percentage}</Text>
+                                            <Text weight={500} color={data.iconColor}>{data.percentage}</Text>
                                         </HStack>
                                     </HStack>
                                 </VStack>
