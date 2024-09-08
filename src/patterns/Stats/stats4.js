@@ -16,7 +16,7 @@ import { arrowUp, arrowDown, trendingUp, moreVertical, trendingDown } from "@wor
 /**
  * Render Stats
  */
-function Stats5() {
+function Stats4() {
     const cardData = [
         {
             title: 'Total Orders',
@@ -91,12 +91,12 @@ function Stats5() {
 };
 
 // @meta-start
-Stats5.meta = {
-    title: 'Stats 5',
-    name: 'Stats5',
+Stats4.meta = {
+    title: 'Stats 4',
+    name: 'Stats4',
     category: 'Stats',
-    path: '/Stats/stats5',
+    path: '/Stats/stats4',
 };
 // @meta-end
 
-export default Stats5;
+export default Stats4;
