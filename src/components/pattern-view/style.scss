@@ -35,7 +35,7 @@
 
 .wpui-variation-card {
     border-radius: 4px !important;
-    padding: 45px 35px;
+    padding: 45px 10px;
     container-type: inline-size;
     container-name: wpui-resizer;
 
@@ -47,11 +47,31 @@
     }
 }
 
-.components-resizable-box__handle:after {
-    height: 40px;
-    border-radius: 10px;
-    top: 50%;
-    transform: translateY(-50%)
+.components-resizable-box__side-handle::before {
+    display: none;
+}
+.components-resizable-box__handle {
+    &:after {
+        height: 60px;
+        width: 6px;
+        border-radius: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #979aa1;
+        box-shadow: none;
+    }
+
+    &:hover:after {
+        background-color: #656a71;
+    }
+
+    &-left:after {
+        margin-right: 20px;
+    }
+
+    &-right:after {
+        margin-right: -10px;
+    }
 }
 
 ::-webkit-scrollbar {

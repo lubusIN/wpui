@@ -46,7 +46,6 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     const updateHeight = () => {
         const iframeBody = iframeRef.current?.contentWindow?.document.body;
         if (iframeBody) {
-            console.log('hello');
             setHeight(iframeBody.scrollHeight);
         }
     };
