@@ -21,11 +21,16 @@
         box-shadow: none !important;
         border: none;
     }
-}
 
-.wpui-toogle-button {
-    border-radius: 6px !important;
-    font-weight: 600;
+    .wpui-toggle-button {
+        border-radius: 6px !important;
+        font-weight: 600;
+
+        &.active {
+            color: black;
+            box-shadow: rgb(207, 207, 207) 0px 0px 3px;
+        }
+    }
 }
 
 .wpui-variation-card {
@@ -33,6 +38,13 @@
     padding: 45px 35px;
     container-type: inline-size;
     container-name: wpui-resizer;
+
+    iframe {
+        overflow: hidden;
+        border: none;
+        box-sizing: border-box;
+        width: 100%;
+    }
 }
 
 .components-resizable-box__handle:after {
@@ -40,10 +52,6 @@
     border-radius: 10px;
     top: 50%;
     transform: translateY(-50%)
-}
-
-iframe {
-    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
