@@ -46,6 +46,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     const updateHeight = () => {
         const iframeBody = iframeRef.current?.contentWindow?.document.body;
         if (iframeBody) {
+            console.log('hello');
             setHeight(iframeBody.scrollHeight);
         }
     };
@@ -78,17 +79,6 @@ function PatternView({ title, name, category, path, component: Pattern }) {
         }
     }, [responsive]);
 
-    // Adjust responsive state based on width changes.
-    useEffect(() => {
-        if (width <= 400) {
-            setResponsive('mobile');
-        } else if (width <= 800) {
-            setResponsive('tablet');
-        } else {
-            setResponsive('desktop');
-        }
-    }, [width]);
-
     // Cleanup resize ping interval on unmount.
     useEffect(() => {
         return () => clearInterval(resizePing.current);
@@ -102,11 +92,27 @@ function PatternView({ title, name, category, path, component: Pattern }) {
             style={view === 'code' ? { display: 'none' } : { margin: '0 auto' }}
             maxWidth={1200}
             minWidth={400}
-            size={{ width }}
+            size={{ width: width }}
             enable={{ right: true, left: true }}
-            onResizeStop={(event, direction, elt, delta) => {
-                setWidth((prevWidth) => prevWidth + delta.width);
+            onResize={(event, direction, elt, delta) => {
+                const newWidth = width + delta.width;
+                setWidth(newWidth);
+                // Ensure the iframe reference exists and is correctly accessed
+                if (iframeRef && iframeRef.current) {
+                    const iframeWidth = iframeRef.current.contentWindow.document.documentElement.clientWidth;
+
+                    // Update the responsive state based on the new width
+                    if (iframeWidth <= 400) {
+                        setResponsive('mobile');
+                    } else if (iframeWidth <= 800) {
+                        setResponsive('tablet');
+                    } else {
+                        setResponsive('desktop');
+                    }
+                }
                 updateHeight();
+            }}
+            onResizeStop={() => {
                 clearInterval(resizePing.current);
             }}
             onResizeStart={() => {
@@ -129,37 +135,43 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     return (
         <VStack spacing={4}>
             <HStack>
-                <Heading className="head" level={4} weight={500}>
-                    {title}
-                </Heading>
+                <HStack>
+                    <Heading className="head" level={4} weight={500}>
+                        {title}
+                    </Heading>
+                </HStack>
                 {isDesktop && (
-                    <ToggleGroupControl
-                        label="Responsive"
-                        hideLabelFromVision
-                        value={responsive}
-                        onChange={handleResponsiveChange}
-                        style={{ gap: '10px' }}
-                    >
-                        <ToggleGroupControlOptionIcon value="desktop" label="Desktop" icon={desktop} />
-                        <ToggleGroupControlOptionIcon value="tablet" label="Tablet" icon={tablet} />
-                        <ToggleGroupControlOptionIcon value="mobile" label="Mobile" icon={mobile} />
-                    </ToggleGroupControl>
+                    <HStack justify='center'>
+                        <ToggleGroupControl
+                            label="Responsive"
+                            hideLabelFromVision
+                            value={responsive}
+                            onChange={handleResponsiveChange}
+                            style={{ gap: '10px' }}
+                        >
+                            <ToggleGroupControlOptionIcon value="desktop" label="Desktop" icon={desktop} />
+                            <ToggleGroupControlOptionIcon value="tablet" label="Tablet" icon={tablet} />
+                            <ToggleGroupControlOptionIcon value="mobile" label="Mobile" icon={mobile} />
+                        </ToggleGroupControl>
+                    </HStack>
                 )}
-                <ToggleGroupControl
-                    className="wpui-view-toggle"
-                    hideLabelFromVision
-                    value={view}
-                    onChange={(value) => setView(value)}
-                >
-                    {['Preview', 'Code'].map((value, index) => (
-                        <ToggleGroupControlOption
-                            className={`wpui-toggle-button ${view === value.toLowerCase() ? 'active' : ''}`}
-                            key={index}
-                            value={value.toLowerCase()}
-                            label={value}
-                        />
-                    ))}
-                </ToggleGroupControl>
+                <HStack justify='right'>
+                    <ToggleGroupControl
+                        className="wpui-view-toggle"
+                        hideLabelFromVision
+                        value={view}
+                        onChange={(value) => setView(value)}
+                    >
+                        {['Preview', 'Code'].map((value, index) => (
+                            <ToggleGroupControlOption
+                                className={`wpui-toggle-button ${view === value.toLowerCase() ? 'active' : ''}`}
+                                key={index}
+                                value={value.toLowerCase()}
+                                label={value}
+                            />
+                        ))}
+                    </ToggleGroupControl>
+                </HStack>
             </HStack>
 
             {isDesktop ? (
