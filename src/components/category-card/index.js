@@ -44,7 +44,7 @@ function CategoryCard({ thumbnail: Thumbnail, title, path, patterns }) {
                     </VStack>
                 </VStack>
             </Link>
-        </VStack >
+        </VStack>
     );
 }
 
