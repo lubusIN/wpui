@@ -65,7 +65,7 @@ function Shell3() {
     useEffect(() => setSidebarOpen(!isMobile), [isMobile]);
 
     return (
-        <Card style={{ minHeight: '580px' }}>
+        <Card style={{ minHeight: '560px' }}>
             <CardHeader size='small'>
                 <HStack>
                     <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
