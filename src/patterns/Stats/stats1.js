@@ -24,14 +24,14 @@ import {
 function Stats1() {
     return (
         <Grid spacing={5} columns={[1, 2, 3]}>
-            <Card isBorderless isElevated style={{ width: '100%' }}>
+            <Card style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
                             icon={trendingUp}
                             fill="white"
                             size={30}
-                            style={{ backgroundColor: '#6366F1', borderRadius: '6px', padding: '8px' }}
+                            style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }}
                         ></Icon>
                         <VStack>
                             <Text size={18} variant="muted">Total Sales</Text>
@@ -49,14 +49,14 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-            <Card isBorderless isElevated style={{ width: '100%' }}>
+            <Card style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
                             icon={trendingUp}
                             fill="white"
                             size={30}
-                            style={{ backgroundColor: '#6366F1', borderRadius: '6px', padding: '8px' }}
+                            style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }}
                         ></Icon>
                         <VStack>
                             <Text size={18} variant="muted">Net Sales</Text>
@@ -74,14 +74,14 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-            <Card isBorderless isElevated style={{ width: '100%' }}>
+            <Card style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
                             icon={box}
                             fill="white"
                             size={30}
-                            style={{ backgroundColor: '#6366F1', borderRadius: '6px', padding: '8px' }}
+                            style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }}
                         ></Icon>
                         <VStack>
                             <Text size={18} variant="muted">Orders</Text>
