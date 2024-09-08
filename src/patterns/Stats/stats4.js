@@ -11,7 +11,7 @@ import {
     __experimentalVStack as VStack,
     DropdownMenu
 } from "@wordpress/components";
-import { arrowUp, arrowDown, trendingUp, moreVertical, trendingDown } from "@wordpress/icons";
+import { arrowUp, arrowDown, trendingUp, moreVertical, trendingDown, receipt } from "@wordpress/icons";
 
 /**
  * Render Stats
@@ -40,7 +40,7 @@ function Stats4() {
             percentage: '1.8%',
             icon: arrowDown,
             iconColor: '#B04A48',
-            backgroundColor:'#FDE2E1'
+            backgroundColor: '#FDE2E1'
         }
     ];
     return (
@@ -60,13 +60,9 @@ function Stats4() {
                                         label="Select a direction"
                                         controls={[
                                             {
-                                                title: 'Buy',
-                                                icon: trendingUp,
-                                            },
-                                            {
-                                                title: 'Sell',
-                                                icon: trendingDown,
-                                            },
+                                                title: 'view orders',
+                                                icon: receipt,
+                                            }
                                         ]}
                                     />
                                 </HStack>
