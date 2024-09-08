@@ -13,14 +13,13 @@ body {
 
 .wpui-hero-cont {
     margin: auto 0 auto auto;
-    padding-right: 141px !important;
     width: 50%;
 }
 
 .wpui-com-page,
 .wpui-lcont {
     margin: auto;
-    max-width: 1350px;
+    max-width: 1200px;
     padding: 40px 20px;
 }
 
@@ -28,11 +27,6 @@ div.wpui-column {
     border-radius: 10px;
     box-shadow: none !important;
     height: auto;
-    padding: 10px;
-}
-
-.wpui-heading{
-    margin-left: 20px !important;
 }
 
 .copied-pop .components-popover__content {
@@ -66,60 +60,39 @@ div.wpui-column {
     }
 }
 
-/* Docs */
+/* Getting Started */
 pre {
     background-color: #f0f0f0;
     padding: 20px;
     border: 0.5px solid #cacaca;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-.main {
-    margin-left: 150px;
-    margin-right: 150px;
-    padding: 10px;
+.getting_started {
+    max-width: 1200px;
+    padding: 20px;
+    margin: auto;
 }
 
-@media only screen and (max-width:480px) {
-    div.wpui-column {
-        column-gap: 10px;
-        grid-template-columns: repeat(1, 1fr)
+@media only screen and (max-width:820px) {
+
+    .wpui-com-page,
+    .wpui-lcont,
+    .getting_started {
+        max-width: 100% !important;
+
     }
 
-    .wpui-footer .components-card__body .footer-content {
+    pre {
+        overflow: scroll;
+    }
+
+    .wpui-footer .components-card__body .footer-content,
+    div.wpui-hero-cont {
         width: 100% !important
     }
 
     .wpui-variation-card {
-        padding: 35px 20px
-    }
-
-    div.wpui-hero-cont {
-        padding-right: 24px !important;
-        width: 100%
-    }
-
-    .main {
-        width: 95%;
-        margin: 0%;
-    }
-    pre{
-        overflow: scroll;
+        padding: 35px 20px !important
     }
 }
-
-@media only screen and (min-width:481px) and (max-width:820px) {
-    div.wpui-column {
-        column-gap: 10px;
-        grid-template-columns: repeat(2, 1fr)
-    }
-
-    .wpui-hero-cont {
-        width: 100%
-    }
-    .main {
-        width: 100%;
-        margin: 0%;
-    }
-}
-

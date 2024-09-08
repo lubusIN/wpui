@@ -1,7 +1,7 @@
 /**
  * External dependencies.
  */
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 /**
  * WordPress dependencies.
@@ -16,6 +16,7 @@ import {
     __experimentalHeading as Heading,
     __experimentalToggleGroupControl as ToggleGroupControl,
     __experimentalToggleGroupControlOption as ToggleGroupControlOption,
+    __experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
 } from "@wordpress/components";
 
 /**
@@ -23,103 +24,166 @@ import {
  */
 import { PatternCode } from '../index';
 import './style.scss';
+import { tablet, desktop, mobile } from '@wordpress/icons';
 
 /**
- * Render Pattern View
+ * Renders the Pattern View component.
  */
 function PatternView({ title, name, category, path, component: Pattern }) {
-    const patternstyle = category === 'Shells' ? { padding: '0px' } : {};
+    const patternStyle = category === 'Shells' ? { padding: '0px' } : {};
     const [view, setView] = useState('preview');
-    const isMobile = useViewportMatch('mobile');
-    const iframeRef = useRef(null);
+    const [responsive, setResponsive] = useState('desktop');
     const [height, setHeight] = useState(100);
+    const [width, setWidth] = useState(1200);
 
-    let resizePing;
+    const iframeRef = useRef(null);
+    const resizePing = useRef(null); // Persistent reference for resizing
+    const isDesktop = useViewportMatch('large');
+
+    /**
+     * Update the height of the iframe to match its content.
+     */
     const updateHeight = () => {
-        if (iframeRef.current) {
-            setHeight(iframeRef.current.contentWindow.document.body.scrollHeight);
-        } else {
-            clearInterval(resizePing);
+        const iframeBody = iframeRef.current?.contentWindow?.document.body;
+        if (iframeBody) {
+            setHeight(iframeBody.scrollHeight);
         }
     };
 
-    const desktop = (
+    /**
+     * Set up a MutationObserver to watch for changes in the iframe content.
+     */
+    const observeIframeContent = () => {
+        const iframeDocument = iframeRef.current.contentWindow.document;
+        const observer = new MutationObserver(() => updateHeight());
+        observer.observe(iframeDocument.body, { childList: true, subtree: true, attributes: true });
+        return observer;
+    };
+
+    /**
+     * Handle responsive changes and update the width based on the selected device.
+     */
+    const handleResponsiveChange = (value) => {
+        setResponsive(value);
+        const widthMap = { mobile: 400, tablet: 800, desktop: 1200 };
+        setWidth(widthMap[value]);
+    };
+
+    // Set up MutationObserver when iframe loads and clean up when unmounting.
+    useEffect(() => {
+        if (iframeRef.current) {
+            const observer = observeIframeContent();
+            updateHeight();
+            return () => observer.disconnect();
+        }
+    }, [responsive]);
+
+    // Cleanup resize ping interval on unmount.
+    useEffect(() => {
+        return () => clearInterval(resizePing.current);
+    }, []);
+
+    /**
+     * Render the resizable component (only for desktop view).
+     */
+    const resizableComponent = (
         <ResizableBox
-            style={view === 'code' ? { display: 'none' } : { marginRight: 'auto', marginLeft: 'auto' }}
-            maxWidth={1350}
-            minWidth={360}
-            defaultSize={{width:1350}}
+            style={view === 'code' ? { display: 'none' } : { margin: '0 auto' }}
+            maxWidth={1200}
+            minWidth={400}
+            size={{ width: width }}
             enable={{ right: true, left: true }}
-            onResizeStop={() => {
+            onResize={(event, direction, elt, delta) => {
+                const newWidth = width + delta.width;
+                setWidth(newWidth);
+                // Ensure the iframe reference exists and is correctly accessed
+                if (iframeRef && iframeRef.current) {
+                    const iframeWidth = iframeRef.current.contentWindow.document.documentElement.clientWidth;
+
+                    // Update the responsive state based on the new width
+                    if (iframeWidth <= 400) {
+                        setResponsive('mobile');
+                    } else if (iframeWidth <= 800) {
+                        setResponsive('tablet');
+                    } else {
+                        setResponsive('desktop');
+                    }
+                }
                 updateHeight();
-                clearInterval(resizePing);
             }}
-            onResizeStart={() => resizePing = setInterval(() => {
-                updateHeight();
-            }, 10)}
+            onResizeStop={() => {
+                clearInterval(resizePing.current);
+            }}
+            onResizeStart={() => {
+                resizePing.current = setInterval(updateHeight, 10);
+            }}
         >
-            <Card className="wpui-variation-card" style={{ ...patternstyle }}>
+            <Card className="wpui-variation-card" style={patternStyle}>
                 <iframe
-                    loading='lazy'
-                    seamless={true}
+                    loading="lazy"
+                    seamless
                     ref={iframeRef}
-                    height={height + 3 + 'px'} // + 3 to fix pixels cutting off
+                    height={`${height + 4}px`}
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
-                    style={{
-                        border: 'none',
-                        boxSizing: 'border-box',
-                        width: '100%',
-                    }}
-                    onLoad={() => updateHeight()}
+                    onLoad={updateHeight}
                 />
             </Card>
         </ResizableBox>
     );
 
-    const mobile = (
-        <Card className="wpui-variation-card" style={view === 'code' ? { display: 'none' } : {}}>
-            <Pattern />
-        </Card>
-    );
-
-    const ActiveButton = (value) => ({
-        color: view === value ? 'black' : '',
-        boxShadow: view === value ? 'rgb(207, 207, 207) 0px 0px 3px' : '',
-    });
-
     return (
-        <>
-            <VStack spacing={4}>
+        <VStack spacing={4}>
+            <HStack>
                 <HStack>
-                    <Heading className='head' level={4} weight={500}>{title}</Heading>
-                    <HStack expanded={false} justify='right' alignment='center'>
+                    <Heading className="head" level={4} weight={500}>
+                        {title}
+                    </Heading>
+                </HStack>
+                {isDesktop && (
+                    <HStack justify='center'>
                         <ToggleGroupControl
-                            className="wpui-view-toggle"
+                            label="Responsive"
                             hideLabelFromVision
-                            __nextHasNoMarginBottom
-                            isBlock
-                            value={view}
-                            onChange={(value) => setView(value)}
+                            value={responsive}
+                            onChange={handleResponsiveChange}
+                            style={{ gap: '10px' }}
                         >
-                            <ToggleGroupControlOption
-                                className='wpui-toogle-button'
-                                style={ActiveButton('preview')}
-                                value="preview"
-                                label="Preview"
-                            />
-                            <ToggleGroupControlOption
-                                className='wpui-toogle-button'
-                                style={ActiveButton('code')}
-                                value="code"
-                                label="Code"
-                            />
+                            <ToggleGroupControlOptionIcon value="desktop" label="Desktop" icon={desktop} />
+                            <ToggleGroupControlOptionIcon value="tablet" label="Tablet" icon={tablet} />
+                            <ToggleGroupControlOptionIcon value="mobile" label="Mobile" icon={mobile} />
                         </ToggleGroupControl>
                     </HStack>
+                )}
+                <HStack justify='right'>
+                    <ToggleGroupControl
+                        className="wpui-view-toggle"
+                        hideLabelFromVision
+                        value={view}
+                        onChange={(value) => setView(value)}
+                    >
+                        {['Preview', 'Code'].map((value, index) => (
+                            <ToggleGroupControlOption
+                                className={`wpui-toggle-button ${view === value.toLowerCase() ? 'active' : ''}`}
+                                key={index}
+                                value={value.toLowerCase()}
+                                label={value}
+                            />
+                        ))}
+                    </ToggleGroupControl>
                 </HStack>
-                {isMobile ? desktop : mobile}
-                <PatternCode path={path} style={view === 'preview' ? { display: 'none' } : {}} />
-            </VStack>
-        </>
+            </HStack>
+
+            {isDesktop ? (
+                resizableComponent
+            ) : (
+                <Card className="wpui-variation-card" style={view === 'code' ? { display: 'none' } : {}}>
+                    <Pattern />
+                </Card>
+            )}
+
+            <PatternCode path={path} style={view === 'preview' ? { display: 'none' } : {}} />
+        </VStack>
     );
 }
+
 export default PatternView;
