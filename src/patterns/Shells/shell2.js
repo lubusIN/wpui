@@ -24,8 +24,8 @@ import React, { useState } from 'react';
  */
 function Shell2() {
 
-    const isDesktop = useViewportMatch('large');
-    const isMobile = useViewportMatch('mobile');
+    const isDesktop = useViewportMatch('medium', '>=');
+    const isMobile = useViewportMatch('medium', '<');
     const [activeButton, setActiveButton] = useState('dashboard');
     const [showButtons, setShowButtons] = useState(false);
     const icon = {
@@ -60,11 +60,11 @@ function Shell2() {
         <>
             <Card style={{ backgroundColor: "#1c1e24", padding: "5px", borderRadius: '5px' }}>
                 <Flex expanded={false} gap={1} align='top' direction={['column', 'row']}>
-                    <CardBody style={{ width: isDesktop ? '25%' : '100%', padding: '0px' }}>
+                    <CardBody style={{ width: isDesktop ? '280px' : '100%', padding: '0px' }}>
                         <VStack spacing={15} style={{ marginTop: '15px' }}>
                             <HStack style={{ marginLeft:'8px', marginBottom: isDesktop ? '':'10px' }}>
                                 <img width='120px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/Logo(2).png"></img>
-                                {!isMobile && (
+                                {isMobile && (
                                     <Button
                                         icon={showButtons ? close : menu}
                                         onClick={() => setShowButtons(prevState => !prevState)}
@@ -74,14 +74,14 @@ function Shell2() {
                                 )}
                             </HStack>
                             {
-                                isMobile &&
+                                isDesktop &&
                                 <MenuList activeButton={activeButton} handleButtonClick={handleButtonClick} icon={icon} />
                             }
                         </VStack>
                     </CardBody>
                     <ZStack isReversed style={{ width: '100%' }}>
                         {
-                            !isMobile && showButtons &&
+                            isMobile && showButtons &&
                             <MenuList activeButton={activeButton} handleButtonClick={handleButtonClick} icon={icon} />
                         }
                         <CardBody size="large" style={{ padding: '0px', height: isDesktop ? '720px' : '500px', width: "100%", backgroundColor: 'white', borderRadius: '5px' }}>
@@ -96,7 +96,7 @@ function Shell2() {
             </Card>
             <style>
                 {`
-                    .components-z-stack >div{
+                    .components-z-stack > div{
                         width: 100%;
                     }
                 `}
