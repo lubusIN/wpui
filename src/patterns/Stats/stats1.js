@@ -1,17 +1,17 @@
 /**
  * WordPress dependencies.
  */
-
-import { 
-    arrowUp, 
-    box, 
-    trendingUp 
+import {
+    arrowUp,
+    box,
+    trendingUp
 } from "@wordpress/icons";
 
 import {
     Card,
     Icon,
     CardBody,
+    __experimentalGrid as Grid,
     __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
@@ -23,14 +23,15 @@ import {
  */
 function Stats1() {
     return (
-        <HStack spacing={5} direction={['column', 'row']}>
-            <Card isBorderless isElevated style={{ width: '100%' }}>
+        <Grid spacing={5} columns={[1, 2, 3]}>
+            <Card style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
                             icon={trendingUp}
-                            color="black"
+                            fill="white"
                             size={30}
+                            style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }}
                         ></Icon>
                         <VStack>
                             <Text size={18} variant="muted">Total Sales</Text>
@@ -48,13 +49,14 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-            <Card isBorderless isElevated style={{ width: '100%' }}>
+            <Card style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
                             icon={trendingUp}
-                            color="black"
+                            fill="white"
                             size={30}
+                            style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }}
                         ></Icon>
                         <VStack>
                             <Text size={18} variant="muted">Net Sales</Text>
@@ -72,13 +74,14 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-            <Card isBorderless isElevated style={{ width: '100%' }}>
+            <Card style={{ width: '100%' }}>
                 <CardBody>
                     <HStack alignment="left" spacing={6}>
                         <Icon
                             icon={box}
-                            color="black"
+                            fill="white"
                             size={30}
+                            style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }}
                         ></Icon>
                         <VStack>
                             <Text size={18} variant="muted">Orders</Text>
@@ -96,15 +99,15 @@ function Stats1() {
                     <Heading level={4}>View all</Heading>
                 </CardBody>
             </Card>
-        </HStack>
+        </Grid>
     );
 };
 
 // @meta-start
 Stats1.meta = {
     title: 'Stats 1',
-    name:'Stats1',
-    category:'Stats',
+    name: 'Stats1',
+    category: 'Stats',
     path: '/Stats/stats1',
 };
 // @meta-end
