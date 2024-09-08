@@ -36,16 +36,16 @@ function Footer() {
                     <Text size={20} align="center" weight={400} lineHeight={1.5} color='white'>
                         WPUI is a #BuildInPublic project from the house of LUBUS. We love getting feedback from you! It really helps us know how we’re doing, what you’re interested in, and what you’d like to see next. So please, don’t hesitate to share your thoughts with us! We’re all ears...
                     </Text>
-                    <Button className='btn' href='https://github.com/lubusIN/wpui/discussions' style={{ border: '1px solid white' }}>
+                    <Button className='footer_btn' href='https://github.com/lubusIN/wpui/discussions'>
                         Join discussion
                     </Button>
                 </VStack>
             </CardBody>
             <CardDivider style={{ backgroundColor: '#ffffff4f' }} />
             <CardBody style={{ padding: '20px' }}>
-                <HStack className='wpui-footer-bottom'>
+                <HStack className='wpui-footer-bottom' wrap justify='center'>
                     <Text className='wpui-footer-bottom-left' color='white'>&copy; {Year} WPUI. All Rights Reserved.</Text>
-                    <HStack expanded={false} spacing={1}  className='wpui-footer-bottom-right'>
+                    <HStack expanded={false} spacing={1} className='wpui-footer-bottom-right'>
                         <Text color='white'>Made in India</Text>
                         <Flag />
                     </HStack>

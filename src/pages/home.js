@@ -26,13 +26,13 @@ function Home() {
                 <Grid
                     className="wpui-column"
                     alignment="bottom"
-                    columns={3}
+                    columns={[1, 2, 3]}
                     columnGap={30}
                     rowGap={25}
                 >
                     {
                         Object.values(categories).map((category, index) => {
-                            const {title, path, patterns} = category.meta;
+                            const { title, path, patterns } = category.meta;
                             return (
                                 <CategoryCard
                                     key={`${index}-${path}`}
