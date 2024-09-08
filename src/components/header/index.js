@@ -44,7 +44,7 @@ function Header() {
 
     return (
         <Card className={headerClass} isBorderless>
-            <HStack>
+            <HStack className="header_cont">
                 <Link to={"/"} className='wpui-site-logo'>
                     <Logo />
                 </Link>
