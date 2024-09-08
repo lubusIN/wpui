@@ -2,8 +2,6 @@
     background-color: #1f1f1f !important;
 
     .components-card__body {
-        padding: 12px 3vw;
-
         &:first-child {
             padding: 60px 3vw;
         }
@@ -15,28 +13,7 @@
     }
 }
 
-.btn{
+.footer_btn {
     color: aliceblue;
-}
-
-.wpui-footer-bottom-left{
-    margin-left: 5.9% !important;
-    
-}
-.wpui-footer-bottom-right{
-    margin-right: 5.6% !important;
-
-}
-
-@media only screen and (max-width:360px) {
-.wpui-footer-bottom-left{
-    margin-left: 0px !important;
-}
-.wpui-footer-bottom-right{
-    margin-right: 0px !important;
-}
-.wpui-footer-bottom{
-    display: flex;
-    flex-direction: column !important;
-}
+    border: 1px solid white;
 }
