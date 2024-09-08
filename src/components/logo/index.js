@@ -24,8 +24,8 @@ function Logo() {
 <path d="M104.94 27.5C102.305 27.5 100.321 26.8245 98.9218 25.4415C97.523 24.0584 96.8398 21.9999 96.8398 19.1694V8.8125H100.483V18.9764C100.483 20.07 100.646 21.035 100.971 21.8069C101.296 22.611 101.784 23.2221 102.435 23.6403C103.086 24.0584 103.931 24.2836 104.94 24.2836C106.013 24.2836 106.859 24.0584 107.51 23.6403C108.16 23.2221 108.648 22.5789 108.941 21.8069C109.234 21.0028 109.396 20.07 109.396 19.0086V8.8125H113.04V19.2016C113.04 22.0642 112.324 24.1549 110.925 25.5058C109.559 26.8245 107.542 27.5 104.94 27.5Z" fill="white"/>
 <path d="M121.14 8.8125H117.09V27.5H121.14V8.8125Z" fill="white"/>
 <defs>
-<filter id="filter0_dd_622_789" x="0" y="0" width="38" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_dd_622_789" x="0" y="0" width="38" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="1"/>
 <feGaussianBlur stdDeviation="1"/>
