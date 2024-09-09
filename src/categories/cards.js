@@ -6,12 +6,12 @@ import React from 'react'
 /**
  * Internal dependencies.
  */
-import * as patterns from '../patterns/';
+import * as patterns from '../patterns';
 
 /**
- * Render CardHeading
+ * Render Card
  */
-function CardHeading() {
+function Cards() {
     return (
         <svg width="307" height="230" viewBox="0 0 307 230" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="307" height="230" rx="6" fill="#F0F5FF" />
@@ -45,11 +45,10 @@ function CardHeading() {
     );
 };
 
-CardHeading.meta = {
-    title: 'Card Heading',
-    path: '/cardheading',
-    patterns: patterns.CardHeadings,
+Cards.meta = {
+    title: 'Cards',
+    path: '/cards',
+    patterns: patterns.Cards,
 };
 
-export default CardHeading;
-
+export default Cards;

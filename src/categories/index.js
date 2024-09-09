@@ -1,5 +1,5 @@
 export { default as ActionPanels } from './action-panel';
-export { default as CardHeading } from './card-heading';
+export { default as Cards } from './cards';
 export { default as EmptyState } from './empty-state';
 export { default as Feed } from './feed';
 export { default as Form } from './form';

@@ -8,9 +8,9 @@ import {
 } from "@wordpress/components";
 
 /**
- * Render Card Heading.
+ * Render Card.
  */
-function CardHeading1() {
+function Card1() {
     return (
         <Card size="medium" style={{ borderRadius: '4px' }}>
             <CardHeader style={{ paddingTop: '25px', paddingBottom: '25px' }}>
@@ -22,12 +22,12 @@ function CardHeading1() {
 };
 
 // @meta-start
-CardHeading1.meta = {
-    title: 'Card Heading 1',
-    name:'CardHeading1',
-    category:'CardHeadings',
-    path: '/CardHeading/cardheading1',
+Card1.meta = {
+    title: 'Card 1',
+    name:'Card1',
+    category:'Cards',
+    path: '/Cards/card1',
 };
 // @meta-end
 
-export default CardHeading1;
+export default Card1;
