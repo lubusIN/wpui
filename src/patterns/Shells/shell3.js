@@ -95,7 +95,7 @@ function Shell3() {
                         width: '100%',
                         display: sidebarOpen && isMobile ? 'none' : ''
                     }}>
-                        {/* Display Your Content Here */}hello
+                        {/* Display Your Content Here */}
                     </CardBody>
 
                     {sidebarOpen && (
