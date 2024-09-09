@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 import { useViewportMatch } from '@wordpress/compose';
 import {
+    ProgressBar,
     Card,
     ResizableBox,
     __experimentalHStack as HStack,
@@ -30,6 +31,7 @@ import { tablet, desktop, mobile } from '@wordpress/icons';
  * Renders the Pattern View component.
  */
 function PatternView({ title, name, category, path, component: Pattern }) {
+    const [loading, setLoading] = useState(true);
     const patternStyle = category === 'Shells' ? { padding: '0px' } : {};
     const [view, setView] = useState('preview');
     const [responsive, setResponsive] = useState('desktop');
@@ -126,14 +128,26 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     ref={iframeRef}
                     height={`${height}px`}
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
-                    onLoad={updateHeight}
+                    onLoad={() => {updateHeight(); setLoading(false)}}
                 />
             </Card>
         </ResizableBox>
     );
 
     return (
-        <VStack spacing={4}>
+        <VStack spacing={4} style={{ position: 'relative' }}>
+            {loading && (
+                <VStack expanded align='center' style={{
+                    position: 'absolute',
+                    backgroundColor: 'rgb(255 255 255 / 80%)',
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 100
+                }}>
+                    <ProgressBar />
+                </VStack>
+            )}
+
             <HStack>
                 <HStack>
                     <Heading className="head" level={4} weight={500}>

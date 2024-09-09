@@ -11,11 +11,12 @@ import {
     __experimentalHStack as HStack,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
+import { atSymbol } from "@wordpress/icons";
 
 /**
- * Render Card Heading.
+ * Render Card.s
  */
-function CardHeading4() {
+function Card4() {
     return (
         <Card size="medium" style={{ borderRadius: '4px' }}>
             <CardHeader style={{ paddingTop: '25px', paddingBottom: '25px' }}>
@@ -38,7 +39,7 @@ function CardHeading4() {
                         </Button>
                         <Button
                             variant="secondary"
-                            icon={"email"}
+                            icon={atSymbol}
                             iconSize={22}
                             style={{ borderRadius: '5px' }}
                         >
@@ -53,12 +54,12 @@ function CardHeading4() {
 };
 
 // @meta-start
-CardHeading4.meta = {
-    title: 'Card Heading 4',
-    name:'CardHeading4',
-    category:'CardHeadings',
-    path: '/CardHeading/cardheading4',
+Card4.meta = {
+    title: 'Card 4',
+    name:'Card4',
+    category:'Cards',
+    path: '/Cards/card4',
 };
 // @meta-end
 
-export default CardHeading4;
+export default Card4;

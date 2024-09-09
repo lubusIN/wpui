@@ -15,7 +15,7 @@ import {
 /**
  * Render Cards
  */
-function Grid3() {
+function GridList3() {
     return (
         <Card isBorderless>
             <Grid columns={[1, 2]} gap={5}>
@@ -69,13 +69,13 @@ function Grid3() {
 };
 
 // @meta-start
-Grid3.meta = {
-    title: 'Grid 3',
-    name:'Grid3',
+GridList3.meta = {
+    title: 'GridList 3',
+    name:'GridList3',
     category:'GridLists',
-    path: '/GridLists/grid3',
+    path: '/GridLists/gridlist3',
 };
 // @meta-end
 
 
-export default Grid3;
+export default GridList3;
