@@ -20,7 +20,7 @@ cd wpui-sample-plugin
 ```
 install packages 
 ```
-npm run install
+npm install
 ```
 build assets 
 ```
@@ -56,7 +56,7 @@ cd wpui-sample-app
 ```
 install packages 
 ```
-npm run install
+npm install
 ```
 build assets 
 ```

@@ -26,15 +26,17 @@ const root = ReactDom.createRoot(document.getElementById('root'))
 
 if (mode) {
     const Pattern = Patterns[category][pattern];
+    const embedStyle = category !== 'Shells' ? { marginTop: '1px' } : {};
+
     root.render(
-        <div className="wpui-pattern-embed">
+        <div className="wpui-pattern-embed" style={embedStyle}>
             <Pattern />
         </div>
     )
 } else {
     root.render(
         <React.StrictMode>
-            <BrowserRouter>
+            <BrowserRouter> 
                 <App />
             </BrowserRouter>
         </React.StrictMode>
