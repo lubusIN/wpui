@@ -26,7 +26,7 @@ const root = ReactDom.createRoot(document.getElementById('root'))
 
 if (mode) {
     const Pattern = Patterns[category][pattern];
-    const embedStyle = category !== 'Shells' ? { marginTop: '1px' } : {};
+    const embedStyle = category !== 'Shells' ? { marginTop: '1px', marginLeft: '1px', marginRight: '1px' } : {};
 
     root.render(
         <div className="wpui-pattern-embed" style={embedStyle}>
