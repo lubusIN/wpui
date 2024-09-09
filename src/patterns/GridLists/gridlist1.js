@@ -23,7 +23,7 @@ import {
 /**
  * Render Cards
  */
-function Grid1() {
+function GridList1() {
 
     const control = [
         {
@@ -134,12 +134,12 @@ function Grid1() {
 };
 
 // @meta-start
-Grid1.meta = {
-    title: 'Grid 1',
-    name:'Grid1',
+GridList1.meta = {
+    title: 'GridList 1',
+    name:'GridList1',
     category:'GridLists',
-    path: '/GridLists/grid1',
+    path: '/GridLists/gridlist1',
 };
 // @meta-end
 
-export default Grid1;
+export default GridList1;

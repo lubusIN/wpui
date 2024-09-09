@@ -25,7 +25,7 @@ import {
 /**
  * Render Cards
  */
-function Grid4() {
+function GridList4() {
     return (
         <Grid columns={[1, 2]} gap={0}>
             <Card size="large">
@@ -164,12 +164,12 @@ function Grid4() {
 };
 
 // @meta-start
-Grid4.meta = {
-    title: 'Grid 4',
-    name:'Grid4',
+GridList4.meta = {
+    title: 'GridList 4',
+    name:'GridList4',
     category:'GridLists',
-    path: '/GridLists/grid4',
+    path: '/GridLists/gridlist4',
 };
 // @meta-end
 
-export default Grid4;
+export default GridList4;
