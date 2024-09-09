@@ -65,8 +65,8 @@ function Shell3() {
     useEffect(() => setSidebarOpen(!isMobile), [isMobile]);
 
     return (
-        <Card style={{ minHeight: '560px' }}>
-            <CardHeader size='small'>
+        <Card isBorderless style={{ minHeight: '560px' }}>
+            <CardHeader isBorderless={false} size='small'>
                 <HStack>
                     <img width='100px' style={{ minWidth: 'auto' }} src="https://raw.githubusercontent.com/lubusIN/wpui/main/src/img/logo.png"></img>
                     <HStack alignment="right">
@@ -93,9 +93,9 @@ function Shell3() {
                         padding: '0',
                         height: '100%',
                         width: '100%',
-                        display: isMobile ? 'none' : ''
+                        display: sidebarOpen && isMobile ? 'none' : ''
                     }}>
-                        {/* Display Your Content Here */}
+                        {/* Display Your Content Here */}hello
                     </CardBody>
 
                     {sidebarOpen && (
