@@ -46,7 +46,7 @@ function Card3() {
 Card3.meta = {
     title: 'Card 3',
     name:'Card3',
-    category:'Card3',
+    category:'Cards',
     path: '/Cards/card3',
 };
 // @meta-end
