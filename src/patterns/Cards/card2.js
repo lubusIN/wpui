@@ -20,9 +20,9 @@ import {
 } from "@wordpress/components";
 
 /**
- * Render Card Heading
+ * Render Card.
  */
-function CardHeading2() {
+function Card2() {
 
     const controls = [
         {
@@ -71,12 +71,12 @@ function CardHeading2() {
 };
 
 // @meta-start
-CardHeading2.meta = {
-    title: 'Card Heading 2',
-    name:'CardHeading2',
-    category:'CardHeadings',
-    path: '/CardHeading/cardheading2',
+Card2.meta = {
+    title: 'Card 2',
+    name:'Card2',
+    category:'Cards',
+    path: '/Cards/card2',
 };
 // @meta-end
 
-export default CardHeading2;
+export default Card2;
