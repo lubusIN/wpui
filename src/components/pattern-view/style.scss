@@ -36,14 +36,13 @@
 .wpui-variation-card {
     border-radius: 4px !important;
     padding: 45px 10px;
-    container-type: inline-size;
-    container-name: wpui-resizer;
 
     iframe {
         overflow: hidden;
         border: none;
         box-sizing: border-box;
         width: 100%;
+        display: block;
     }
 }
 
@@ -80,6 +79,5 @@
 }
 
 .wpui-pattern-embed {
-    margin: 1px;
     box-sizing: border-box;
 }

@@ -46,7 +46,8 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     const updateHeight = () => {
         const iframeBody = iframeRef.current?.contentWindow?.document.body;
         if (iframeBody) {
-            setHeight(iframeBody.scrollHeight);
+            const bufferPx = category === 'Shells' ? 0 : 3; // handle iframe cutting off
+            setHeight(iframeBody.scrollHeight + bufferPx);
         }
     };
 
@@ -123,7 +124,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     loading="lazy"
                     seamless
                     ref={iframeRef}
-                    height={`${height + 4}px`}
+                    height={`${height}px`}
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
                     onLoad={updateHeight}
                 />
