@@ -66,26 +66,30 @@ function Navigation2() {
                             key={item.slug}
                             icon={item.icon}
                             iconPosition="left"
-                            info={
-                                item.count && (
+
+                            onClick={() => setItemActive(item.slug)}
+                            isPressed={activeItem === item.slug}
+                            style={{
+                                width: '20rem',
+                                height: '100%',
+                                backgroundColor: activeItem === item.slug ? '#3858e9' : '',
+                                color: activeItem === item.slug ? 'white' : 'black',
+                                
+                            }}>
+                            {item.name}
+                                {item.count && (
                                     <Text
                                         style={{
                                             padding: '2px 5px',
                                             borderRadius: '20px',
                                             border: '1px solid grey',
                                             color: activeItem === item.slug ? 'white' : '',
+                                            marginLeft:'12px'
                                         }} >
                                         {item.count}
                                     </Text>
                                 )
-                            }
-                            onClick={() => setItemActive(item.slug)}
-                            isPressed={activeItem === item.slug}
-                            style={{
-                                width: '20rem',
-                                height: '100%',
-                            }}>
-                            {item.name}
+                            } 
                         </MenuItem>
                     ))}
                 </VStack>

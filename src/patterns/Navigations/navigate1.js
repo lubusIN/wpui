@@ -37,7 +37,9 @@ function Navigation1() {
                             key={item.slug}
                             onClick={() => setItemActive(item.slug)}
                             isPressed={activeItem === item.slug}
-                            style={{ width: '20rem' }}>
+                            style={{
+                                width: '20rem', backgroundColor: activeItem === item.slug ? '#3858e9' : '',
+                            }}>
                             {item.name}
                         </MenuItem>
                     ))}
