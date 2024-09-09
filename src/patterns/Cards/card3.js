@@ -12,9 +12,9 @@ import {
 } from "@wordpress/components";
 
 /**
- * Render Card Heading.
+ * Render Card.
  */
-function CardHeading3() {
+function Card3() {
     return (
         <>
             <Card size="medium" style={{ borderRadius: '4px' }}>
@@ -43,12 +43,12 @@ function CardHeading3() {
 };
 
 // @meta-start
-CardHeading3.meta = {
-    title: 'Card Heading 3',
-    name:'CardHeading3',
-    category:'CardHeadings',
-    path: '/CardHeading/cardheading3',
+Card3.meta = {
+    title: 'Card 3',
+    name:'Card3',
+    category:'Card3',
+    path: '/Cards/card3',
 };
 // @meta-end
 
-export default CardHeading3;
+export default Card3;

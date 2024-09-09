@@ -2,7 +2,7 @@
  * Components
  */
 export * as PageHeading from './PageHeading';
-export * as CardHeadings  from './CardHeading';
+export * as Cards  from './Cards';
 export * as BreadCrumbs  from './BreadCrumbs';
 export * as EmptyState  from './EmptyState';
 export * as ActionPanels  from './ActionPanels';
