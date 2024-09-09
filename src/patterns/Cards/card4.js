@@ -11,9 +11,10 @@ import {
     __experimentalHStack as HStack,
     __experimentalSurface as Surface,
 } from "@wordpress/components";
+import { atSymbol } from "@wordpress/icons";
 
 /**
- * Render Card.
+ * Render Card.s
  */
 function Card4() {
     return (
@@ -38,7 +39,7 @@ function Card4() {
                         </Button>
                         <Button
                             variant="secondary"
-                            icon={"email"}
+                            icon={atSymbol}
                             iconSize={22}
                             style={{ borderRadius: '5px' }}
                         >
