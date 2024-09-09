@@ -14,7 +14,7 @@ import {
  * Render Stats
  */
 function Stats3() {
-    const statData = [
+    const cardData = [
         {
             label: 'Total Orders',
             value: '71,987'
@@ -33,12 +33,12 @@ function Stats3() {
             <VStack spacing={5}>
                 <Heading level={3}>Last 30 days</Heading>
                 <Grid columns={[1, 2, 3]} gap={0}>
-                    {statData.map((stat, index) => (
+                    {cardData.map((data, index) => (
                         <Card key={index}>
                             <CardBody>
                                 <VStack>
-                                    <Text size={14}>{stat.label}</Text>
-                                    <Heading level={2}>{stat.value}</Heading>
+                                    <Text size={14}>{data.label}</Text>
+                                    <Heading level={2}>{data.value}</Heading>
                                 </VStack>
                             </CardBody>
                         </Card>
