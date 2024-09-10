@@ -45,5 +45,7 @@ function Actionpanel4() {
 Actionpanel4.meta = {
     title: 'Action Panel 4',
     path: '/New-patterns/actionpanel4',
+    name: 'Actionpanel4',
+    category: 'NewPatterns',
 };
 export default Actionpanel4;
