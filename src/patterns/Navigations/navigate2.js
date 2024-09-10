@@ -33,7 +33,7 @@ function Navigation2() {
     return (
         <MenuGroup>
             <HStack alignment="center">
-                <VStack spacing={4}>
+                <VStack spacing={5}>
                     {items.map((item) => (
                         <MenuItem
                             key={item.slug}
