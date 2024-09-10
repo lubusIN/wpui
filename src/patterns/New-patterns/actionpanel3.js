@@ -71,6 +71,8 @@ function Actionpanel3() {
 
 Actionpanel3.meta = {
     title: 'Actionpanel 3',
+    name: 'Actionpanel3',
+    category: 'NewPatterns',
     path: '/New-patterns/actionpanel3',
 };
 

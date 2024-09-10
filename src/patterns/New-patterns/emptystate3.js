@@ -106,6 +106,8 @@ function Emptystate3() {
 Emptystate3.meta = {
     title: 'Empty State 3',
     path: '/New-patterns/emptystate3',
+    name: 'Emptystate3',
+    category: 'NewPatterns',
 };
 
 export default Emptystate3;

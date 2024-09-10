@@ -51,6 +51,8 @@ function Card1() {
 Card1.meta = {
     title: 'Card 1',
     path: '/New-patterns/card1',
+    name: 'Card1',
+    category: 'NewPatterns',
 };
 
 export default Card1;
