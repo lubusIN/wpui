@@ -8,7 +8,7 @@ import { Icon } from '@wordpress/components';
 /**
  * Internal dependencies.
  */
-import * as patterns from '../patterns/';
+import * as patterns from '../patterns';
 
 /**
  * Render ActionPanels

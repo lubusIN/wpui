@@ -60,6 +60,8 @@ function Shell7() {
 // @meta-start
 Shell7.meta = {
     title: 'Shell 7',
+    name: 'Shell7',
+    category: 'NewPatterns',
     path: '/NewPatterns/shell7',
 };
 // @meta-end

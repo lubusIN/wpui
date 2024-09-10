@@ -50,6 +50,8 @@ function Shell4() {
 // @meta-start
 Shell4.meta = {
     title: 'Shell 4',
+    name: 'Shell4',
+    category: 'NewPatterns',
     path: '/NewPatterns/shell4',
 };
 // @meta-end

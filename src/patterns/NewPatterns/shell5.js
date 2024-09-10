@@ -115,6 +115,8 @@ function Shell5() {
 // @meta-start
 Shell5.meta = {
     title: 'Shell 5',
+    name: 'Shell5',
+    category: 'NewPatterns',
     path: '/NewPatterns/shell5',
 };
 // @meta-end

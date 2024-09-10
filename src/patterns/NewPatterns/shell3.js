@@ -63,6 +63,8 @@ function Shell3() {
 // @meta-start
 Shell3.meta = {
     title: 'Shell 3',
+    name: 'Shell3',
+    category: 'NewPatterns',
     path: '/NewPatterns/shell3',
 };
 // @meta-end

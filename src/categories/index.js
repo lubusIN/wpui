@@ -10,4 +10,4 @@ export { default as PageHeading } from './page-heading';
 export { default as Shells } from './shells';
 export { default as Stats } from './stats';
 export { default as Tables } from './tables';
-export { default as NewPatterns } from './new-patterns';
+export { default as NewPatterns } from './newpatterns';

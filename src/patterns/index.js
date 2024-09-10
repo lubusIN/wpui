@@ -1,4 +1,3 @@
-import { NewPatterns } from '@wpui/categories';
 
 /**
  * Components
