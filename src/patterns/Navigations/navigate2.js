@@ -44,8 +44,7 @@ function Navigation2() {
                                         borderRadius: '20px',
                                         border: '1px solid grey',
                                         borderColor: activeItem === item.slug ? 'white' : '',
-                                    }}
-                                >
+                                    }}>
                                     {item.count}
                                 </Text>
                             )}
