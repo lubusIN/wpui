@@ -36,6 +36,7 @@ function Navigation2() {
                 <VStack spacing={5}>
                     {items.map((item) => (
                         <MenuItem
+                        suffix={item.count}
                             key={item.slug}
                             icon={item.icon}
                             iconPosition="left"
@@ -47,23 +48,7 @@ function Navigation2() {
                                 color: activeItem === item.slug ? 'white' : 'black',
                             }}
                         >
-                            <HStack spacing={50}>
-                                <Text color={activeItem === item.slug ? 'white' : ''}>
-                                    {item.name}
-                                </Text>
-                                {item.count && (
-                                    <Text
-                                        color={activeItem === item.slug ? 'white' : ''}
-                                        style={{
-                                            padding: '4px 12px',
-                                            borderRadius: '20px',
-                                            border: '1px solid grey',
-                                            borderColor: activeItem === item.slug ? 'white' : '',                                        }}
-                                    >
-                                        {item.count}
-                                    </Text>
-                                )}
-                            </HStack>
+                        {item.name}
                         </MenuItem>
                     ))}
                 </VStack>
