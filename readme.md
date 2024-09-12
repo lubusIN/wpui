@@ -3,7 +3,7 @@
 
 # WPUI
 ### Build Your React Powered WordPress Plugin Or App With Speed.
-WPUI is a design pattern library built upon wordpress components Which gives you the building blocks you need to build your react-powered WordPress plugin or app. spend less time on UI and more time building your idea.
+WPUI is a design pattern library built upon WordPress components Which gives you the building blocks you need to build your react-powered WordPress plugin or app. Spend less time on UI and more time building your idea.
 
 ## Usage
 - Visit https://wpui.lubus.in/
@@ -14,15 +14,9 @@ WPUI is a design pattern library built upon wordpress components Which gives you
 - Clone this repository `git clone https://github.com/lubusIN/wpui`
 - Open project directory `cd wpui`
 - Install dependencies `npm install`
-- Watch for chanegs in dev `npm run start`
+- Watch for changes in dev `npm run start`
 - Build production assets `npm run build`
 - Launch locally `npm run serve`
-
-## Craftsmen
-- [Ajit Bohra](https://twitter.com/ajitbohra)
-- [Pravin Prajapati](https://twitter.com/buddhamaan)
-- [Punit Verma](https://github.com/punitverma123)
-- [Nikhil Sharma](https://github.com/NikhilSharma666)
 
 ## Meet Your Artisans
 [LUBUS](http://lubus.in) is a web design agency based in Mumbai, India.
