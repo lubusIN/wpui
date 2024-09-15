@@ -31,7 +31,6 @@ import { tablet, desktop, mobile } from '@wordpress/icons';
  * Renders the Pattern View component.
  */
 function PatternView({ title, name, category, path, component: Pattern }) {
-    const [loading, setLoading] = useState(true);
     const patternStyle = category === 'Shells' ? { padding: '0px' } : {};
     const [view, setView] = useState('preview');
     const [responsive, setResponsive] = useState('desktop');
@@ -41,6 +40,7 @@ function PatternView({ title, name, category, path, component: Pattern }) {
     const iframeRef = useRef(null);
     const resizePing = useRef(null); // Persistent reference for resizing
     const isDesktop = useViewportMatch('large');
+    const [loading, setLoading] = useState(isDesktop);
 
     /**
      * Update the height of the iframe to match its content.
@@ -128,25 +128,27 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                     ref={iframeRef}
                     height={`${height}px`}
                     src={`/?mode=embed&category=${category}&pattern=${name}`}
-                    onLoad={() => {updateHeight(); setLoading(false)}}
+                    onLoad={() => { updateHeight(); setLoading(false) }}
                 />
             </Card>
         </ResizableBox>
     );
 
+    const loadingComponent = (
+        <VStack expanded align='center' style={{
+            position: 'absolute',
+            backgroundColor: 'rgb(255 255 255 / 80%)',
+            width: '100%',
+            height: '100%',
+            zIndex: 100
+        }}>
+            <ProgressBar />
+        </VStack>
+    );
+
     return (
         <VStack spacing={4} style={{ position: 'relative' }}>
-            {loading && (
-                <VStack expanded align='center' style={{
-                    position: 'absolute',
-                    backgroundColor: 'rgb(255 255 255 / 80%)',
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 100
-                }}>
-                    <ProgressBar />
-                </VStack>
-            )}
+            {loading && loadingComponent}
 
             <HStack>
                 <HStack>
