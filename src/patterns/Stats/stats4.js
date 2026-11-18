@@ -2,109 +2,132 @@
  * WordPress dependencies.
  */
 import {
-    Card,
-    Icon,
-    __experimentalGrid as Grid,
-    __experimentalText as Text,
-    __experimentalHeading as Heading,
-    __experimentalHStack as HStack,
-    __experimentalVStack as VStack,
-    DropdownMenu
-} from "@wordpress/components";
-import { arrowUp, arrowDown, trendingUp, moreVertical, receipt } from "@wordpress/icons";
+	Card,
+	Icon,
+	__experimentalGrid as Grid,
+	__experimentalText as Text,
+	__experimentalHeading as Heading,
+	__experimentalHStack as HStack,
+	__experimentalVStack as VStack,
+	DropdownMenu,
+} from '@wordpress/components';
+import {
+	arrowUp,
+	arrowDown,
+	trendingUp,
+	moreVertical,
+	receipt,
+} from '@wordpress/icons';
 
 /**
  * Render Stats
  */
 function Stats4() {
-    const cardData = [
-        {
-            title: 'Total Orders',
-            current: '11,204',
-            percentage: '48%',
-            icon: arrowUp,
-            iconColor: '#22C55D',
-            backgroundColor: '#DCFCE6'
-        },
-        {
-            title: 'Avg. Order Value',
-            current: '34.27%',
-            percentage: '2.6%',
-            icon: arrowUp,
-            iconColor: '#22C55D',
-            backgroundColor: '#DCFCE6'
-        },
-        {
-            title: 'Order Conversion Rate',
-            current: '12.56%',
-            percentage: '1.8%',
-            icon: arrowDown,
-            iconColor: '#B04A48',
-            backgroundColor: '#FDE2E1'
-        }
-    ];
-    return (
-        <Card isBorderless isRounded>
-            <VStack spacing={5}>
-                <Heading level={3}>Last 7 Days</Heading>
-                <Grid columns={[1, 2, 3]} gap={5}>
-                    {cardData.map((data, index) => (
-                        <Card key={index} style={{ padding: '20px' }}>
-                            <VStack alignment="left" spacing={3}>
-                                <HStack>
-                                    <Icon
-                                        icon={trendingUp}
-                                        size={45}
-                                        style={{
-                                            color: '#ffffff',
-                                            backgroundColor: '#3858e9',
-                                            borderRadius: '6px',
-                                        }}
-                                    />
-                                    <DropdownMenu
-                                        icon={moreVertical}
-                                        label="Select a direction"
-                                        controls={[
-                                            {
-                                                title: 'view orders',
-                                                icon: receipt,
-                                            }
-                                        ]}
-                                    />
-                                </HStack>
-                                <VStack expanded={false} spacing={1}>
-                                    <Heading level={5} weight={500} variant='muted'>{data.title}</Heading>
-                                    <HStack>
-                                        <Heading level={2}>{data.current}</Heading>
-                                        <HStack expanded={false} spacing={0}>
-                                            <Icon
-                                                icon={data.icon}
-                                                size={20}
-                                                style={{
-                                                    color: data.iconColor,
-                                                    backgroundColor: data.backgroundColor,
-                                                    marginRight: "4px",
-                                                }}
-                                            />
-                                            <Text weight={500} color={data.iconColor}>{data.percentage}</Text>
-                                        </HStack>
-                                    </HStack>
-                                </VStack>
-                            </VStack>
-                        </Card>
-                    ))}
-                </Grid>
-            </VStack>
-        </Card>
-    );
-};
+	const cardData = [
+		{
+			title: 'Total Orders',
+			current: '11,204',
+			percentage: '48%',
+			icon: arrowUp,
+			iconColor: '#22C55D',
+			backgroundColor: '#DCFCE6',
+		},
+		{
+			title: 'Avg. Order Value',
+			current: '34.27%',
+			percentage: '2.6%',
+			icon: arrowUp,
+			iconColor: '#22C55D',
+			backgroundColor: '#DCFCE6',
+		},
+		{
+			title: 'Order Conversion Rate',
+			current: '12.56%',
+			percentage: '1.8%',
+			icon: arrowDown,
+			iconColor: '#B04A48',
+			backgroundColor: '#FDE2E1',
+		},
+	];
+	return (
+		<Card isBorderless isRounded>
+			<VStack spacing={ 5 }>
+				<Heading level={ 3 }>Last 7 Days</Heading>
+				<Grid columns={ [ 1, 2, 3 ] } gap={ 5 }>
+					{ cardData.map( ( data, index ) => (
+						<Card key={ index } style={ { padding: '20px' } }>
+							<VStack alignment="left" spacing={ 3 }>
+								<HStack>
+									<Icon
+										icon={ trendingUp }
+										size={ 45 }
+										style={ {
+											color: '#ffffff',
+											backgroundColor: '#3858e9',
+											borderRadius: '6px',
+										} }
+									/>
+									<DropdownMenu
+										icon={ moreVertical }
+										label="Select a direction"
+										controls={ [
+											{
+												title: 'view orders',
+												icon: receipt,
+											},
+										] }
+									/>
+								</HStack>
+								<VStack expanded={ false } spacing={ 1 }>
+									<Heading
+										level={ 5 }
+										weight={ 500 }
+										variant="muted"
+									>
+										{ data.title }
+									</Heading>
+									<HStack>
+										<Heading level={ 2 }>
+											{ data.current }
+										</Heading>
+										<HStack
+											expanded={ false }
+											spacing={ 0 }
+										>
+											<Icon
+												icon={ data.icon }
+												size={ 20 }
+												style={ {
+													color: data.iconColor,
+													backgroundColor:
+														data.backgroundColor,
+													marginRight: '4px',
+												} }
+											/>
+											<Text
+												weight={ 500 }
+												color={ data.iconColor }
+											>
+												{ data.percentage }
+											</Text>
+										</HStack>
+									</HStack>
+								</VStack>
+							</VStack>
+						</Card>
+					) ) }
+				</Grid>
+			</VStack>
+		</Card>
+	);
+}
 
 // @meta-start
 Stats4.meta = {
-    title: 'Stats 4',
-    name: 'Stats4',
-    category: 'Stats',
-    path: '/Stats/stats4',
+	title: 'Stats 4',
+	name: 'Stats4',
+	category: 'Stats',
+	path: '/Stats/stats4',
 };
 // @meta-end
 

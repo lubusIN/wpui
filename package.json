@@ -1,41 +1,45 @@
 {
-  "name": "wpui",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "wp-scripts build --webpack-no-externals",
-    "check-engines": "wp-scripts check-engines",
-    "check-licenses": "wp-scripts check-licenses",
-    "format": "wp-scripts format",
-    "lint:css": "wp-scripts lint-style",
-    "lint:js": "wp-scripts lint-js",
-    "lint:md:docs": "wp-scripts lint-md-docs",
-    "lint:pkg-json": "wp-scripts lint-pkg-json",
-    "packages-update": "wp-scripts packages-update",
-    "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start --webpack-no-externals",
-    "serve": "serve",
-    "test:e2e": "wp-scripts test-e2e",
-    "test:unit": "wp-scripts test-unit-js"
-  },
-  "dependencies": {
-    "@wordpress/components": "^44.0.0",
-    "@wordpress/compose": "^9.1.0",
-    "@wordpress/element": "^10.1.0",
-    "@wordpress/icons": "^20.0.0",
-    "@wordpress/scripts": "^37.1.0",
-    "react-content-loader": "^7.1.2",
-    "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.18.5",
-    "react-syntax-highlighter": "^16.1.2",
-    "remark-gfm": "^4.0.1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "raw-loader": "^4.0.2",
-    "serve": "^14.2.8"
-  }
+	"name": "wpui",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "wp-scripts build --webpack-no-externals",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint": "npm run lint:js && npm run lint:css",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-no-externals",
+		"serve": "serve",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"dependencies": {
+		"@wordpress/components": "^44.0.0",
+		"@wordpress/compose": "^9.1.0",
+		"@wordpress/element": "^10.1.0",
+		"@wordpress/i18n": "^7.1.0",
+		"@wordpress/icons": "^20.0.0",
+		"@wordpress/scripts": "^37.1.0",
+		"react": "^18.3.1",
+		"react-content-loader": "^7.1.2",
+		"react-dom": "^18.3.1",
+		"react-markdown": "^10.1.0",
+		"react-router-dom": "^7.18.5",
+		"react-syntax-highlighter": "^16.1.2",
+		"remark-gfm": "^4.0.1"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"raw-loader": "^4.0.2",
+		"serve": "^14.2.8"
+	}
 }

@@ -1,19 +1,21 @@
 /**
  * External dependencies.
  */
-import Markdown from "react-markdown";
+import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 /**
  * internal dependencies.
  */
-import gettingStarted from "@wpui/docs/getting-started.md"
+import gettingStarted from '@wpui/docs/getting-started.md';
 
 function GettingStarted() {
-  return (
-    <div className="getting_started">
-      <Markdown remarkPlugins={[remarkGfm]}>{gettingStarted}</Markdown>
-    </div>
-  );
-};
+	return (
+		<div className="getting_started">
+			<Markdown remarkPlugins={ [ remarkGfm ] }>
+				{ gettingStarted }
+			</Markdown>
+		</div>
+	);
+}
 export default GettingStarted;

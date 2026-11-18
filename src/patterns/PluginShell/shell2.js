@@ -1,93 +1,128 @@
 /**
  * External dependencies.
  */
-import { useState } from "@wordpress/element";
+import { useState } from '@wordpress/element';
 
 /**
  * WordPress dependencies.
  */
-import { 
-    wordpress, 
-    commentAuthorAvatar 
-} from "@wordpress/icons";
+import { wordpress, commentAuthorAvatar } from '@wordpress/icons';
 import {
-    Card,
-    Icon,
-    Button,
-    CardBody,
-    CardHeader,
-    __experimentalHStack as HStack,
-    __experimentalHeading as Heading,
-} from "@wordpress/components";
+	Card,
+	Icon,
+	Button,
+	CardBody,
+	CardHeader,
+	__experimentalHStack as HStack,
+	__experimentalHeading as Heading,
+} from '@wordpress/components';
 
 /**
  * Render Shell2
  */
 function Shell2() {
+	const items = [
+		{
+			name: 'Dashboard',
+			slug: 'dashboard',
+		},
+		{
+			name: 'Teams',
+			slug: 'teams',
+		},
+		{
+			name: 'Projects',
+			slug: 'projects',
+		},
+		{
+			name: 'Calendar',
+			slug: 'calendar',
+		},
+	];
 
-    const items = [
-        {
-            name: 'Dashboard',
-            slug: 'dashboard',
-        },
-        {
-            name: 'Teams',
-            slug: 'teams',
-        },
-        {
-            name: 'Projects',
-            slug: 'projects',
-        },
-        {
-            name: 'Calendar',
-            slug: 'calendar',
-        }
-    ];
+	const [ activeItem, setActiveItem ] = useState( 'Dashboard' );
+	const [ cardBodyContent, setCardBodyContent ] = useState( '' );
 
-    const [activeItem, setActiveItem] = useState('Dashboard');
-    const [cardBodyContent, setCardBodyContent] = useState('');
+	const handleNavigationClick = ( slug, content ) => {
+		setActiveItem( slug );
+		setCardBodyContent( content );
+	};
 
-    const handleNavigationClick = (slug, content) => {
-        setActiveItem(slug);
-        setCardBodyContent(content);
-    };
-
-    return (
-        <Card>
-            <CardHeader style={{ backgroundColor: '#5046E5' }}>
-                <HStack direction={['column', 'row']} spacing={4}>
-                    <Icon fill="white" icon={wordpress} size={35}></Icon>
-                    <HStack alignment="left" spacing={2} direction={['column', 'row']}>
-                        {items.map((item, index) => (
-                            <Button
-                                key={index}
-                                variant={activeItem === item.name ? "secondary" : "tertiary"}
-                                style={{ color: 'white' }}
-                                onClick={() => handleNavigationClick(item.name, item.content)}
-                            >
-                                {item.name}
-                            </Button>
-                        ))}
-                    </HStack>
-                </HStack>
-                <HStack alignment="right">
-                    <Icon icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="white" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2" /><circle cx="12" cy="3" r="1" /></g></svg>} size={25}></Icon>
-                    <Icon fill="white" icon={commentAuthorAvatar} size={35}></Icon>
-                </HStack>
-            </CardHeader>
-            <CardBody><Heading>{activeItem}</Heading></CardBody>
-            <CardBody isShady>
-                <Card
-                    variant="grid"
-                    style={{
-                        minWidth: '100px',
-                        height: '250px'
-                    }}>
-                    <CardBody>{cardBodyContent}</CardBody>
-                </Card>
-            </CardBody>
-        </Card>
-    );
+	return (
+		<Card>
+			<CardHeader style={ { backgroundColor: '#5046E5' } }>
+				<HStack direction={ [ 'column', 'row' ] } spacing={ 4 }>
+					<Icon fill="white" icon={ wordpress } size={ 35 }></Icon>
+					<HStack
+						alignment="left"
+						spacing={ 2 }
+						direction={ [ 'column', 'row' ] }
+					>
+						{ items.map( ( item, index ) => (
+							<Button
+								key={ index }
+								variant={
+									activeItem === item.name
+										? 'secondary'
+										: 'tertiary'
+								}
+								style={ { color: 'white' } }
+								onClick={ () =>
+									handleNavigationClick(
+										item.name,
+										item.content
+									)
+								}
+							>
+								{ item.name }
+							</Button>
+						) ) }
+					</HStack>
+				</HStack>
+				<HStack alignment="right">
+					<Icon
+						icon={
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+							>
+								<g fill="none" stroke="white" strokeWidth="2.5">
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2"
+									/>
+									<circle cx="12" cy="3" r="1" />
+								</g>
+							</svg>
+						}
+						size={ 25 }
+					></Icon>
+					<Icon
+						fill="white"
+						icon={ commentAuthorAvatar }
+						size={ 35 }
+					></Icon>
+				</HStack>
+			</CardHeader>
+			<CardBody>
+				<Heading>{ activeItem }</Heading>
+			</CardBody>
+			<CardBody isShady>
+				<Card
+					variant="grid"
+					style={ {
+						minWidth: '100px',
+						height: '250px',
+					} }
+				>
+					<CardBody>{ cardBodyContent }</CardBody>
+				</Card>
+			</CardBody>
+		</Card>
+	);
 }
 
 export default Shell2;

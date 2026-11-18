@@ -2,9 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@wpui/*": [
-				"src/*"
-			],
+			"@wpui/*": [ "src/*" ]
 		}
 	}
 }
