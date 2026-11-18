@@ -3,6 +3,18 @@ body {
 	margin: 0;
 }
 
+body.is-embed {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	overflow: hidden;
+}
+
+.wpui-pattern-embed {
+	box-sizing: border-box;
+	display: flow-root;
+}
+
 .wpui-hero-Section {
 	background-image: url(img/banner.png);
 	background-repeat: no-repeat;
@@ -81,7 +93,6 @@ pre {
 	.wpui-lcont,
 	.getting_started {
 		max-width: 100% !important;
-
 	}
 
 	pre {

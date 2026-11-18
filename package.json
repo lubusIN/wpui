@@ -19,8 +19,6 @@
 		"serve": "serve -s",
 		"test:e2e": "playwright test",
 		"test:unit": "wp-scripts test-unit-js",
-		"test:visual": "playwright test --config=playwright.visual.config.js",
-		"test:visual:update": "playwright test --config=playwright.visual.config.js --update-snapshots",
 		"prepare": "husky"
 	},
 	"dependencies": {
@@ -57,11 +55,11 @@
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
 			"wp-scripts format",
-			"wp-scripts lint-js"
+			"wp-scripts lint-js --fix"
 		],
 		"*.{css,scss}": [
 			"wp-scripts format",
-			"wp-scripts lint-style"
+			"wp-scripts lint-style --fix"
 		]
 	}
 }

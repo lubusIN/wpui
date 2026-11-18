@@ -1,14 +1,9 @@
 /**
- * External dependencies.
- */
-import { useState, useRef, useEffect, useCallback } from 'react';
-
-/**
  * WordPress dependencies.
  */
+import { useState, useRef, useEffect, useCallback } from '@wordpress/element';
 import { useViewportMatch } from '@wordpress/compose';
 import {
-	ProgressBar,
 	Card,
 	ResizableBox,
 	__experimentalHStack as HStack,
@@ -18,56 +13,61 @@ import {
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
 } from '@wordpress/components';
+import { tablet, desktop, mobile } from '@wordpress/icons';
 
 /**
  * Internal dependencies.
  */
 import { PatternCode } from '../index';
 import './style.scss';
-import { tablet, desktop, mobile } from '@wordpress/icons';
 
 /**
  * Renders the Pattern View component.
  */
-function PatternView( { title, name, category, path, component: Pattern } ) {
+function PatternView( { title, name, category, path } ) {
 	const patternStyle = category === 'Shells' ? { padding: '0px' } : {};
 	const [ view, setView ] = useState( 'preview' );
 	const [ responsive, setResponsive ] = useState( 'desktop' );
-	const [ height, setHeight ] = useState( 100 );
+	const [ height, setHeight ] = useState( 150 );
 	const [ width, setWidth ] = useState( 1200 );
+	const [ isResizing, setIsResizing ] = useState( false );
+	const isDesktop = useViewportMatch( 'large' );
 
 	const iframeRef = useRef( null );
-	const resizePing = useRef( null ); // Persistent reference for resizing
-	const isDesktop = useViewportMatch( 'large' );
-	const [ loading, setLoading ] = useState( isDesktop );
 
-	/**
-	 * Update the height of the iframe to match its content.
-	 */
-	const updateHeight = useCallback( () => {
-		const iframeBody = iframeRef.current?.contentWindow?.document.body;
-		if ( iframeBody ) {
-			const bufferPx = category === 'Shells' ? 0 : 3; // handle iframe cutting off
-			setHeight( iframeBody.scrollHeight + bufferPx );
-		}
-	}, [ category ] );
+	// Listen for accurate height messages from the embed iframe runner
+	useEffect( () => {
+		const handleMessage = ( event ) => {
+			if (
+				event.data?.type === 'wpui-pattern-resize' &&
+				event.data?.pattern?.toLowerCase() === name.toLowerCase()
+			) {
+				const newHeight = event.data.height;
+				if ( newHeight > 20 ) {
+					setHeight( newHeight );
+				}
+			}
+		};
 
-	/**
-	 * Set up a MutationObserver to watch for changes in the iframe content.
-	 */
-	const observeIframeContent = useCallback( () => {
-		const iframeDocument = iframeRef.current?.contentWindow?.document;
-		if ( ! iframeDocument?.body ) {
-			return null;
+		window.addEventListener( 'message', handleMessage );
+		return () => window.removeEventListener( 'message', handleMessage );
+	}, [ name ] );
+
+	// Immediate measurement on iframe load as fallback
+	const handleIframeLoad = useCallback( () => {
+		try {
+			const doc = iframeRef.current?.contentDocument;
+			if ( doc ) {
+				const root = doc.getElementById( 'preview-root' ) || doc.body;
+				const h = root.getBoundingClientRect().height;
+				if ( h > 20 ) {
+					setHeight( Math.ceil( h ) );
+				}
+			}
+		} catch {
+			// Ignore any cross-origin errors
 		}
-		const observer = new MutationObserver( () => updateHeight() );
-		observer.observe( iframeDocument.body, {
-			childList: true,
-			subtree: true,
-			attributes: true,
-		} );
-		return observer;
-	}, [ updateHeight ] );
+	}, [] );
 
 	/**
 	 * Handle responsive changes and update the width based on the selected device.
@@ -78,22 +78,26 @@ function PatternView( { title, name, category, path, component: Pattern } ) {
 		setWidth( widthMap[ value ] );
 	};
 
-	// Set up MutationObserver when iframe loads and clean up when unmounting.
-	useEffect( () => {
-		if ( iframeRef.current ) {
-			const observer = observeIframeContent();
-			updateHeight();
-			return () => observer?.disconnect();
-		}
-	}, [ responsive, observeIframeContent, updateHeight ] );
+	/**
+	 * Handle resizing via side handles.
+	 */
+	const handleResize = ( event, direction, elt, delta ) => {
+		const newWidth = width + delta.width;
+		setWidth( newWidth );
 
-	// Cleanup resize ping interval on unmount.
-	useEffect( () => {
-		return () => clearInterval( resizePing.current );
-	}, [] );
+		if ( newWidth <= 400 ) {
+			setResponsive( 'mobile' );
+		} else if ( newWidth <= 800 ) {
+			setResponsive( 'tablet' );
+		} else {
+			setResponsive( 'desktop' );
+		}
+	};
+
+	const embedUrl = `/?mode=embed&category=${ category }&pattern=${ name }`;
 
 	/**
-	 * Render the resizable component (only for desktop view).
+	 * Render the resizable component (for desktop view).
 	 */
 	const resizableComponent = (
 		<ResizableBox
@@ -104,70 +108,34 @@ function PatternView( { title, name, category, path, component: Pattern } ) {
 			minWidth={ 400 }
 			size={ { width } }
 			enable={ { right: true, left: true } }
-			onResize={ ( event, direction, elt, delta ) => {
-				const newWidth = width + delta.width;
-				setWidth( newWidth );
-				// Ensure the iframe reference exists and is correctly accessed
-				if ( iframeRef && iframeRef.current ) {
-					const iframeWidth =
-						iframeRef.current.contentWindow.document.documentElement
-							.clientWidth;
-
-					// Update the responsive state based on the new width
-					if ( iframeWidth <= 400 ) {
-						setResponsive( 'mobile' );
-					} else if ( iframeWidth <= 800 ) {
-						setResponsive( 'tablet' );
-					} else {
-						setResponsive( 'desktop' );
-					}
-				}
-				updateHeight();
-			} }
-			onResizeStop={ () => {
-				clearInterval( resizePing.current );
-			} }
-			onResizeStart={ () => {
-				resizePing.current = setInterval( updateHeight, 10 );
-			} }
+			onResize={ handleResize }
+			onResizeStart={ () => setIsResizing( true ) }
+			onResizeStop={ () => setIsResizing( false ) }
 		>
 			<Card className="wpui-variation-card" style={ patternStyle }>
 				<iframe
-					title={ `${ title } preview` }
-					loading="lazy"
-					seamless
 					ref={ iframeRef }
-					height={ `${ height }px` }
-					src={ `/?mode=embed&category=${ category }&pattern=${ name }` }
-					onLoad={ () => {
-						updateHeight();
-						setLoading( false );
+					className="wpui-preview-iframe"
+					title={ `${ title } preview` }
+					data-category={ category }
+					data-pattern={ name }
+					src={ embedUrl }
+					onLoad={ handleIframeLoad }
+					style={ {
+						width: '100%',
+						height: `${ height }px`,
+						border: 'none',
+						display: 'block',
+						overflow: 'hidden',
+						pointerEvents: isResizing ? 'none' : 'auto',
 					} }
 				/>
 			</Card>
 		</ResizableBox>
 	);
 
-	const loadingComponent = (
-		<VStack
-			expanded
-			align="center"
-			style={ {
-				position: 'absolute',
-				backgroundColor: 'rgb(255 255 255 / 80%)',
-				width: '100%',
-				height: '100%',
-				zIndex: 100,
-			} }
-		>
-			<ProgressBar />
-		</VStack>
-	);
-
 	return (
 		<VStack spacing={ 4 } style={ { position: 'relative' } }>
-			{ loading && loadingComponent }
-
 			<HStack>
 				<HStack>
 					<Heading className="head" level={ 4 } weight={ 500 }>
@@ -223,9 +191,26 @@ function PatternView( { title, name, category, path, component: Pattern } ) {
 			) : (
 				<Card
 					className="wpui-variation-card"
-					style={ view === 'code' ? { display: 'none' } : {} }
+					style={
+						view === 'code' ? { display: 'none' } : patternStyle
+					}
 				>
-					<Pattern />
+					<iframe
+						ref={ iframeRef }
+						className="wpui-preview-iframe"
+						title={ `${ title } preview` }
+						data-category={ category }
+						data-pattern={ name }
+						src={ embedUrl }
+						onLoad={ handleIframeLoad }
+						style={ {
+							width: '100%',
+							height: `${ height }px`,
+							border: 'none',
+							display: 'block',
+							overflow: 'hidden',
+						} }
+					/>
 				</Card>
 			) }
 
