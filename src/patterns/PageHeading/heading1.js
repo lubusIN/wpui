@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies.
  */
-import { edit } from "@wordpress/icons";
+import { pencil } from "@wordpress/icons";
 
 import {
     Button,
@@ -17,7 +17,7 @@ function Heading1() {
         <HStack alignment="start" justify="space-between" spacing={3} direction={['column', 'row']}>
             <Heading level={2}>Mindblown: a blog about philosophy.</Heading>
             <HStack spacing={3} expanded={false}>
-                <Button icon={edit} variant="secondary">Edit</Button>
+                <Button icon={pencil} variant="secondary">Edit</Button>
                 <Button variant="primary">Publish</Button>
             </HStack>
         </HStack>

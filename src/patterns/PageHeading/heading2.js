@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies.
  */
-import { chevronRight, edit } from '@wordpress/icons';
+import { chevronRight, pencil } from '@wordpress/icons';
 
 import {
     Button,
@@ -29,7 +29,7 @@ function Heading2() {
             <HStack alignment="start" justify="space-between" spacing={3} direction={['column', 'row']}>
                 <Heading level={2}>The Future of Artificial Intelligence.</Heading>
                 <HStack spacing={3} expanded={false}>
-                    <Button icon={edit} variant="secondary">Edit</Button>
+                    <Button icon={pencil} variant="secondary">Edit</Button>
                     <Button variant="primary">Publish</Button>
                 </HStack>
             </HStack>

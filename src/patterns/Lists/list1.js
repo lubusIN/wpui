@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies.
  */
-import { edit, moreVertical, trash } from "@wordpress/icons";
+import { pencil, moreVertical, trash } from "@wordpress/icons";
 import {
     Icon,
     Button,
@@ -20,7 +20,7 @@ function List1() {
 
     const controls = [
         {
-            icon: <Icon icon={edit}></Icon>,
+            icon: <Icon icon={pencil}></Icon>,
             onClick: function noRefCheck() { },
             title: 'Edit Post'
         },

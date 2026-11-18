@@ -3,7 +3,7 @@
  */
 import {
     moreHorizontal,
-    edit,
+    pencil,
     seen
 } from "@wordpress/icons";
 import {
@@ -32,7 +32,7 @@ function GridList1() {
             title: 'View'
         },
         {
-            icon: <Icon icon={edit}></Icon>,
+            icon: <Icon icon={pencil}></Icon>,
             onClick: function noRefCheck() { },
             title: 'Edit'
         },

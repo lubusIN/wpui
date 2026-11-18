@@ -11,7 +11,7 @@ import {
     __experimentalVStack as VStack,
     DropdownMenu
 } from "@wordpress/components";
-import { arrowUp, arrowDown, trendingUp, moreVertical, trendingDown, receipt } from "@wordpress/icons";
+import { arrowUp, arrowDown, trendingUp, moreVertical, receipt } from "@wordpress/icons";
 
 /**
  * Render Stats
