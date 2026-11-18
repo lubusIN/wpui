@@ -1,5 +1,4 @@
 const { resolve } = require('path');
-const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' );
 const defaultConfig = require("@wordpress/scripts/config/webpack.config");
 
 module.exports = {

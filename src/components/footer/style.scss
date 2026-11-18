@@ -1,19 +1,20 @@
 .wpui-footer {
-    background-color: #1f1f1f !important;
+	background-color: #1f1f1f !important;
 
-    .components-card__body {
-        &:first-child {
-            padding: 60px 3vw;
-        }
+	.components-card__body {
 
-        .footer-content {
-            margin: auto;
-            width: 50%;
-        }
-    }
+		&:first-child {
+			padding: 60px 3vw;
+		}
+
+		.footer-content {
+			margin: auto;
+			width: 50%;
+		}
+	}
 }
 
 .footer_btn {
-    color: aliceblue;
-    border: 1px solid white;
+	color: #f0f8ff;
+	border: 1px solid #fff;
 }

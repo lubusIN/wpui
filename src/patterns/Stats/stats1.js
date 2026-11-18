@@ -28,21 +28,21 @@ function Stats1() {
             title: "Total Sales",
             amount: "₹5,957,551",
             change: "122",
-            Color: "green",
+            Color: "#16a34a",
         },
         {
             icon: trendingUp,
             title: "Net Sales",
             amount: "₹5,140,956",
             change: "5.4%",
-            Color: "green",
+            Color: "#16a34a",
         },
         {
             icon: box,
             title: "Orders",
             amount: "300",
             change: "3.2%",
-            Color: "green",
+            Color: "#16a34a",
         }
     ];
     return (
@@ -53,15 +53,20 @@ function Stats1() {
                         <HStack alignment="left" spacing={6}>
                             <Icon
                                 icon={data.icon}
-                                fill="white"
                                 size={30}
-                                style={{ backgroundColor: '#3858e9', borderRadius: '6px', padding: '8px' }} />
+                                style={{
+                                    color: '#ffffff',
+                                    backgroundColor: '#3858e9',
+                                    borderRadius: '6px',
+                                    padding: '8px',
+                                }}
+                            />
                             <VStack>
                                 <Text size={18} variant="muted">{data.title}</Text>
                                 <HStack>
                                     <Heading level={2}>{data.amount}</Heading>
                                     <HStack alignment="bottomRight" spacing={0}>
-                                        <Icon icon={arrowUp} fill={data.Color} />
+                                        <Icon icon={arrowUp} style={{ color: data.Color }} />
                                         <Text color={data.Color} size={14}>{data.change}</Text>
                                     </HStack>
                                 </HStack>

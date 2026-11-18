@@ -1,83 +1,87 @@
 .wpui-view-toggle {
-    color: #535353;
-    font-size: .875rem;
-    font-weight: 500;
-    padding: 5px !important;
-    background-color: #f6f6f6 !important;
-    border: none !important;
-    border-radius: 6px !important;
+	background-color: #f1f3f5 !important;
+	border: 1px solid #e2e8f0 !important;
+	border-radius: 6px !important;
+	height: 36px !important;
+	padding: 0 !important;
 
-    [role="presentation"] {
-        background-color: white;
-        transform: none !important;
-    }
+	&::before {
+		background-color: #fff !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 5px !important;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+	}
 
-    button[data-active-item] {
-        padding: 10px 15px;
-        fill: #5b5b5b;
-    }
+	&:focus-within {
+		border-color: #3858e9 !important;
+		box-shadow: 0 0 0 1px #3858e9 !important;
+	}
 
-    &:focus-within {
-        box-shadow: none !important;
-        border: none;
-    }
+	button {
+		color: #64748b;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		padding: 0 16px;
 
-    .wpui-toggle-button {
-        border-radius: 6px !important;
-        font-weight: 600;
+		&:hover {
+			color: #1e293b;
+		}
 
-        &.active {
-            color: black;
-            box-shadow: rgb(207, 207, 207) 0px 0px 3px;
-        }
-    }
+		&[aria-checked="true"],
+		&[aria-pressed="true"] {
+			color: #0f172a;
+			font-weight: 600;
+		}
+	}
 }
 
 .wpui-variation-card {
-    border-radius: 4px !important;
-    padding: 45px 10px;
+	border-radius: 4px !important;
+	padding: 45px 10px;
 
-    iframe {
-        overflow: hidden;
-        border: none;
-        box-sizing: border-box;
-        width: 100%;
-        display: block;
-    }
+	iframe {
+		overflow: hidden;
+		border: none;
+		box-sizing: border-box;
+		width: 100%;
+		display: block;
+	}
 }
 
 .components-resizable-box__side-handle::before {
-    display: none;
+	display: none;
 }
+
 .components-resizable-box__handle {
-    &:after {
-        height: 60px;
-        width: 6px;
-        border-radius: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #979aa1;
-        box-shadow: none;
-    }
 
-    &:hover:after {
-        background-color: #656a71;
-    }
+	&::after {
+		height: 60px;
+		width: 6px;
+		border-radius: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #979aa1;
+		box-shadow: none;
+	}
 
-    &-left:after {
-        margin-right: 20px;
-    }
+	&:hover::after {
+		background-color: #656a71;
+	}
 
-    &-right:after {
-        margin-right: -10px;
-    }
+	&-left::after {
+		margin-right: 20px;
+	}
+
+	&-right::after {
+		margin-right: -10px;
+	}
 }
 
 ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+	width: 0;
+	height: 0;
 }
 
 .wpui-pattern-embed {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }

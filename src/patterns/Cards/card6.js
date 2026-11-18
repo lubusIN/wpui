@@ -43,11 +43,9 @@ function Card6() {
                         </Text>
                         <HStack alignment="left">
                             <Button variant="primary" >Call to action</Button>
-                            <Button style={{ padding: 0 }}>
-                                <Text size={14} weight={600} color='#3858E9' style={{ textDecoration: 'none' }} >
-                                    Link Text
-                                </Text>
-                                <Icon icon={arrowRight} color="#3858E9"></Icon>
+                            <Button variant="link" style={{ textDecoration: 'none', padding: 0, height: 'auto', fontWeight: 600 }}>
+                                Link Text
+                                <Icon icon={arrowRight} style={{ color: '#3858e9', marginLeft: '4px' }} />
                             </Button>
                         </HStack>
                     </VStack>

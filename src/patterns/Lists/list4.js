@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { Fragment } from "@wordpress/element";
 import {
     CardDivider,
     __experimentalText as Text,
@@ -58,8 +59,8 @@ function List4() {
             <HStack alignment="center">
                 <VStack className="wpui_user_list" spacing={4}>
                     {users.map((user, index) => (
-                        <>
-                            <HStack key={index} spacing={10}>
+                        <Fragment key={index}>
+                            <HStack spacing={10}>
                                 <HStack spacing={3} alignment="left" expanded={false}>
                                     <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px", minWidth:"45px" }} />
                                     <VStack spacing={2} style={{ width: '40rem' }}>
@@ -83,7 +84,7 @@ function List4() {
                                 </VStack>
                             </HStack>
                             <CardDivider margin={2} />
-                        </>
+                        </Fragment>
                     ))}
                 </VStack>
             </HStack>

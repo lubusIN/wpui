@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { Fragment } from "@wordpress/element";
 import { pencil, moreVertical, trash } from "@wordpress/icons";
 import {
     Icon,
@@ -65,8 +66,8 @@ function List1() {
         <>
             <VStack className="wpui_post_list">
                 {posts.map((post, index) => (
-                    <>
-                        <HStack key={index} className="wpui_list_item">
+                    <Fragment key={index}>
+                        <HStack className="wpui_list_item">
                             <HStack justify="space-between" direction={['column', 'row']}>
                                 <VStack>
                                     <HStack alignment="left">
@@ -91,7 +92,7 @@ function List1() {
                         </HStack>
 
                         <CardDivider margin={5}></CardDivider>
-                    </>
+                    </Fragment>
                 ))}
             </VStack>
             <style>

@@ -1,6 +1,7 @@
 /**
  * WordPress dependencies.
  */
+import { Fragment } from "@wordpress/element";
 import {
     CardDivider,
     Button,
@@ -35,10 +36,10 @@ function List3() {
             <HStack alignment="center">
                 <VStack className="wpui_user_list" spacing={6}>
                     {users.map((user, index) => (
-                        <>
-                            <HStack key={index} spacing={10}>
+                        <Fragment key={index}>
+                            <HStack spacing={10}>
                                 <HStack spacing={3} alignment="left" expanded={false}>
-                                <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px" }} />
+                                    <Surface as={'img'} src={user.avatar} style={{ borderRadius: '100%', maxWidth: "45px" }} />
                                     <VStack spacing={2} style={{ width: '15rem' }}>
                                         <Heading
                                             size={14}
@@ -57,10 +58,10 @@ function List3() {
                                 <Button variant="secondary" style={{ minWidth: 'auto' }}>View</Button>
                             </HStack>
                             <CardDivider margin={2} />
-                        </>
+                        </Fragment>
                     ))}
 
-                    <Button variant="secondary" style={{ width: '100%', justifyContent: 'center' }} text="View All"></Button>
+                    <Button variant="secondary" style={{ width: '100%', justifyContent: 'center' }}>View All</Button>
                 </VStack>
             </HStack>
             <style>

@@ -26,140 +26,72 @@ import {
  * Render Cards
  */
 function GridList4() {
+    const items = [
+        {
+            icon: mobile,
+            title: 'Responsive Design',
+            description: 'Our WordPress theme ensures a seamless experience across all devices, providing a user-friendly interface on desktops, tablets, and smartphones.',
+        },
+        {
+            icon: check,
+            title: 'SEO Optimization',
+            description: "Boost your website's visibility with our built-in SEO optimization tools. Improve your search engine rankings and attract more organic traffic.",
+        },
+        {
+            icon: people,
+            title: 'E-commerce Solutions',
+            description: 'Take your business online with our e-commerce solutions. From secure payment gateways to customizable product pages, we help you build a successful online store.',
+        },
+        {
+            icon: payment,
+            title: 'Premium Blog Templates',
+            description: 'Explore a collection of beautifully crafted blog templates, designed to make your content stand out. Choose from a variety of styles to suit your unique taste.',
+        },
+        {
+            icon: receipt,
+            title: '24/7 Customer Support',
+            description: 'We pride ourselves on providing exceptional customer support. Our dedicated team is available 24/7 to assist you with any queries or issues you may encounter.',
+        },
+        {
+            icon: postAuthor,
+            title: 'One-Click Installation',
+            description: 'Get started in minutes with our easy one-click installation. No technical expertise required – launch your WordPress site effortlessly and focus on what you do best.',
+        },
+    ];
+
     return (
-        <Grid columns={[1, 2]} gap={0}>
-            <Card size="large">
-                <CardBody>
-                    <VStack spacing={8}>
-                        <HStack>
-                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
-                                <Icon
-                                    size={40}
-                                    icon={mobile}
-                                />
-                            </CardBody>
-                            <Button icon={external} size={40} variant="Tertiary"></Button>
-                        </HStack>
-                        <VStack>
-                            <Heading level={4} weight={500}>Responsive Design</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">
-                                Our WordPress theme ensures a seamless experience across all devices, providing a user-friendly interface on desktops, tablets, and smartphones.
-                            </Text>
-                        </VStack>
-                    </VStack>
-                </CardBody>
-            </Card>
-
-            <Card size="large">
-                <CardBody>
-                    <VStack spacing={8}>
-                        <HStack>
-                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
-                                <Icon
-                                    size={40}
-                                    icon={check}
-                                />
-                            </CardBody>
-                            <Button icon={external} size={40} variant="Tertiary"></Button>
-                        </HStack>
-                        <VStack>
-                            <Heading level={4} weight={500}>SEO Optimization</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">
-                                Boost your website's visibility with our built-in SEO optimization tools. Improve your search engine rankings and attract more organic traffic.
-                            </Text>
-                        </VStack>
-                    </VStack>
-                </CardBody>
-            </Card>
-
-            <Card size="large">
-                <CardBody>
-                    <VStack spacing={8}>
-                        <HStack>
-                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
-                                <Icon
-                                    size={40}
-                                    icon={people}
-                                />
-                            </CardBody>
-                            <Button icon={external} size={40} variant="Tertiary"></Button>
-                        </HStack>
-                        <VStack>
-                            <Heading level={4} weight={500}>E-commerce Solutions</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">
-                                Take your business online with our e-commerce solutions. From secure payment gateways to customizable product pages, we help you build a successful online store.
-                            </Text>
-                        </VStack>
-                    </VStack>
-                </CardBody>
-            </Card>
-
-            <Card size="large">
-                <CardBody>
-                    <VStack spacing={8}>
-                        <HStack>
-                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
-                                <Icon
-                                    size={40}
-                                    icon={payment}
-                                />
-                            </CardBody>
-                            <Button icon={external} size={40} variant="Tertiary"></Button>
-                        </HStack>
-                        <VStack>
-                            <Heading level={4} weight={500}> Premium Blog Templates</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">
-                                Explore a collection of beautifully crafted blog templates, designed to make your content stand out. Choose from a variety of styles to suit your unique taste.
-                            </Text>
-                        </VStack>
-                    </VStack>
-                </CardBody>
-            </Card>
-
-            <Card size="large">
-                <CardBody>
-                    <VStack spacing={8}>
-                        <HStack>
-                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
-                                <Icon
-                                    size={40}
-                                    icon={receipt}
-                                />
-                            </CardBody>
-                            <Button icon={external} size={40} variant="Tertiary"></Button>
-                        </HStack>
-                        <VStack>
-                            <Heading level={4} weight={500}>24/7 Customer Support</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">
-                                We pride ourselves on providing exceptional customer support. Our dedicated team is available 24/7 to assist you with any queries or issues you may encounter.
-                            </Text>
-                        </VStack>
-                    </VStack>
-                </CardBody>
-            </Card>
-
-            <Card size="large">
-                <CardBody>
-                    <VStack spacing={8}>
-                        <HStack>
-                            <CardBody isShady size={'XSmall'} style={{ borderRadius: '4px' }}>
-                                <Icon
-                                    size={40}
-                                    icon={postAuthor}
-                                />
-                            </CardBody>
-                            <Button icon={external} size={40} variant="Tertiary"></Button>
-                        </HStack>
-                        <VStack>
-                            <Heading level={4} weight={500}> One-Click Installation</Heading>
-                            <Text size={15} lineHeight={1.6} variant="muted">
-                                Get started in minutes with our easy one-click installation. No technical expertise required – launch your WordPress site effortlessly and focus on what you do best.
-                            </Text>
-                        </VStack>
-                    </VStack>
-                </CardBody>
-            </Card>
-        </Grid>
+        <Card isRounded style={{ overflow: 'hidden' }}>
+            <Grid
+                columns={[1, 2]}
+                rowGap="1px"
+                columnGap="1px"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }}
+            >
+                {items.map((item, index) => (
+                    <Card key={index} size="large" isBorderless isRounded={false}>
+                        <CardBody>
+                            <VStack spacing={8}>
+                                <HStack>
+                                    <CardBody isShady size={'XSmall'} style={{ borderRadius: '6px' }}>
+                                        <Icon
+                                            size={40}
+                                            icon={item.icon}
+                                        />
+                                    </CardBody>
+                                    <Button icon={external} size={40} variant="tertiary"></Button>
+                                </HStack>
+                                <VStack>
+                                    <Heading level={4} weight={500}>{item.title}</Heading>
+                                    <Text size={15} lineHeight={1.6} variant="muted">
+                                        {item.description}
+                                    </Text>
+                                </VStack>
+                            </VStack>
+                        </CardBody>
+                    </Card>
+                ))}
+            </Grid>
+        </Card>
     );
 };
 

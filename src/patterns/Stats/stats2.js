@@ -66,7 +66,7 @@ function Stats2() {
                                             padding: '0px 15px 0px 5px'
                                         }}>
                                         <HStack spacing={0}>
-                                            <Icon icon={data.icon} fill={data.iconColor} />
+                                            <Icon icon={data.icon} style={{ color: data.iconColor }} />
                                             <Text weight={500} color={data.textColor}>{data.percentage}</Text>
                                         </HStack>
                                     </Surface>

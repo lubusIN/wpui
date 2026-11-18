@@ -1,98 +1,99 @@
 body {
-    font-family: Inter, sans-serif;
-    margin: 0;
+	font-family: Inter, sans-serif;
+	margin: 0;
 }
 
 .wpui-hero-Section {
-    background-image: url(img/banner.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10vw 0;
-    border-radius: 0% !important;
+	background-image: url(img/banner.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10vw 0;
+	border-radius: 0% !important;
 }
 
 .wpui-hero-cont {
-    margin: auto 0 auto auto;
-    width: 50%;
+	margin: auto 0 auto auto;
+	width: 50%;
 }
 
 .wpui-com-page,
 .wpui-lcont {
-    margin: auto;
-    max-width: 1200px;
-    padding: 40px 20px;
+	margin: auto;
+	max-width: 1200px;
+	padding: 40px 20px;
 }
 
 div.wpui-column {
-    border-radius: 10px;
-    box-shadow: none !important;
-    height: auto;
+	border-radius: 10px;
+	box-shadow: none !important;
+	height: auto;
 }
 
 .copied-pop .components-popover__content {
-    padding: 6px !important
+	padding: 6px !important;
 }
 
 .wpui-back-button span,
 .wpui-back-button button {
-    color: #535353;
-    font-size: .875rem;
-    font-weight: 500;
+	color: #535353;
+	font-size: 0.875rem;
+	font-weight: 500;
 }
 
 .wpui-back-button .home:hover {
-    color: #3858e9;
+	color: #3858e9;
 }
 
 .wpui-hero-cta {
-    .components-button {
-        padding: 20px !important;
-        color: white !important;
 
-        &:nth-child(1) {
-            border: 1px solid transparent;
-        }
+	.components-button {
+		padding: 20px !important;
+		color: #fff !important;
 
-        &:nth-child(2) {
-            box-shadow: none !important;
-            border: 1px solid white;
-        }
-    }
+		&:nth-child(1) {
+			border: 1px solid transparent;
+		}
+
+		&:nth-child(2) {
+			box-shadow: none !important;
+			border: 1px solid #fff;
+		}
+	}
 }
 
 /* Getting Started */
 pre {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 0.5px solid #cacaca;
-    border-radius: 4px;
+	background-color: #f0f0f0;
+	padding: 20px;
+	border: 0.5px solid #cacaca;
+	border-radius: 4px;
 }
 
 .getting_started {
-    max-width: 1200px;
-    padding: 20px;
-    margin: auto;
+	max-width: 1200px;
+	padding: 20px;
+	margin: auto;
 }
 
-@media only screen and (max-width:820px) {
+@media only screen and (max-width: 820px) {
 
-    .wpui-com-page,
-    .wpui-lcont,
-    .getting_started {
-        max-width: 100% !important;
+	.wpui-com-page,
+	.wpui-lcont,
+	.getting_started {
+		max-width: 100% !important;
 
-    }
+	}
 
-    pre {
-        overflow: scroll;
-    }
+	pre {
+		overflow: scroll;
+	}
 
-    .wpui-footer .components-card__body .footer-content,
-    div.wpui-hero-cont {
-        width: 100% !important
-    }
+	.wpui-footer .components-card__body .footer-content,
+	div.wpui-hero-cont {
+		width: 100% !important;
+	}
 
-    .wpui-variation-card {
-        padding: 35px 20px;
-    }
+	.wpui-variation-card {
+		padding: 35px 20px;
+	}
 }

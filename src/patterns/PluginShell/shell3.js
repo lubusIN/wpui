@@ -13,14 +13,11 @@ import {
 import {
     Card,
     Icon,
+    Button,
     CardBody,
     CardHeader,
     __experimentalHStack as HStack,
     __experimentalHeading as Heading,
-    __experimentalNavigation as Navigation,
-    __experimentalNavigationGroup as NavigationGroup,
-    __experimentalNavigationItem as NavigationItem,
-    __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
 
 /**
@@ -58,25 +55,20 @@ function Shell3() {
     return (
         <Card>
             <CardHeader style={{ backgroundColor: '#000000' }}>
-                <HStack direction={['column', 'row']}>
+                <HStack direction={['column', 'row']} spacing={4}>
                     <Icon fill="white" icon={wordpress} size={35}></Icon>
-                    <Navigation>
-                        <NavigationMenu>
-                            <NavigationGroup>
-                                <HStack alignment="left" direction={['column', 'row']}>
-                                    {items.map((item, index) => (
-                                        <NavigationItem
-                                            key={index}
-                                            item={item.slug}
-                                            title={item.name}
-                                            onClick={() => handleNavigationClick(item.name, item.content)}
-                                            style={{ color: 'white' }}
-                                        />
-                                    ))}
-                                </HStack>
-                            </NavigationGroup>
-                        </NavigationMenu>
-                    </Navigation>
+                    <HStack alignment="left" spacing={2} direction={['column', 'row']}>
+                        {items.map((item, index) => (
+                            <Button
+                                key={index}
+                                variant={activeItem === item.name ? "secondary" : "tertiary"}
+                                style={{ color: 'white' }}
+                                onClick={() => handleNavigationClick(item.name, item.content)}
+                            >
+                                {item.name}
+                            </Button>
+                        ))}
+                    </HStack>
                 </HStack>
                 <HStack alignment="right">
                     <Icon icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="white" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2" /><circle cx="12" cy="3" r="1" /></g></svg>} size={25} ></Icon>

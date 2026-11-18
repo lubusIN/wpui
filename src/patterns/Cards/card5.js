@@ -27,23 +27,21 @@ function Card5() {
                                 minWidth: 'auto',
                                 backgroundColor: "#F2F6FF",
                             }}>
-                            <Icon style={{ minWidth: '25px' }} icon={starFilled} size={25} fill="blue"></Icon>
+                            <Icon style={{ minWidth: '25px', color: '#3858e9' }} icon={starFilled} size={25} />
                         </CardBody>
                         <VStack>
                             <Heading level={4} >Build WP Plugin Faster</Heading>
                             <Text variant='muted' style={{ maxWidth: '225px' }} >
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                             </Text>
-                            <Button style={{ padding: 0 }}>
-                                <Text size={14} weight={600} color='#3858E9' style={{ textDecoration: 'none' }} >
-                                    Link Text
-                                </Text>
-                                <Icon icon={arrowRight} color="#3858E9"></Icon>
+                            <Button variant="link" style={{ textDecoration: 'none', padding: 0, height: 'auto', fontWeight: 600 }}>
+                                Link Text
+                                <Icon icon={arrowRight} style={{ color: '#3858e9', marginLeft: '4px' }} />
                             </Button>
                         </VStack>
                     </HStack>
                 </CardBody>
-            </Card >
+            </Card>
         </HStack>
     );
 };

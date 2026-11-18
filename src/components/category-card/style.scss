@@ -1,39 +1,39 @@
 div.wpui-preview {
-    position: relative;
-    padding: 10px 0px;
+	position: relative;
+	padding: 10px 0;
 
-    &:after {
-        content: '';
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(231, 238, 250, .286);
-        z-index: -1;
-        padding: 0px 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 15px;
-    }
+	&::after {
+		content: "";
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(231, 238, 250, 0.286);
+		z-index: -1;
+		padding: 0 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 15px;
+	}
 
-    &:hover:after {
-        display: block;
-    }
+	&:hover::after {
+		display: block;
+	}
 }
 
 .wpui-card-link {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 div.wpui-card-preview {
-    background: #b8cfff94;
-    border-radius: 15px;
-    height: 250px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+	background: #b8cfff94;
+	border-radius: 15px;
+	height: 250px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
 
-    svg {
-        height: 100%;
-    }
+	svg {
+		height: 100%;
+	}
 }

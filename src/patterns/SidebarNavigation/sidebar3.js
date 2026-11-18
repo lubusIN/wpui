@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "@wordpress/element";
+
+/**
  * WordPress dependencies.
  */
 import { 
@@ -13,19 +18,21 @@ import {
 import {
     Icon,
     Card,
+    SearchControl,
+    NavigableMenu,
+    MenuGroup,
+    MenuItem,
     __experimentalGrid as Grid,
     __experimentalText as Text,
     __experimentalHStack as HStack,
-    __experimentalNavigation as Navigation,
-    __experimentalNavigationGroup as NavigationGroup,
-    __experimentalNavigationItem as NavigationItem,
-    __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
 
 /**
  * Render Dashboard
  */
 function Sidebar3() {
+    const [activeItem, setActiveItem] = useState('dashboard');
+    const [search, setSearch] = useState('');
 
     const items = [
         {
@@ -61,46 +68,62 @@ function Sidebar3() {
             templateColumns="1fr 3fr"
         >
             <Card>
-                <Navigation activeItem="dashboard">
-                    <NavigationMenu title='Home' hasSearch>
-                        <NavigationGroup>
-                            {items.map((item, index) => (
-                                <NavigationItem
+                <div style={{ padding: '16px 16px 0 16px' }}>
+                    <SearchControl
+                        __nextHasNoMarginBottom
+                        value={search}
+                        onChange={setSearch}
+                        placeholder="Search..."
+                    />
+                </div>
+                <NavigableMenu>
+                    <MenuGroup label="Home">
+                        {items
+                            .filter((item) => !search || item.name.toLowerCase().includes(search.toLowerCase()))
+                            .map((item, index) => (
+                                <MenuItem
                                     key={index}
-                                    item={item.slug}
                                     icon={item.icon}
-                                    title={item.name}
-                                    onClick={() => { }}
-                                />
+                                    iconPosition="left"
+                                    isSelected={activeItem === item.slug}
+                                    onClick={() => setActiveItem(item.slug)}
+                                >
+                                    {item.name}
+                                </MenuItem>
                             ))}
-                        </NavigationGroup>
-                    </NavigationMenu>
-                    <NavigationMenu title='Clients'>
-                        <NavigationGroup>
-                            <NavigationItem
-                                item="heroicons"
-                                title="HeroIcons"
-                            />
-                            <NavigationItem
-                                item="tailwind"
-                                title="Tailwind"
-                            />
-                            <NavigationItem
-                                item="workations"
-                                title="Workations"
-                            />
-                        </NavigationGroup>
-                    </NavigationMenu>
-                    <NavigationMenu>
-                        <NavigationItem style={{ marginTop: '30px' }}>
+                    </MenuGroup>
+                    <MenuGroup label="Clients">
+                        <MenuItem
+                            iconPosition="left"
+                            isSelected={activeItem === 'heroicons'}
+                            onClick={() => setActiveItem('heroicons')}
+                        >
+                            HeroIcons
+                        </MenuItem>
+                        <MenuItem
+                            iconPosition="left"
+                            isSelected={activeItem === 'tailwind'}
+                            onClick={() => setActiveItem('tailwind')}
+                        >
+                            Tailwind
+                        </MenuItem>
+                        <MenuItem
+                            iconPosition="left"
+                            isSelected={activeItem === 'workations'}
+                            onClick={() => setActiveItem('workations')}
+                        >
+                            Workations
+                        </MenuItem>
+                    </MenuGroup>
+                    <MenuGroup>
+                        <div style={{ padding: '16px', marginTop: '16px' }}>
                             <HStack alignment="left">
                                 <Icon size={45} icon={commentAuthorAvatar}></Icon>
-                                <Text size={15} >Your Name</Text>
+                                <Text size={15}>Your Name</Text>
                             </HStack>
-                        </NavigationItem>
-                    </NavigationMenu>
-                </Navigation>
-
+                        </div>
+                    </MenuGroup>
+                </NavigableMenu>
             </Card>
             <Card>
                 <Card variant="grid" style={{ margin: '15px', height: '70vh', width: 'auto' }}></Card>

@@ -116,14 +116,14 @@ function GridList1() {
                         <HStack>
                             <Text size={15}>Amount</Text>
                             <HStack justify="right">
-                                <Heading level={15}>{user.amount}</Heading>
-                                <Heading
+                                <Text size={15} weight={600}>{user.amount}</Text>
+                                <Text
                                     size={13}
-                                    color={status[user.status].color}
+                                    weight={500}
                                     style={status[user.status]}
                                 >
                                     {user.status}
-                                </Heading>
+                                </Text>
                             </HStack>
                         </HStack>
                     </CardBody>

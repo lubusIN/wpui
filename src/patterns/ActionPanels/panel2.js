@@ -26,11 +26,13 @@ function Panel2() {
                         <Text size={15} weight={400} variant="muted" style={{ maxWidth: '600px' }}>
                             Gain insights into your website's performance, track visitor behavior, and measure engagement with our comprehensive analytics tool.
                         </Text>
-                        <Button style={{ padding: 0 }}>
-                            <Text size={14} weight={600} as={"a"} href="https://wordpress.org" color='#3858E9' style={{ textDecoration: 'none' }} >
-                                Explore Analytics
-                            </Text>
-                            <Icon icon={arrowRight} color="#3858E9"></Icon>
+                        <Button
+                            variant="link"
+                            href="https://wordpress.org"
+                            style={{ textDecoration: 'none', fontWeight: 600, fontSize: '14px', padding: 0, height: 'auto' }}
+                        >
+                            Explore Analytics
+                            <Icon icon={arrowRight} style={{ color: '#3858e9', marginLeft: '4px' }} />
                         </Button>
                     </VStack>
                 </CardBody>

@@ -174,18 +174,13 @@ function PatternView({ title, name, category, path, component: Pattern }) {
                 <HStack justify='right'>
                     <ToggleGroupControl
                         className="wpui-view-toggle"
+                        label="View"
                         hideLabelFromVision
                         value={view}
                         onChange={(value) => setView(value)}
                     >
-                        {['Preview', 'Code'].map((value, index) => (
-                            <ToggleGroupControlOption
-                                className={`wpui-toggle-button ${view === value.toLowerCase() ? 'active' : ''}`}
-                                key={index}
-                                value={value.toLowerCase()}
-                                label={value}
-                            />
-                        ))}
+                        <ToggleGroupControlOption value="preview" label="Preview" />
+                        <ToggleGroupControlOption value="code" label="Code" />
                     </ToggleGroupControl>
                 </HStack>
             </HStack>

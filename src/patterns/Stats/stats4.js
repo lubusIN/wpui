@@ -52,9 +52,15 @@ function Stats4() {
                         <Card key={index} style={{ padding: '20px' }}>
                             <VStack alignment="left" spacing={3}>
                                 <HStack>
-                                    <Icon icon={trendingUp} fill="white" size={45}
-                                        style={{ backgroundColor: '#3858e9', borderRadius: '6px' }} >
-                                    </Icon>
+                                    <Icon
+                                        icon={trendingUp}
+                                        size={45}
+                                        style={{
+                                            color: '#ffffff',
+                                            backgroundColor: '#3858e9',
+                                            borderRadius: '6px',
+                                        }}
+                                    />
                                     <DropdownMenu
                                         icon={moreVertical}
                                         label="Select a direction"
@@ -71,8 +77,15 @@ function Stats4() {
                                     <HStack>
                                         <Heading level={2}>{data.current}</Heading>
                                         <HStack expanded={false} spacing={0}>
-                                            <Icon icon={data.icon} fill={data.iconColor} size={20}
-                                                style={{ backgroundColor: data.backgroundColor, marginRight:"4px" }} />
+                                            <Icon
+                                                icon={data.icon}
+                                                size={20}
+                                                style={{
+                                                    color: data.iconColor,
+                                                    backgroundColor: data.backgroundColor,
+                                                    marginRight: "4px",
+                                                }}
+                                            />
                                             <Text weight={500} color={data.iconColor}>{data.percentage}</Text>
                                         </HStack>
                                     </HStack>

@@ -1,4 +1,9 @@
 /**
+ * External dependencies.
+ */
+import { useState } from "@wordpress/element";
+
+/**
  * WordPress dependencies.
  */
 import { 
@@ -14,21 +19,23 @@ import {
     Card,
     Button,
     CardBody,
+    SearchControl,
+    NavigableMenu,
+    MenuGroup,
+    MenuItem,
     __experimentalGrid as Grid,
     __experimentalVStack as VStack,
     __experimentalText as Text,
     __experimentalHeading as Heading,
     __experimentalHStack as HStack,
-    __experimentalNavigation as Navigation,
-    __experimentalNavigationGroup as NavigationGroup,
-    __experimentalNavigationItem as NavigationItem,
-    __experimentalNavigationMenu as NavigationMenu,
 } from "@wordpress/components";
 
 /**
  * Render Dashboard
  */
 function Sidebar1() {
+    const [activeItem, setActiveItem] = useState('dashboard');
+    const [search, setSearch] = useState('');
 
     const items = [
         {
@@ -64,43 +71,64 @@ function Sidebar1() {
             templateColumns="1fr 3fr"
         >
             <Card>
-                <Navigation activeItem="dashboard">
-                    <NavigationMenu title='Home' hasSearch>
-                        <NavigationGroup>
-                            {items.map((item, index) => (
-                                <NavigationItem
+                <div style={{ padding: '16px 16px 0 16px' }}>
+                    <SearchControl
+                        __nextHasNoMarginBottom
+                        value={search}
+                        onChange={setSearch}
+                        placeholder="Search..."
+                    />
+                </div>
+                <NavigableMenu>
+                    <MenuGroup label="Home">
+                        {items
+                            .filter((item) => !search || item.name.toLowerCase().includes(search.toLowerCase()))
+                            .map((item, index) => (
+                                <MenuItem
                                     key={index}
-                                    item={item.slug}
                                     icon={item.icon}
-                                    title={item.name}
-                                    onClick={() => { }}
-                                />
+                                    iconPosition="left"
+                                    isSelected={activeItem === item.slug}
+                                    onClick={() => setActiveItem(item.slug)}
+                                >
+                                    {item.name}
+                                </MenuItem>
                             ))}
-                        </NavigationGroup>
-                    </NavigationMenu>
-                    <NavigationMenu title='Clients'>
-                        <NavigationGroup>
-                            <NavigationItem
-                                item="heroicons"
-                                title="HeroIcons"
-                            />
-                            <NavigationItem
-                                item="tailwind"
-                                title="Tailwind"
-                            />
-                            <NavigationItem
-                                item="workations"
-                                title="Workations"
-                            />
-                        </NavigationGroup>
-                    </NavigationMenu>
-                    <NavigationMenu>
-                        <NavigationItem
+                    </MenuGroup>
+                    <MenuGroup label="Clients">
+                        <MenuItem
+                            iconPosition="left"
+                            isSelected={activeItem === 'heroicons'}
+                            onClick={() => setActiveItem('heroicons')}
+                        >
+                            HeroIcons
+                        </MenuItem>
+                        <MenuItem
+                            iconPosition="left"
+                            isSelected={activeItem === 'tailwind'}
+                            onClick={() => setActiveItem('tailwind')}
+                        >
+                            Tailwind
+                        </MenuItem>
+                        <MenuItem
+                            iconPosition="left"
+                            isSelected={activeItem === 'workations'}
+                            onClick={() => setActiveItem('workations')}
+                        >
+                            Workations
+                        </MenuItem>
+                    </MenuGroup>
+                    <MenuGroup>
+                        <MenuItem
                             icon={cog}
-                            title="Settings"
-                        />
-                    </NavigationMenu>
-                </Navigation>
+                            iconPosition="left"
+                            isSelected={activeItem === 'settings'}
+                            onClick={() => setActiveItem('settings')}
+                        >
+                            Settings
+                        </MenuItem>
+                    </MenuGroup>
+                </NavigableMenu>
             </Card>
             <Card>
                 <VStack expanded>
