@@ -18,7 +18,8 @@
 		"start": "wp-scripts start --webpack-no-externals",
 		"serve": "serve",
 		"test:e2e": "wp-scripts test-e2e",
-		"test:unit": "wp-scripts test-unit-js"
+		"test:unit": "wp-scripts test-unit-js",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"@wordpress/components": "^44.0.0",
@@ -39,7 +40,19 @@
 	"license": "ISC",
 	"description": "",
 	"devDependencies": {
+		"husky": "^9.1.7",
+		"lint-staged": "^17.6.1",
 		"raw-loader": "^4.0.2",
 		"serve": "^14.2.8"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"wp-scripts format",
+			"wp-scripts lint-js"
+		],
+		"*.{css,scss}": [
+			"wp-scripts format",
+			"wp-scripts lint-style"
+		]
 	}
 }
