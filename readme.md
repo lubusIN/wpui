@@ -22,7 +22,7 @@ WPUI is a design pattern library built upon WordPress components Which gives you
 
 [LUBUS](https://lubus.in/?utm_source=github&utm_medium=open-source&utm_campaign=wpui) is a web design agency based in Mumbai, India.
 
-<a href="https://cal.com/lubus">
+<a href="https://book.lubus.in/">
 <img src="https://raw.githubusercontent.com/lubusIN/.github/refs/heads/main/profile/banner.png" />
 </a>
 
